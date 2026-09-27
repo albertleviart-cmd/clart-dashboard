@@ -152,8 +152,19 @@
 
   <section>
     <h2>פרסום ו-ROAS</h2>
-    <p class="h2-sub">ROAS כולל מחשב גם את העסקאות שנסגרו מחוץ לאתר, ROAS אתר רק את מכירות השופיפיי</p>
+    <p class="h2-sub">ROAS מחושב מול הוצאת מטא בלבד (דולר). גוגל אדס מוצג בנפרד למטה כי החשבון שלו בשקלים</p>
     <div class="kpi-grid" id="adsKpiGrid"></div>
+    <div class="closed-card" id="googleAdsCard" style="margin-top:10px; display:none">
+      <div>
+        <div class="amount num" id="googleAdsAmount" style="color:var(--accent-orange)">₪0</div>
+        <div class="count num">הוצאת גוגל אדס, לא נכלל ב-ROAS למעלה</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="analyticsSection" style="display:none">
+    <h2>תנועה באתר (Google Analytics)</h2>
+    <div class="kpi-grid" id="analyticsKpiGrid"></div>
   </section>
 
   <section id="closedSection" style="display:none">
@@ -215,6 +226,7 @@
   var fmtUSD0 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
   var fmtUSD2 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 2 });
   var fmtNum = new Intl.NumberFormat('en-US');
+  var fmtILS0 = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'ILS', maximumFractionDigits: 0 });
 
   function money(n) { return fmtUSD0.format(Number(n) || 0); }
   function moneyPrecise(n) { return fmtUSD2.format(Number(n) || 0); }
@@ -222,7 +234,7 @@
   function num(n) { return fmtNum.format(Number(n) || 0); }
 
   var PERIOD_LABEL = { today: 'היום', last7d: '7 ימים אחרונים', last30d: '30 יום אחרונים', monthToDate: 'מתחילת החודש' };
-  var SOURCE_LABEL = { monday: 'מנדיי', shopify: 'שופיפיי', metaAds: 'מטא אדס', googleAds: 'גוגל אדס' };
+  var SOURCE_LABEL = { monday: 'מנדיי', shopify: 'שופיפיי', metaAds: 'מטא אדס', googleAds: 'גוגל אדס', googleAnalytics: 'Google Analytics' };
   var FUNNEL_ORDER = ['new', 'working', 'negotiating', 'deposit_production', 'closed', 'lost', 'remarketing_pool'];
   var FUNNEL_OPACITY = { new: 0.35, working: 0.5, negotiating: 0.65, deposit_production: 0.8, closed: 1 };
   var VELOCITY_LABEL = { yesterday: 'אתמול', last7d: '7 ימים', last14d: '14 יום', last30d: '30 יום' };
@@ -293,7 +305,7 @@
   function renderAdsKpis() {
     var grid = document.getElementById('adsKpiGrid');
     var p = currentPeriod();
-    if (!p) { grid.innerHTML = ''; return; }
+    if (!p) { grid.innerHTML = ''; document.getElementById('googleAdsCard').style.display = 'none'; return; }
     var site = p.site || { revenue: 0, orders: 0 };
     var closed = p.closedDeals || { revenue: 0 };
     var spend = p.spend || 0;
@@ -301,10 +313,36 @@
     var roasTotal = spend > 0 ? (site.revenue + closed.revenue) / spend : 0;
     var cpaSite = site.orders > 0 ? spend / site.orders : 0;
     var tiles = [
-      { label: 'הוצאת פרסום (מטא)', value: money(spend), cls: 'orange' },
+      { label: 'הוצאת מטא אדס', value: money(spend), cls: 'orange' },
       { label: 'ROAS אתר בלבד', value: roasFmt(roasSite), cls: '' },
       { label: 'ROAS כולל', value: roasFmt(roasTotal), cls: 'aqua' },
       { label: 'עלות להזמנת אתר (CPA)', value: moneyPrecise(cpaSite), cls: '' }
+    ];
+    grid.innerHTML = tiles.map(function (t) {
+      return '<div class="tile"><div class="label">' + t.label + '</div><div class="value num ' + t.cls + '">' + t.value + '</div></div>';
+    }).join('');
+
+    var gCard = document.getElementById('googleAdsCard');
+    if (p.googleAdsSpendILS != null) {
+      gCard.style.display = '';
+      document.getElementById('googleAdsAmount').textContent = fmtILS0.format(p.googleAdsSpendILS || 0);
+    } else {
+      gCard.style.display = 'none';
+    }
+  }
+
+  function renderAnalytics() {
+    var section = document.getElementById('analyticsSection');
+    var grid = document.getElementById('analyticsKpiGrid');
+    var p = currentPeriod();
+    if (!p || !p.analytics) { section.style.display = 'none'; return; }
+    section.style.display = '';
+    var a = p.analytics;
+    var convRate = a.sessions > 0 ? (100 * (a.transactions || 0) / a.sessions) : 0;
+    var tiles = [
+      { label: 'כניסות לאתר (Sessions)', value: num(a.sessions), cls: 'blue' },
+      { label: 'עסקאות שהושלמו (GA)', value: num(a.transactions), cls: '' },
+      { label: 'שיעור המרה', value: convRate.toFixed(2) + '%', cls: '' }
     ];
     grid.innerHTML = tiles.map(function (t) {
       return '<div class="tile"><div class="label">' + t.label + '</div><div class="value num ' + t.cls + '">' + t.value + '</div></div>';
@@ -488,9 +526,14 @@
     var el = document.getElementById('footerNote');
     if (!state.data) return;
     var parts = [];
-    parts.push('<b>גוגל אדס:</b> עדיין לא מחובר, ROAS ו-CPA מחושבים כרגע רק מול הוצאת מטא.');
+    var g = (state.data.sources && state.data.sources.googleAds) || {};
+    if (g.status === 'ok') {
+      parts.push('<b>גוגל אדס:</b> מחובר, אבל החשבון מתנהל בשקלים ולא בדולר כמו שופיפיי ומטא. כדי לא להציג ROAS מטעה ממטבעות מעורבבים, ההוצאה מוצגת בנפרד למעלה ואינה נכללת ב-ROAS או ב-CPA.');
+    } else {
+      parts.push('<b>גוגל אדס:</b> ' + (g.note || 'לא מחובר') + '.');
+    }
     if (state.data.metaAccountNote) parts.push('<b>מטא אדס:</b> ' + state.data.metaAccountNote);
-    parts.push('כל הסכומים בדולר ($). הדף בודק עדכון כל דקה, אין צורך לרענן ידנית.');
+    parts.push('סכומי אתר, מטא ו-ROAS בדולר ($), גוגל אדס בשקל (₪). הדף בודק עדכון כל דקה, אין צורך לרענן ידנית.');
     el.innerHTML = parts.join('<br>');
   }
 
@@ -499,6 +542,7 @@
     renderSources();
     renderSiteKpis();
     renderAdsKpis();
+    renderAnalytics();
     renderClosed();
     renderSplit();
     renderVelocity();

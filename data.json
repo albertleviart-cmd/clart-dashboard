@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-27T12:19:15+03:00",
+  "updatedAt": "2026-09-27T15:56:48+03:00",
   "sources": {
     "monday": {
       "status": "ok",
@@ -14,11 +14,16 @@
       "note": ""
     },
     "googleAds": {
-      "status": "manual",
-      "note": "טרם חובר, נדרש חיבור קונקטור או הזנה ידנית"
+      "status": "ok",
+      "note": ""
     }
   },
   "metaAccountNote": "חשבון Albert Levi Art (USD) בלבד",
+  "fx": {
+    "ilsToUsd": 0.328516,
+    "asOf": "2026-09-27",
+    "source": "open.er-api.com"
+  },
   "periods": {
     "today": {
       "site": {
@@ -37,7 +42,11 @@
         "revenue": 0,
         "count": 0
       },
-      "spend": 95.69
+      "spendBreakdown": {
+        "meta": 141.63,
+        "google": 7.47
+      },
+      "spend": 149.1
     },
     "last7d": {
       "site": {
@@ -56,7 +65,11 @@
         "revenue": 2386.1,
         "count": 3
       },
-      "spend": 3588.42
+      "spendBreakdown": {
+        "meta": 3588.49,
+        "google": 34.79
+      },
+      "spend": 3623.28
     },
     "last30d": {
       "site": {
@@ -75,7 +88,11 @@
         "revenue": 5795.1,
         "count": 5
       },
-      "spend": 16213.37
+      "spendBreakdown": {
+        "meta": 16213.44,
+        "google": 200.45
+      },
+      "spend": 16413.89
     },
     "monthToDate": {
       "site": {
@@ -94,7 +111,11 @@
         "revenue": 5795.1,
         "count": 5
       },
-      "spend": 14066.07
+      "spendBreakdown": {
+        "meta": 14112.08,
+        "google": 175.59
+      },
+      "spend": 14287.67
     }
   },
   "leadVelocity": {
@@ -147,7 +168,7 @@
         "date": "2026-09-27",
         "siteRevenue": 0,
         "closedDealsRevenue": 0,
-        "spend": 95.69,
+        "spend": 149.1,
         "roasSite": 0.0,
         "roasTotal": 0.0
       }
