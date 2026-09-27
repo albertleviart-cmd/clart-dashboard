@@ -1,0 +1,15 @@
+{
+  "updatedAt": null,
+  "sources": {
+    "monday": {"status": "pending", "note": "ממתין לריצה ראשונה"},
+    "shopify": {"status": "pending", "note": "ממתין לריצה ראשונה"},
+    "metaAds": {"status": "pending", "note": "ממתין לריצה ראשונה"},
+    "googleAds": {"status": "manual", "note": "טרם חובר, נדרש חיבור קונקטור או הזנה ידנית"}
+  },
+  "metaAccountNote": "",
+  "periods": {},
+  "leadVelocity": {"yesterday": 0, "last7d": 0, "last14d": 0, "last30d": 0},
+  "funnel": [],
+  "totalLeads": 0,
+  "history": {"days": []}
+}
