@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-27T23:53:04+03:00",
+  "updatedAt": "2026-09-28T00:26:00+03:00",
   "sources": {
     "monday": {
       "status": "ok",
@@ -31,15 +31,15 @@
   "periods": {
     "today": {
       "site": {
-        "revenue": 296.1,
-        "orders": 1,
+        "revenue": 0,
+        "orders": 0,
         "originals": {
           "revenue": 0,
           "orders": 0
         },
         "prints": {
-          "revenue": 296.1,
-          "orders": 1
+          "revenue": 0,
+          "orders": 0
         }
       },
       "closedDeals": {
@@ -47,26 +47,26 @@
         "count": 0
       },
       "spendBreakdown": {
-        "meta": 458.54,
-        "google": 11.43
+        "meta": 476.3,
+        "google": 0.0
       },
-      "spend": 469.97,
+      "spend": 476.3,
       "analytics": {
-        "sessions": 99,
+        "sessions": 103,
         "transactions": 0
       }
     },
     "last7d": {
       "site": {
-        "revenue": 3457.85,
-        "orders": 11,
+        "revenue": 3377.75,
+        "orders": 10,
         "originals": {
           "revenue": 0,
           "orders": 0
         },
         "prints": {
-          "revenue": 3457.85,
-          "orders": 11
+          "revenue": 3778.0,
+          "orders": 10
         }
       },
       "closedDeals": {
@@ -75,11 +75,11 @@
       },
       "spendBreakdown": {
         "meta": 3588.58,
-        "google": 34.79
+        "google": 44.12
       },
-      "spend": 3623.37,
+      "spend": 3632.7,
       "analytics": {
-        "sessions": 3219,
+        "sessions": 3221,
         "transactions": 9
       }
     },
@@ -92,7 +92,7 @@
           "orders": 0
         },
         "prints": {
-          "revenue": 16857.51,
+          "revenue": 19296.12,
           "orders": 57
         }
       },
@@ -102,11 +102,11 @@
       },
       "spendBreakdown": {
         "meta": 16213.53,
-        "google": 200.45
+        "google": 205.3
       },
-      "spend": 16413.98,
+      "spend": 16418.83,
       "analytics": {
-        "sessions": 11188,
+        "sessions": 11189,
         "transactions": 57
       }
     },
@@ -119,7 +119,7 @@
           "orders": 0
         },
         "prints": {
-          "revenue": 13966.9,
+          "revenue": 15895.41,
           "orders": 44
         }
       },
@@ -128,12 +128,12 @@
         "count": 5
       },
       "spendBreakdown": {
-        "meta": 14429.08,
+        "meta": 14446.84,
         "google": 179.54
       },
-      "spend": 14608.62,
+      "spend": 14626.38,
       "analytics": {
-        "sessions": 9633,
+        "sessions": 9634,
         "transactions": 39
       }
     }
@@ -170,12 +170,12 @@
     {
       "key": "new",
       "label": "ליד חדש",
-      "count": 142
+      "count": 1
     },
     {
       "key": "working",
       "label": "בטיפול",
-      "count": 660
+      "count": 796
     },
     {
       "key": "negotiating",
@@ -195,7 +195,7 @@
     {
       "key": "lost",
       "label": "אבוד",
-      "count": 12
+      "count": 17
     },
     {
       "key": "remarketing_pool",
@@ -213,6 +213,14 @@
         "spend": 469.97,
         "roasSite": 0.63,
         "roasTotal": 0.63
+      },
+      {
+        "date": "2026-09-28",
+        "siteRevenue": 0,
+        "closedDealsRevenue": 0.0,
+        "spend": 476.3,
+        "roasSite": 0.0,
+        "roasTotal": 0.0
       }
     ]
   }
