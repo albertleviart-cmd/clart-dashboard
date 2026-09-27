@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-27T23:41:49+03:00",
+  "updatedAt": "2026-09-27T23:53:04+03:00",
   "sources": {
     "monday": {
       "status": "ok",
@@ -47,12 +47,12 @@
         "count": 0
       },
       "spendBreakdown": {
-        "meta": 453.1,
+        "meta": 458.54,
         "google": 11.43
       },
-      "spend": 464.53,
+      "spend": 469.97,
       "analytics": {
-        "sessions": 95,
+        "sessions": 99,
         "transactions": 0
       }
     },
@@ -79,7 +79,7 @@
       },
       "spend": 3623.37,
       "analytics": {
-        "sessions": 3213,
+        "sessions": 3219,
         "transactions": 9
       }
     },
@@ -106,7 +106,7 @@
       },
       "spend": 16413.98,
       "analytics": {
-        "sessions": 11185,
+        "sessions": 11188,
         "transactions": 57
       }
     },
@@ -128,41 +128,41 @@
         "count": 5
       },
       "spendBreakdown": {
-        "meta": 14423.64,
+        "meta": 14429.08,
         "google": 179.54
       },
-      "spend": 14603.18,
+      "spend": 14608.62,
       "analytics": {
-        "sessions": 9627,
+        "sessions": 9633,
         "transactions": 39
       }
     }
   },
   "leadVelocity": {
-    "yesterday": 18,
-    "last7d": 56,
-    "last14d": 78,
-    "last30d": 122
+    "yesterday": 19,
+    "last7d": 57,
+    "last14d": 79,
+    "last30d": 123
   },
   "leadSources": {
     "yesterday": {
-      "total": 18,
-      "form": 13,
+      "total": 19,
+      "form": 14,
       "other": 5
     },
     "last7d": {
-      "total": 56,
-      "form": 29,
+      "total": 57,
+      "form": 30,
       "other": 27
     },
     "last14d": {
-      "total": 78,
-      "form": 49,
+      "total": 79,
+      "form": 50,
       "other": 29
     },
     "last30d": {
-      "total": 122,
-      "form": 91,
+      "total": 123,
+      "form": 92,
       "other": 31
     }
   },
@@ -175,7 +175,7 @@
     {
       "key": "working",
       "label": "בטיפול",
-      "count": 659
+      "count": 660
     },
     {
       "key": "negotiating",
@@ -203,16 +203,16 @@
       "count": 593
     }
   ],
-  "totalLeads": 1632,
+  "totalLeads": 1633,
   "history": {
     "days": [
       {
         "date": "2026-09-27",
         "siteRevenue": 296.1,
         "closedDealsRevenue": 0.0,
-        "spend": 464.53,
-        "roasSite": 0.6374,
-        "roasTotal": 0.6374
+        "spend": 469.97,
+        "roasSite": 0.63,
+        "roasTotal": 0.63
       }
     ]
   }
