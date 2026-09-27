@@ -16,6 +16,10 @@
     "googleAds": {
       "status": "ok",
       "note": ""
+    },
+    "googleAnalytics": {
+      "status": "pending",
+      "note": "ממתין לריצה ראשונה"
     }
   },
   "metaAccountNote": "חשבון Albert Levi Art (USD) בלבד",
