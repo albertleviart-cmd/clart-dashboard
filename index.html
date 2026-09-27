@@ -298,7 +298,7 @@
   function renderAdsKpis() {
     var grid = document.getElementById('adsKpiGrid');
     var p = currentPeriod();
-    if (!p) { grid.innerHTML = ''; document.getElementById('googleAdsCard').style.display = 'none'; return; }
+    if (!p) { grid.innerHTML = ''; return; }
     var site = p.site || { revenue: 0, orders: 0 };
     var closed = p.closedDeals || { revenue: 0 };
     var spend = p.spend || 0;
