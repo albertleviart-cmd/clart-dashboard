@@ -1,15 +1,48 @@
 {
-  "updatedAt": null,
+  "updatedAt": "2026-09-27T12:14:30+03:00",
   "sources": {
-    "monday": {"status": "pending", "note": "ממתין לריצה ראשונה"},
-    "shopify": {"status": "pending", "note": "ממתין לריצה ראשונה"},
-    "metaAds": {"status": "pending", "note": "ממתין לריצה ראשונה"},
+    "monday": {"status": "ok", "note": ""},
+    "shopify": {"status": "ok", "note": ""},
+    "metaAds": {"status": "ok", "note": ""},
     "googleAds": {"status": "manual", "note": "טרם חובר, נדרש חיבור קונקטור או הזנה ידנית"}
   },
-  "metaAccountNote": "",
-  "periods": {},
-  "leadVelocity": {"yesterday": 0, "last7d": 0, "last14d": 0, "last30d": 0},
-  "funnel": [],
-  "totalLeads": 0,
-  "history": {"days": []}
+  "metaAccountNote": "חשבון Albert Levi Art (USD) בלבד",
+  "periods": {
+    "today": {
+      "site": {"revenue": 0, "orders": 0, "originals": {"revenue": 0, "orders": 0}, "prints": {"revenue": 0, "orders": 0}},
+      "closedDeals": {"revenue": 0, "count": 0},
+      "spend": 95.67
+    },
+    "last7d": {
+      "site": {"revenue": 3502.85, "orders": 15, "originals": {"revenue": 0, "orders": 0}, "prints": {"revenue": 3502.85, "orders": 15}},
+      "closedDeals": {"revenue": 2386.1, "count": 3},
+      "spend": 3588.42
+    },
+    "last30d": {
+      "site": {"revenue": 18224.03, "orders": 77, "originals": {"revenue": 0, "orders": 0}, "prints": {"revenue": 18224.03, "orders": 77}},
+      "closedDeals": {"revenue": 5795.1, "count": 5},
+      "spend": 16213.37
+    },
+    "monthToDate": {
+      "site": {"revenue": 13471.45, "orders": 56, "originals": {"revenue": 0, "orders": 0}, "prints": {"revenue": 13471.45, "orders": 56}},
+      "closedDeals": {"revenue": 5795.1, "count": 5},
+      "spend": 14066.05
+    }
+  },
+  "leadVelocity": {"yesterday": 12, "last7d": 50, "last14d": 72, "last30d": 116},
+  "funnel": [
+    {"key": "new", "label": "ליד חדש", "count": 142},
+    {"key": "working", "label": "בטיפול", "count": 654},
+    {"key": "negotiating", "label": "משא ומתן", "count": 21},
+    {"key": "deposit_production", "label": "מקדמה וייצור", "count": 23},
+    {"key": "closed", "label": "נסגר", "count": 7},
+    {"key": "lost", "label": "אבוד", "count": 12},
+    {"key": "remarketing_pool", "label": "מאגר רימרקטינג", "count": 593}
+  ],
+  "totalLeads": 1626,
+  "history": {
+    "days": [
+      {"date": "2026-09-27", "siteRevenue": 0, "closedDealsRevenue": 0, "spend": 95.67, "roasSite": 0, "roasTotal": 0}
+    ]
+  }
 }
