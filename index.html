@@ -133,6 +133,28 @@
   footer { font-size: 11.5px; color: var(--text-muted); line-height: 1.7; border-top: 1px solid var(--border); padding-top: 14px; margin-top: 8px; }
   footer b { color: var(--text-secondary); }
   .skeleton { color: var(--text-muted); font-size: 13px; padding: 24px; text-align: center; }
+
+  /* ===== daily leads scan ===== */
+  .scan-head { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:10px; }
+  .scan-head .scan-date { font-size:11.5px; color:var(--text-muted); }
+  .answer-list { display:flex; flex-direction:column; gap:8px; }
+  .answer-row { background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--axis); border-radius:12px; padding:12px 14px; }
+  .answer-row.high { border-left-color:var(--status-critical); }
+  .answer-row.medium { border-left-color:var(--status-warning); }
+  .answer-row.low { border-left-color:var(--accent-blue); }
+  .answer-row .who { font-size:13.5px; font-weight:700; margin-bottom:3px; display:flex; gap:8px; align-items:baseline; flex-wrap:wrap; }
+  .answer-row .why { font-size:12px; color:var(--text-secondary); line-height:1.5; }
+  .chip { font-size:10.5px; font-weight:600; color:var(--text-secondary); background:var(--chip-bg); border-radius:20px; padding:2px 8px; white-space:nowrap; }
+  .simple-list { display:flex; flex-direction:column; gap:6px; }
+  .simple-row { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:10px 12px; font-size:12px; color:var(--text-secondary); line-height:1.5; }
+  .simple-row b { color:var(--text-primary); font-weight:700; }
+  .two-col { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  @media (max-width:760px){ .two-col { grid-template-columns:1fr; } }
+  .fault-row { display:flex; gap:8px; align-items:flex-start; font-size:12px; color:var(--text-secondary); line-height:1.5; padding:8px 0; border-bottom:1px solid var(--border); }
+  .fault-row:last-child { border-bottom:none; }
+  .fault-row .dot { margin-top:6px; }
+  .wa-note { font-size:11.5px; color:var(--text-muted); margin-top:10px; font-style:italic; }
+  .empty-note { font-size:12px; color:var(--text-muted); padding:12px 0; }
 </style>
 </head>
 <body>
@@ -226,6 +248,58 @@
     </div>
   </section>
 
+  <section id="scanSection" style="display:none">
+    <div class="scan-head">
+      <h2 style="margin:0">סריקת לידים יומית</h2>
+      <span class="scan-date" id="scanDateLabel"></span>
+    </div>
+    <div class="sources" id="scanSourcesRow"></div>
+  </section>
+
+  <section id="needsAnswerSection" style="display:none">
+    <h2>מה דורש ממך תשובה</h2>
+    <p class="h2-sub">מסודר לפי דחיפות. אדום הוא כסף או לקוח שממתין יותר מדי</p>
+    <div class="answer-list" id="needsAnswerList"></div>
+  </section>
+
+  <section id="scanMoneySection" style="display:none">
+    <h2>כסף</h2>
+    <p class="h2-sub">מחזור נספר לפי מועד סגירת העסקה, לא לפי מתי הכסף נכנס. השלמת תשלום על עסקה ישנה אינה מחזור חדש</p>
+    <div class="kpi-grid" id="scanMoneyGrid"></div>
+  </section>
+
+  <section id="scanFlowSection" style="display:none">
+    <div class="two-col">
+      <div>
+        <h2>מה נכנס אתמול</h2>
+        <div class="simple-list" id="newYesterdayList"></div>
+      </div>
+      <div>
+        <h2>מי הגיב</h2>
+        <div class="simple-list" id="repliedList"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="scanWorkSection" style="display:none">
+    <div class="two-col">
+      <div>
+        <h2>טיוטות שהוכנו</h2>
+        <div class="simple-list" id="draftsList"></div>
+      </div>
+      <div>
+        <h2>משימות Quo</h2>
+        <div class="simple-list" id="quoTasksList"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="scanFaultsSection" style="display:none">
+    <h2>תקלות</h2>
+    <div id="faultsList"></div>
+    <div class="wa-note" id="waNote"></div>
+  </section>
+
   <footer id="footerNote">
     בונה כרגע. ברגע שהסנכרון הראשון ירוץ, הנתונים האמיתיים יופיעו כאן לבד תוך דקה, בלי לרענן.
   </footer>
@@ -248,7 +322,7 @@
   var FUNNEL_OPACITY = { new: 0.35, working: 0.5, negotiating: 0.65, deposit_production: 0.8, closed: 1 };
   var VELOCITY_LABEL = { yesterday: 'אתמול', last7d: '7 ימים', last14d: '14 יום', last30d: '30 יום' };
 
-  var state = { data: null, period: 'last30d' };
+  var state = { data: null, leads: null, period: 'last30d' };
   var savedPeriod = null;
   try { savedPeriod = localStorage.getItem('clat-dash-period'); } catch (e) {}
   if (savedPeriod && PERIOD_LABEL[savedPeriod]) state.period = savedPeriod;
@@ -567,6 +641,82 @@
     el.innerHTML = parts.join('<br>');
   }
 
+
+  // ===== daily leads scan =====
+  var SCAN_SOURCE_LABEL = { monday:'מנדיי', quoMessages:'Quo', gmailBusiness:'גמייל עסקי', gmailPrivate:'גמייל פרטי', shopify:'שופיפיי', stripe:'Stripe', autocalls:'Autocalls', calendar:'יומן', googleAnalytics:'Analytics', googleAds:'גוגל אדס' };
+  function esc(t) { return String(t == null ? '' : t).replace(/[&<>"]/g, function (c) { return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]; }); }
+  function show(id, on) { var el = document.getElementById(id); if (el) el.style.display = on ? '' : 'none'; }
+
+  function renderLeads() {
+    var L = state.leads;
+    if (!L) { ['scanSection','needsAnswerSection','scanMoneySection','scanFlowSection','scanWorkSection','scanFaultsSection'].forEach(function(id){ show(id,false); }); return; }
+
+    show('scanSection', true);
+    document.getElementById('scanDateLabel').textContent = L.scanDate ? ('מכסה את ' + L.scanDate) : '';
+    var row = document.getElementById('scanSourcesRow');
+    var srcs = L.sources || {};
+    row.innerHTML = Object.keys(SCAN_SOURCE_LABEL).filter(function(k){ return srcs[k]; }).map(function (k) {
+      var st = srcs[k] || {};
+      var cls = st.status === 'ok' ? 'ok' : (st.status === 'error' ? 'err' : 'warn');
+      return '<span class="source" title="' + esc(st.note || '') + '"><span class="dot ' + cls + '"></span>' + esc(SCAN_SOURCE_LABEL[k]) + '</span>';
+    }).join('');
+
+    var na = (L.needsAnswer || []).slice().sort(function (a, b) {
+      var w = { high: 0, medium: 1, low: 2 };
+      var d = (w[a.urgency] == null ? 3 : w[a.urgency]) - (w[b.urgency] == null ? 3 : w[b.urgency]);
+      return d !== 0 ? d : (Number(b.waitingDays) || 0) - (Number(a.waitingDays) || 0);
+    });
+    show('needsAnswerSection', true);
+    document.getElementById('needsAnswerList').innerHTML = na.length ? na.map(function (r) {
+      var days = Number(r.waitingDays) || 0;
+      return '<div class="answer-row ' + esc(r.urgency || 'low') + '">' +
+        '<div class="who">' + esc(r.name) +
+        (r.channel ? '<span class="chip">' + esc(r.channel) + '</span>' : '') +
+        (days ? '<span class="chip">' + days + ' ימים ממתין</span>' : '') +
+        '</div><div class="why">' + esc(r.why) + '</div></div>';
+    }).join('') : '<div class="empty-note">אין מי שממתין לתשובה. יום נקי.</div>';
+
+    var rev = L.revenue || {};
+    show('scanMoneySection', true);
+    document.getElementById('scanMoneyGrid').innerHTML =
+      '<div class="tile"><div class="label">מחזור מתחילת החודש</div><div class="value blue">' + money(rev.monthToDate) + '</div></div>' +
+      '<div class="tile"><div class="label">כסף שנכנס, לא מחזור חדש</div><div class="value">' + money(rev.cashNotTurnover) + '</div></div>' +
+      '<div class="tile"><div class="label">יתרות פתוחות לגבייה</div><div class="value">' + money(rev.openBalances) + '</div></div>';
+
+    var ny = L.newYesterday || [], rp = L.replied || [];
+    show('scanFlowSection', ny.length || rp.length);
+    document.getElementById('newYesterdayList').innerHTML = ny.length ? ny.map(function (r) {
+      return '<div class="simple-row"><b>' + esc(r.name) + '</b>' + (r.source ? ' <span class="chip">' + esc(r.source) + '</span>' : '') + (r.detail ? '<br>' + esc(r.detail) : '') + '</div>';
+    }).join('') : '<div class="empty-note">לא נכנס אף ליד חדש.</div>';
+    document.getElementById('repliedList').innerHTML = rp.length ? rp.map(function (r) {
+      return '<div class="simple-row"><b>' + esc(r.name) + '</b>' + (r.channel ? ' <span class="chip">' + esc(r.channel) + '</span>' : '') + (r.said ? '<br>' + esc(r.said) : '') + '</div>';
+    }).join('') : '<div class="empty-note">אף אחד לא הגיב.</div>';
+
+    var dr = L.draftsPrepared || [], qt = L.quoTasks || [];
+    show('scanWorkSection', dr.length || qt.length);
+    document.getElementById('draftsList').innerHTML = dr.length ? dr.map(function (r) {
+      return '<div class="simple-row"><b>' + esc(r.name) + '</b>' +
+        '<span class="chip">' + (r.inbox === 'private' ? 'תיבה פרטית' : 'תיבה עסקית') + '</span>' +
+        (r.needsInput ? '<span class="chip" style="color:var(--status-warning)">מחכה להשלמה שלך</span>' : '') +
+        (r.gist ? '<br>' + esc(r.gist) : '') + '</div>';
+    }).join('') : '<div class="empty-note">לא הוכנו טיוטות.</div>';
+    document.getElementById('quoTasksList').innerHTML = qt.length ? qt.map(function (r) {
+      var days = Number(r.waitingDays) || 0;
+      return '<div class="simple-row"><b>' + esc(r.name) + '</b>' + (days ? '<span class="chip">' + days + ' ימים</span>' : '') + (r.asked ? '<br>' + esc(r.asked) : '') + '</div>';
+    }).join('') : '<div class="empty-note">החלון של 14 יום נסרק, לא נמצאה שיחה תלויה.</div>';
+
+    var f = (L.faults || []).slice().sort(function (a, b) {
+      var w = { high: 0, medium: 1, low: 2 };
+      return (w[a.severity] == null ? 3 : w[a.severity]) - (w[b.severity] == null ? 3 : w[b.severity]);
+    });
+    show('scanFaultsSection', true);
+    document.getElementById('faultsList').innerHTML = f.length ? f.map(function (r) {
+      var cls = r.severity === 'high' ? 'err' : (r.severity === 'medium' ? 'warn' : 'ok');
+      return '<div class="fault-row"><span class="dot ' + cls + '"></span><span>' + esc(r.what) + '</span></div>';
+    }).join('') : '<div class="empty-note">אין תקלות פתוחות.</div>';
+    document.getElementById('waNote').textContent = L.whatsappNote || '';
+  }
+
   function renderAll() {
     document.getElementById('updatedLabel').textContent = state.data ? relativeTime(state.data.updatedAt) : 'טוען נתונים...';
     renderSources();
@@ -580,6 +730,7 @@
     renderFunnel();
     renderTrend();
     renderFooter();
+    renderLeads();
   }
 
   renderAll();
@@ -603,6 +754,23 @@
   }
   fetchData();
   setInterval(fetchData, 60000);
+
+  var lastLeadsSeen;
+  function fetchLeads() {
+    fetch('./leads.json?_=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (json) {
+        if (!json) return;
+        if (json.updatedAt !== lastLeadsSeen) {
+          lastLeadsSeen = json.updatedAt;
+          state.leads = json;
+          renderLeads();
+        }
+      })
+      .catch(function (e) { console.error('leads fetch failed', e); });
+  }
+  fetchLeads();
+  setInterval(fetchLeads, 60000);
 })();
 </script>
 </body>
