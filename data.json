@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-27T16:25:32+03:00",
+  "updatedAt": "2026-09-27T23:41:49+03:00",
   "sources": {
     "monday": {
       "status": "ok",
@@ -31,15 +31,15 @@
   "periods": {
     "today": {
       "site": {
-        "revenue": 0.0,
-        "orders": 0,
+        "revenue": 296.1,
+        "orders": 1,
         "originals": {
           "revenue": 0,
           "orders": 0
         },
         "prints": {
-          "revenue": 0.0,
-          "orders": 0
+          "revenue": 296.1,
+          "orders": 1
         }
       },
       "closedDeals": {
@@ -47,122 +47,122 @@
         "count": 0
       },
       "spendBreakdown": {
-        "meta": 155.97,
-        "google": 7.47
+        "meta": 453.1,
+        "google": 11.43
       },
-      "spend": 163.44,
+      "spend": 464.53,
       "analytics": {
-        "sessions": 15,
+        "sessions": 95,
         "transactions": 0
       }
     },
     "last7d": {
       "site": {
-        "revenue": 3502.85,
-        "orders": 15,
+        "revenue": 3457.85,
+        "orders": 11,
         "originals": {
           "revenue": 0,
           "orders": 0
         },
         "prints": {
-          "revenue": 3502.85,
-          "orders": 15
+          "revenue": 3457.85,
+          "orders": 11
         }
       },
       "closedDeals": {
-        "revenue": 2386.1,
+        "revenue": 5011.1,
         "count": 3
       },
       "spendBreakdown": {
-        "meta": 3588.51,
+        "meta": 3588.58,
         "google": 34.79
       },
-      "spend": 3623.3,
+      "spend": 3623.37,
       "analytics": {
-        "sessions": 3120,
+        "sessions": 3213,
         "transactions": 9
       }
     },
     "last30d": {
       "site": {
-        "revenue": 18224.03,
-        "orders": 77,
+        "revenue": 16857.51,
+        "orders": 57,
         "originals": {
           "revenue": 0,
           "orders": 0
         },
         "prints": {
-          "revenue": 18224.03,
-          "orders": 77
+          "revenue": 16857.51,
+          "orders": 57
         }
       },
       "closedDeals": {
-        "revenue": 5795.1,
+        "revenue": 8420.1,
         "count": 5
       },
       "spendBreakdown": {
-        "meta": 16213.46,
+        "meta": 16213.53,
         "google": 200.45
       },
-      "spend": 16413.91,
+      "spend": 16413.98,
       "analytics": {
-        "sessions": 11115,
+        "sessions": 11185,
         "transactions": 57
       }
     },
     "monthToDate": {
       "site": {
-        "revenue": 13471.45,
-        "orders": 56,
+        "revenue": 13966.9,
+        "orders": 44,
         "originals": {
           "revenue": 0,
           "orders": 0
         },
         "prints": {
-          "revenue": 13471.45,
-          "orders": 56
+          "revenue": 13966.9,
+          "orders": 44
         }
       },
       "closedDeals": {
-        "revenue": 5795.1,
+        "revenue": 8420.1,
         "count": 5
       },
       "spendBreakdown": {
-        "meta": 14126.44,
-        "google": 175.59
+        "meta": 14423.64,
+        "google": 179.54
       },
-      "spend": 14302.03,
+      "spend": 14603.18,
       "analytics": {
-        "sessions": 9542,
+        "sessions": 9627,
         "transactions": 39
       }
     }
   },
   "leadVelocity": {
-    "yesterday": 15,
-    "last7d": 53,
-    "last14d": 75,
-    "last30d": 119
+    "yesterday": 18,
+    "last7d": 56,
+    "last14d": 78,
+    "last30d": 122
   },
   "leadSources": {
     "yesterday": {
-      "total": 15,
-      "form": 10,
+      "total": 18,
+      "form": 13,
       "other": 5
     },
     "last7d": {
-      "total": 53,
-      "form": 26,
+      "total": 56,
+      "form": 29,
       "other": 27
     },
     "last14d": {
-      "total": 75,
-      "form": 46,
+      "total": 78,
+      "form": 49,
       "other": 29
     },
     "last30d": {
-      "total": 119,
-      "form": 88,
+      "total": 122,
+      "form": 91,
       "other": 31
     }
   },
@@ -175,7 +175,7 @@
     {
       "key": "working",
       "label": "בטיפול",
-      "count": 656
+      "count": 659
     },
     {
       "key": "negotiating",
@@ -203,16 +203,16 @@
       "count": 593
     }
   ],
-  "totalLeads": 1629,
+  "totalLeads": 1632,
   "history": {
     "days": [
       {
         "date": "2026-09-27",
-        "siteRevenue": 0.0,
+        "siteRevenue": 296.1,
         "closedDealsRevenue": 0.0,
-        "spend": 163.44,
-        "roasSite": 0.0,
-        "roasTotal": 0.0
+        "spend": 464.53,
+        "roasSite": 0.6374,
+        "roasTotal": 0.6374
       }
     ]
   }
