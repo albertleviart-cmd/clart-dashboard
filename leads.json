@@ -1,81 +1,395 @@
 {
-  "updatedAt": "2026-09-28T00:45:00+03:00",
-  "scanDate": "2026-09-27",
+  "updatedAt": "2026-09-28T01:15:00+03:00",
+  "scanDate": "2026-09-28",
   "sources": {
-    "monday": {"status": "ok", "note": ""},
-    "quoMessages": {"status": "ok", "note": "14 יום, 32 שיחות"},
-    "gmailBusiness": {"status": "ok", "note": "2 יום, לינקי תשלום 7 יום, סוופ 30 יום"},
-    "gmailPrivate": {"status": "ok", "note": "דרך Composio"},
-    "shopify": {"status": "ok", "note": ""},
-    "stripe": {"status": "error", "note": "הקונקטור מנותק, לא כקונקטור ולא ב-Composio. צריך חיבור מחדש"},
-    "autocalls": {"status": "ok", "note": "12 שיחות"},
-    "calendar": {"status": "ok", "note": ""},
-    "googleAnalytics": {"status": "ok", "note": "properties/415263029"},
-    "googleAds": {"status": "ok", "note": "customer 7282991915"}
+    "monday": {
+      "status": "ok",
+      "note": "לוח 2037430545, לידים שנוצרו ב-48 שעות: 19"
+    },
+    "quoMessages": {
+      "status": "ok",
+      "note": "14 יום, 34 שיחות, 91 הודעות"
+    },
+    "gmailBusiness": {
+      "status": "ok",
+      "note": "2 יום, לינקי תשלום 7 יום, סוופ 30 יום, 50 שרשורים"
+    },
+    "gmailPrivate": {
+      "status": "ok",
+      "note": "דרך Composio, שני חיפושים, בעיקר Upwork ומערכות"
+    },
+    "shopify": {
+      "status": "ok",
+      "note": "15 הזמנות אחרונות עד #4309"
+    },
+    "stripe": {
+      "status": "error",
+      "note": "לא נסרק. הכלי stripe_api_read אינו זמין בסשן הענן הזה, וגם אין חיבור Stripe פעיל ב-Composio. ההוראות עודכנו ב-28.09 ואומרות שהקונקטור מחובר ומאומת, ולכן הפער הוא בהרשאות של הסריקה בענן ולא בחיבור עצמו"
+    },
+    "autocalls": {
+      "status": "ok",
+      "note": "31 שיחות ב-26 עד 28.09, כמעט כולן תא קולי"
+    },
+    "calendar": {
+      "status": "ok",
+      "note": "היום ומחר"
+    },
+    "googleAnalytics": {
+      "status": "ok",
+      "note": "properties/415263029, אזור זמן America/Los_Angeles, 20 עד 27.09"
+    },
+    "googleAds": {
+      "status": "partial",
+      "note": "customer 7282991915 נסרק, אבל שער ILS לא נשלף, החיבור החוצה ל-open.er-api.com נחסם על ידי מדיניות הפרוקסי. הסכום לא הומר"
+    },
+    "metaAds": {
+      "status": "ok",
+      "note": "400319919198934 דולרי, 2111326855852065 שקלי ללא הוצאה"
+    },
+    "whatsapp": {
+      "status": "error",
+      "note": "לא ניתן לסריקה בענן"
+    }
   },
   "needsAnswer": [
-    {"name": "Daniela Bush", "why": "כתובת משלוח שגויה בהזמנה #4300 על 656.10 דולר. ביקשה 1441 Wagner St Wantagh NY, בשופיפיי עדיין 435 E 70th St New York, הסטטוס IN_PROGRESS", "channel": "Email", "waitingDays": 7, "urgency": "high"},
-    {"name": "Hillary Nadelman", "why": "שילמה 855 דולר ב-25.09 ואין כתובת משלוח. נתבקשה פעמיים. זה הדבר היחיד שחוסם את ההזמנה", "channel": "Email", "waitingDays": 3, "urgency": "high"},
-    {"name": "Ghia Edwards", "why": "אמרה במפורש Yes I would like to reschedule ב-14.09 ומאז שקט. טיוטה מחכה", "channel": "Email", "waitingDays": 14, "urgency": "medium"},
-    {"name": "mmgnma@gmail.com", "why": "שאל What sizes you making originals in. טיוטה מחכה לטווח הגדלים ממך", "channel": "Email", "waitingDays": 11, "urgency": "medium"},
-    {"name": "Renee", "why": "שאלה על הרקדנית ב-10x12 או 10x14. משימת Quo מוכנה, צריך ממך מחירים", "channel": "QUO", "waitingDays": 2, "urgency": "medium"},
-    {"name": "David Javitch", "why": "מייל אישי על תור אונקולוגי. לא הוכנה טיוטה במכוון, מייל שכדאי שתכתוב בעצמך", "channel": "Email", "waitingDays": 1, "urgency": "medium"}
+    {
+      "name": "Stephen Masters",
+      "why": "ענה ב-SMS Living room & really not sure of the size אחת עשרה דקות אחרי שכתבת לו. צריך ממך שתיים עד שלוש אפשרויות גודל עם מחירים",
+      "channel": "QUO",
+      "waitingDays": 1,
+      "urgency": "high"
+    },
+    {
+      "name": "Scott Dolney",
+      "why": "ענה ב-SMS Not sure what are my options. צריך ממך פירוט קצר של גדלים ומחירים",
+      "channel": "QUO",
+      "waitingDays": 1,
+      "urgency": "high"
+    },
+    {
+      "name": "Daniela Bush",
+      "why": "הבטחת לה ב-22.09 שהזמנה #4300 על 656.10 דולר תישלח ל-1441 Wagner St Wantagh NY, ובשופיפיי הכתובת עדיין 435 E 70th St והסטטוס IN_PROGRESS. הבטחה שלא בוצעה",
+      "channel": "Email",
+      "waitingDays": 7,
+      "urgency": "high"
+    },
+    {
+      "name": "Pamela Fisher",
+      "why": "שילמה 209 דולר ב-15.09 ומסרה כתובת משלוח, ומאז 13 יום בלי שום מילה ממך. טיוטה מחכה לסטטוס ההפקה",
+      "channel": "Email",
+      "waitingDays": 13,
+      "urgency": "high"
+    },
+    {
+      "name": "Beverly Jacobs",
+      "why": "ביקשה ב-17.09 כתובת, שם פרויקט ו-Tax ID כדי לתרום מקרן הצדקה שלה. אספנית שכבר קנתה. טיוטה מחכה לפרטים ממך",
+      "channel": "Email",
+      "waitingDays": 10,
+      "urgency": "high"
+    },
+    {
+      "name": "Lisa Beth ו-Gregory Meisel",
+      "why": "שילמו מקדמה 975 דולר אבל ההסכם החתום עדיין לא חזר, למרות שכתבו we will sign and send back",
+      "channel": "Email",
+      "waitingDays": 1,
+      "urgency": "medium"
+    },
+    {
+      "name": "Darcy White",
+      "why": "מורה בתיכון עם קעקוע חי, לא יכולה את ה-40x30 גם עם 15 אחוז. טיוטה עם הצעת גודל קטן יותר מחכה לשני מחירים ממך",
+      "channel": "Email",
+      "waitingDays": 9,
+      "urgency": "medium"
+    },
+    {
+      "name": "Kevin",
+      "why": "לינק Stripe נשלח בוואטסאפ ב-24.09 ולא שולם, ארבעה ימים. כתובת המשלוח כבר בידיך",
+      "channel": "WhatsApp",
+      "waitingDays": 4,
+      "urgency": "medium"
+    },
+    {
+      "name": "mmgnma@gmail.com",
+      "why": "שאל What sizes you making originals in לפני 11 יום. טיוטה מחכה לטווח הגדלים ממך",
+      "channel": "Email",
+      "waitingDays": 11,
+      "urgency": "medium"
+    },
+    {
+      "name": "Renee",
+      "why": "שאלה על הרקדנית ב-10x12 או 10x14. משימת Quo פתוחה מאתמול, צריך ממך מחירים",
+      "channel": "QUO",
+      "waitingDays": 2,
+      "urgency": "medium"
+    }
   ],
   "newYesterday": [
-    {"name": "Marci Reiter", "source": "Shopify #4308", "detail": "188.10 דולר, MY HEAD EXPLODED, משלוח ל-Melville NY"},
-    {"name": "adam", "source": "Autocalls", "detail": "adamberger4@gmail.com, תקציב 2,500 עד 3,500, נמשך ל-Tree of Life, תא קולי"},
-    {"name": "Noah Ray", "source": "Autocalls", "detail": "noahrayshah@gmail.com, תקציב עד 2,500, תא קולי"},
-    {"name": "Russ", "source": "טופס החנות", "detail": "recpt04@yahoo.ca מקנדה, שאל על ציור אבסטרקטי, נוצרה לו רשומה"}
+    {
+      "name": "Lisa Beth ו-Gregory Meisel",
+      "source": "Email",
+      "detail": "מקדמה 975 דולר ב-Apple Pay על מקור Tree of Life 85 על 53 אינץ'. העסקה נסגרה ב-27.09"
+    },
+    {
+      "name": "Joseph Tuso",
+      "source": "Shopify #4309",
+      "detail": "296.10 דולר, Tote Bag Tree of life ו-Tree of Life Blue Life, משלוח ל-Parkland FL. אינו ליד ולא נוצרה לו רשומה"
+    },
+    {
+      "name": "Stephen Masters",
+      "source": "Autocalls",
+      "detail": "engineer2525@gmail.com, Hummingbird, נוצר כ-Unreachable ואז ענה ב-SMS"
+    },
+    {
+      "name": "Scott Dolney",
+      "source": "Autocalls",
+      "detail": "scottdolney@yahoo.com, הקשר בין ארצות הברית לישראל, נוצר כ-Unreachable ואז ענה ב-SMS"
+    },
+    {
+      "name": "Mona",
+      "source": "Autocalls",
+      "detail": "lemleymona44@gmail.com, הציפורים ב-Alive Together הזכירו לה רקדנים, תא קולי"
+    },
+    {
+      "name": "Roselynn",
+      "source": "Autocalls",
+      "detail": "Roselynnamen@gmail.com, I love the tree, שלושה חיוגים שנותקו אחרי 10 שניות"
+    },
+    {
+      "name": "Colleen Eichor, Kevin, Robert Lynn Ginsberg",
+      "source": "סריקת וואטסאפ ידנית 27.09",
+      "detail": "שלושה לידים שלא היו במנדיי בכלל, נוצרו ידנית"
+    }
   ],
   "replied": [
-    {"name": "Renee", "channel": "QUO", "said": "the dancer is what I'm interested in, maybe a 10x12 / Or 10x14?"},
-    {"name": "Lisa Beth Meisel", "channel": "Email", "said": "אישרה 55 עד 60 אינץ' ונמשכת למסגרת צפה דקה על המקור"},
-    {"name": "Cindy Goldstein", "channel": "Email", "said": "שאלה על סטטוס הזמנה #4199, נענתה"}
+    {
+      "name": "Stephen Masters",
+      "channel": "QUO",
+      "said": "Living room & really not sure of the size"
+    },
+    {
+      "name": "Scott Dolney",
+      "channel": "QUO",
+      "said": "Not sure what are my options"
+    },
+    {
+      "name": "Gregory Meisel",
+      "channel": "Email",
+      "said": "$975 done via Apple Pay for the 85 inch by 53inch painting of Tree of Life in the colors you and Lisa Beth agreed upon"
+    },
+    {
+      "name": "Hillary Nadelman",
+      "channel": "Email",
+      "said": "מסרה כתובת בבוקה רטון, וביקשה גוני ירוק לעץ ובלי הכתובת בעברית am Israel chai, רק העץ והחתימה"
+    },
+    {
+      "name": "Lisa Beth Meisel",
+      "channel": "Email",
+      "said": "אישרה שהספה לא צמודה לקיר ושהיא מעדיפה מסגרת צפה דקה על המקור"
+    }
   ],
-  "revenue": {"monthToDate": 8962, "cashNotTurnover": 2550, "openBalances": 9825, "currency": "USD"},
+  "revenue": {
+    "monthToDate": 12862,
+    "cashNotTurnover": 2550,
+    "openBalances": 7950,
+    "currency": "USD"
+  },
   "draftsPrepared": [
-    {"name": "Ghia Edwards", "inbox": "business", "gist": "התנצלות על שהשיחה לא תואמה מחדש, לינק Calendly להזמנה עצמית, שאלה אחת אם עוד רוצה לדבר", "needsInput": false},
-    {"name": "mmgnma@gmail.com", "inbox": "business", "gist": "תשובה על גדלים של מקורות ושאלה על הקיר", "needsInput": true}
+    {
+      "name": "Beverly Jacobs",
+      "inbox": "business",
+      "gist": "פרטי תרומה לקרן הצדקה שלה, ושאלה אחת אם היא מעדיפה המחאה או דף התרומות",
+      "needsInput": true
+    },
+    {
+      "name": "Pamela Fisher",
+      "inbox": "business",
+      "gist": "התנצלות על 13 ימי שקט אחרי שהיא שילמה, אישור הכתובת ב-Haymarket, ושאלה אם הכתובת עדיין נכונה",
+      "needsInput": true
+    },
+    {
+      "name": "Darcy White",
+      "inbox": "business",
+      "gist": "הצעת גודל קטן יותר של Tree of Life הכחול במקום ויתור על העסקה",
+      "needsInput": true
+    },
+    {
+      "name": "Ghia Edwards",
+      "inbox": "business",
+      "gist": "טיוטה מאתמול, עדיין ממתינה לשליחה",
+      "needsInput": false
+    },
+    {
+      "name": "mmgnma@gmail.com",
+      "inbox": "business",
+      "gist": "טיוטה מאתמול על גדלים של מקורות, מחכה לטווח הגדלים",
+      "needsInput": true
+    },
+    {
+      "name": "Russ",
+      "inbox": "business",
+      "gist": "טיוטה מאתמול על הציור האבסטרקטי",
+      "needsInput": false
+    },
+    {
+      "name": "Banks-Koulax",
+      "inbox": "business",
+      "gist": "טיוטה מאתמול",
+      "needsInput": false
+    }
+  ],
+  "draftsDeleted": [
+    {
+      "name": "Lisa Beth Meisel",
+      "why": "טיוטה מ-26.09 בשרשור שדיברה על בעיית הגובה. העסקה נסגרה מאז והמקדמה שולמה, ולכן הנוסח הפך לשגוי ומסוכן"
+    }
   ],
   "quoTasks": [
-    {"name": "Renee", "waitingDays": 2, "asked": "גודל הרקדנית, 10x12 או 10x14. הנוסח מכוון ל-12x9 או 16x12 כי אלה הגדלים שקיימים"},
-    {"name": "Melba", "waitingDays": 7, "asked": "הצעת שיחת טלפון מ-20.09 בלי תגובה. הנוסח מבקש רק תמונה של הקיר"},
-    {"name": "Suzanne", "waitingDays": 10, "asked": "יש לה יצירה וגודל, the lion family ב-5 על 3.5, חסר רק תיאום"}
+    {
+      "name": "Marnie Varry",
+      "waitingDays": 8,
+      "asked": "לקוחה משלמת, הזמנה #4287, שלחה כעשר הודעות בלי מענה ומסרה מספר טלפון חדש 3172369824"
+    },
+    {
+      "name": "Carrie",
+      "waitingDays": 11,
+      "asked": "חיבור לטבעת האינסוף של אמה וחדר אוכל מוגדר, חסר רק גודל. הנוסח מבקש תמונה של הקיר במקום מספר"
+    },
+    {
+      "name": "Lisa",
+      "waitingDays": 11,
+      "asked": "נשאלה איזו יצירת יונק דבש אהבה, שאלה פתוחה שלא נענתה"
+    },
+    {
+      "name": "Gregory",
+      "waitingDays": 11,
+      "asked": "Together We Win, הנוסח מצמצם לשאלה אחת, בית או משרד"
+    },
+    {
+      "name": "עשר משימות מאתמול",
+      "waitingDays": 1,
+      "asked": "Suzanne, Melba, Renee, Paul, Colleen, Lisa, James, Ronald, Susan, Torino. כולן פתוחות ומועדן היום"
+    }
+  ],
+  "quoQueueNoTaskYet": [
+    "Deidra 10 יום",
+    "Lisa 8602348569 10 יום",
+    "Christian 7 יום",
+    "Jaclyn 7 יום"
   ],
   "mondayUpdated": {
-    "updated": 32,
-    "created": 1,
+    "updated": 7,
+    "created": 0,
     "details": [
-      "נוספו שתי עמודות: Close Date ו-Amount Paid",
-      "23 רשומות סווגו למקדמה מול תשלום מלא לפי ההקשר",
-      "Renee ו-Eugia הועברו ל-Conversation Active",
-      "Russ נוצר חדש",
-      "נוקו שני סכומים כפולים שיצרו ספירה כפולה"
+      "Lisa Beth Meisel לסטטוס Deposit Paid, Close Date 27.09, Amount Paid 975, Deal Value 3900",
+      "Hillary Nadelman, כתובת המשלוח והמפרט התקבלו, החסימה נסגרה, תאריך פעולה 05.10",
+      "Stephen Masters מ-Unreachable ל-Conversation Active, ענה ב-SMS",
+      "Scott Dolney מ-Unreachable ל-Conversation Active, ענה ב-SMS",
+      "Mona, Roselynn ו-Noah Ray קיבלו ערוץ QUO ותאריך קשר 27.09, הסטטוס לא שונה כי לא הגיבו",
+      "לא נוצרו רשומות חדשות. ארבעת הלידים של אתמול נכנסו ללוח אוטומטית, ו-Joseph Tuso הוא משלם ולא ליד"
     ]
   },
   "faults": [
-    {"what": "Stripe מנותק, לא נסרקו חיובים. תשלומים ישירים לא מזוהים", "severity": "high"},
-    {"what": "הזמנה #4300 של Daniela Bush עם כתובת משלוח שגויה, שבעה ימים", "severity": "high"},
-    {"what": "Unassigned הוא הערוץ הגדול ביותר ב-GA, 27 אחוז מהתנועה. ייחוס שבור", "severity": "high"},
-    {"what": "קוד ההנחה BENJAMIN מוגבל לקולקשן Fine Art Prints, ייכשל בשקט על Embellished", "severity": "medium"},
-    {"what": "הודעת Quo שנפתחה ב-Hi Bharath יצאה למספר של Banks-Koulax", "severity": "medium"},
-    {"what": "Henry ו-Stephen בלי Close Date, 8,092 דולר לא נספרים באף חודש. התאריכים רק בוואטסאפ", "severity": "medium"},
-    {"what": "Stephen רשום 4,692 בדולר קנדי בעמודה של דולר אמריקאי", "severity": "low"},
-    {"what": "פניות מטופס שופיפיי לא נכנסות אוטומטית למנדיי", "severity": "medium"}
+    {
+      "what": "הזמנה #4300 של Daniela Bush: הבטחת לה בכתב ב-22.09 שהמשלוח יוצא ל-1441 Wagner St Wantagh, ובשופיפיי הכתובת עדיין 435 E 70th St. שבעה ימים, סטטוס IN_PROGRESS. החבילה עלולה לצאת לכתובת הלא נכונה",
+      "severity": "high"
+    },
+    {
+      "what": "מטא הוציאה 3,588 דולר בשבעה ימים מול 3,378 דולר הכנסה בשופיפיי באותם ימים. על בסיס החנות לבד ההוצאה גדולה מההכנסה, גם בהתחשב בכך שעסקאות מקור נסגרות בטלפון ובמייל ולא עוברות בחנות",
+      "severity": "high"
+    },
+    {
+      "what": "Stripe לא נסרק בריצה הזו. ההוראות עודכנו ב-28.09 ואומרות שהקונקטור מחובר ומאומת מול acct_1SM0Z937dfJIOq2B, אבל הכלי stripe_api_read אינו חשוף לסשן הענן הזה ואין חיבור Stripe ב-Composio. כלומר החיבור קיים אבל הסריקה היומית לא מגיעה אליו, וחיובים ישירים ממשיכים להיות בלתי נראים לדוח. זה פער הרשאות שצריך לסדר, לא חיבור שבור",
+      "severity": "high"
+    },
+    {
+      "what": "Pamela Fisher שילמה 209 דולר ב-15.09 ולא קיבלה שום עדכון 13 יום. לא ברור אם היצירה הופקה בכלל",
+      "severity": "high"
+    },
+    {
+      "what": "Unassigned הוא עדיין הערוץ הגדול ב-GA, 76 מתוך 284 סשנים ב-26.09, כ-27 אחוז. ייחוס שבור, כנראה UTM",
+      "severity": "high"
+    },
+    {
+      "what": "Deal Value של Meisel, 3,900, נגזר מהמקדמה לפי 25 אחוז ולא מצוטט מהשיחה. המחיר המדויק ב-Albert_Levi_Original_Artwork_Agreement_Meisel.pdf. משפיע ישירות על מחזור ספטמבר",
+      "severity": "medium"
+    },
+    {
+      "what": "ב-20.09 נרשמו 683 סשנים ב-Direct לבד מול כ-50 ביום רגיל, זינוק של פי 13 ביום אחד. חשד לתנועת בוטים או לקמפיין בלי UTM",
+      "severity": "medium"
+    },
+    {
+      "what": "ההסכם החתום של Meisel לא חזר. הם שילמו מקדמה 975 דולר לפני שחתמו",
+      "severity": "medium"
+    },
+    {
+      "what": "הטלפון של Marnie Varry במנדיי הוא 3174574225 והיא כותבת מ-3172369824. מספר חדש שלא עודכן",
+      "severity": "medium"
+    },
+    {
+      "what": "Bharath מסומן No Budget Now אבל ההערה אומרת שביקש שיחזרו אליו. סטטוס שלא מתיישב עם המציאות",
+      "severity": "medium"
+    },
+    {
+      "what": "הודעת Quo שנפתחה ב-Hi Bharath עדיין יוצאת למספר 2135183037 ששייך ל-Banks-Koulax. לא תוקן מאתמול",
+      "severity": "medium"
+    },
+    {
+      "what": "Roselynn קיבלה שלושה חיוגי Autocalls ב-27.09, כולם נרשמו completed באורך 10 עד 11 שניות עם ended_by customer. ניתוק מיידי ולא תא קולי, כדאי לבדוק את פתיחת השיחה",
+      "severity": "medium"
+    },
+    {
+      "what": "שער ILS לא נשלף, החיבור ל-open.er-api.com נחסם על ידי מדיניות הפרוקסי. סכום Google Ads, 134.30, נרשם במטבע החשבון בלי המרה. יש גם סתירה פתוחה: ההוראות אומרות שהחשבון בשקלים ואילו מדידת הבסיס רשמה את אותו מדד כדולרים",
+      "severity": "medium"
+    },
+    {
+      "what": "פניות מטופס הקשר של שופיפיי מגיעות מ-mailer@shopify.com ואינן נכנסות אוטומטית למנדיי, בשונה מפניות powerfulform. דורש בדיקה ידנית בכל ריצה",
+      "severity": "medium"
+    },
+    {
+      "what": "Henry ו-Stephen בלי Close Date, כ-8,092 דולר שלא נספרים באף חודש. התאריכים רק בוואטסאפ",
+      "severity": "medium"
+    },
+    {
+      "what": "קוד ההנחה BENJAMIN מוגבל לקולקשן Fine Art Prints וייכשל בשקט על Embellished",
+      "severity": "medium"
+    },
+    {
+      "what": "Mona ו-Noah Ray מקבלים גם SMS ממך וגם חיוגים אוטומטיים באותו יום, כי הסטטוס Unreachable משאיר אותם ברצף החיוג",
+      "severity": "low"
+    },
+    {
+      "what": "Stephen רשום 4,692 בדולר קנדי בעמודה של דולר אמריקאי",
+      "severity": "low"
+    }
   ],
-  "whatsappNote": "לא נסרק, אין API ואין מסך בענן. סריקה ידנית אחרונה: 2026-09-25",
+  "whatsappNote": "לא נסרק, אין API ואין מסך בענן. סריקה ידנית אחרונה: 2026-09-27, וממנה נוצרו Colleen Eichor, Kevin ו-Robert Lynn Ginsberg",
   "meetings": [
-    {"when": "2026-09-28 16:00", "who": "אלברט מול גל"}
+    {
+      "when": "2026-09-28 16:00",
+      "who": "אלברט מול גל, Google Meet, ה-RSVP שלך עדיין needsAction"
+    }
   ],
   "traffic": {
     "date": "2026-09-26",
-    "sessions": 285,
+    "note": "26.09 הוא היום השלם האחרון בנכס. אזור הזמן של GA הוא America/Los_Angeles ולכן היום 27.09 עדיין פתוח ואינו בר השוואה",
+    "sessions": 284,
     "transactions": 1,
     "revenue": 188.1,
-    "organicSearchSessions": 5,
+    "sessions7dAvg": 439,
+    "sessions6dAvgExcludingSpike": 342,
+    "organicSearchSessions": 10,
+    "organicSearchPct": 3.5,
+    "unassignedSessions": 76,
     "unassignedPct": 27,
-    "adSpend7d": 105.89,
-    "activeCampaigns": 1,
-    "totalCampaigns": 13
+    "metaSpend7d": 3588.58,
+    "metaTopCampaign": "TMA | CT | Listicle 5 Things art | Sales, 1971.17 דולר",
+    "metaActiveCampaigns": 7,
+    "metaIlsAccountSpend7d": 0,
+    "googleAdsCost7d": 134.3,
+    "googleAdsCurrencyVerified": false,
+    "googleAdsImpressions7d": 178,
+    "googleAdsClicks7d": 39,
+    "googleAdsActiveCampaigns": 1,
+    "shopifyRevenue7d": 3377.75
   }
 }
