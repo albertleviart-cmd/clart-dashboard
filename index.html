@@ -102,6 +102,16 @@
   .velocity-tile .n { font-size: 26px; font-weight: 700; color: var(--accent-blue); }
   .velocity-tile .l { font-size: 11.5px; color: var(--text-muted); margin-top: 2px; }
 
+  .source-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  @media (max-width: 560px) { .source-grid { grid-template-columns: repeat(2, 1fr); } }
+  .source-tile { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; }
+  .source-tile .win { font-size: 11.5px; color: var(--text-muted); margin-bottom: 6px; }
+  .source-tile .n { font-size: 24px; font-weight: 700; }
+  .source-tile .brk { font-size: 11.5px; margin-top: 6px; line-height: 1.7; }
+  .source-tile .brk .k { color: var(--text-muted); }
+  .source-tile .brk .form { color: var(--accent-aqua); font-weight: 700; }
+  .source-tile .brk .other { color: var(--text-secondary); font-weight: 700; }
+
   .funnel { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
   .funnel-row { display: grid; grid-template-columns: 140px 1fr 44px; gap: 10px; align-items: center; margin-bottom: 8px; }
   .funnel-row .stage-label { font-size: 12.5px; color: var(--text-secondary); }
@@ -181,6 +191,12 @@
     <h2>קצב כניסת לידים חדשים</h2>
     <p class="h2-sub">לפי תאריך יצירת הרשומה במנדיי, כולל לידים מ-Quo ומשני תיבות המייל</p>
     <div class="velocity-grid" id="velocityGrid"></div>
+  </section>
+
+  <section id="leadSourceSection" style="display:none">
+    <h2>מקור לידים חדשים</h2>
+    <p class="h2-sub">טופס האתר (Powerful Form Builder) לעומת כל השאר: מייל, Quo והזנה ידנית. הזיהוי לפי שדות השאלות של הטופס שנשמרים במנדיי</p>
+    <div class="source-grid" id="leadSourceGrid"></div>
   </section>
 
   <section id="funnelSection" style="display:none">
@@ -381,6 +397,28 @@
     }).join('');
   }
 
+  function renderLeadSources() {
+    var section = document.getElementById('leadSourceSection');
+    var ls = state.data && state.data.leadSources;
+    if (!ls) { section.style.display = 'none'; return; }
+    section.style.display = '';
+    var grid = document.getElementById('leadSourceGrid');
+    grid.innerHTML = Object.keys(VELOCITY_LABEL).map(function (k) {
+      var d = ls[k] || {};
+      var total = Number(d.total) || 0;
+      var form = Number(d.form) || 0;
+      var other = Number(d.other) || 0;
+      var pct = total > 0 ? Math.round((form / total) * 100) : 0;
+      return '<div class="source-tile">' +
+        '<div class="win">' + VELOCITY_LABEL[k] + '</div>' +
+        '<div class="n num">' + num(total) + '</div>' +
+        '<div class="brk">' +
+          '<div><span class="k">מהטופס:</span> <span class="form num">' + num(form) + '</span> <span class="k">(' + pct + '%)</span></div>' +
+          '<div><span class="k">אחר:</span> <span class="other num">' + num(other) + '</span></div>' +
+        '</div></div>';
+    }).join('');
+  }
+
   function renderFunnel() {
     var section = document.getElementById('funnelSection');
     if (!state.data || !state.data.funnel) { section.style.display = 'none'; return; }
@@ -538,6 +576,7 @@
     renderClosed();
     renderSplit();
     renderVelocity();
+    renderLeadSources();
     renderFunnel();
     renderTrend();
     renderFooter();

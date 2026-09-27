@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-27T16:24:26+03:00",
+  "updatedAt": "2026-09-27T16:25:32+03:00",
   "sources": {
     "monday": {
       "status": "ok",
@@ -143,6 +143,28 @@
     "last7d": 53,
     "last14d": 75,
     "last30d": 119
+  },
+  "leadSources": {
+    "yesterday": {
+      "total": 15,
+      "form": 10,
+      "other": 5
+    },
+    "last7d": {
+      "total": 53,
+      "form": 26,
+      "other": 27
+    },
+    "last14d": {
+      "total": 75,
+      "form": 46,
+      "other": 29
+    },
+    "last30d": {
+      "total": 119,
+      "form": 88,
+      "other": 31
+    }
   },
   "funnel": [
     {
