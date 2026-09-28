@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T04:13:58+03:00",
+  "updatedAt": "2026-09-28T05:11:59+03:00",
   "sources": {
     "monday": {
       "status": "ok",
@@ -47,12 +47,12 @@
         "count": 1
       },
       "spendBreakdown": {
-        "meta": 616.56,
-        "google": 2.66
+        "meta": 649.16,
+        "google": 2.69
       },
-      "spend": 619.22,
+      "spend": 651.85,
       "analytics": {
-        "sessions": 186,
+        "sessions": 224,
         "transactions": 1
       }
     },
@@ -79,7 +79,7 @@
       },
       "spend": 3632.77,
       "analytics": {
-        "sessions": 3289,
+        "sessions": 3326,
         "transactions": 10
       }
     },
@@ -106,7 +106,7 @@
       },
       "spend": 16418.90,
       "analytics": {
-        "sessions": 11270,
+        "sessions": 11286,
         "transactions": 58
       }
     },
@@ -128,12 +128,12 @@
         "count": 9
       },
       "spendBreakdown": {
-        "meta": 14587.17,
-        "google": 182.21
+        "meta": 14619.77,
+        "google": 182.23
       },
-      "spend": 14769.38,
+      "spend": 14802.00,
       "analytics": {
-        "sessions": 9709,
+        "sessions": 9734,
         "transactions": 40
       }
     }
@@ -218,9 +218,9 @@
         "date": "2026-09-28",
         "siteRevenue": 0,
         "closedDealsRevenue": 3900,
-        "spend": 619.22,
+        "spend": 651.85,
         "roasSite": 0.0,
-        "roasTotal": 6.3
+        "roasTotal": 5.98
       }
     ]
   }
