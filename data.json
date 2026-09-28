@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T16:28:30+03:00",
+  "updatedAt": "2026-09-28T17:26:03+03:00",
   "sources": {
     "monday": {
       "status": "ok",
@@ -47,12 +47,12 @@
         "count": 1
       },
       "spendBreakdown": {
-        "meta": 126.38,
-        "google": 7.70
+        "meta": 152.69,
+        "google": 7.71
       },
-      "spend": 134.08,
+      "spend": 160.40,
       "analytics": {
-        "sessions": 17,
+        "sessions": 18,
         "transactions": 0
       }
     },
@@ -74,26 +74,26 @@
         "count": 4
       },
       "spendBreakdown": {
-        "meta": 3754.12,
+        "meta": 3754.66,
         "google": 44.77
       },
-      "spend": 3798.89,
+      "spend": 3799.43,
       "analytics": {
-        "sessions": 2408,
+        "sessions": 2409,
         "transactions": 10
       }
     },
     "last30d": {
       "site": {
-        "revenue": 17051.01,
-        "orders": 58,
+        "revenue": 16669.36,
+        "orders": 57,
         "originals": {
           "revenue": 0,
           "orders": 0
         },
         "prints": {
-          "revenue": 19511.12,
-          "orders": 58
+          "revenue": 19062.12,
+          "orders": 57
         }
       },
       "closedDeals": {
@@ -101,12 +101,12 @@
         "count": 9
       },
       "spendBreakdown": {
-        "meta": 16313.85,
+        "meta": 16314.39,
         "google": 208.31
       },
-      "spend": 16522.16,
+      "spend": 16522.70,
       "analytics": {
-        "sessions": 11029,
+        "sessions": 11034,
         "transactions": 55
       }
     },
@@ -128,12 +128,12 @@
         "count": 9
       },
       "spendBreakdown": {
-        "meta": 14808.62,
-        "google": 189.88
+        "meta": 14835.47,
+        "google": 189.89
       },
-      "spend": 14998.50,
+      "spend": 15025.36,
       "analytics": {
-        "sessions": 9848,
+        "sessions": 9853,
         "transactions": 41
       }
     }
@@ -218,9 +218,9 @@
         "date": "2026-09-28",
         "siteRevenue": 489.6,
         "closedDealsRevenue": 3900,
-        "spend": 134.08,
-        "roasSite": 3.65,
-        "roasTotal": 32.74
+        "spend": 160.40,
+        "roasSite": 3.05,
+        "roasTotal": 27.37
       }
     ]
   }
