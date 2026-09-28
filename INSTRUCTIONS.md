@@ -283,7 +283,7 @@ git push
 **מלכודות מספרים:**
 - `cost_micros` הוא מיליוניות, **לחלק במיליון**. 105,890,000 הם 105.89 דולר.
 - **אזור הזמן של נכס ה-GA הוא America/Los_Angeles ולא ישראל.** "אתמול" ב-GA אינו "אתמול" בשופיפיי, פער עד עשר שעות. לבדוק יום לכל כיוון לפני שמכריזים על אי התאמה.
-- **Google Ads רץ בשקלים והדשבורד בדולרים.** להמיר עם שער חי מ-`https://open.er-api.com/v6/latest/ILS`, ולציין את השער והתאריך. **אל תמציא שער.**
+- **Google Ads רץ בשקלים והדשבורד בדולרים.** להמיר בשער קבוע 1 דולר = 3 שקל (`ilsToUsd = 0.333333`), כפי שנקבע ב-28.09.2026 כי `open.er-api.com` חסום לצמיתות בסביבת הריצה. לא לנסות שער חי.
 - `conversions_value` ב-Ads לא שווה ל-`purchaseRevenue` ב-GA ולא לשופיפיי. **אין להכריז ROAS על סמך Ads לבדו. שופיפיי הוא מקור האמת להכנסה.**
 
 ---
@@ -402,11 +402,10 @@ periods.<תקופה>.spendBreakdown.meta = amount_spent (0 אם חסר). זה ר
 
 costMicros חוזר כמחרוזת ובמיקרו-יחידות. חלק ב-1,000,000 כדי לקבל שקלים. תוצאה ריקה (results חסר או ריק) זה לא שגיאה, זה אפס.
 
-**המרה לדולר:** משוך שער חי:
-`curl -s -m 12 "https://open.er-api.com/v6/latest/ILS"` וקח rates.USD (וגם time_last_update_utc).
-periods.<תקופה>.spendBreakdown.google = עלות בשקלים × rates.USD, מעוגל ל-2 ספרות.
-כתוב fx = {ilsToUsd: <השער>, asOf: "<YYYY-MM-DD של time_last_update_utc>", source: "open.er-api.com"}.
-אם משיכת השער נכשלה, השתמש ב-fx.ilsToUsd הישן מה-data.json שקראת בהתחלה והשאר את asOf הישן. אם גם זה לא קיים, אל תכתוב spendBreakdown.google בכלל ורשום את הסיבה ב-sources.googleAds.note. **אל תמציא שער.**
+**המרה לדולר: שער קבוע, נקבע על ידי אלברט ב-28.09.2026.** `open.er-api.com` חסום לצמיתות על ידי הפרוקסי של סביבת הריצה (403, connect_rejected על מדיניות הארגון), לא תקלה זמנית, ואין טעם לנסות שוב בכל ריצה. **אל תנסה למשוך שער חי יותר.** השער הקבוע: 1 דולר = 3 שקל, כלומר `ilsToUsd = 0.333333`.
+periods.<תקופה>.spendBreakdown.google = עלות בשקלים × 0.333333, מעוגל ל-2 ספרות.
+כתוב fx = {ilsToUsd: 0.333333, asOf: "fixed", source: "ידני, 1 USD = 3 ILS, נקבע 28.09.2026"}.
+אם אלברט יבקש בעתיד לחזור לשער חי או לעדכן את השער הקבוע, זה עריכה של הקובץ הזה, לא של הרוטינה.
 
 אם גוגל נכשל: sources.googleAds = {status:"error", note:"<תיאור קצר>"}, אל תכתוב spendBreakdown.google הריצה הזו, השאר את הישן. אם הצליח: sources.googleAds = {status:"ok", note:""}.
 
