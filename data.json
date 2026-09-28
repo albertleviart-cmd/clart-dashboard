@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T01:13:48+03:00",
+  "updatedAt": "2026-09-29T02:12:55+03:00",
   "sources": {
     "monday": {
       "status": "ok",
@@ -47,12 +47,12 @@
         "count": 1
       },
       "spendBreakdown": {
-        "meta": 383.15,
+        "meta": 384.68,
         "google": 0
       },
-      "spend": 383.15,
+      "spend": 384.68,
       "analytics": {
-        "sessions": 86,
+        "sessions": 97,
         "transactions": 1
       }
     },
@@ -79,21 +79,21 @@
       },
       "spend": 3805.91,
       "analytics": {
-        "sessions": 2483,
+        "sessions": 2494,
         "transactions": 11
       }
     },
     "last30d": {
       "site": {
-        "revenue": 16171.51,
-        "orders": 56,
+        "revenue": 16159.41,
+        "orders": 55,
         "originals": {
           "revenue": 0,
           "orders": 0
         },
         "prints": {
-          "revenue": 18454.12,
-          "orders": 56
+          "revenue": 18439.89,
+          "orders": 55
         }
       },
       "closedDeals": {
@@ -106,7 +106,7 @@
       },
       "spend": 16517.40,
       "analytics": {
-        "sessions": 11124,
+        "sessions": 11129,
         "transactions": 56
       }
     },
@@ -128,41 +128,41 @@
         "count": 9
       },
       "spendBreakdown": {
-        "meta": 15066.48,
+        "meta": 15068.01,
         "google": 190.47
       },
-      "spend": 15256.95,
+      "spend": 15258.48,
       "analytics": {
-        "sessions": 9929,
+        "sessions": 9933,
         "transactions": 42
       }
     }
   },
   "leadVelocity": {
-    "yesterday": 11,
-    "last7d": 59,
-    "last14d": 79,
-    "last30d": 118
+    "yesterday": 12,
+    "last7d": 60,
+    "last14d": 80,
+    "last30d": 119
   },
   "leadSources": {
     "yesterday": {
-      "total": 11,
-      "form": 8,
+      "total": 12,
+      "form": 9,
       "other": 3
     },
     "last7d": {
-      "total": 59,
-      "form": 32,
+      "total": 60,
+      "form": 33,
       "other": 27
     },
     "last14d": {
-      "total": 79,
-      "form": 51,
+      "total": 80,
+      "form": 52,
       "other": 28
     },
     "last30d": {
-      "total": 118,
-      "form": 89,
+      "total": 119,
+      "form": 90,
       "other": 29
     }
   },
@@ -175,7 +175,7 @@
     {
       "key": "working",
       "label": "בטיפול",
-      "count": 797
+      "count": 798
     },
     {
       "key": "negotiating",
@@ -203,7 +203,7 @@
       "count": 593
     }
   ],
-  "totalLeads": 1636,
+  "totalLeads": 1637,
   "history": {
     "days": [
       {
@@ -226,9 +226,9 @@
         "date": "2026-09-29",
         "siteRevenue": 0,
         "closedDealsRevenue": 3900,
-        "spend": 383.15,
+        "spend": 384.68,
         "roasSite": 0.0,
-        "roasTotal": 10.18
+        "roasTotal": 10.14
       }
     ]
   }
