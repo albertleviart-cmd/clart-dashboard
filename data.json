@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-28T12:12:08+03:00",
+  "updatedAt": "2026-09-28T13:13:55+03:00",
   "sources": {
     "monday": {
       "status": "ok",
@@ -47,10 +47,10 @@
         "count": 1
       },
       "spendBreakdown": {
-        "meta": 59.98,
+        "meta": 66.3,
         "google": 7.70
       },
-      "spend": 67.68,
+      "spend": 74.00,
       "analytics": {
         "sessions": 0,
         "transactions": 0
@@ -74,13 +74,13 @@
         "count": 4
       },
       "spendBreakdown": {
-        "meta": 3751.59,
+        "meta": 3752.19,
         "google": 44.77
       },
-      "spend": 3796.36,
+      "spend": 3796.96,
       "analytics": {
-        "sessions": 2382,
-        "transactions": 9
+        "sessions": 2387,
+        "transactions": 10
       }
     },
     "last30d": {
@@ -101,13 +101,13 @@
         "count": 9
       },
       "spendBreakdown": {
-        "meta": 16311.32,
+        "meta": 16311.92,
         "google": 208.31
       },
-      "spend": 16519.63,
+      "spend": 16520.23,
       "analytics": {
-        "sessions": 10993,
-        "transactions": 54
+        "sessions": 11004,
+        "transactions": 55
       }
     },
     "monthToDate": {
@@ -128,13 +128,13 @@
         "count": 9
       },
       "spendBreakdown": {
-        "meta": 14739.69,
+        "meta": 14746.61,
         "google": 189.88
       },
-      "spend": 14929.57,
+      "spend": 14936.49,
       "analytics": {
-        "sessions": 9815,
-        "transactions": 40
+        "sessions": 9823,
+        "transactions": 41
       }
     }
   },
@@ -218,9 +218,9 @@
         "date": "2026-09-28",
         "siteRevenue": 193.5,
         "closedDealsRevenue": 3900,
-        "spend": 67.68,
-        "roasSite": 2.86,
-        "roasTotal": 60.48
+        "spend": 74.00,
+        "roasSite": 2.61,
+        "roasTotal": 55.32
       }
     ]
   }
