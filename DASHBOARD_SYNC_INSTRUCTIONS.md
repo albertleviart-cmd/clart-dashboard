@@ -61,7 +61,7 @@ totalLeads מ-items_count של get_board_info.
 
 **באג ידוע ותוקן ב-27.09.2026, אל תחזור אליו:** גרסה קודמת השתמשה ב-run-analytics-query עם `FROM sales SHOW net_sales, orders GROUP BY product_title` וסכמה את orders מכל השורות. זה ניפח את מספר ההזמנות (הראה 15 כשבשופיפיי עצמו היו 11 ב-7 ימים), כי הזמנה עם כמה מוצרים שונים נספרה פעם אחת לכל מוצר. **אל תשתמש ב-run-analytics-query בכלל למספר ההזמנות.** השיטה הנכונה היא graphql_query על orders ישירות, כמו שמתואר למטה.
 
-**רשימת מקוריים:** search_products, search_query "tag:'original work'", first 50, דפדף עד שאין עוד (pageInfo.hasNextPage/after). אסוף את כל ה-title המדויקים (לצורך בדיקה שנייה בלבד, הסיווג עצמו נעשה לפי תג על המוצר בפועל, לא לפי title).
+**בוטל ב-28.09.2026, אל תחזור לזה:** גרסה קודמת עשתה כאן קריאת search_products נפרדת עם tag:'original work' כ"בדיקה שנייה" לרשימת המקוריים. זה יותר מ-130 מוצרים ופלט JSON ענק בכל ריצה, בלי שום תועלת בפועל: אלברט לא סוגר ציורים מקוריים דרך שופיפיי בכלל, אלא כלידים בעסקאות פרטיות (נספר תחת monday closedDeals). הסיווג originals/prints למטה ממשיך להתבסס אך ורק על תגית "original work" בפועל על ה-product בתוך שאילתת ה-orders עצמה (product.tags), בלי שום קריאת אימות נוספת. בפועל originals תמיד יצא 0, וזה תקין.
 
 **הכנסות והזמנות לפי תקופה, דרך graphql_query על orders:**
 לכל אחת מארבע התקופות (today/-7d/-30d/היום הראשון בחודש עד עכשיו), שאילתה:
