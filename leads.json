@@ -1,6 +1,13 @@
 {
   "updatedAt": "2026-09-29T07:25:00+03:00",
   "scanDate": "2026-09-29",
+  "customerMetrics": {
+    "ltv": 267.49,
+    "avgDaysBetweenPurchases": 76.6,
+    "purchaserCount": 2907,
+    "repeatCustomerCount": 301,
+    "computedAt": "2026-09-29T21:40:00+03:00"
+  },
   "sources": {
     "monday": {
       "status": "ok",
