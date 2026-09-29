@@ -138,7 +138,8 @@
   .scan-head { display:flex; align-items:baseline; gap:10px; flex-wrap:wrap; margin-bottom:10px; }
   .scan-head .scan-date { font-size:11.5px; color:var(--text-muted); }
   .answer-list { display:flex; flex-direction:column; gap:8px; }
-  .answer-row { background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--axis); border-radius:12px; padding:12px 14px; }
+  .answer-row { background:var(--surface); border:1px solid var(--border); border-left:3px solid var(--axis); border-radius:12px; padding:12px 14px; display:flex; align-items:flex-start; gap:10px; }
+  .answer-row.is-done { opacity:0.45; }
   .answer-row.high { border-left-color:var(--status-critical); }
   .answer-row.medium { border-left-color:var(--status-warning); }
   .answer-row.low { border-left-color:var(--accent-blue); }
@@ -146,15 +147,21 @@
   .answer-row .why { font-size:12px; color:var(--text-secondary); line-height:1.5; }
   .chip { font-size:10.5px; font-weight:600; color:var(--text-secondary); background:var(--chip-bg); border-radius:20px; padding:2px 8px; white-space:nowrap; }
   .simple-list { display:flex; flex-direction:column; gap:6px; }
-  .simple-row { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:10px 12px; font-size:12px; color:var(--text-secondary); line-height:1.5; }
+  .simple-row { background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:10px 12px; font-size:12px; color:var(--text-secondary); line-height:1.5; display:flex; align-items:flex-start; gap:10px; }
+  .simple-row.is-done { opacity:0.45; }
   .simple-row b { color:var(--text-primary); font-weight:700; }
+  .simple-body, .answer-body, .fault-body { flex:1; min-width:0; }
   .two-col { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
   @media (max-width:760px){ .two-col { grid-template-columns:1fr; } }
   .fault-row { display:flex; gap:8px; align-items:flex-start; font-size:12px; color:var(--text-secondary); line-height:1.5; padding:8px 0; border-bottom:1px solid var(--border); }
+  .fault-row.is-done { opacity:0.45; }
   .fault-row:last-child { border-bottom:none; }
   .fault-row .dot { margin-top:6px; }
   .wa-note { font-size:11.5px; color:var(--text-muted); margin-top:10px; font-style:italic; }
   .empty-note { font-size:12px; color:var(--text-muted); padding:12px 0; }
+  .done-toggle { flex:none; width:20px; height:20px; margin-top:1px; border-radius:6px; border:1.5px solid var(--border); background:var(--surface); cursor:pointer; padding:0; font-size:12px; line-height:18px; color:var(--accent-aqua); }
+  .done-toggle:hover { border-color:var(--accent-aqua); }
+  .done-chip { color:var(--accent-aqua); display:inline-block; margin-top:6px; }
 </style>
 </head>
 <body>
@@ -642,6 +649,56 @@
   }
 
 
+  // ===== dismissible items (mark done, auto-clear 24h later, nothing is ever deleted from the data itself) =====
+  var DONE_KEY = 'clat-dash-done-v1';
+  var DONE_TTL_MS = 24 * 60 * 60 * 1000;
+  var DONE_PRUNE_MS = 72 * 60 * 60 * 1000;
+  function loadDone() {
+    try { var raw = localStorage.getItem(DONE_KEY); return raw ? JSON.parse(raw) : {}; }
+    catch (e) { return {}; }
+  }
+  function saveDone(map) {
+    try { localStorage.setItem(DONE_KEY, JSON.stringify(map)); } catch (e) {}
+  }
+  var doneMap = (function () {
+    var map = loadDone(), now = Date.now(), changed = false;
+    Object.keys(map).forEach(function (k) {
+      if (now - map[k] > DONE_PRUNE_MS) { delete map[k]; changed = true; }
+    });
+    if (changed) saveDone(map);
+    return map;
+  })();
+  function toggleDone(key) {
+    if (doneMap[key]) delete doneMap[key]; else doneMap[key] = Date.now();
+    saveDone(doneMap);
+  }
+  function itemKey(prefix, parts) {
+    return prefix + '::' + parts.filter(function (p) { return p; }).join('|').slice(0, 200);
+  }
+  function hoursLeft(doneAt) {
+    return Math.max(1, Math.ceil((DONE_TTL_MS - (Date.now() - doneAt)) / 3600000));
+  }
+  function withDoneMeta(items, keyFn) {
+    var out = items.map(function (item) {
+      var key = keyFn(item);
+      return { item: item, key: key, doneAt: doneMap[key] || null };
+    }).filter(function (m) { return !(m.doneAt && (Date.now() - m.doneAt) > DONE_TTL_MS); });
+    out.sort(function (a, b) { return (a.doneAt ? 1 : 0) - (b.doneAt ? 1 : 0); });
+    return out;
+  }
+  function doneToggleHtml(m) {
+    return '<button class="done-toggle" data-done-key="' + esc(m.key) + '" title="סמן כבוצע">' + (m.doneAt ? '✓' : '') + '</button>';
+  }
+  function doneNoteHtml(m) {
+    return m.doneAt ? '<span class="chip done-chip">בוצע, ייעלם בעוד כ-' + hoursLeft(m.doneAt) + 'ש׳</span>' : '';
+  }
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest('.done-toggle');
+    if (!btn) return;
+    toggleDone(btn.getAttribute('data-done-key'));
+    renderLeads();
+  });
+
   // ===== daily leads scan =====
   var SCAN_SOURCE_LABEL = { monday:'מנדיי', quoMessages:'Quo', gmailBusiness:'גמייל עסקי', gmailPrivate:'גמייל פרטי', shopify:'שופיפיי', stripe:'Stripe', autocalls:'Autocalls', calendar:'יומן', googleAnalytics:'Analytics', googleAds:'גוגל אדס' };
   function esc(t) { return String(t == null ? '' : t).replace(/[&<>"]/g, function (c) { return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]; }); }
@@ -666,14 +723,16 @@
       var d = (w[a.urgency] == null ? 3 : w[a.urgency]) - (w[b.urgency] == null ? 3 : w[b.urgency]);
       return d !== 0 ? d : (Number(b.waitingDays) || 0) - (Number(a.waitingDays) || 0);
     });
+    var naMeta = withDoneMeta(na, function (r) { return itemKey('na', [r.name, r.channel, r.why]); });
     show('needsAnswerSection', true);
-    document.getElementById('needsAnswerList').innerHTML = na.length ? na.map(function (r) {
-      var days = Number(r.waitingDays) || 0;
-      return '<div class="answer-row ' + esc(r.urgency || 'low') + '">' +
-        '<div class="who">' + esc(r.name) +
+    document.getElementById('needsAnswerList').innerHTML = naMeta.length ? naMeta.map(function (m) {
+      var r = m.item, days = Number(r.waitingDays) || 0;
+      return '<div class="answer-row ' + esc(r.urgency || 'low') + (m.doneAt ? ' is-done' : '') + '">' +
+        doneToggleHtml(m) +
+        '<div class="answer-body"><div class="who">' + esc(r.name) +
         (r.channel ? '<span class="chip">' + esc(r.channel) + '</span>' : '') +
         (days ? '<span class="chip">' + days + ' ימים ממתין</span>' : '') +
-        '</div><div class="why">' + esc(r.why) + '</div></div>';
+        '</div><div class="why">' + esc(r.why) + '</div>' + doneNoteHtml(m) + '</div></div>';
     }).join('') : '<div class="empty-note">אין מי שממתין לתשובה. יום נקי.</div>';
 
     var rev = L.revenue || {};
@@ -685,34 +744,46 @@
 
     var ny = L.newYesterday || [], rp = L.replied || [];
     show('scanFlowSection', ny.length || rp.length);
-    document.getElementById('newYesterdayList').innerHTML = ny.length ? ny.map(function (r) {
-      return '<div class="simple-row"><b>' + esc(r.name) + '</b>' + (r.source ? ' <span class="chip">' + esc(r.source) + '</span>' : '') + (r.detail ? '<br>' + esc(r.detail) : '') + '</div>';
+    var nyMeta = withDoneMeta(ny, function (r) { return itemKey('ny', [r.name, r.source, r.detail]); });
+    document.getElementById('newYesterdayList').innerHTML = nyMeta.length ? nyMeta.map(function (m) {
+      var r = m.item;
+      return '<div class="simple-row' + (m.doneAt ? ' is-done' : '') + '">' + doneToggleHtml(m) +
+        '<div class="simple-body"><b>' + esc(r.name) + '</b>' + (r.source ? ' <span class="chip">' + esc(r.source) + '</span>' : '') + (r.detail ? '<br>' + esc(r.detail) : '') + doneNoteHtml(m) + '</div></div>';
     }).join('') : '<div class="empty-note">לא נכנס אף ליד חדש.</div>';
-    document.getElementById('repliedList').innerHTML = rp.length ? rp.map(function (r) {
-      return '<div class="simple-row"><b>' + esc(r.name) + '</b>' + (r.channel ? ' <span class="chip">' + esc(r.channel) + '</span>' : '') + (r.said ? '<br>' + esc(r.said) : '') + '</div>';
+    var rpMeta = withDoneMeta(rp, function (r) { return itemKey('rp', [r.name, r.channel, r.said]); });
+    document.getElementById('repliedList').innerHTML = rpMeta.length ? rpMeta.map(function (m) {
+      var r = m.item;
+      return '<div class="simple-row' + (m.doneAt ? ' is-done' : '') + '">' + doneToggleHtml(m) +
+        '<div class="simple-body"><b>' + esc(r.name) + '</b>' + (r.channel ? ' <span class="chip">' + esc(r.channel) + '</span>' : '') + (r.said ? '<br>' + esc(r.said) : '') + doneNoteHtml(m) + '</div></div>';
     }).join('') : '<div class="empty-note">אף אחד לא הגיב.</div>';
 
     var dr = L.draftsPrepared || [], qt = L.quoTasks || [];
     show('scanWorkSection', dr.length || qt.length);
-    document.getElementById('draftsList').innerHTML = dr.length ? dr.map(function (r) {
-      return '<div class="simple-row"><b>' + esc(r.name) + '</b>' +
+    var drMeta = withDoneMeta(dr, function (r) { return itemKey('dr', [r.name, r.inbox, r.gist]); });
+    document.getElementById('draftsList').innerHTML = drMeta.length ? drMeta.map(function (m) {
+      var r = m.item;
+      return '<div class="simple-row' + (m.doneAt ? ' is-done' : '') + '">' + doneToggleHtml(m) +
+        '<div class="simple-body"><b>' + esc(r.name) + '</b>' +
         '<span class="chip">' + (r.inbox === 'private' ? 'תיבה פרטית' : 'תיבה עסקית') + '</span>' +
         (r.needsInput ? '<span class="chip" style="color:var(--status-warning)">מחכה להשלמה שלך</span>' : '') +
-        (r.gist ? '<br>' + esc(r.gist) : '') + '</div>';
+        (r.gist ? '<br>' + esc(r.gist) : '') + doneNoteHtml(m) + '</div></div>';
     }).join('') : '<div class="empty-note">לא הוכנו טיוטות.</div>';
-    document.getElementById('quoTasksList').innerHTML = qt.length ? qt.map(function (r) {
-      var days = Number(r.waitingDays) || 0;
-      return '<div class="simple-row"><b>' + esc(r.name) + '</b>' + (days ? '<span class="chip">' + days + ' ימים</span>' : '') + (r.asked ? '<br>' + esc(r.asked) : '') + '</div>';
+    var qtMeta = withDoneMeta(qt, function (r) { return itemKey('qt', [r.name, r.asked]); });
+    document.getElementById('quoTasksList').innerHTML = qtMeta.length ? qtMeta.map(function (m) {
+      var r = m.item, days = Number(r.waitingDays) || 0;
+      return '<div class="simple-row' + (m.doneAt ? ' is-done' : '') + '">' + doneToggleHtml(m) +
+        '<div class="simple-body"><b>' + esc(r.name) + '</b>' + (days ? '<span class="chip">' + days + ' ימים</span>' : '') + (r.asked ? '<br>' + esc(r.asked) : '') + doneNoteHtml(m) + '</div></div>';
     }).join('') : '<div class="empty-note">החלון של 14 יום נסרק, לא נמצאה שיחה תלויה.</div>';
 
     var f = (L.faults || []).slice().sort(function (a, b) {
       var w = { high: 0, medium: 1, low: 2 };
       return (w[a.severity] == null ? 3 : w[a.severity]) - (w[b.severity] == null ? 3 : w[b.severity]);
     });
+    var fMeta = withDoneMeta(f, function (r) { return itemKey('fa', [r.what]); });
     show('scanFaultsSection', true);
-    document.getElementById('faultsList').innerHTML = f.length ? f.map(function (r) {
-      var cls = r.severity === 'high' ? 'err' : (r.severity === 'medium' ? 'warn' : 'ok');
-      return '<div class="fault-row"><span class="dot ' + cls + '"></span><span>' + esc(r.what) + '</span></div>';
+    document.getElementById('faultsList').innerHTML = fMeta.length ? fMeta.map(function (m) {
+      var r = m.item, cls = r.severity === 'high' ? 'err' : (r.severity === 'medium' ? 'warn' : 'ok');
+      return '<div class="fault-row' + (m.doneAt ? ' is-done' : '') + '">' + doneToggleHtml(m) + '<span class="dot ' + cls + '"></span><span class="fault-body">' + esc(r.what) + doneNoteHtml(m) + '</span></div>';
     }).join('') : '<div class="empty-note">אין תקלות פתוחות.</div>';
     document.getElementById('waNote').textContent = L.whatsappNote || '';
   }
