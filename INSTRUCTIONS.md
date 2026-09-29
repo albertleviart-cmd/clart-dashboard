@@ -211,6 +211,43 @@ Quo, Gmail עסקי, Gmail פרטי, Shopify, Stripe אם מחובר, Autocalls,
 
 ---
 
+# מדדי לקוחות (נוסף 29.09.2026): Customer Lifetime Value ו-Average Days Between Purchases
+
+**זה שונה מכל שאר הריצה הזו: לא חלון של 24 שעות, אלא סריקה של כל בסיס הלקוחות בשופיפיי, פעם אחת ביום כי זו הריצה היחידה שרצה פעם ביום.** אל תדלג על זה כי זה נראה כבד, אבל גם אל תיתקע עליו: אם שופיפיי איטי או נכשל באמצע, השאר את הערכים הישנים ב-leads.json, אל תכתוב חצי תוצאה.
+
+**שלב 1, משיכה:** דפדף על כל הלקוחות בחנות עם graphql_query:
+```
+customers(first: 250, after: <endCursor>) {
+  edges {
+    node {
+      id
+      numberOfOrders
+      amountSpent { amount }
+      orders(first: 50, sortKey: CREATED_AT) {
+        edges { node { createdAt } }
+      }
+    }
+  }
+  pageInfo { hasNextPage endCursor }
+}
+```
+המשך לדפדף עם `after` עד ש-hasNextPage הוא false. יש כ-4,860 לקוחות (נמדד 29.09.2026), כלומר כ-20 עמודים, זה תקין וצפוי לריצה פעם ביום, אל תקצר את זה.
+
+**שלב 2, לכל לקוח שחזר:**
+1. המר numberOfOrders למספר שלם (חוזר כמחרוזת).
+2. אם numberOfOrders >= 1: זה קונה בפועל. הוסף את amountSpent.amount (כמספר) לסכום כולל ltvSum, והוסף 1 למונה purchaserCount.
+3. אם numberOfOrders >= 2: זה לקוח חוזר. קח את רשימת orders.edges[].node.createdAt, **ודא שהיא ממוינת עולה לפי תאריך** (אל תסמוך על סדר ברירת המחדל בלי לבדוק), וחשב את הפער בימים בין כל שתי הזמנות עוקבות ברשימה. הוסף כל פער כזה (מספר, לא מעוגל) לרשימה גלובלית gapsInDays שמצטברת על פני כל הלקוחות. הוסף גם 1 למונה repeatCustomerCount.
+   (לקוח עם 50 הזמנות בדיוק, הגבול העליון של השאילתה: ציין הערה בדוח שההיסטוריה שלו עלולה להיות חתוכה, מקרה נדיר מאוד בעסק הזה.)
+
+**שלב 3, חישוב סופי:**
+- ltv = ltvSum / purchaserCount, מעוגל ל-2 ספרות. אם purchaserCount == 0, ltv = 0.
+- avgDaysBetweenPurchases = ממוצע כל הערכים ב-gapsInDays, מעוגל לספרה אחת. אם gapsInDays ריקה (אין עדיין מספיק לקוחות חוזרים עם היסטוריה), avgDaysBetweenPurchases = 0 וציין את זה בדוח כהערה, לא כתקלה.
+
+**כתוב ל-leads.json:** customerMetrics = {ltv, avgDaysBetweenPurchases, purchaserCount, repeatCustomerCount, computedAt: <ISO עם offset ישראל>}.
+אם שלב 1 נכשל (שופיפיי לא זמין או שגיאה באמצע הדפדוף): אל תכתוב customerMetrics בכלל, השאר את הישן מה-leads.json שקראת בהתחלה, וציין בדוח שהמדדים האלה לא עודכנו היום.
+
+---
+
 # הפלט: שני קבצים בריפו
 
 ## leads.json
@@ -230,9 +267,11 @@ Quo, Gmail עסקי, Gmail פרטי, Shopify, Stripe אם מחובר, Autocalls,
   "mondayUpdated": {"updated":0, "created":0, "details":[]},
   "faults": [{"what":"", "severity":"high|medium|low"}],
   "whatsappNote": "לא נסרק, אין API. סריקה ידנית אחרונה: YYYY-MM-DD",
-  "meetings": [{"when":"", "who":""}]
+  "meetings": [{"when":"", "who":""}],
+  "customerMetrics": {"ltv":0, "avgDaysBetweenPurchases":0, "purchaserCount":0, "repeatCustomerCount":0, "computedAt":"ISO עם offset +03:00"}
 }
 ```
+`customerMetrics` מחושב פעם ביום, ראה פרק "מדדי לקוחות" למעלה. אם השלב הזה נכשל, קח את הערך הישן מה-leads.json הקיים במקום למחוק.
 
 **לשדות שנכשלו, קח מה-leads.json הישן, אל תמחק.** קרא אותו עם Read לפני שאתה כותב.
 
@@ -329,8 +368,10 @@ totalLeads מ-items_count של get_board_info.
 
 **חשוב, כדי שתבין למה המספרים האלה לא זזים בין ריצה לריצה:** הלידים החדשים במנדיי עצמם נוצרים בעיקר על ידי הרוטינה היומית הנפרדת clart-leads-sync שרצה פעם ביום ב-07:03 ומכניסה למנדיי לידים חדשים מ-Quo, שני תיבות המייל, ומהאתר. הריצה שלך כאן רק קוראת את המצב הנוכחי של מנדיי, היא לא סורקת Quo או מייל בעצמה. אז leadVelocity ו-funnel ישתנו בעיקר פעם ביום אחרי שהרוטינה הבוקר רצה, ולא בכל ריצה שלך. זה תקין, אל תנסה לסרוק ערוצים אחרים כדי "לתקן" את זה.
 
-**עסקאות שנסגרו לפי תקופה (closedDeals):** לכל אחת מארבע התקופות today/last7d/last30d/monthToDate, board_insights עם aggregations על numeric_mm5f7m9m עם COUNT ו-SUM, filters על **date_mm7kecgd (Close Date)**:
+**עסקאות שנסגרו לפי תקופה (closedDeals):** לכל אחת משש התקופות today/yesterday/last3d/last7d/last30d/monthToDate, board_insights עם aggregations על numeric_mm5f7m9m עם COUNT ו-SUM, filters על **date_mm7kecgd (Close Date)**:
 - today: operator "within_the_last", compareValue ["DAYS",1]
+- yesterday: operator "between", compareValue [אתמול YYYY-MM-DD, אתמול YYYY-MM-DD] (שני התאריכים זהים, זה יום קלנדרי בודד לפי שעון ישראל, לא חלון מתגלגל). נבדק ב-29.09.2026 ועובד: "between" עם אותו תאריך פעמיים מסנן ליום אחד מדויק.
+- last3d: operator "within_the_last", compareValue ["DAYS",3]
 - last7d: operator "within_the_last", compareValue ["DAYS",7]
 - last30d: operator "within_the_last", compareValue ["DAYS",30]
 - monthToDate: operator "greater_than_or_equals", compareValue התאריך של היום הראשון בחודש הנוכחי (YYYY-MM-DD)
@@ -344,10 +385,10 @@ totalLeads מ-items_count של get_board_info.
 
 **באג ידוע ותוקן ב-27.09.2026, אל תחזור אליו:** גרסה קודמת השתמשה ב-run-analytics-query עם `FROM sales SHOW net_sales, orders GROUP BY product_title` וסכמה את orders מכל השורות. זה ניפח את מספר ההזמנות (הראה 15 כשבשופיפיי עצמו היו 11 ב-7 ימים), כי הזמנה עם כמה מוצרים שונים נספרה פעם אחת לכל מוצר. **אל תשתמש ב-run-analytics-query בכלל למספר ההזמנות.** השיטה הנכונה היא graphql_query על orders ישירות, כמו שמתואר למטה.
 
-**בוטל ב-28.09.2026, אל תחזור לזה:** גרסה קודמת עשתה כאן קריאת search_products נפרדת עם tag:'original work' כ"בדיקה שנייה" לרשימת המקוריים. זה יותר מ-130 מוצרים ופלט JSON ענק בכל ריצה, בלי שום תועלת בפועל: אלברט לא סוגר ציורים מקוריים דרך שופיפיי בכלל, אלא כלידים בעסקאות פרטיות (נספר תחת monday closedDeals). הסיווג originals/prints למטה ממשיך להתבסס אך ורק על תגית "original work" בפועל על ה-product בתוך שאילתת ה-orders עצמה (product.tags), בלי שום קריאת אימות נוספת. בפועל originals תמיד יצא 0, וזה תקין.
+**בוטל ב-29.09.2026, אל תחזור לזה:** גרסאות קודמות עקבו אחרי פיצול מקוריים מול פרינטים (originals/prints) לפי תגית "original work" על המוצר, כולל שדות ב-data.json וקטע ייעודי בדשבורד. אלברט לא סוגר ציורים מקוריים דרך שופיפיי בכלל, אלא כלידים בעסקאות פרטיות (נספר תחת monday closedDeals), אז השדה הזה תמיד יצא אפס. הוסר לגמרי, גם מהקטע הזה וגם מהדשבורד. אל תוסיף את זה בחזרה ואל תשלוף lineItems/product.tags, אין להם עוד שימוש.
 
 **הכנסות והזמנות לפי תקופה, דרך graphql_query על orders:**
-לכל אחת מארבע התקופות (today/-7d/-30d/היום הראשון בחודש עד עכשיו), שאילתה:
+לכל אחת משש התקופות (today/yesterday/last3d/-7d/-30d/היום הראשון בחודש עד עכשיו), שאילתה:
 ```
 orders(first: 100, query: "created_at:>='<תאריך התחלה ISO>' AND created_at:<='<תאריך סוף ISO>'") {
   edges {
@@ -356,9 +397,8 @@ orders(first: 100, query: "created_at:>='<תאריך התחלה ISO>' AND create
       createdAt
       cancelledAt
       subtotalPriceSet { shopMoney { amount } }
-      lineItems(first: 50) {
-        edges { node { title discountedTotalSet { shopMoney { amount } } product { tags } } }
-      }
+      shippingAddress { provinceCode countryCodeV2 }
+      customer { id numberOfOrders }
     }
   }
   pageInfo { hasNextPage endCursor }
@@ -366,23 +406,27 @@ orders(first: 100, query: "created_at:>='<תאריך התחלה ISO>' AND create
 ```
 דפדף עם `after: <endCursor>` עד ש-hasNextPage הוא false. אם יש מעל 100 הזמנות בתקופה (בעיקר ל-30 יום ולחודש), זה צפוי, תמשיך לדפדף.
 
+**גבולות תאריך ל-yesterday ו-last3d, שעון ישראל:**
+- yesterday: created_at מ-00:00:00 של אתמול עד 23:59:59 של אתמול (יום קלנדרי בודד, לא חלון מתגלגל, כמו today).
+- last3d: created_at מ-00:00:00 לפני יומיים עד עכשיו (חלון מתגלגל של שלושה ימים כולל היום, עקבי עם last7d/last30d).
+
 **עיבוד לכל הזמנה שחזרה:**
-1. אם cancelledAt לא null, דלג על ההזמנה הזו לגמרי, היא לא נספרת לא בהכנסה ולא במספר ההזמנות.
+1. אם cancelledAt לא null, דלג על ההזמנה הזו לגמרי, היא לא נספרת בשום מדד למטה.
 2. אחרת: site.orders += 1, site.revenue += subtotalPriceSet.shopMoney.amount (כמספר).
-3. עבור על lineItems: אם ל-product.tags יש "original work", הוסף את discountedTotalSet.shopMoney.amount ל-originalsLineRevenue של ההזמנה הזו, אחרת ל-printsLineRevenue.
-4. אם originalsLineRevenue > 0 להזמנה: originals.revenue += originalsLineRevenue, originals.orders += 1.
-5. אם printsLineRevenue > 0 להזמנה: prints.revenue += printsLineRevenue, prints.orders += 1.
-   (הזמנה נדירה עם גם מקורי וגם פרינט תיספר בשתי הקטגוריות, זה תקין ושקוף, עדיף מהמרה שקרית לקטגוריה אחת.)
+3. **מדינה בארה"ב:** אם shippingAddress.countryCodeV2 == "US" ול-provinceCode יש ערך, byState[provinceCode].revenue += subtotalPriceSet.shopMoney.amount ו-byState[provinceCode].orders += 1. הזמנה בלי כתובת משלוח, בלי provinceCode, או מחוץ לארה"ב, פשוט דולגת על השלב הזה בלבד (עדיין נספרת ב-site.revenue/orders כרגיל).
+4. **לקוח חוזר:** אם customer לא null (לקוחות אורח בלי חשבון הם לפעמים null, דלג עליהם כאן), הוסף את customer.id לסט ייחודי allCustomerIds של התקופה. אם customer.numberOfOrders (מגיע כמחרוזת, המר למספר שלם) גדול מ-1, הוסף גם לסט ייחודי repeatCustomerIds.
 
-**הערת דיוק:** subtotalPriceSet הוא הסכום לפני משלוח ומס ואחרי הנחות, אבל **לפני** זיכויים חלקיים שניתנו אחרי ההזמנה. הזמנות שבוטלו לגמרי (cancelledAt) כן מוחרגות, אבל זיכוי חלקי לא מופחת. זה מספיק טוב לדשבורד יומיומי, לא מדויק לצרכי הנהלת חשבונות.
+**הערת דיוק:** subtotalPriceSet הוא הסכום לפני משלוח ומס ואחרי הנחות, אבל **לפני** זיכויים חלקיים שניתנו אחרי ההזמנה. הזמנות שבוטלו לגמרי (cancelledAt) כן מוחרגות, אבל זיכוי חלקי לא מופחת. זה מספיק טוב לדשבורד יומיומי, לא מדויק לצרכי הנהלת חשבונות. **numberOfOrders הוא ספירה לכל החיים של הלקוח, לא רק בתקופה הנוכחית**, זה בדיוק הכוונה: לקוח שכבר קנה בעבר ייספר "חוזר" גם אם הפעם הראשונה שהוא מופיע בתקופה הנבדקת.
 
-periods.<תקופה>.site = {revenue, orders, originals:{revenue,orders}, prints:{revenue,orders}}.
+periods.<תקופה>.site = {revenue, orders}.
+periods.<תקופה>.byState = מערך של {state: provinceCode, revenue, orders}, רק מדינות עם orders>0, ממוין יורד לפי revenue.
+periods.<תקופה>.repeatCustomers = {count: גודל repeatCustomerIds, totalCustomers: גודל allCustomerIds, percent: (count/totalCustomers*100 מעוגל לספרה אחת, 0 אם totalCustomers=0)}.
 
-אם שופיפיי נכשל: sources.shopify = {status:"error", note:"<תיאור>"}. אל תכתוב periods.*.site בכלל הריצה הזו, השאר את הישן. אם הצליח: sources.shopify = {status:"ok", note:""}.
+אם שופיפיי נכשל: sources.shopify = {status:"error", note:"<תיאור>"}. אל תכתוב periods.*.site/byState/repeatCustomers בכלל הריצה הזו, השאר את הישן. אם הצליח: sources.shopify = {status:"ok", note:""}.
 
 ## מקור 3: מטא אדס (MCP ff90e049)
 חשבון פעיל: "Albert Levi Art", ad_account_id "400319919198934", USD (זהה למטבע שופיפיי).
-לכל תקופה, ads_get_ad_entities: ad_account_id "400319919198934", level "ad_account", fields ["amount_spent"], date_preset: today→"today", last7d→"last_7d", last30d→"last_30d", monthToDate→"this_month". חובה client_conversation_id (20 תווים אקראיים, אותו לכל הקריאות בריצה) ו-advertiser_request. התעלם מ-next_actions אם מופיע.
+לכל תקופה, ads_get_ad_entities: ad_account_id "400319919198934", level "ad_account", fields ["amount_spent"], date_preset: today→"today", yesterday→"yesterday", last3d→"last_3d", last7d→"last_7d", last30d→"last_30d", monthToDate→"this_month" (כל השישה date_preset תקניים של מטא, אין צורך בטווח תאריכים ידני). חובה client_conversation_id (20 תווים אקראיים, אותו לכל הקריאות בריצה) ו-advertiser_request. התעלם מ-next_actions אם מופיע.
 periods.<תקופה>.spendBreakdown.meta = amount_spent (0 אם חסר). זה רק החלק של מטא, ה-spend הכולל מחושב בהמשך.
 
 גם בדוק "2111326855852065" (חשבון "Albert Levi", ILS) עם date_preset "last_30d". אם amount_spent>0, כתוב הערה קצרה ב-metaAccountNote שיש הוצאה נוספת בחשבון הזה שלא נכללת (מטבע שונה). אחרת metaAccountNote ריק או ציון שם החשבון הראשי בלבד.
@@ -396,6 +440,8 @@ periods.<תקופה>.spendBreakdown.meta = amount_spent (0 אם חסר). זה ר
 
 לכל תקופה, arguments: {customer_id: "7282991915", query: "..."}:
 - today: `SELECT metrics.cost_micros FROM customer WHERE segments.date DURING TODAY`
+- yesterday: `SELECT metrics.cost_micros FROM customer WHERE segments.date DURING YESTERDAY`
+- last3d: **אין DURING מוכן לשלושה ימים ב-GAQL**, השתמש בטווח מפורש: `SELECT metrics.cost_micros FROM customer WHERE segments.date BETWEEN '<לפני יומיים, YYYY-MM-DD>' AND '<היום, YYYY-MM-DD>'` (חלון מתגלגל של שלושה ימים כולל היום, עקבי עם last7d/last30d).
 - last7d: `SELECT metrics.cost_micros FROM customer WHERE segments.date DURING LAST_7_DAYS`
 - last30d: `SELECT metrics.cost_micros FROM customer WHERE segments.date DURING LAST_30_DAYS`
 - monthToDate: `SELECT metrics.cost_micros FROM customer WHERE segments.date DURING THIS_MONTH`
@@ -412,19 +458,31 @@ periods.<תקופה>.spendBreakdown.google = עלות בשקלים × 0.333333, 
 ## מקור 5: Google Analytics (Composio, MCP fe5ad87c)
 property: "properties/415263029" (Albert art shopify, USD, זה החנות הראשית שהדשבורד עוסק בה, לא properties/440744270 שזה האתר הישראלי הנפרד). חובר ב-27.09.2026.
 
-הכלי: COMPOSIO_MULTI_EXECUTE_TOOL עם tool_slug "GOOGLE_ANALYTICS_RUN_REPORT". שלח את ארבע הבקשות (today/last7d/last30d/monthToDate) בקריאה אחת במקביל.
+הכלי: COMPOSIO_MULTI_EXECUTE_TOOL עם tool_slug "GOOGLE_ANALYTICS_RUN_REPORT". שלח את כל הבקשות של שש התקופות (today/yesterday/last3d/last7d/last30d/monthToDate), **כל אחת פעמיים** (פירוט למטה, סה"כ 12 קריאות), בקריאה אחת במקביל.
 
-לכל תקופה, arguments: {property: "properties/415263029", dateRanges: [{startDate: "<תאריך התחלה או 'today'/'7daysAgo'/'30daysAgo'>", endDate: "today"}], metrics: [{name:"sessions"},{name:"transactions"}]}.
-עבור monthToDate, startDate הוא התאריך של היום הראשון בחודש הנוכחי (YYYY-MM-DD), לא מחרוזת יחסית.
-בלי dimensions, כדי שתחזור שורה אחת עם הסכומים לכל התקופה. אם rows ריק, sessions=0 ו-transactions=0.
-metricValues מוחזרים כמחרוזות, המר למספרים.
+**תאריכי כל תקופה** (dateRanges), עקביים בין שני סוגי הבקשות של אותה תקופה:
+- today: {startDate:"today", endDate:"today"}
+- yesterday: {startDate:"yesterday", endDate:"yesterday"} (יום קלנדרי בודד, שעון הנכס עצמו שהוא America/Los_Angeles, לא שעון ישראל, ראה הערה למטה)
+- last3d: {startDate:"3daysAgo", endDate:"today"}
+- last7d: {startDate:"7daysAgo", endDate:"today"}
+- last30d: {startDate:"30daysAgo", endDate:"today"}
+- monthToDate: {startDate: התאריך של היום הראשון בחודש הנוכחי (YYYY-MM-DD, לא מחרוזת יחסית), endDate:"today"}
 
+**בקשה א', ספירות בסיס:** {property: "properties/415263029", dateRanges: [<למעלה>], metrics: [{name:"sessions"},{name:"transactions"}]}. בלי dimensions, שורה אחת עם הסכומים לתקופה. אם rows ריק, sessions=0 ו-transactions=0.
 periods.<תקופה>.analytics = {sessions, transactions}.
 
-אם Google Analytics נכשל: sources.googleAnalytics = {status:"error", note:"<תיאור קצר>"}, אל תכתוב periods.*.analytics הריצה הזו, השאר את הישן. אם הצליח: sources.googleAnalytics = {status:"ok", note:""}.
+**בקשה ב', משפך המכירה (נוסף ב-29.09.2026):** {property: "properties/415263029", dateRanges: [<אותו טווח כמו בקשה א' לאותה תקופה>], dimensions: [{name:"eventName"}], metrics: [{name:"eventCount"}], dimensionFilter: {filter: {fieldName:"eventName", inListFilter: {values: ["view_item","add_to_cart","begin_checkout","purchase"]}}}}. נבדק ב-29.09.2026 ועובד, מחזיר שורה לכל אירוע עם הספירה שלו.
+לכל אירוע בתוצאה, שלוף את eventCount שלו. אירוע שלא הופיע בתוצאה (0 מקרים בתקופה) מקבל 0, אל תדלג על השדה.
+periods.<תקופה>.funnel = {visitors: periods.<תקופה>.analytics.sessions (מבקשה א', לא שאילתה נפרדת), productViews: eventCount של view_item, addToCart: eventCount של add_to_cart, checkout: eventCount של begin_checkout, purchases: eventCount של purchase}.
+**שים לב, purchases כאן (מונה אירועי GA4) ו-transactions בבקשה א' יכולים להיות קרובים אך לא זהים, זה תקין, שתי שיטות ספירה שונות של GA4 עצמו, אל תנסה "לתקן" אחד לפי השני.**
+
+**הערת אזור זמן:** נכס ה-GA הזה הוא America/Los_Angeles, לא ישראל, גם לפני התוספת הזו וגם אחריה. "אתמול" ב-GA (yesterday) הוא יום קלנדרי לפי הזמן שם, לא לפי שעון ישראל, פער של עד עשר שעות מ-yesterday במנדיי/שופיפיי/מטא/גוגל אדס שכולם לפי שעון ישראל. זה מגבלה קיימת של הנכס, לא באג חדש, ותועד כבר קודם בפרק המלכודות למטה.
+
+אם Google Analytics נכשל (אחת מהשתיים או שתיהן): sources.googleAnalytics = {status:"error", note:"<תיאור קצר>"}, אל תכתוב periods.*.analytics ולא periods.*.funnel בכלל הריצה הזו, השאר את הישן. אם שתיהן הצליחו: sources.googleAnalytics = {status:"ok", note:""}.
 
 ## בניית data.json
-אובייקט מלא: {updatedAt (ISO עם offset ישראל, למשל 2026-09-27T14:32:00+03:00), sources (כולל monday, shopify, metaAds, googleAds, googleAnalytics), metaAccountNote, fx, periods (today/last7d/last30d/monthToDate, כל אחד {site, closedDeals, spendBreakdown:{meta,google}, spend, analytics:{sessions,transactions}}), leadVelocity, leadSources (yesterday/last7d/last14d/last30d, כל אחד {total, form, other}), funnel, totalLeads, history:{days}}.
+אובייקט מלא: {updatedAt (ISO עם offset ישראל, למשל 2026-09-27T14:32:00+03:00), sources (כולל monday, shopify, metaAds, googleAds, googleAnalytics), metaAccountNote, fx, periods (**שש תקופות**: today/yesterday/last3d/last7d/last30d/monthToDate, כל אחת {site:{revenue,orders}, byState:[{state,revenue,orders}], repeatCustomers:{count,totalCustomers,percent}, closedDeals, spendBreakdown:{meta,google}, spend, analytics:{sessions,transactions}, funnel:{visitors,productViews,addToCart,checkout,purchases}}), leadVelocity, leadSources (yesterday/last7d/last14d/last30d, כל אחד {total, form, other}), funnel (**זה משפך הלידים של מנדיי, אל תבלבל עם periods.<תקופה>.funnel שהוא משפך המכירה של GA**), totalLeads, history:{days}}.
+**אין יותר originals/prints בשום מקום**, הוסר ב-29.09.2026, ראה הערה במקור שופיפיי למטה.
 לשדות שנכשלו הריצה הזו, קח את הערך הישן מה-data.json שקראת בשלב הראשון במקום למחוק אותו.
 
 **הוצאה כוללת:** periods.<תקופה>.spend = spendBreakdown.meta + spendBreakdown.google, הכל בדולרים. זה השדה שהדף משתמש בו ל-ROAS ול-CPA, אז הוא חייב להיות הסכום של השניים ולא רק מטא. אם אחד הערוצים נכשל הריצה הזו, סכום את הערך הישן שלו מה-data.json הקיים כדי ש-spend יישאר שלם.

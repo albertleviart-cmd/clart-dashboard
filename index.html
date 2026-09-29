@@ -176,6 +176,8 @@
 
   <div class="tabs" role="tablist" id="periodTabs">
     <button class="tab" data-period="today" role="tab">היום</button>
+    <button class="tab" data-period="yesterday" role="tab">אתמול</button>
+    <button class="tab" data-period="last3d" role="tab">3 ימים</button>
     <button class="tab" data-period="last7d" role="tab">7 ימים</button>
     <button class="tab" data-period="last30d" role="tab" aria-selected="true">30 יום</button>
     <button class="tab" data-period="monthToDate" role="tab">החודש</button>
@@ -198,6 +200,26 @@
   <section id="analyticsSection" style="display:none">
     <h2>תנועה באתר (Google Analytics)</h2>
     <div class="kpi-grid" id="analyticsKpiGrid"></div>
+  </section>
+
+  <section id="salesFunnelSection" style="display:none">
+    <h2>משפך מכירה (Google Analytics)</h2>
+    <p class="h2-sub">מבקרים עד רכישה, עם אחוז המעבר מכל שלב לבא אחריו</p>
+    <div class="funnel">
+      <div id="salesFunnelRows"></div>
+      <div class="funnel-note" id="salesFunnelNote"></div>
+    </div>
+  </section>
+
+  <section id="customerInsightsSection" style="display:none">
+    <h2>תובנות לקוחות</h2>
+    <div class="two-col">
+      <div class="tile" id="repeatCustomerTile"></div>
+      <div class="funnel" style="padding:16px">
+        <div class="h2-sub" style="margin-bottom:10px">הכנסה לפי מדינה בארה"ב</div>
+        <div id="byStateRows"></div>
+      </div>
+    </div>
   </section>
 
   <section id="closedSection" style="display:none">
@@ -270,6 +292,12 @@
     <div class="kpi-grid" id="scanMoneyGrid"></div>
   </section>
 
+  <section id="customerMetricsSection" style="display:none">
+    <h2>לקוחות, כל הזמנים</h2>
+    <p class="h2-sub">מחושב פעם ביום מכל בסיס הלקוחות בשופיפיי, לא לפי תקופה נבחרת</p>
+    <div class="kpi-grid" id="customerMetricsGrid"></div>
+  </section>
+
   <section id="scanFlowSection" style="display:none">
     <div class="two-col">
       <div>
@@ -318,7 +346,7 @@
   function roasFmt(n) { return (Number(n) || 0).toFixed(2) + 'x'; }
   function num(n) { return fmtNum.format(Number(n) || 0); }
 
-  var PERIOD_LABEL = { today: 'היום', last7d: '7 ימים אחרונים', last30d: '30 יום אחרונים', monthToDate: 'מתחילת החודש' };
+  var PERIOD_LABEL = { today: 'היום', yesterday: 'אתמול', last3d: '3 ימים אחרונים', last7d: '7 ימים אחרונים', last30d: '30 יום אחרונים', monthToDate: 'מתחילת החודש' };
   var SOURCE_LABEL = { monday: 'מנדיי', shopify: 'שופיפיי', metaAds: 'מטא אדס', googleAds: 'גוגל אדס', googleAnalytics: 'Google Analytics' };
   var FUNNEL_ORDER = ['new', 'working', 'negotiating', 'deposit_production', 'closed', 'lost', 'remarketing_pool'];
   var FUNNEL_OPACITY = { new: 0.35, working: 0.5, negotiating: 0.65, deposit_production: 0.8, closed: 1 };
@@ -427,6 +455,66 @@
     grid.innerHTML = tiles.map(function (t) {
       return '<div class="tile"><div class="label">' + t.label + '</div><div class="value num ' + t.cls + '">' + t.value + '</div></div>';
     }).join('');
+  }
+
+  function renderSalesFunnel() {
+    var section = document.getElementById('salesFunnelSection');
+    var p = currentPeriod();
+    var f = p && p.funnel;
+    if (!f) { section.style.display = 'none'; return; }
+    section.style.display = '';
+    var stages = [
+      { label: 'מבקרים', value: f.visitors || 0 },
+      { label: 'צפייה במוצר', value: f.productViews || 0 },
+      { label: 'הוספה לעגלה', value: f.addToCart || 0 },
+      { label: 'הגעה לקופה', value: f.checkout || 0 },
+      { label: 'רכישה', value: f.purchases || 0 }
+    ];
+    var maxV = Math.max(stages[0].value, 1);
+    document.getElementById('salesFunnelRows').innerHTML = stages.map(function (s, i) {
+      var widthPct = Math.max(3, 100 * s.value / maxV);
+      var convHtml = '';
+      if (i > 0) {
+        var prev = stages[i - 1].value;
+        var rate = prev > 0 ? (100 * s.value / prev) : 0;
+        convHtml = '<br><span style="font-size:10.5px;color:var(--text-muted);font-weight:400">' + rate.toFixed(1) + '% מהשלב הקודם</span>';
+      }
+      return '<div class="funnel-row">' +
+        '<div class="stage-label">' + s.label + convHtml + '</div>' +
+        '<div class="funnel-track"><div class="funnel-fill" style="width:' + widthPct.toFixed(1) + '%;background:var(--accent-blue)"></div></div>' +
+        '<div class="count num">' + num(s.value) + '</div>' +
+      '</div>';
+    }).join('');
+    var overall = stages[0].value > 0 ? (100 * stages[4].value / stages[0].value) : 0;
+    document.getElementById('salesFunnelNote').textContent = 'המרה כוללת ממבקר עד רכישה: ' + overall.toFixed(2) + '%';
+  }
+
+  function renderCustomerInsights() {
+    var section = document.getElementById('customerInsightsSection');
+    var p = currentPeriod();
+    if (!p || (!p.repeatCustomers && !p.byState)) { section.style.display = 'none'; return; }
+    section.style.display = '';
+    var rc = p.repeatCustomers || { count: 0, totalCustomers: 0, percent: 0 };
+    document.getElementById('repeatCustomerTile').innerHTML =
+      '<div class="label">לקוחות חוזרים</div>' +
+      '<div class="value num aqua">' + rc.percent.toFixed(1) + '%</div>' +
+      '<div style="font-size:12px;color:var(--text-muted);margin-top:4px">' + num(rc.count) + ' מתוך ' + num(rc.totalCustomers) + ' לקוחות בתקופה</div>';
+
+    var states = (p.byState || []).slice(0, 8);
+    var byStateEl = document.getElementById('byStateRows');
+    if (!states.length) {
+      byStateEl.innerHTML = '<div class="empty-note">אין הזמנות עם כתובת משלוח בארה"ב בתקופה הזו.</div>';
+    } else {
+      var maxRev = Math.max.apply(null, states.map(function (s) { return s.revenue || 0; }).concat([1]));
+      byStateEl.innerHTML = states.map(function (s) {
+        var widthPct = Math.max(3, 100 * (s.revenue || 0) / maxRev);
+        return '<div class="funnel-row">' +
+          '<div class="stage-label">' + esc(s.state) + '</div>' +
+          '<div class="funnel-track"><div class="funnel-fill" style="width:' + widthPct.toFixed(1) + '%;background:var(--accent-aqua)"></div></div>' +
+          '<div class="count num">' + money(s.revenue) + '</div>' +
+        '</div>';
+      }).join('');
+    }
   }
 
   function renderClosed() {
@@ -608,8 +696,9 @@
     if (g.status === 'ok') {
       var fx = state.data.fx || {};
       var rate = fx.ilsToUsd ? Number(fx.ilsToUsd).toFixed(4) : null;
-      parts.push('<b>גוגל אדס:</b> מחובר, החשבון מתנהל בשקלים. ההוצאה מומרת לדולר בשער חי' +
-        (rate ? ' (1 ש״ח = ' + rate + ' $' : '') + (fx.asOf ? ', עודכן ' + fx.asOf : '') + (rate ? ')' : '') +
+      var isFixed = fx.asOf === 'fixed';
+      parts.push('<b>גוגל אדס:</b> מחובר, החשבון מתנהל בשקלים. ההוצאה מומרת לדולר ' + (isFixed ? 'בשער קבוע' : 'בשער חי') +
+        (rate ? ' (1 ש״ח = ' + rate + ' $' : '') + (!isFixed && fx.asOf ? ', עודכן ' + fx.asOf : '') + (rate ? ')' : '') +
         '. ROAS ו-CPA למעלה מחושבים מול מטא וגוגל יחד.');
     } else {
       parts.push('<b>גוגל אדס:</b> ' + (g.note || 'לא מחובר') + '. ROAS ו-CPA מחושבים כרגע רק מול הוצאת מטא.');
@@ -744,6 +833,15 @@
       '<div class="tile"><div class="label">כסף שנכנס, לא מחזור חדש</div><div class="value">' + money(rev.cashNotTurnover) + '</div></div>' +
       '<div class="tile"><div class="label">יתרות פתוחות לגבייה</div><div class="value">' + money(rev.openBalances) + '</div></div>';
 
+    var cm = L.customerMetrics;
+    show('customerMetricsSection', !!cm);
+    if (cm) {
+      document.getElementById('customerMetricsGrid').innerHTML =
+        '<div class="tile"><div class="label">שווי לקוח ממוצע (LTV)</div><div class="value num blue">' + moneyPrecise(cm.ltv) + '</div></div>' +
+        '<div class="tile"><div class="label">ימים בממוצע בין רכישות</div><div class="value num">' + (Number(cm.avgDaysBetweenPurchases) || 0).toFixed(1) + '</div></div>' +
+        '<div class="tile"><div class="label">לקוחות חוזרים, כל הזמנים</div><div class="value num">' + num(cm.repeatCustomerCount) + '</div></div>';
+    }
+
     var ny = L.newYesterday || [], rp = L.replied || [];
     show('scanFlowSection', ny.length || rp.length);
     var nyMeta = withDoneMeta(ny, function (r) { return itemKey('ny', [r.name, r.source, r.detail]); });
@@ -796,6 +894,8 @@
     renderSiteKpis();
     renderAdsKpis();
     renderAnalytics();
+    renderSalesFunnel();
+    renderCustomerInsights();
     renderClosed();
     renderVelocity();
     renderLeadSources();
