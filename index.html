@@ -211,11 +211,6 @@
     </div>
   </section>
 
-  <section id="splitSection" style="display:none">
-    <h2>מקוריים מול פרינטים, מכירות אתר בלבד</h2>
-    <div class="split" id="splitGrid"></div>
-  </section>
-
   <section id="velocitySection" style="display:none">
     <h2>קצב כניסת לידים חדשים</h2>
     <p class="h2-sub">לפי תאריך יצירת הרשומה במנדיי, כולל לידים מ-Quo ומשני תיבות המייל</p>
@@ -441,30 +436,6 @@
     section.style.display = '';
     document.getElementById('closedAmount').textContent = money(p.closedDeals.revenue);
     document.getElementById('closedCount').textContent = num(p.closedDeals.count) + ' עסקאות, ' + PERIOD_LABEL[state.period];
-  }
-
-  function renderSplit() {
-    var section = document.getElementById('splitSection');
-    var grid = document.getElementById('splitGrid');
-    var p = currentPeriod();
-    if (!p || !p.site) { section.style.display = 'none'; return; }
-    var orig = p.site.originals || { revenue: 0, orders: 0 };
-    var prints = p.site.prints || { revenue: 0, orders: 0 };
-    var maxRev = Math.max(orig.revenue || 0, prints.revenue || 0, 1);
-    section.style.display = '';
-    grid.innerHTML =
-      '<div class="split-card">' +
-        '<div class="title"><span class="swatch" style="background:var(--accent-aqua)"></span>מקוריים</div>' +
-        '<div class="amount num">' + money(orig.revenue) + '</div>' +
-        '<div class="orders num">' + num(orig.orders) + ' הזמנות</div>' +
-        '<div class="bar-track"><div class="bar-fill" style="width:' + (100 * (orig.revenue || 0) / maxRev).toFixed(1) + '%;background:var(--accent-aqua)"></div></div>' +
-      '</div>' +
-      '<div class="split-card">' +
-        '<div class="title"><span class="swatch" style="background:var(--accent-yellow)"></span>פרינטים</div>' +
-        '<div class="amount num">' + money(prints.revenue) + '</div>' +
-        '<div class="orders num">' + num(prints.orders) + ' הזמנות</div>' +
-        '<div class="bar-track"><div class="bar-fill" style="width:' + (100 * (prints.revenue || 0) / maxRev).toFixed(1) + '%;background:var(--accent-yellow)"></div></div>' +
-      '</div>';
   }
 
   function renderVelocity() {
@@ -826,7 +797,6 @@
     renderAdsKpis();
     renderAnalytics();
     renderClosed();
-    renderSplit();
     renderVelocity();
     renderLeadSources();
     renderFunnel();
