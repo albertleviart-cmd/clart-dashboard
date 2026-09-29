@@ -96,13 +96,13 @@
   .bar-track { height: 6px; background: var(--grid); border-radius: 3px; margin-top: 10px; overflow: hidden; }
   .bar-fill { height: 100%; border-radius: 3px; }
 
-  .velocity-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .velocity-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
   @media (max-width: 560px) { .velocity-grid { grid-template-columns: repeat(2, 1fr); } }
   .velocity-tile { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; text-align: center; }
   .velocity-tile .n { font-size: 26px; font-weight: 700; color: var(--accent-blue); }
   .velocity-tile .l { font-size: 11.5px; color: var(--text-muted); margin-top: 2px; }
 
-  .source-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+  .source-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
   @media (max-width: 560px) { .source-grid { grid-template-columns: repeat(2, 1fr); } }
   .source-tile { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; }
   .source-tile .win { font-size: 11.5px; color: var(--text-muted); margin-bottom: 6px; }
@@ -350,7 +350,7 @@
   var SOURCE_LABEL = { monday: 'מנדיי', shopify: 'שופיפיי', metaAds: 'מטא אדס', googleAds: 'גוגל אדס', googleAnalytics: 'Google Analytics' };
   var FUNNEL_ORDER = ['new', 'working', 'negotiating', 'deposit_production', 'closed', 'lost', 'remarketing_pool'];
   var FUNNEL_OPACITY = { new: 0.35, working: 0.5, negotiating: 0.65, deposit_production: 0.8, closed: 1 };
-  var VELOCITY_LABEL = { yesterday: 'אתמול', last7d: '7 ימים', last14d: '14 יום', last30d: '30 יום' };
+  var VELOCITY_LABEL = { today: 'היום', yesterday: 'אתמול', last7d: '7 ימים', last14d: '14 יום', last30d: '30 יום' };
 
   var state = { data: null, leads: null, period: 'last30d' };
   var savedPeriod = null;

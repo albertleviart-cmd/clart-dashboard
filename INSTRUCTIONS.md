@@ -354,19 +354,22 @@ board_insights: aggregations על lead_status (בלי פונקציה) ועם COU
 תווית ריקה או לא ברשימה, תתעלם. בנה מערך funnel עם שבעה אובייקטים {key, label (עברית קצרה), count} בסדר: new, working, negotiating, deposit_production, closed, lost, remarketing_pool.
 totalLeads מ-items_count של get_board_info.
 
-**קצב כניסת לידים (leadVelocity):** ארבע קריאות board_insights נפרדות עם aggregations COUNT_ITEMS, filters על העמודה הווירטואלית "__creation_log__" עם operator "within_the_last" ו-compareValue ["DAYS", N]:
-- yesterday: N=1 (חלון גלגל של 24 שעות, לא בהכרח יום קלנדרי)
-- last7d: N=7
-- last14d: N=14
-- last30d: N=30
+**קצב כניסת לידים (leadVelocity):** חמש קריאות board_insights נפרדות עם aggregations COUNT_ITEMS, filters על העמודה הווירטואלית "__creation_log__":
+- today: operator "between", compareValue [היום YYYY-MM-DD, היום YYYY-MM-DD] (יום קלנדרי לפי שעון ישראל, לא חלון מתגלגל)
+- yesterday: operator "between", compareValue [אתמול YYYY-MM-DD, אתמול YYYY-MM-DD] (יום קלנדרי לפי שעון ישראל, לא חלון מתגלגל)
+- last7d: operator "within_the_last", compareValue ["DAYS",7]
+- last14d: operator "within_the_last", compareValue ["DAYS",14]
+- last30d: operator "within_the_last", compareValue ["DAYS",30]
 
-**פילוח מקור הלידים (leadSources):** ארבע קריאות board_insights נוספות, זהות לאלה של leadVelocity אבל עם פילטר שני: העמודה `text_mksv58se` ("why connected?") עם operator "is_not_empty" ו-compareValue מערך ריק `[]`, ב-filtersOperator "and".
+**תוקן 29.09.2026, אל תחזור לזה:** yesterday היה קודם within_the_last עם compareValue ["DAYS",1], כלומר חלון מתגלגל של 24 שעות מרגע הריצה ולא יום קלנדרי. בפועל זה גרם לתיוג "אתמול" בדשבורד להציג כמעט אך ורק לידים שנכנסו היום (כי לידים מטופס האתר נכנסים למנדיי תוך שנייה מהגשת הטופס, לא רק פעם ביום), בזמן שאלברט ראה בעיניים שהיום נכנסו X לידים והדשבורד תייג את אותו X בתור "אתמול". נבדק ישירות מול מנדיי ב-29.09.2026: within_the_last DAYS:1 החזיר 25, לעומת between על התאריך הקלנדרי של אתמול בפועל שהחזיר 4, ו-between על התאריך הקלנדרי של היום שהחזיר 21 (4+21=25, בדיוק תואם, מוכיח שה"חלון הגלגל" בפועל היה בעיקר "היום"). האופרטור between עם אותו תאריך קלנדרי פעמיים על __creation_log__ נבדק ועובד נכון, בדיוק כמו על עמודת תאריך רגילה.
+
+**פילוח מקור הלידים (leadSources):** חמש קריאות board_insights נוספות, זהות לאלה של leadVelocity (כולל today) אבל עם פילטר שני: העמודה `text_mksv58se` ("why connected?") עם operator "is_not_empty" ו-compareValue מערך ריק `[]`, ב-filtersOperator "and".
 
 זו עמודת שאלה של טופס Powerful Form Builder באתר, ורק הטופס ממלא אותה, לכן היא הסימן האמין לזיהוי ליד שהגיע מהטופס. אל תשתמש בעמודות ה-UTM לצורך הזה: הן שבורות. `utm_medium` לא נכתב יותר בכלל (אפס לידים ב-30 יום), ו-`utm_source` מכילה ערכים פגומים כמו "utm_sourcefacebook" שהם שמות שדות שנדחפו לתוך הערך.
 
-לכל אחת מארבע התקופות כתוב `leadSources.<תקופה>` = {total: המספר מ-leadVelocity לאותה תקופה, form: המספר מהקריאה עם הפילטר, other: total פחות form}. **חובה למדוד את total ו-form באותה ריצה ובסמיכות זמן**, אחרת ליד שנכנס בין שתי הקריאות ייחשב בטעות ל-other.
+לכל אחת מחמש התקופות כתוב `leadSources.<תקופה>` = {total: המספר מ-leadVelocity לאותה תקופה, form: המספר מהקריאה עם הפילטר, other: total פחות form}. **חובה למדוד את total ו-form באותה ריצה ובסמיכות זמן**, אחרת ליד שנכנס בין שתי הקריאות ייחשב בטעות ל-other.
 
-**חשוב, כדי שתבין למה המספרים האלה לא זזים בין ריצה לריצה:** הלידים החדשים במנדיי עצמם נוצרים בעיקר על ידי הרוטינה היומית הנפרדת clart-leads-sync שרצה פעם ביום ב-07:03 ומכניסה למנדיי לידים חדשים מ-Quo, שני תיבות המייל, ומהאתר. הריצה שלך כאן רק קוראת את המצב הנוכחי של מנדיי, היא לא סורקת Quo או מייל בעצמה. אז leadVelocity ו-funnel ישתנו בעיקר פעם ביום אחרי שהרוטינה הבוקר רצה, ולא בכל ריצה שלך. זה תקין, אל תנסה לסרוק ערוצים אחרים כדי "לתקן" את זה.
+**חשוב, כדי שתבין למה המספרים האלה לא זזים בין ריצה לריצה, חוץ מ-today:** לידים מטופס האתר נכנסים למנדיי בזמן אמת (תוך שנייה מהגשה, אוטומציה נפרדת בצד מנדיי, לא קשורה לרוטינות שלנו), ולכן today יכול לזוז בכל ריצה שלך במהלך היום. לעומת זאת שאר הלידים (Quo, שני תיבות המייל) נכנסים למנדיי רק על ידי הרוטינה היומית הנפרדת clart-leads-sync שרצה פעם ביום ב-07:03. הריצה שלך כאן רק קוראת את המצב הנוכחי של מנדיי, היא לא סורקת Quo או מייל בעצמה. אז yesterday/last7d/last14d/last30d ו-funnel ישתנו בעיקר פעם ביום אחרי שהרוטינה הבוקר רצה, אבל today יכול להשתנות בכל אחת מריצות דשבורד-הסינק (06/09/12/15/18/21/23). זה תקין, אל תנסה לסרוק ערוצים אחרים כדי "לתקן" את זה.
 
 **עסקאות שנסגרו לפי תקופה (closedDeals):** לכל אחת משש התקופות today/yesterday/last3d/last7d/last30d/monthToDate, board_insights עם aggregations על numeric_mm5f7m9m עם COUNT ו-SUM, filters על **date_mm7kecgd (Close Date)**:
 - today: operator "within_the_last", compareValue ["DAYS",1]
@@ -481,7 +484,7 @@ periods.<תקופה>.funnel = {visitors: periods.<תקופה>.analytics.sessions
 אם Google Analytics נכשל (אחת מהשתיים או שתיהן): sources.googleAnalytics = {status:"error", note:"<תיאור קצר>"}, אל תכתוב periods.*.analytics ולא periods.*.funnel בכלל הריצה הזו, השאר את הישן. אם שתיהן הצליחו: sources.googleAnalytics = {status:"ok", note:""}.
 
 ## בניית data.json
-אובייקט מלא: {updatedAt (ISO עם offset ישראל, למשל 2026-09-27T14:32:00+03:00), sources (כולל monday, shopify, metaAds, googleAds, googleAnalytics), metaAccountNote, fx, periods (**שש תקופות**: today/yesterday/last3d/last7d/last30d/monthToDate, כל אחת {site:{revenue,orders}, byState:[{state,revenue,orders}], repeatCustomers:{count,totalCustomers,percent}, closedDeals, spendBreakdown:{meta,google}, spend, analytics:{sessions,transactions}, funnel:{visitors,productViews,addToCart,checkout,purchases}}), leadVelocity, leadSources (yesterday/last7d/last14d/last30d, כל אחד {total, form, other}), funnel (**זה משפך הלידים של מנדיי, אל תבלבל עם periods.<תקופה>.funnel שהוא משפך המכירה של GA**), totalLeads, history:{days}}.
+אובייקט מלא: {updatedAt (ISO עם offset ישראל, למשל 2026-09-27T14:32:00+03:00), sources (כולל monday, shopify, metaAds, googleAds, googleAnalytics), metaAccountNote, fx, periods (**שש תקופות**: today/yesterday/last3d/last7d/last30d/monthToDate, כל אחת {site:{revenue,orders}, byState:[{state,revenue,orders}], repeatCustomers:{count,totalCustomers,percent}, closedDeals, spendBreakdown:{meta,google}, spend, analytics:{sessions,transactions}, funnel:{visitors,productViews,addToCart,checkout,purchases}}), leadVelocity (**חמש תקופות**: today/yesterday/last7d/last14d/last30d, today ו-yesterday לפי יום קלנדרי בישראל, השאר חלון מתגלגל), leadSources (אותן חמש תקופות, כל אחד {total, form, other}), funnel (**זה משפך הלידים של מנדיי, אל תבלבל עם periods.<תקופה>.funnel שהוא משפך המכירה של GA**), totalLeads, history:{days}}.
 **אין יותר originals/prints בשום מקום**, הוסר ב-29.09.2026, ראה הערה במקור שופיפיי למטה.
 לשדות שנכשלו הריצה הזו, קח את הערך הישן מה-data.json שקראת בשלב הראשון במקום למחוק אותו.
 
