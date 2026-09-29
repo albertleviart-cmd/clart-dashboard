@@ -211,40 +211,44 @@ Quo, Gmail עסקי, Gmail פרטי, Shopify, Stripe אם מחובר, Autocalls,
 
 ---
 
-# מדדי לקוחות (נוסף 29.09.2026): Customer Lifetime Value ו-Average Days Between Purchases
+# מדדי לקוחות (נוסף 29.09.2026, שונה ל-bulk export 29.09.2026): Customer Lifetime Value ו-Average Days Between Purchases
 
 **זה שונה מכל שאר הריצה הזו: לא חלון של 24 שעות, אלא סריקה של כל בסיס הלקוחות בשופיפיי, פעם אחת ביום כי זו הריצה היחידה שרצה פעם ביום.** אל תדלג על זה כי זה נראה כבד, אבל גם אל תיתקע עליו: אם שופיפיי איטי או נכשל באמצע, השאר את הערכים הישנים ב-leads.json, אל תכתוב חצי תוצאה.
 
-**שלב 1, משיכה:** דפדף על כל הלקוחות בחנות עם graphql_query:
+**שיטה: bulk operation של שופיפיי, לא דפדוף.** נבדק חי ב-29.09.2026: דפדוף רגיל (250 לקוחות בעמוד, ~20 עמודים) עבד אבל עלה מאות אלפי טוקנים כי כל הנתונים הגולמיים עברו דרך ה-context של המודל. bulk operation מוציא את כל הנתונים לקובץ אחד בצד של שופיפיי ומחזיר קישור להורדה, כך שהעיבוד קורה בפייתון מחוץ ל-context לגמרי ורק ארבעת המספרים הסופיים חוזרים. נבדק מול אותו בסיס לקוחות ונתן תוצאה זהה לחלוטין לשיטת הדפדוף הישנה (ltv 267.49, avgDaysBetweenPurchases 76.6, purchaserCount 2907, repeatCustomerCount 301), ולקח כ-19 שניות בלבד להשלים מול כ-20 דקות בדפדוף. **זו השיטה הראשית, אל תחזור לדפדוף אלא אם השלב הבא נכשל.**
+
+**שלב 1, הפעלת bulk operation (graphql_mutation):**
+```graphql
+mutation { bulkOperationRunQuery(query: "{ customers { edges { node { id numberOfOrders amountSpent { amount } orders(sortKey: CREATED_AT) { edges { node { createdAt } } } } } } }") { bulkOperation { id status } userErrors { field message } } }
+```
+שים לב: בתוך bulk operation אין להוסיף `first` לשדה `orders` המקונן, זה נתמך ומחזיר את כל ההזמנות של הלקוח בלי הגבלת 50 (בשונה מהשיטה הישנה). אם userErrors לא ריק, עצור ועבור לשיטת הגיבוי (שלב 5 למטה).
+
+**שלב 2, המתנה לסיום (graphql_query, בדיקה חוזרת):**
+```graphql
+{ currentBulkOperation { id status errorCode objectCount rootObjectCount url } }
+```
+בדוק כל 5-10 שניות. עצור ועבור לגיבוי אם: status הוא FAILED או CANCELED, או שעברו יותר מ-5 דקות בלי COMPLETED (אצל אלברט זה תקין ולוקח פחות מדקה, אז 5 דקות זה שוליים נדיבים למקרה של עומס בצד שופיפיי).
+
+**שלב 3, הורדת הקובץ (Bash, curl):** כש-status הוא COMPLETED, יש url בתשובה (קישור זמני שתקף 7 ימים). הורד אותו עם curl ל-scratchpad, ולדוג ב-`-w "HTTP %{http_code}"` כדי לוודא 200. הקובץ הוא JSONL: **כל שורה בלי `__parentId` היא רשומת לקוח** (עם id, numberOfOrders, amountSpent), **וכל שורה עם `__parentId` היא הזמנה מקוננת** ששייכת ללקוח שה-id שלו שווה לאותו `__parentId` (לקוח יכול להופיע עם כמה שורות הזמנה, לפי מספר ההזמנות שלו).
+
+**שלב 4, חישוב בפייתון (Bash, אל תעשה את זה בעצמך בראש):**
+1. קרא את הקובץ שורה-שורה, בנה מילון לקוחות (id → {numberOfOrders, amountSpent}) ומילון הזמנות (parentId → רשימת createdAt).
+2. לכל לקוח: numberOfOrders כמספר שלם (חוזר כמחרוזת). אם >= 1: קונה בפועל, הוסף amountSpent.amount (כמספר) ל-ltvSum, הוסף 1 ל-purchaserCount. אם >= 2: לקוח חוזר, קח את תאריכי ההזמנות שלו מהמילון השני, **מיין עולה לפי תאריך**, חשב פער בימים בין כל שתי הזמנות עוקבות, הוסף כל פער (לא מעוגל) לרשימה גלובלית gapsInDays, הוסף 1 ל-repeatCustomerCount.
+3. ltv = round(ltvSum / purchaserCount, 2) אם purchaserCount > 0 אחרת 0. avgDaysBetweenPurchases = round(ממוצע gapsInDays, 1) אם gapsInDays לא ריקה אחרת 0.
+4. בדיקת סבירות לפני כתיבה: purchaserCount אמור להיות כמה אלפים (מתוך כ-4,860 לקוחות בסך הכל), ltv סכום דולרי סביר (לא $0.01 ולא מיליון), avgDaysBetweenPurchases מספר ימים סביר (לא שלילי, לא עצום). אם משהו נראה הזוי, אל תכתוב, ציין בדוח.
+
+**כתוב ל-leads.json:** customerMetrics = {ltv, avgDaysBetweenPurchases, purchaserCount, repeatCustomerCount, computedAt: <ISO עם offset ישראל>}.
+
+**שלב 5, גיבוי אם ה-bulk נכשל (רק אם שלב 1-3 נכשלו):** דפדף עם graphql_query הרגיל:
 ```
 customers(first: 250, after: <endCursor>) {
-  edges {
-    node {
-      id
-      numberOfOrders
-      amountSpent { amount }
-      orders(first: 50, sortKey: CREATED_AT) {
-        edges { node { createdAt } }
-      }
-    }
-  }
+  edges { node { id numberOfOrders amountSpent { amount } orders(first: 50, sortKey: CREATED_AT) { edges { node { createdAt } } } } }
   pageInfo { hasNextPage endCursor }
 }
 ```
-המשך לדפדף עם `after` עד ש-hasNextPage הוא false. יש כ-4,860 לקוחות (נמדד 29.09.2026), כלומר כ-20 עמודים, זה תקין וצפוי לריצה פעם ביום, אל תקצר את זה.
+המשך לדפדף עם `after` עד ש-hasNextPage הוא false (כ-20 עמודים), ואז אותו חישוב כמו שלב 4 (לקוח עם בדיוק 50 הזמנות, הגבול העליון כאן, ציין הערה שההיסטוריה שלו עלולה להיות חתוכה, נדיר מאוד).
 
-**שלב 2, לכל לקוח שחזר:**
-1. המר numberOfOrders למספר שלם (חוזר כמחרוזת).
-2. אם numberOfOrders >= 1: זה קונה בפועל. הוסף את amountSpent.amount (כמספר) לסכום כולל ltvSum, והוסף 1 למונה purchaserCount.
-3. אם numberOfOrders >= 2: זה לקוח חוזר. קח את רשימת orders.edges[].node.createdAt, **ודא שהיא ממוינת עולה לפי תאריך** (אל תסמוך על סדר ברירת המחדל בלי לבדוק), וחשב את הפער בימים בין כל שתי הזמנות עוקבות ברשימה. הוסף כל פער כזה (מספר, לא מעוגל) לרשימה גלובלית gapsInDays שמצטברת על פני כל הלקוחות. הוסף גם 1 למונה repeatCustomerCount.
-   (לקוח עם 50 הזמנות בדיוק, הגבול העליון של השאילתה: ציין הערה בדוח שההיסטוריה שלו עלולה להיות חתוכה, מקרה נדיר מאוד בעסק הזה.)
-
-**שלב 3, חישוב סופי:**
-- ltv = ltvSum / purchaserCount, מעוגל ל-2 ספרות. אם purchaserCount == 0, ltv = 0.
-- avgDaysBetweenPurchases = ממוצע כל הערכים ב-gapsInDays, מעוגל לספרה אחת. אם gapsInDays ריקה (אין עדיין מספיק לקוחות חוזרים עם היסטוריה), avgDaysBetweenPurchases = 0 וציין את זה בדוח כהערה, לא כתקלה.
-
-**כתוב ל-leads.json:** customerMetrics = {ltv, avgDaysBetweenPurchases, purchaserCount, repeatCustomerCount, computedAt: <ISO עם offset ישראל>}.
-אם שלב 1 נכשל (שופיפיי לא זמין או שגיאה באמצע הדפדוף): אל תכתוב customerMetrics בכלל, השאר את הישן מה-leads.json שקראת בהתחלה, וציין בדוח שהמדדים האלה לא עודכנו היום.
+אם גם השיטה הראשית וגם הגיבוי נכשלו (שופיפיי לא זמין וכו'): אל תכתוב customerMetrics בכלל, השאר את הישן מה-leads.json שקראת בהתחלה, וציין בדוח שהמדדים האלה לא עודכנו היום.
 
 ---
 
@@ -390,10 +394,13 @@ totalLeads מ-items_count של get_board_info.
 
 **בוטל ב-29.09.2026, אל תחזור לזה:** גרסאות קודמות עקבו אחרי פיצול מקוריים מול פרינטים (originals/prints) לפי תגית "original work" על המוצר, כולל שדות ב-data.json וקטע ייעודי בדשבורד. אלברט לא סוגר ציורים מקוריים דרך שופיפיי בכלל, אלא כלידים בעסקאות פרטיות (נספר תחת monday closedDeals), אז השדה הזה תמיד יצא אפס. הוסר לגמרי, גם מהקטע הזה וגם מהדשבורד. אל תוסיף את זה בחזרה ואל תשלוף lineItems/product.tags, אין להם עוד שימוש.
 
-**הכנסות והזמנות לפי תקופה, דרך graphql_query על orders:**
-לכל אחת משש התקופות (today/yesterday/last3d/-7d/-30d/היום הראשון בחודש עד עכשיו), שאילתה:
+**הכנסות והזמנות לפי תקופה, דרך graphql_query על orders — משיכה אחת, לא שש:**
+
+**שונה 29.09.2026, אל תחזור לשש קריאות נפרדות:** גרסה קודמת שלחה שש שאילתות נפרדות, אחת לכל תקופה, אבל התקופות מקוננות זו בזו (today⊂last3d⊂last7d⊂last30d, ו-monthToDate תמיד בתוך חלון 30 הימים האחרונים כי הוא לכל היותר מתחילת החודש הנוכחי), אז אותן הזמנות נמשכו וחזרו דרך ה-context עד שש פעמים בכל ריצה. עכשיו מושכים פעם אחת את החלון הרחב ביותר (30 יום אחורה) וחותכים ממנו את שש התקופות מקומית בפייתון.
+
+שאילתה יחידה:
 ```
-orders(first: 100, query: "created_at:>='<תאריך התחלה ISO>' AND created_at:<='<תאריך סוף ISO>'") {
+orders(first: 100, query: "created_at:>='<לפני 30 יום בדיוק, 00:00:00 שעון ישראל>' AND created_at:<='<עכשיו>'") {
   edges {
     node {
       name
@@ -407,13 +414,17 @@ orders(first: 100, query: "created_at:>='<תאריך התחלה ISO>' AND create
   pageInfo { hasNextPage endCursor }
 }
 ```
-דפדף עם `after: <endCursor>` עד ש-hasNextPage הוא false. אם יש מעל 100 הזמנות בתקופה (בעיקר ל-30 יום ולחודש), זה צפוי, תמשיך לדפדף.
+דפדף עם `after: <endCursor>` עד ש-hasNextPage הוא false (בעסק הזה זה בדרך כלל עמוד אחד או שניים ל-30 יום, לא 100+, אבל אם כן יגיע לשם בעתיד, תמשיך לדפדף).
 
-**גבולות תאריך ל-yesterday ו-last3d, שעון ישראל:**
-- yesterday: created_at מ-00:00:00 של אתמול עד 23:59:59 של אתמול (יום קלנדרי בודד, לא חלון מתגלגל, כמו today).
-- last3d: created_at מ-00:00:00 לפני יומיים עד עכשיו (חלון מתגלגל של שלושה ימים כולל היום, עקבי עם last7d/last30d).
+**שמור את כל ההזמנות שנמשכו בקובץ scratchpad אחד, ואז בפייתון (Bash) חתוך אותן לשש התקופות לפי created_at, שעון ישראל:**
+- today: מ-00:00:00 היום עד עכשיו.
+- yesterday: מ-00:00:00 של אתמול עד 23:59:59 של אתמול (יום קלנדרי בודד, לא חלון מתגלגל).
+- last3d: מ-00:00:00 לפני יומיים עד עכשיו (חלון מתגלגל של שלושה ימים כולל היום).
+- last7d / last30d: אותו עיקרון, חלון מתגלגל של N ימים כולל היום.
+- monthToDate: מ-00:00:00 של היום הראשון בחודש הנוכחי עד עכשיו.
+כל הזמנה יכולה להיכנס ליותר מתקופה אחת בו-זמנית (למשל הזמנה מהיום נכנסת גם ל-today וגם ל-last7d וגם ל-last30d), זה תקין וצפוי: כל תקופה מחושבת בנפרד מאותו מאגר משותף שנמשך פעם אחת.
 
-**עיבוד לכל הזמנה שחזרה:**
+**עיבוד לכל הזמנה, בכל תקופה שהיא נכנסת אליה:**
 1. אם cancelledAt לא null, דלג על ההזמנה הזו לגמרי, היא לא נספרת בשום מדד למטה.
 2. אחרת: site.orders += 1, site.revenue += subtotalPriceSet.shopMoney.amount (כמספר).
 3. **מדינה בארה"ב:** אם shippingAddress.countryCodeV2 == "US" ול-provinceCode יש ערך, byState[provinceCode].revenue += subtotalPriceSet.shopMoney.amount ו-byState[provinceCode].orders += 1. הזמנה בלי כתובת משלוח, בלי provinceCode, או מחוץ לארה"ב, פשוט דולגת על השלב הזה בלבד (עדיין נספרת ב-site.revenue/orders כרגיל).
