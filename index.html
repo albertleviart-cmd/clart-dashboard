@@ -650,9 +650,14 @@
 
 
   // ===== dismissible items (mark done, auto-clear 24h later, nothing is ever deleted from the data itself) =====
+  // "done" state is shared across every device via two small Make.com webhooks reading/writing
+  // one record in an isolated Make data store. No credential is exposed on this page: the webhook
+  // URLs are unguessable but not a secret the way an access token is, nothing sensitive behind them.
   var DONE_KEY = 'clat-dash-done-v1';
   var DONE_TTL_MS = 24 * 60 * 60 * 1000;
   var DONE_PRUNE_MS = 72 * 60 * 60 * 1000;
+  var DONE_GET_URL = 'https://hook.us2.make.com/f9s7yi59bkr3jcmmxqtdqf46drbaf49p';
+  var DONE_SET_URL = 'https://hook.us2.make.com/hpbw3wr3uo5hsmgjnit4tseetddo3rc9';
   function loadDone() {
     try { var raw = localStorage.getItem(DONE_KEY); return raw ? JSON.parse(raw) : {}; }
     catch (e) { return {}; }
@@ -660,17 +665,43 @@
   function saveDone(map) {
     try { localStorage.setItem(DONE_KEY, JSON.stringify(map)); } catch (e) {}
   }
-  var doneMap = (function () {
-    var map = loadDone(), now = Date.now(), changed = false;
+  function pruneDoneMap(map) {
+    var now = Date.now(), changed = false;
     Object.keys(map).forEach(function (k) {
       if (now - map[k] > DONE_PRUNE_MS) { delete map[k]; changed = true; }
     });
-    if (changed) saveDone(map);
-    return map;
-  })();
+    return changed;
+  }
+  var doneMap = loadDone();
+  if (pruneDoneMap(doneMap)) saveDone(doneMap);
+
+  function refreshDoneFromRemote(cb) {
+    fetch(DONE_GET_URL + '?_=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (remote) {
+        if (remote && typeof remote === 'object') {
+          var merged = {}, k;
+          for (k in remote) merged[k] = remote[k];
+          for (k in doneMap) if (!(k in merged)) merged[k] = doneMap[k];
+          pruneDoneMap(merged);
+          doneMap = merged;
+          saveDone(doneMap);
+        }
+        if (cb) cb();
+      })
+      .catch(function () { if (cb) cb(); });
+  }
+  function pushDoneToRemote() {
+    fetch(DONE_SET_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ value: JSON.stringify(doneMap) })
+    }).catch(function (e) { console.error('done-sync push error', e); });
+  }
   function toggleDone(key) {
     if (doneMap[key]) delete doneMap[key]; else doneMap[key] = Date.now();
     saveDone(doneMap);
+    pushDoneToRemote();
   }
   function itemKey(prefix, parts) {
     return prefix + '::' + parts.filter(function (p) { return p; }).join('|').slice(0, 200);
@@ -842,6 +873,9 @@
   }
   fetchLeads();
   setInterval(fetchLeads, 60000);
+
+  refreshDoneFromRemote(renderLeads);
+  setInterval(function () { refreshDoneFromRemote(renderLeads); }, 60000);
 })();
 </script>
 </body>
