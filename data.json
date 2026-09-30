@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-29T23:07:50+03:00",
+  "updatedAt": "2026-09-30T06:12:33+03:00",
   "sources": {
     "monday": {
       "status": "ok",
@@ -31,6 +31,38 @@
   "periods": {
     "today": {
       "site": {
+        "revenue": 0.0,
+        "orders": 0
+      },
+      "byState": [],
+      "repeatCustomers": {
+        "count": 0,
+        "totalCustomers": 0,
+        "percent": 0
+      },
+      "closedDeals": {
+        "revenue": 0,
+        "count": 0
+      },
+      "spendBreakdown": {
+        "meta": 479.96,
+        "google": 1.31
+      },
+      "spend": 481.27,
+      "analytics": {
+        "sessions": 162,
+        "transactions": 0
+      },
+      "funnel": {
+        "visitors": 162,
+        "productViews": 117,
+        "addToCart": 8,
+        "checkout": 11,
+        "purchases": 0
+      }
+    },
+    "yesterday": {
+      "site": {
         "revenue": 268.2,
         "orders": 2
       },
@@ -51,53 +83,10 @@
         "count": 0
       },
       "spendBreakdown": {
-        "meta": 285.91,
-        "google": 14.69
+        "meta": 558.03,
+        "google": 14.7
       },
-      "spend": 300.6,
-      "analytics": {
-        "sessions": 57,
-        "transactions": 0
-      },
-      "funnel": {
-        "visitors": 57,
-        "productViews": 56,
-        "addToCart": 5,
-        "checkout": 9,
-        "purchases": 0
-      }
-    },
-    "yesterday": {
-      "site": {
-        "revenue": 534.6,
-        "orders": 2
-      },
-      "byState": [
-        {
-          "state": "CO",
-          "revenue": 341.1,
-          "orders": 1
-        },
-        {
-          "state": "NV",
-          "revenue": 193.5,
-          "orders": 1
-        }
-      ],
-      "repeatCustomers": {
-        "count": 0,
-        "totalCustomers": 2,
-        "percent": 0.0
-      },
-      "closedDeals": {
-        "revenue": 0,
-        "count": 0
-      },
-      "spendBreakdown": {
-        "meta": 558.02,
-        "google": 8.29
-      },
-      "spend": 566.31,
+      "spend": 572.73,
       "analytics": {
         "sessions": 234,
         "transactions": 3
@@ -112,19 +101,19 @@
     },
     "last3d": {
       "site": {
-        "revenue": 1098.9,
-        "orders": 5
+        "revenue": 802.8,
+        "orders": 4
       },
       "byState": [
-        {
-          "state": "FL",
-          "revenue": 564.3,
-          "orders": 3
-        },
         {
           "state": "CO",
           "revenue": 341.1,
           "orders": 1
+        },
+        {
+          "state": "FL",
+          "revenue": 268.2,
+          "orders": 2
         },
         {
           "state": "NV",
@@ -134,7 +123,7 @@
       ],
       "repeatCustomers": {
         "count": 0,
-        "totalCustomers": 5,
+        "totalCustomers": 4,
         "percent": 0.0
       },
       "closedDeals": {
@@ -142,19 +131,19 @@
         "count": 1
       },
       "spendBreakdown": {
-        "meta": 1779.14,
-        "google": 34.57
+        "meta": 1779.15,
+        "google": 24.3
       },
-      "spend": 1813.71,
+      "spend": 1803.45,
       "analytics": {
-        "sessions": 910,
+        "sessions": 1018,
         "transactions": 6
       },
       "funnel": {
-        "visitors": 910,
-        "productViews": 691,
-        "addToCart": 49,
-        "checkout": 29,
+        "visitors": 1018,
+        "productViews": 752,
+        "addToCart": 52,
+        "checkout": 31,
         "purchases": 6
       }
     },
@@ -210,26 +199,26 @@
         "count": 3
       },
       "spendBreakdown": {
-        "meta": 3854.77,
-        "google": 50.7
+        "meta": 3854.78,
+        "google": 56.57
       },
-      "spend": 3905.47,
+      "spend": 3911.35,
       "analytics": {
-        "sessions": 2297,
+        "sessions": 2404,
         "transactions": 12
       },
       "funnel": {
-        "visitors": 2297,
-        "productViews": 1658,
-        "addToCart": 111,
-        "checkout": 57,
+        "visitors": 2404,
+        "productViews": 1719,
+        "addToCart": 114,
+        "checkout": 59,
         "purchases": 12
       }
     },
     "last30d": {
       "site": {
-        "revenue": 15868.31,
-        "orders": 55
+        "revenue": 14769.7,
+        "orders": 48
       },
       "byState": [
         {
@@ -244,18 +233,13 @@
         },
         {
           "state": "TX",
-          "revenue": 1028.35,
-          "orders": 4
+          "revenue": 893.2,
+          "orders": 3
         },
         {
           "state": "TN",
           "revenue": 656.1,
           "orders": 1
-        },
-        {
-          "state": "MA",
-          "revenue": 559.3,
-          "orders": 2
         },
         {
           "state": "NC",
@@ -268,19 +252,24 @@
           "orders": 2
         },
         {
-          "state": "CO",
-          "revenue": 391.25,
-          "orders": 2
-        },
-        {
           "state": "GA",
           "revenue": 385.1,
           "orders": 2
         },
         {
+          "state": "MA",
+          "revenue": 381.65,
+          "orders": 1
+        },
+        {
           "state": "NV",
           "revenue": 352.5,
           "orders": 2
+        },
+        {
+          "state": "CO",
+          "revenue": 341.1,
+          "orders": 1
         },
         {
           "state": "RI",
@@ -291,16 +280,6 @@
           "state": "VA",
           "revenue": 269.0,
           "orders": 1
-        },
-        {
-          "state": "PA",
-          "revenue": 257.75,
-          "orders": 2
-        },
-        {
-          "state": "CA",
-          "revenue": 232.25,
-          "orders": 2
         },
         {
           "state": "KY",
@@ -318,13 +297,18 @@
           "orders": 1
         },
         {
-          "state": "IN",
-          "revenue": 78.0,
+          "state": "CA",
+          "revenue": 80.1,
           "orders": 1
         },
         {
-          "state": "SD",
-          "revenue": 75.65,
+          "state": "PA",
+          "revenue": 80.1,
+          "orders": 1
+        },
+        {
+          "state": "IN",
+          "revenue": 78.0,
           "orders": 1
         },
         {
@@ -345,27 +329,27 @@
       ],
       "repeatCustomers": {
         "count": 8,
-        "totalCustomers": 53,
-        "percent": 15.1
+        "totalCustomers": 47,
+        "percent": 17.0
       },
       "closedDeals": {
         "revenue": 12861.86,
         "count": 9
       },
       "spendBreakdown": {
-        "meta": 16463.0,
-        "google": 202.46
+        "meta": 16463.01,
+        "google": 211.52
       },
-      "spend": 16665.46,
+      "spend": 16674.53,
       "analytics": {
-        "sessions": 10994,
+        "sessions": 11074,
         "transactions": 54
       },
       "funnel": {
-        "visitors": 10994,
-        "productViews": 7607,
-        "addToCart": 536,
-        "checkout": 267,
+        "visitors": 11074,
+        "productViews": 7668,
+        "addToCart": 539,
+        "checkout": 269,
         "purchases": 54
       }
     },
@@ -491,44 +475,44 @@
         "count": 9
       },
       "spendBreakdown": {
-        "meta": 15527.36,
-        "google": 205.15
+        "meta": 15721.42,
+        "google": 206.48
       },
-      "spend": 15732.51,
+      "spend": 15927.9,
       "analytics": {
-        "sessions": 10147,
+        "sessions": 10229,
         "transactions": 44
       },
       "funnel": {
-        "visitors": 10147,
-        "productViews": 7133,
-        "addToCart": 505,
-        "checkout": 251,
+        "visitors": 10229,
+        "productViews": 7194,
+        "addToCart": 508,
+        "checkout": 253,
         "purchases": 44
       }
     }
   },
   "leadVelocity": {
-    "today": 22,
-    "yesterday": 4,
-    "last7d": 77,
+    "today": 1,
+    "yesterday": 22,
+    "last7d": 75,
     "last14d": 97,
-    "last30d": 140
+    "last30d": 139
   },
   "leadSources": {
     "today": {
+      "total": 1,
+      "form": 1,
+      "other": 0
+    },
+    "yesterday": {
       "total": 22,
       "form": 22,
       "other": 0
     },
-    "yesterday": {
-      "total": 4,
-      "form": 4,
-      "other": 0
-    },
     "last7d": {
-      "total": 77,
-      "form": 50,
+      "total": 75,
+      "form": 48,
       "other": 27
     },
     "last14d": {
@@ -537,8 +521,8 @@
       "other": 27
     },
     "last30d": {
-      "total": 140,
-      "form": 111,
+      "total": 139,
+      "form": 110,
       "other": 29
     }
   },
@@ -551,7 +535,7 @@
     {
       "key": "working",
       "label": "בטיפול",
-      "count": 802
+      "count": 803
     },
     {
       "key": "negotiating",
@@ -579,7 +563,7 @@
       "count": 593
     }
   ],
-  "totalLeads": 1659,
+  "totalLeads": 1660,
   "history": {
     "days": [
       {
@@ -605,6 +589,14 @@
         "spend": 300.6,
         "roasSite": 0.89,
         "roasTotal": 0.89
+      },
+      {
+        "date": "2026-09-30",
+        "siteRevenue": 0.0,
+        "closedDealsRevenue": 0,
+        "spend": 481.27,
+        "roasSite": 0.0,
+        "roasTotal": 0.0
       }
     ]
   }
