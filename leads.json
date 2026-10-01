@@ -1,409 +1,287 @@
 {
-  "updatedAt": "2026-09-29T07:25:00+03:00",
-  "scanDate": "2026-09-29",
+  "updatedAt": "2026-10-01T07:20:00+03:00",
+  "scanDate": "2026-09-30",
   "customerMetrics": {
-    "ltv": 267.49,
+    "ltv": 267.41,
     "avgDaysBetweenPurchases": 76.6,
-    "purchaserCount": 2907,
+    "purchaserCount": 2909,
     "repeatCustomerCount": 301,
-    "computedAt": "2026-09-29T21:40:00+03:00"
+    "computedAt": "2026-10-01T07:15:00+03:00"
   },
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "לוח 2037430545. לידים שנוצרו ב-48 שעות: 12. בנוסף נסרקו כל הרשומות עם Close Date בספטמבר, 9 רשומות, ובוצעו חיפושי כפילות לפי מייל וטלפון על חמישה משלמים חדשים"
+      "note": "לוח 2037430545. 24 רשומות נוצרו ב-48 שעות, מתוכן 20 כפילויות של Joseph Krendel. עודכנו 6 רשומות. לא נוצרה אף רשומה חדשה: אין ליד נכנס חדש שאינו בלוח"
     },
     "quoMessages": {
       "status": "ok",
-      "note": "14 יום, 92 הודעות מ-33 משתתפים. שלוש הודעות יוצאות חדשות ב-28.09 בערב לסטיבן, סקוט ורנה. אין אף שיחה שבה הלקוח דיבר אחרון ואין לה משימה פתוחה"
+      "note": "חלון 14 יום, 97 הודעות מ-34 משתתפים. אין אף שיחה שבה הלקוח דיבר אחרון ואין לה משימה פתוחה. נוצרה משימה אחת חדשה על Jodie, 8 ימים בלי תגובה"
     },
     "gmailBusiness": {
       "status": "ok",
-      "note": "שלושה חיפושים: 2 יום החזיר 27 שרשורים, לינקי תשלום 7 יום החזיר 5, וסוופ 30 יום החזיר 201 שרשורים שנקראו ב-50 האחרונים לפי ההודעה האחרונה בכל שרשור"
+      "note": "שלושה חיפושים: 2 יום החזיר 43 שרשורים, buy.stripe.com 7 יום החזיר 4, וסוופ 30 יום החזיר 201 שרשורים שנסרקו ב-50 האחרונים לפי ההודעה האחרונה בכל שרשור"
     },
     "gmailPrivate": {
       "status": "ok",
-      "note": "דרך Composio, שני חיפושים, 201 הודעות, 120 נסרקו. **אין אף ליד אמנות.** רק Upwork, Fiverr, Printify, Mercury, FIDF, Park West, RV Print Factory ובנקים"
+      "note": "דרך Composio, שני חיפושים, 102 הודעות ייחודיות. **אין אף ליד אמנות.** רק Upwork, RV Print Factory, Artfinder, AliExpress, UPS, FIDF, ברוקרים ופרסומות"
     },
     "shopify": {
       "status": "ok",
-      "note": "15 הזמנות אחרונות עד #4313. ארבע הזמנות חדשות מאז הריצה הקודמת, סך 802.80 דולר"
+      "note": "20 הזמנות אחרונות עד #4315. שתי הזמנות חדשות מאז הריצה הקודמת: #4314 ב-30.09 על 50.64 ו-#4315 ב-01.10 על 246.75, סך 297.39 דולר"
     },
     "stripe": {
       "status": "ok",
-      "note": "GetCharges על acct_1SM0Z937dfJIOq2B עם limit 5. **החלון מספיק: החיוב החמישי הוא של David Javitch מ-24.09, לפני הריצה הקודמת, ולכן לא הוגדל.** שני חיובים חדשים"
+      "note": "GetCharges על acct_1SM0Z937dfJIOq2B עם limit 5. **החלון מספיק: החיוב החמישי הוא Meisel מ-27.09, לפני הריצה הקודמת.** אין אף חיוב מוצלח חדש. שני חיובים חדשים נכשלו, שניהם של Yocheved Keren על 2,250 דולר"
     },
     "autocalls": {
       "status": "ok",
-      "note": "24 שיחות ב-28 עד 29.09. **שתי שיחות אנושיות אמיתיות, ושתיהן נגמרו בקביעת ייעוץ.** נבדקו שלושה תמלולים מלאים לפי answered_call ו-connection_type ולא לפי משך"
+      "note": "40 שיחות ב-29 עד 30.09. **אפס שיחות אנושיות אמיתיות.** כל השיחות בסטטוס completed נמשכו 19 שניות או פחות, וכל השאר no-answer או תא קולי"
     },
     "calendar": {
       "status": "ok",
-      "note": "היום ומחר. שני ייעוצים היום, אין כלום מחר"
+      "note": "היום ומחר, אין אף אירוע. הייעוץ היחיד שהיה ביומן, Joseph Krendel ב-30.09, בוטל על ידי הלקוח"
     },
     "googleAnalytics": {
       "status": "ok",
-      "note": "properties/415263029, אזור זמן America/Los_Angeles, 21 עד 28.09 ופילוח ערוצים ל-28.09"
+      "note": "properties/415263029, אזור זמן America/Los_Angeles, 23 עד 30.09 ופילוח ערוצים ל-30.09. **30.09 הוא יום חלקי בשעון LA בזמן הסריקה, כ-21:00, ולכן לא להשוות אותו כיום מלא**"
     },
     "googleAds": {
       "status": "ok",
-      "note": "customer 7282991915, GAQL על campaign עם segments.date 22 עד 28.09. קמפיין אחד בלבד עם חשיפות. ההמרה לדולר בשער הקבוע 0.333333 לפי ההוראות"
+      "note": "customer 7282991915, GAQL על campaign עם segments.date 24 עד 30.09. קמפיין אחד בלבד עם חשיפות. ההמרה לדולר בשער הקבוע 0.333333 לפי ההוראות"
     },
     "metaAds": {
       "status": "ok",
-      "note": "400319919198934 דולרי, 7 קמפיינים עם הוצאה מתוך 25. 2111326855852065 שקלי ללא הוצאה בשבעה ימים"
+      "note": "400319919198934 דולרי, 7 קמפיינים עם הוצאה ב-30.09, סך 403.47 דולר. 2111326855852065 השקלי בלי הוצאה כלל ב-24 עד 30.09"
     },
     "whatsapp": {
       "status": "error",
-      "note": "לא ניתן לסריקה בענן, אין API ואין מסך"
+      "note": "לא ניתן לסריקה בענן, אין API ואין מסך. לא נוסה לעקוף"
     }
   },
   "needsAnswer": [
     {
-      "name": "Amy Grottolo",
-      "why": "**ייעוץ היום ב-17:45 שעון ישראל, טלפון 425-260-9595.** ליד Hot שקבע בשיחה אמיתית עם הבוט. תקציב 2,500 עד 3,500. הסיבה שלה: My boyfriend is a surgeon in Tel Aviv. **לא אמרה איזו יצירה ולא איזה חדר, שאלת המיקום נשארה בלי מענה בשיחה, ולכן זה מה שצריך לברר**",
-      "channel": "Phone Call",
-      "waitingDays": 0,
+      "name": "Yocheved Keren",
+      "why": "ניסתה לשלם 2,250 דולר ב-30.09 ושני החיובים נדחו, אמקס do_not_honor ו-Link בלי כיסוי. אין לה רשומה בלוח. זו העסקה הגדולה ביותר שעל הפרק והיא נתקעה על אמצעי תשלום",
+      "channel": "Stripe",
+      "waitingDays": 1,
       "urgency": "high"
     },
     {
-      "name": "Jennifer Nason",
-      "why": "**ייעוץ היום ב-19:15 שעון ישראל, טלפון 845-245-8055.** תקציב 5,000 עד 10,000 דולר, הגבוה ביותר בין הלידים החדשים של החודש. רוצה את הפרפר לסלון, ובמילים שלה The butterfly means someone in heaven is close by you. **ה-RSVP שלה ביומן עדיין needsAction, שווה אישור טלפוני לפני**",
-      "channel": "Phone Call",
-      "waitingDays": 0,
+      "name": "Dov Javitch",
+      "why": "אישר סופית את Light of Hope, שאל אם 30 על 30 זה אינצ'ים או רגל, וביקש קבלה על מקדמת ה-875 דולר. יתרה פתוחה 2,625",
+      "channel": "Email",
+      "waitingDays": 1,
       "urgency": "high"
     },
     {
-      "name": "Ellen Danzis ובעלה Marc",
-      "why": "**ליד שאיבד 11 יום ונוצרה לו רשומה רק בריצה הזו.** ביקשה ביקור בסטודיו לבעלה שמגיע לישראל 15 עד 24 באוקטובר, ומסרה את הטלפון שלו 718-607-2141 ב-18.09 אחרי שביקשת אותו. מאז אין שום עדות שיצרת איתו קשר. החלון נסגר. טיוטה מחכה",
+      "name": "Angela",
+      "why": "ליד חדש מהטופס ב-30.09 עם תקציב מוצהר 3,500 עד 5,000 דולר, כלומר טווח של מקור. יממה בלי שום מגע, והטלפון שמסרה אינו תקין",
       "channel": "Email",
-      "waitingDays": 11,
+      "waitingDays": 1,
       "urgency": "high"
     },
     {
-      "name": "Daniela Bush",
-      "why": "הבטחת לה ב-22.09 בכתב שהזמנה #4300 על 656.10 דולר תישלח ל-1441 Wagner St Wantagh NY. **שמונה ימים אחר כך הסטטוס בשופיפיי עדיין IN_PROGRESS.** החבילה עלולה לצאת לכתובת הלא נכונה",
+      "name": "Joseph Krendel",
+      "why": "ביטל את הייעוץ 28 דקות לפני המועד ב-30.09. סימן 20 יצירות בטופס, וכל הקשר איתו עובר דרך כתובת מייל שבורה שחוזרת שלוש פעמים",
       "channel": "Email",
-      "waitingDays": 8,
+      "waitingDays": 1,
       "urgency": "high"
     },
     {
-      "name": "Pamela Fisher",
-      "why": "שילמה 209 דולר ב-15.09 ומסרה כתובת משלוח. **14 יום בלי מילה ממך.** טיוטה קיימת מ-28.09 ומחכה שתשלים את סטטוס ההפקה",
-      "channel": "Email",
-      "waitingDays": 14,
-      "urgency": "high"
-    },
-    {
-      "name": "Beverly Jacobs",
-      "why": "ביקשה ב-17.09 כתובת, שם פרויקט ו-Tax ID כדי לתרום מקרן הצדקה שלה. אספנית שקנתה ב-840 דולר ביולי. **12 יום.** טיוטה קיימת ומחכה לפרטים ממך",
-      "channel": "Email",
-      "waitingDays": 12,
-      "urgency": "high"
-    },
-    {
-      "name": "David Javitch, דב",
-      "why": "**שלח ב-27.09 מייל אישי על מצב הסרטן שלו ולא קיבל תשובה, יומיים.** הגידולים לא גדלו, נשלח ל-MRI בעוד שנה, והוא כותב שהוא דווקא עצוב ולא מוקל. לקוח משלם עם יתרה של 2,625 דולר. הוכנה טיוטה אישית שמחכה למשפט ממך על היצירה",
-      "channel": "Email",
-      "waitingDays": 2,
-      "urgency": "high"
-    },
-    {
-      "name": "Michael Miller, mmgnma",
-      "why": "אספן חוזר שקנה מקור ב-3,500 דולר באפריל. ענית לו ב-20.09 על הגדלים והוא שותק תשעה ימים. הטיוטה מ-28.09 קיימת ומחכה שתוסיף משפט אישי על היצירה שקנה",
-      "channel": "Email",
-      "waitingDays": 9,
-      "urgency": "high"
-    },
-    {
-      "name": "Darcy White",
-      "why": "מורה בתיכון, לא יכולה את ה-40x30 גם עם 15 אחוז הנחה. הטיוטה עם הצעת גודל קטן יותר מחכה לשני מחירים ממך",
-      "channel": "Email",
-      "waitingDays": 10,
-      "urgency": "medium"
-    },
-    {
-      "name": "Lisa Beth ו-Gregory Meisel",
-      "why": "שילמו מקדמה 975 דולר ב-27.09, אומת ב-Stripe, אבל **ההסכם החתום עדיין לא חזר** למרות שכתבו we will sign and send back. לא הוכנה טיוטת תזכורת כי כתבת להם לפני פחות מ-48 שעות",
-      "channel": "Email",
-      "waitingDays": 2,
-      "urgency": "medium"
-    },
-    {
-      "name": "Kevin",
-      "why": "לינק Stripe נשלח בוואטסאפ ב-24.09 ולא שולם, **חמישה ימים.** אומת עקיפות: אין שום חיוב שלו בחמשת החיובים האחרונים ב-Stripe. כתובת המשלוח כבר בידיך",
-      "channel": "WhatsApp",
-      "waitingDays": 5,
-      "urgency": "medium"
-    },
-    {
-      "name": "Helena Zabinsky",
-      "why": "כתבה ב-16.09 שקיבלה את היצירה, מיסגרה אותה, היא תלויה על הקיר והיא אוהבת אותה. **13 יום בלי תשובה.** לא הוכנה טיוטה כי אין כוונת קנייה לפי הכלל, אבל זו המלצה חמה שמתבקשת מעצמה",
+      "name": "Ellen Danzis",
+      "why": "בעלה מארק מגיע לישראל ב-15.10, נשארו 14 יום. הטיוטה מ-29.09 עדיין לא נשלחה ואין שום קשר עם הטלפון שמסרה",
       "channel": "Email",
       "waitingDays": 13,
-      "urgency": "low"
+      "urgency": "high"
+    },
+    {
+      "name": "Benjamin Lebedin",
+      "why": "סגר והזמין, #4315 על 246.75 דולר. כתב My order is placed וסיפר שהוא ואביו מחכים לתלות. מגיע לו אישור",
+      "channel": "Email",
+      "waitingDays": 1,
+      "urgency": "medium"
+    },
+    {
+      "name": "Sandra Stechman",
+      "why": "בחרה פרינט 12 על 9 ב-89 דולר, מסרה כתובת משלוח וקיבלה לינק תשלום ב-30.09 בשעה 23:48. הלינק טרם שולם",
+      "channel": "QUO",
+      "waitingDays": 1,
+      "urgency": "medium"
     }
   ],
   "newYesterday": [
     {
-      "name": "Amy Grottolo",
-      "source": "Autocalls",
-      "detail": "amygrottolo77@gmail.com, 4252609595, רשומה 3248958978 נוצרה 28.09 בשעה 20:28. שיחה של 130 שניות שנגמרה בקביעת ייעוץ להיום 10:45 שעון ניו יורק. תקציב 2,500 עד 3,500"
+      "name": "Angela",
+      "source": "טופס האתר",
+      "detail": "The Symbol, David star. תקציב 3,500 עד 5,000 דולר. נוצרה 30.09 בשעה 10:06 ולא נגעו בה"
     },
     {
-      "name": "Jennifer Nason",
-      "source": "Autocalls",
-      "detail": "Jendrew84@gmail.com, 8452458055, רשומה 3248832013 נוצרה 28.09 בשעה 18:06. שיחה של 116 שניות שנגמרה בקביעת ייעוץ להיום 12:15 שעון ניו יורק. תקציב 5,000 עד 10,000"
+      "name": "Benjamin sedaghatzandi",
+      "source": "טופס האתר",
+      "detail": "נוצר 30.09 בשעה 04:27. תקציב 2,500 ומטה, כלומר פרינט. חויג ונפל לתא קולי, סטטוס Unreachable"
     },
     {
-      "name": "Lisa Finbear Harder",
-      "source": "powerfulform",
-      "detail": "Bearleefin@yahoo.com, 8189180655, רשומה 3249066788 נוצרה 28.09 בשעה 22:58. במילים שלה: It is my souls reflection. שני חיוגים ב-29.09 שנפלו לתא קולי"
+      "name": "Benjamin Lebedin",
+      "source": "Shopify #4315",
+      "detail": "**עסקה שנסגרה.** 246.75 דולר, Am Yisrael Chai Tree Of Life בגודל 40 על 30, קוד ההנחה BENJAMIN נקלט סוף סוף"
     },
     {
-      "name": "Ellen Danzis",
-      "source": "סוופ 30 יום בגמייל העסקי",
-      "detail": "**נוצרה בריצה הזו, רשומה 3249191896.** פנייה מ-15.09 מטופס הקשר של שופיפיי שלא נכנסה אוטומטית ללוח. ביקור בסטודיו לבעלה מארק, 15 עד 24 באוקטובר"
+      "name": "Adina Derrick",
+      "source": "Shopify #4314",
+      "detail": "50.64 דולר, Tote Bag Heart Of Protection, קוד WELCOME10. משלמת שאינה ליד"
     }
   ],
   "replied": [
     {
-      "name": "Marci Reiter",
+      "name": "Dov Javitch",
       "channel": "Email",
-      "said": "ב-28.09 בשעה 16:19 כתבה 30 x 40 please, וב-21:18 אחרי שקיבלה לינק להשלמת ההפרש כתבה Done. Thank you. **החיוב אומת ב-Stripe: 108 דולר ב-28.09 בשעה 21:17 מ-m2reiter@aol.com**"
+      "said": "Yes, Light of Hope has always been my preference. And your suggestion of 30 x 30 is fine, except you didn't say if that's 30 feet or 30 inches. I like to think big"
     },
     {
-      "name": "Rene",
+      "name": "Benjamin Lebedin",
+      "channel": "Email",
+      "said": "My order is placed. My father and I are looking forward to hanging your beautiful piece on our wall"
+    },
+    {
+      "name": "Sandra Stechman",
       "channel": "QUO",
-      "said": "ב-28.09 בשעה 21:57 ענתה מילה אחת, Print, וקיבלה ממך תוך ארבע דקות את כל טווח המחירים. הכדור אצלה"
+      "said": "I understand. I'd like to start with the print on canvas, ואחריו כתובת המשלוח 401 Main Street, Mazon Illinois 60444"
     },
     {
-      "name": "Amy Grottolo",
-      "channel": "Phone Call",
-      "said": "בשיחה: My boyfriend is a surgeon in Tel Aviv, ואחר כך Yes לייעוץ ו-1045 am לבחירת המועד"
-    },
-    {
-      "name": "Jennifer Nason",
-      "channel": "Phone Call",
-      "said": "בשיחה על הפרפר, Eastern standards but today, ואחר כך 12 15 לבחירת המועד"
+      "name": "Yvette Leung",
+      "channel": "Email",
+      "said": "Its gorgeous, I will save up and hopefully order an original one day. I'm Canadian but hope to come to Israel within a couple of years so I can visit your studio"
     }
   ],
   "revenue": {
-    "monthToDate": 12862,
-    "cashNotTurnover": 2550,
+    "monthToDate": 246.75,
+    "monthToDateMonth": "אוקטובר 2026",
+    "septemberFinal": 12862,
+    "cashNotTurnover": 0,
     "openBalances": 7950,
-    "newStripeCashToday": 208,
-    "newShopifyOrdersSinceLastRun": 802.8,
+    "newStripeCashToday": 0,
+    "failedStripeToday": 2250,
+    "newShopifyOrdersSinceLastRun": 297.39,
     "unreconciledStripeCashSeptember": 5604,
     "currency": "USD"
   },
   "draftsPrepared": [
     {
-      "name": "Ellen Danzis",
+      "name": "Dov Javitch",
       "inbox": "business",
-      "gist": "**חדשה בריצה הזו.** מאשרת שקיבלת את הטלפון של מארק, מתנצלת על העיכוב, ואומרת שתכתוב לו בוואטסאפ לקביעת ביקור בין 15 ל-24 באוקטובר. שאלה אחת: יום חול או יום ראשון",
+      "gist": "30 אינצ'ים ולא רגל, ואפשרות להגדיל ל-40 על 40. מאשר שהקבלה בדרך",
+      "needsInput": true
+    },
+    {
+      "name": "Benjamin Lebedin",
+      "inbox": "business",
+      "gist": "אישור ההזמנה, התייחסות לאביו, ושאלה אם לעדכן במסרון או במייל כשנשלח",
       "needsInput": false
     },
     {
-      "name": "David Javitch, דב",
+      "name": "Angela",
       "inbox": "business",
-      "gist": "**חדשה בריצה הזו.** תגובה אישית וקצרה על מייל הסרטן שלו, בלי שום דבר מכירתי, שמתייחסת לכך שהוא הגיע מוכן לניתוח ויצא בלי כלום. מחכה לך להוסיף משפט אחד על מצב היצירה שלו בסוגריים המרובעים",
-      "needsInput": true
-    },
-    {
-      "name": "Michael Miller, mmgnma",
-      "inbox": "business",
-      "gist": "מעקב אחרי שענית לו על הגדלים ב-20.09, עם שאלה אחת איזו מארבע היצירות נשארה איתו. מחכה למשפט אישי על היצירה שקנה באפריל",
-      "needsInput": true
-    },
-    {
-      "name": "Beverly Jacobs",
-      "inbox": "business",
-      "gist": "פרטי תרומה לקרן הצדקה שלה, ושאלה אחת אם מעדיפה המחאה או דף התרומות",
-      "needsInput": true
-    },
-    {
-      "name": "Pamela Fisher",
-      "inbox": "business",
-      "gist": "התנצלות על השקט אחרי שהיא שילמה, אישור הכתובת ב-Haymarket, ושאלה אם הכתובת עדיין נכונה",
-      "needsInput": true
-    },
-    {
-      "name": "Darcy White",
-      "inbox": "business",
-      "gist": "הצעת גודל קטן יותר של Tree of Life הכחול במקום ויתור על העסקה",
-      "needsInput": true
-    },
-    {
-      "name": "Russ",
-      "inbox": "business",
-      "gist": "טיוטה מ-27.09 על הציור האבסטרקטי, עדיין ממתינה לשליחה",
+      "gist": "מייל פתיחה על מגן דוד, בקשת מספר טלפון תקין, ושאלה איפה בבית",
       "needsInput": false
     },
     {
-      "name": "Ghia Edwards",
+      "name": "Joseph Krendel",
       "inbox": "business",
-      "gist": "טיוטה מ-27.09, עדיין ממתינה לשליחה",
-      "needsInput": false
-    },
-    {
-      "name": "Banks-Koulax",
-      "inbox": "business",
-      "gist": "טיוטה מ-26.09, עדיין ממתינה לשליחה",
+      "gist": "הטיוטה הישנה נמחקה כי התיישנה. חדשה: הצעת מועד חלופי והסבר על המייל השבור",
       "needsInput": false
     }
   ],
   "quoTasks": [
     {
-      "name": "לא נוצרה אף משימה חדשה",
-      "waitingDays": 0,
-      "asked": "**חלון 14 יום נסרק במלואו, 33 משתתפים.** אין אף שיחה שבה הלקוח דיבר אחרון ואין לה כבר משימה פתוחה. Lori ו-Jodie טרם עברו 7 ימים מההודעה שלך, 6.4 ו-5.4 בהתאמה. סטיבן, סקוט ורנה קיבלו ממך תשובה אמש ולכן הכדור אצלם"
-    },
-    {
-      "name": "21 משימות פתוחות מהריצות הקודמות, מתוכן 14 באיחור",
-      "waitingDays": 1,
-      "asked": "**14 משימות עם תאריך יעד 28.09 שעבר: Gregory, Carrie, Lisa, Marnie Varry, Suzanne, Melba, Renee, Paul, Colleen, Lisa, James, Ronald, Susan, Torino.** ועוד 7 לתאריך היום: adam, Jaclyn, Christian, Lisa, Deidra, Scott, Stephen. שלוש מהן, של סטיבן סקוט ורנה, אפשר לסגור כי הנוסח שהן החזיקו נשלח בפועל"
+      "name": "Jodie 4058928868",
+      "waitingDays": 8,
+      "asked": "נשאלה איזו יצירה תפסה אותה וגם לשלוח תמונה של הקיר, שתי שאלות בבת אחת, ולא ענתה"
     }
   ],
   "mondayUpdated": {
-    "updated": 8,
-    "created": 1,
+    "updated": 6,
+    "created": 0,
     "details": [
-      "Amy 3248958978, נרשם שהייעוץ היום ב-17:45 שעון ישראל, שהתמלול מאשר שיחה אנושית אמיתית, ושהיא לא אמרה איזו יצירה ואיזה חדר. תאריך קשר 28.09",
-      "Jennifer Nason 3248832013, נרשם שהייעוץ היום ב-19:15 שעון ישראל, שהתקציב 5,000 עד 10,000, ושה-RSVP שלה עדיין needsAction. תאריך קשר 28.09",
-      "Lisa Finbear Harder 3249066788, ליד חדש מטופס, נרשמו שני החיוגים שנפלו לתא קולי, תאריך קשר 28.09 ותאריך פעולה 29.09",
-      "Stephen Masters 3246483777, נרשם שענית לו אמש וביקשת תמונות, הכדור אצלו, תאריך פעולה נדחה ל-01.10",
-      "Scott Dolney 3246461517, נרשם שענית לו אמש, ושלא נמסר לו שום מחיר, תאריך פעולה נדחה ל-01.10",
-      "Renee 3243903960, נרשם שקיבלה את כל טווח המחירים ושתי שאלות הגודל נענו, תאריך פעולה נדחה ל-01.10",
-      "David Javitch 2774912128, נרשם מייל הבריאות מ-27.09 שלא נענה, בלי לגעת בכסף",
-      "Sheila Kroos 3243229130, נרשם שהמספר שגוי לפי תמלול, ושנשרפו 14 חיוגים. **הסטטוס לא שונה, זו המלצה בלבד**",
-      "**נוצרה רשומה אחת: Ellen Danzis 3249191896**, בקבוצת New Leads, סטטוס Conversation Active, אחרי בדיקת כפילות כפולה לפי המייל ולפי הטלפון שחזרו ריקים",
-      "**לא נוצרו רשומות ל-Marci Reiter ול-Jonathan DeFelice.** שניהם משלמים ולא לידים נכנסים, ולפי הנוהל הם מדווחים בלבד"
+      "Benjamin Lebedin 3243470754: סטטוס In Production, Deal Value 246.75, Close Date 01.10, Amount Paid 246.75, ערוץ Email",
+      "Sandra Stechman 3250555853: Deal Value 89, Last Contacted 30.09, ערוץ QUO. Close Date ו-Amount Paid לא נרשמו כי הלינק טרם שולם",
+      "David Javitch 2774912128: הערות, Last Contacted 30.09, ערוץ Email. לא נגעתי בכסף",
+      "Joseph Krendel 3249723010: הורד הסימון Consultation Booked כי הייעוץ בוטל, הערות, Last Contacted 30.09",
+      "Angela 3251776466: הערות על הטלפון השבור ועל חוסר המגע, Next Action 01.10",
+      "Yvette Leung 3233608206: הערות, ערוץ Email, Last Contacted 30.09"
     ]
   },
   "faults": [
     {
-      "what": "**הבוט של Autocalls חייג 14 פעמים למספר שאינו של Sheila Kroos, ויש לזה עכשיו הוכחה בתמלול.** בשיחה של 28.09 בשעה 16:07 נשמע מענה שאומר 614-582-2128 is not available, וההערכה החזירה connection_type wrong_number. הרצף התחיל ב-24.09 והוא ממשיך כי הסטטוס Unreachable דווקא מתיר חיוגים. **צריך להוציא אותה מהרצף או להשיג מספר נכון, זו פעולה במערכת חיה ולכן היא המלצה ולא בוצעה**",
+      "what": "Yocheved Keren, y.keren@student.fdu.edu, ניסתה לשלם 2,250 דולר פעמיים ב-30.09 ושני החיובים נדחו. אין לה רשומה בלוח ולא נוצרה, כי משלם שאינו ליד הוא החלטה שלך",
       "severity": "high"
     },
     {
-      "what": "**פניות מטופס הקשר של שופיפיי אינן נכנסות ללוח, וזו כבר הפעם השנייה שזה גורם לאיבוד ליד אמיתי.** Ellen Danzis פנתה ב-15.09, ניהלה איתך ארבע הודעות, מסרה את הטלפון של בעלה ב-18.09, ומאז 11 יום של שקט. בעלה מגיע לישראל ב-15.10. זה בדיוק מה שקרה ל-Russ ב-27.09. **ההתראות מגיעות מ-mailer@shopify.com ולא מ-powerfulform, ולכן הן עוברות מתחת לרדאר. זה צריך אוטומציה ולא בדיקה ידנית**",
-      "severity": "high"
-    },
-    {
-      "what": "**Marci Reiter שילמה 108 דולר ב-28.09 להשלמת שדרוג ל-40x30, יש לה הזמנה #4308 על 188.10 דולר מ-26.09, ואין לה שום רשומה בלוח.** חיפוש reiter בעמודת המייל חזר ריק. יש יצירה בהפקה, סך 296.10 דולר שולם, ואפס מעקב. לפי הנוהל היא משלמת ולא ליד נכנס ולכן לא נפתחה רשומה, **אבל זו החלטה שלך והיא דחופה כי היצירה כבר בעבודה**",
-      "severity": "high"
-    },
-    {
-      "what": "הזמנה #4300 של Daniela Bush: הבטחת בכתב ב-22.09 שהמשלוח יוצא ל-1441 Wagner St Wantagh, **ושמונה ימים אחר כך הסטטוס עדיין IN_PROGRESS.** החבילה עלולה לצאת לכתובת הישנה ב-435 E 70th St",
-      "severity": "high"
-    },
-    {
-      "what": "**מטא הוציאה 3,850.29 דולר בשבעה ימים מול 3,256.25 דולר הכנסה בשופיפיי באותם ימים, פער שלילי של 594 דולר, ועם גוגל זה 645.** הקמפיין Listicle 5 Things art לבד לקח 1,854.46 דולר, כמעט חצי מהתקציב. יש לזכור שעסקאות מקור נסגרות בטלפון ובמייל ואינן עוברות בחנות, ולכן זה אינו ROAS מלא",
-      "severity": "high"
-    },
-    {
-      "what": "**Jonathan DeFelice שילם 100 דולר ב-28.09 בשעה 20:46 מהמייל jdefelice@anselm.edu, ואין לו רשומה בלוח, אין לו שרשור מייל, ואין לו שום זכר בשום ערוץ אחר.** חיפוש anselm בלוח וחיפוש defelice בגמייל חזרו ריקים. כתובת החיוב היא Saint Anselm College בניו המפשייר. לא ברור מה הוא קנה",
+      "what": "Autocalls ממשיך לחייג 3 עד 4 פעמים ביום ללידים שאתה מנהל איתם שיחת SMS פעילה: Bharath 213-518-3037, Noah 760-977-9026 ו-Roselynn 914-987-1595. הם בסטטוס שמתיר חיוג כי לא ענו לך. **ממליץ להעביר ל-Conversation Active, לא עשיתי זאת לבד כי הם לא הגיבו בפועל**",
       "severity": "medium"
     },
     {
-      "what": "**תיקון לתקלה שדווחה אתמול, והתיקון חיובי.** אתמול נרשם ש-Unassigned זינק ל-49 אחוז מהתנועה ב-27.09. **זה היה ארטיפקט של יום חלקי.** 27.09 נסגר על 335 סשנים ולא 251, וב-28.09 Unassigned חזר ל-27.3 אחוז, 51 מתוך 187. הבעיה אמיתית אבל היא בקנה מידה של הבסיס ולא זינוק",
+      "what": "Unassigned הוא 64 מתוך 180 סשנים ב-30.09, כלומר 35.6 אחוז. זה גבוה משמעותית מהבסיס של 27 אחוז ומעל סף ה-15 אחוז. רבע עד שליש מהתנועה לא משויכת",
       "severity": "medium"
     },
     {
-      "what": "**תיקון שני, גם הוא חיובי, לקביעה מאתמול שהבוט שורף לידים.** ב-28.09 הבוט ניהל שתי שיחות אנושיות אמיתיות, **ושתיהן נגמרו בקביעת ייעוץ**, Amy ו-Jennifer Nason, האחת Hot והשנייה עם תקציב עד 10,000 דולר. **הבעיה אינה התסריט אלא אחוז המענה: 24 חיוגים, 2 שיחות אמיתיות, כלומר 8 אחוז.** כשאדם עונה רחל סוגרת. מה שכן מאושש הוא שהקריטריון הנכון הוא answered_call ו-connection_type ולא משך השיחה",
+      "what": "Joseph Krendel: המייל השבור www.krendellotem@yahoo.com החזיר Delivery Status Notification Failure בפעם השלישית ב-30.09, ו-20 הרשומות הכפולות שלו בלוח עדיין לא נמחקו",
       "severity": "medium"
     },
     {
-      "what": "**14 מתוך 21 משימות Quo הפתוחות חלף תאריך היעד שלהן ב-28.09 ואף אחת לא טופלה.** Gregory, Carrie, Lisa, Marnie Varry, Suzanne, Melba, Renee, Paul, Colleen, Lisa, James, Ronald, Susan, Torino. כולן מחזיקות נוסח מוכן להעתקה. שלוש מהן אפשר לסגור כי הנוסח נשלח בפועל",
+      "what": "Angela: הטלפון בלוח הוא 90461338368, אחת עשרה ספרות שמתחילות ב-90, לא ניתן לחיוג כפי שהוא ולכן הבוט מעולם לא חייג אליה",
       "severity": "medium"
     },
     {
-      "what": "**חשבון Google Ads 728-299-1915 קושר ב-28.09 לחשבון ניהול בשם Legendary Media, ובאותו יום הוסר ממנו משתמש עם הרשאת אדמין.** שתי התראות נפרדות בתיבה הפרטית. אם זה מכוון אין בעיה, ואם לא זו בעיית הרשאות על חשבון פרסום פעיל",
+      "what": "סצנריו Make בשם dashboard-done-get צבר שגיאות ב-29.09, ובנוסף התקבלה התראה ב-30.09 שהקרדיטים של הארגון עומדים להיגמר",
       "severity": "medium"
     },
     {
-      "what": "רשומת David Javitch עדיין כפולה. 2774912128 היא הפעילה עם הכסף, ו-3187176886 בשם David נושאת את אותו מייל. **ההערה על הכפילות רשומה בשתיהן מ-24.09 והן עדיין לא אוחדו.** כלי הסריקה אינו מוחק רשומות",
-      "severity": "medium"
-    },
-    {
-      "what": "רשומת mmgnma צריכה שינוי שם ל-Michael Miller. היא נושאת כתובת מייל כשם והוא אספן שקנה מקור ב-3,500 דולר באפריל. ייתכן שקיימת לו רשומה שנייה מהעסקה ההיא. כלי הסריקה אינו משנה שמות",
-      "severity": "medium"
-    },
-    {
-      "what": "**Awin שלחה ב-28.09 התראת סגירת חשבון על חוב שלא שולם, Albert Levi Gallery 116371.** זה ערוץ שותפים פעיל וסגירה תפגע בו. גם admin@loyalize.us שאלה ב-28.09 למה עמלת ה-CPA אפס ואם התוכנית הושהתה, ולא נענתה",
-      "severity": "medium"
-    },
-    {
-      "what": "הטלפון של Marnie Varry בלוח הוא 3174574225 והיא כותבת מ-3172369824. מספר חדש שהיא מסרה ב-20.09 ועדיין לא עודכן, ויש לה גם משימת Quo באיחור",
-      "severity": "medium"
-    },
-    {
-      "what": "Bharath מסומן No Budget Now אבל ההערה אומרת שביקש שיחזרו אליו, וההודעה שנפתחת ב-Hi Bharath עדיין יוצאת למספר 2135183037 ששייך ל-Banks-Koulax. שתי התקלות מ-27.09 לא תוקנו",
-      "severity": "medium"
-    },
-    {
-      "what": "**Organic Search הוא 3 סשנים מתוך 187 ב-28.09, כלומר 1.6 אחוז, ירידה מ-2.8 אחוז.** זו נקודת הפתיחה למדוד מולה את סוכנות ה-SEO והיא מדשדשת",
-      "severity": "medium"
-    },
-    {
-      "what": "קוד ההנחה BENJAMIN מוגבל לקולקשן Fine Art Prints וייכשל בשקט על Embellished. Benjamin Lebedin ביקש 40x30 ואלברט ענה ב-26.09 שהקוד אמור לעבוד, וכדאי לוודא שזה נבדק בפועל",
-      "severity": "medium"
-    },
-    {
-      "what": "Stephen Levine רשום 4,692 בדולר קנדי בעמודה של דולר אמריקאי. Stripe מאשר שני חיובים שלו במטבע CAD, 3,519 ו-1,173",
+      "what": "כפילויות שלא נמחקו: Benjamin Lebedin 3243473001, David 3187176886 מול David Javitch 2774912128, Hillary 3175766269 מול Hillary Nadelman 3239066734. **רשומות בלבד, לא נמחק כלום**",
       "severity": "low"
     },
     {
-      "what": "חיוב של 75 דולר של Maxine Tate מ-03.09 מסומן refunded ב-Stripe. אם יש לה רשומה בלוח עם כסף רשום, צריך לנטרל אותו",
+      "what": "לא רצה סריקה ב-30.09. הריצה הקודמת היא מ-29.09, ולכן החלון היום מכסה יומיים ולא יום",
       "severity": "low"
     }
   ],
-  "whatsappNote": "לא נסרק, אין API ואין מסך בענן. סריקה ידנית אחרונה: 2026-09-27, וממנה נוצרו Colleen Eichor, Kevin ו-Robert Lynn Ginsberg. שם נסגרים הקומישנים הגדולים, כ-15,000 דולר בחודש, ולכן כדאי סריקה ידנית שבועית. חלפו יומיים מהסריקה האחרונה",
-  "meetings": [
+  "whatsappNote": "לא נסרק, אין API ואין מסך בענן. סריקה ידנית אחרונה: 2026-09-27, חלפו 4 ימים. שם נסגרים הקומישנים הגדולים, כ-15,000 דולר בחודש שלא מופיעים בשום ערוץ אחר, ולכן כדאי סריקה ידנית שבועית ועכשיו זה בדיוק הזמן",
+  "meetings": [],
+  "upcomingMeetings": [
     {
-      "when": "2026-09-29 17:45",
-      "who": "Amy Grottolo, ייעוץ אמנות אישי בטלפון 425-260-9595, 15 דקות, היא אישרה"
+      "when": "2026-10-08",
+      "who": "Amy Grottolo, שיחה שנייה אחרי הייעוץ מ-29.09"
     },
     {
-      "when": "2026-09-29 19:15",
-      "who": "Jennifer Nason, ייעוץ אמנות אישי בטלפון 845-245-8055, 15 דקות, ה-RSVP שלה עדיין needsAction"
-    },
-    {
-      "when": "2026-09-30",
-      "who": "אין פגישות מחר"
+      "when": "2026-10-10",
+      "who": "Jennifer Nason, שיחה שנייה אחרי הייעוץ מ-29.09"
     }
   ],
   "traffic": {
-    "date": "2026-09-28",
-    "note": "28.09 אינו יום שלם. אזור הזמן של הנכס הוא America/Los_Angeles ובזמן הסריקה נותרו בו כשלוש שעות, ולכן 186 ייסגר סביב 200 עד 215. **תיקון לריצה הקודמת: 27.09 נסגר על 335 סשנים ולא על 251 שנרשמו כיום חלקי**",
-    "sessions": 186,
-    "sessionsPartialDay": true,
-    "transactions": 1,
-    "revenue": 341.1,
-    "sessionsLastFullDay": 335,
-    "sessions7dAvg": 342,
-    "organicSearchSessions": 3,
-    "organicSearchPct": 1.6,
-    "unassignedSessions": 51,
-    "unassignedPct": 27.3,
-    "paidSocialSessions": 35,
-    "organicSocialSessions": 45,
-    "emailSessions": 9,
-    "emailRevenue": 341.1,
-    "metaSpend7d": 3850.29,
-    "metaTopCampaign": "TMA | CT | Listicle 5 Things art | Sales, 1,854.46 דולר",
-    "metaActiveCampaigns": 7,
-    "metaIlsAccountSpend7d": 0,
-    "googleAdsCost7dIls": 152.11,
-    "googleAdsCost7dUsd": 50.7,
-    "googleAdsCurrency": "ILS",
-    "googleAdsFxRate": 0.333333,
-    "googleAdsImpressions7d": 180,
-    "googleAdsClicks7d": 44,
-    "googleAdsConversions7d": 1,
+    "sessionsLastCompleteDay": 266,
+    "lastCompleteDayDate": "2026-09-29",
+    "sessionsPartialDay": 180,
+    "partialDayDate": "2026-09-30",
+    "avg7d": 313.6,
+    "channels30Sep": {
+      "Unassigned": 64,
+      "Paid Social": 34,
+      "Direct": 32,
+      "Organic Social": 24,
+      "Organic Search": 9,
+      "Paid Search": 9,
+      "Paid Other": 4,
+      "Cross-network": 2,
+      "Email": 1,
+      "Referral": 1
+    },
+    "metaSpend30Sep": 403.47,
+    "metaRoasBest": 2.17,
+    "googleAdsIls24to30Sep": 160.6,
+    "googleAdsUsd24to30Sep": 53.53,
+    "googleAdsClicks": 48,
+    "googleAdsImpressions": 176,
     "googleAdsActiveCampaigns": 1,
-    "shopifyRevenue7d": 3256.25,
-    "adSpendVsShopify7d": -644.74
+    "shopifyRevenue30Sep": 50.64,
+    "note": "30.09 הוא יום חלקי בשעון LA בזמן הסריקה. ההשוואה התקפה היא 29.09 עם 266 סשנים מול ממוצע 313.6"
   }
 }
