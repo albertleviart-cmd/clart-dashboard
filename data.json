@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T06:12:00+03:00",
+  "updatedAt": "2026-10-01T09:25:15+03:00",
   "sources": {
     "monday": {
       "status": "ok",
@@ -18,8 +18,8 @@
       "note": ""
     },
     "googleAnalytics": {
-      "status": "ok",
-      "note": ""
+      "status": "error",
+      "note": "monthToDate נכשל: 00:00 שעון ישראל של 1.10 הוא עדיין 30.09 בשעון הנכס (America/Los_Angeles), אז startDate עתידי מבחינת GA. נשארו ערכי periods.*.analytics ו-periods.*.funnel הישנים לכל שש התקופות כדי לא לכתוב סנאפשוט חלקי."
     }
   },
   "metaAccountNote": "חשבון Albert Levi Art (USD) בלבד",
@@ -47,14 +47,14 @@
         "percent": 0.0
       },
       "closedDeals": {
-        "revenue": 0,
-        "count": 0
+        "revenue": 246.75,
+        "count": 1
       },
       "spendBreakdown": {
-        "meta": 391.43,
-        "google": 5.0
+        "meta": 19.16,
+        "google": 5.01
       },
-      "spend": 396.43,
+      "spend": 24.17,
       "analytics": {
         "sessions": 176,
         "transactions": 1
@@ -83,10 +83,10 @@
         "count": 0
       },
       "spendBreakdown": {
-        "meta": 505.86,
+        "meta": 404.59,
         "google": 2.97
       },
-      "spend": 508.83,
+      "spend": 407.56,
       "analytics": {
         "sessions": 266,
         "transactions": 0
@@ -122,14 +122,14 @@
         "percent": 0.0
       },
       "closedDeals": {
-        "revenue": 0,
-        "count": 0
+        "revenue": 246.75,
+        "count": 1
       },
       "spendBreakdown": {
-        "meta": 1777.77,
-        "google": 22.67
+        "meta": 1469.54,
+        "google": 22.69
       },
-      "spend": 1800.44,
+      "spend": 1492.23,
       "analytics": {
         "sessions": 1013,
         "transactions": 6
@@ -190,14 +190,14 @@
         "percent": 9.1
       },
       "closedDeals": {
-        "revenue": 8255,
-        "count": 3
+        "revenue": 8501.75,
+        "count": 4
       },
       "spendBreakdown": {
-        "meta": 3896.53,
+        "meta": 3869.65,
         "google": 53.53
       },
-      "spend": 3950.06,
+      "spend": 3923.18,
       "analytics": {
         "sessions": 2375,
         "transactions": 13
@@ -323,14 +323,14 @@
         "percent": 17.0
       },
       "closedDeals": {
-        "revenue": 12861.86,
-        "count": 9
+        "revenue": 13108.61,
+        "count": 10
       },
       "spendBreakdown": {
-        "meta": 16344.3,
+        "meta": 16152.97,
         "google": 208.14
       },
-      "spend": 16552.44,
+      "spend": 16361.11,
       "analytics": {
         "sessions": 10940,
         "transactions": 51
@@ -361,14 +361,14 @@
         "percent": 0.0
       },
       "closedDeals": {
-        "revenue": 0,
-        "count": 0
+        "revenue": 246.75,
+        "count": 1
       },
       "spendBreakdown": {
-        "meta": 16139.81,
-        "google": 5.0
+        "meta": 19.16,
+        "google": 5.01
       },
-      "spend": 16144.81,
+      "spend": 24.17,
       "analytics": {
         "sessions": 0,
         "transactions": 0
@@ -430,12 +430,12 @@
     {
       "key": "negotiating",
       "label": "משא ומתן",
-      "count": 21
+      "count": 20
     },
     {
       "key": "deposit_production",
       "label": "מקדמה וייצור",
-      "count": 25
+      "count": 26
     },
     {
       "key": "closed",
@@ -491,10 +491,10 @@
       {
         "date": "2026-10-01",
         "siteRevenue": 246.75,
-        "closedDealsRevenue": 0,
-        "spend": 396.43,
-        "roasSite": 0.62,
-        "roasTotal": 0.62
+        "closedDealsRevenue": 246.75,
+        "spend": 24.17,
+        "roasSite": 10.21,
+        "roasTotal": 20.42
       }
     ]
   }
