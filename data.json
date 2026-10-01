@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T09:25:15+03:00",
+  "updatedAt": "2026-10-01T12:15:00+03:00",
   "sources": {
     "monday": {
       "status": "ok",
@@ -18,8 +18,8 @@
       "note": ""
     },
     "googleAnalytics": {
-      "status": "error",
-      "note": "monthToDate נכשל: 00:00 שעון ישראל של 1.10 הוא עדיין 30.09 בשעון הנכס (America/Los_Angeles), אז startDate עתידי מבחינת GA. נשארו ערכי periods.*.analytics ו-periods.*.funnel הישנים לכל שש התקופות כדי לא לכתוב סנאפשוט חלקי."
+      "status": "ok",
+      "note": ""
     }
   },
   "metaAccountNote": "חשבון Albert Levi Art (USD) בלבד",
@@ -51,20 +51,20 @@
         "count": 1
       },
       "spendBreakdown": {
-        "meta": 19.16,
+        "meta": 32.28,
         "google": 5.01
       },
-      "spend": 24.17,
+      "spend": 37.29,
       "analytics": {
-        "sessions": 176,
-        "transactions": 1
+        "sessions": 0,
+        "transactions": 0
       },
       "funnel": {
-        "visitors": 176,
-        "productViews": 111,
-        "addToCart": 21,
-        "checkout": 12,
-        "purchases": 1
+        "visitors": 0,
+        "productViews": 0,
+        "addToCart": 0,
+        "checkout": 0,
+        "purchases": 0
       }
     },
     "yesterday": {
@@ -83,20 +83,20 @@
         "count": 0
       },
       "spendBreakdown": {
-        "meta": 404.59,
+        "meta": 405.19,
         "google": 2.97
       },
-      "spend": 407.56,
+      "spend": 408.16,
       "analytics": {
-        "sessions": 266,
-        "transactions": 0
+        "sessions": 224,
+        "transactions": 2
       },
       "funnel": {
-        "visitors": 266,
-        "productViews": 202,
-        "addToCart": 19,
-        "checkout": 13,
-        "purchases": 0
+        "visitors": 224,
+        "productViews": 195,
+        "addToCart": 22,
+        "checkout": 17,
+        "purchases": 2
       }
     },
     "last3d": {
@@ -126,20 +126,20 @@
         "count": 1
       },
       "spendBreakdown": {
-        "meta": 1469.54,
+        "meta": 1470.14,
         "google": 22.69
       },
-      "spend": 1492.23,
+      "spend": 1492.83,
       "analytics": {
-        "sessions": 1013,
-        "transactions": 6
+        "sessions": 724,
+        "transactions": 5
       },
       "funnel": {
-        "visitors": 1013,
-        "productViews": 766,
-        "addToCart": 66,
-        "checkout": 36,
-        "purchases": 6
+        "visitors": 724,
+        "productViews": 579,
+        "addToCart": 53,
+        "checkout": 34,
+        "purchases": 5
       }
     },
     "last7d": {
@@ -194,19 +194,19 @@
         "count": 4
       },
       "spendBreakdown": {
-        "meta": 3869.65,
+        "meta": 3870.25,
         "google": 53.53
       },
-      "spend": 3923.18,
+      "spend": 3923.78,
       "analytics": {
-        "sessions": 2375,
+        "sessions": 2106,
         "transactions": 13
       },
       "funnel": {
-        "visitors": 2375,
-        "productViews": 1750,
-        "addToCart": 132,
-        "checkout": 65,
+        "visitors": 2106,
+        "productViews": 1627,
+        "addToCart": 123,
+        "checkout": 67,
         "purchases": 13
       }
     },
@@ -327,20 +327,20 @@
         "count": 10
       },
       "spendBreakdown": {
-        "meta": 16152.97,
+        "meta": 16153.57,
         "google": 208.14
       },
-      "spend": 16361.11,
+      "spend": 16361.71,
       "analytics": {
-        "sessions": 10940,
-        "transactions": 51
+        "sessions": 10521,
+        "transactions": 46
       },
       "funnel": {
-        "visitors": 10940,
-        "productViews": 7583,
-        "addToCart": 557,
-        "checkout": 278,
-        "purchases": 51
+        "visitors": 10521,
+        "productViews": 7474,
+        "addToCart": 541,
+        "checkout": 272,
+        "purchases": 46
       }
     },
     "monthToDate": {
@@ -365,10 +365,10 @@
         "count": 1
       },
       "spendBreakdown": {
-        "meta": 19.16,
+        "meta": 32.28,
         "google": 5.01
       },
-      "spend": 24.17,
+      "spend": 37.29,
       "analytics": {
         "sessions": 0,
         "transactions": 0
@@ -492,9 +492,9 @@
         "date": "2026-10-01",
         "siteRevenue": 246.75,
         "closedDealsRevenue": 246.75,
-        "spend": 24.17,
-        "roasSite": 10.21,
-        "roasTotal": 20.42
+        "spend": 37.29,
+        "roasSite": 6.62,
+        "roasTotal": 13.23
       }
     ]
   }
