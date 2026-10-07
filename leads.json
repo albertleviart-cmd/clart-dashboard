@@ -100,7 +100,7 @@
     },
     {
       "name": "Irene Reiss",
-      "why": "06.10 כתבה שיתרתה 1,900 דולר ושנתנה ל-Gal 3,000 שקל. רוצה כמה יצירות של Ofra Friedman לסלון ותמונות התקדמות מהציור שלה. לאמת יתרה ולענות",
+      "why": "06.10 כתבה שיתרתה 1,900 דולר ושילמה יתרה ב-3,000 שקל מזומן ל-Gal. רוצה כמה יצירות של Ofra Friedman לסלון ותמונות התקדמות מהציור שלה",
       "channel": "WhatsApp",
       "waitingDays": 1,
       "urgency": "medium"
@@ -221,8 +221,8 @@
     "monthToDateMonth": "אוקטובר 2026",
     "monthToDateNote": "ללא שינוי. רשומה אחת עם Close Date באוקטובר: Benjamin Lebedin 246.75",
     "septemberFinal": 12862,
-    "cashNotTurnover": 0,
-    "cashNotTurnoverNote": "לא נרשם כי לא ברור אם מקדמה או השלמה: Nivia 2,400 (04.10, נרשם רק Amount Paid, אין Deal Value ו-Close Date). לא מאומת: Kevin יתרה בפורטל, Irene Reiss יתרה 1,900 ו-3,000 שקל במזומן ל-Gal",
+    "cashNotTurnover": 4000,
+    "cashNotTurnoverNote": "Nivia 2,400 ו-Georgi Miller 1,600, שתיהן יתרות על עסקאות קיימות (04.10, Stripe), לא מחזור חדש. Irene Reiss שילמה יתרה ב-3,000 שקל מזומן ל-Gal, לא נכלל כי לא ידוע הסכום בדולרים. Kevin אמור לשלם יתרה ב-Stripe ולא נמצא חיוב, לא מאומת",
     "openBalances": 13600,
     "openBalancesBreakdown": "Lisa Beth Meisel 2,925, David Javitch 2,625, Ruthy 2,400, Anthony 2,400, Marco Zarfati 2,400, Henry 850. ללא שינוי. Irene Reiss אומרת 1,900 ולא נכללה עד אימות",
     "newStripeCashToday": 4000,
@@ -313,7 +313,7 @@
       "severity": "medium"
     },
     {
-      "what": "הערות כסף שלא אומתו: Kevin כתב ששילם יתרה בפורטל (אין חיוב Stripe אחרי 04.10), Irene Reiss כתבה יתרה 1,900 ו-3,000 שקל במזומן. לא נרשם כסף",
+      "what": "Kevin כתב ששילם יתרה, אמור להיות ב-Stripe ולא נמצא חיוב אחרי 04.10, לא מאומת. Irene Reiss שילמה יתרה במזומן (3,000 שקל ל-Gal), הסכום בדולרים לא נרשם ב-Amount Paid, לעדכן ידנית",
       "severity": "medium"
     },
     {
@@ -358,7 +358,7 @@
   "nonLeadPayers": [
     {
       "name": "Georgi Miller (17862088500, georgimiller@aol.com)",
-      "detail": "1,600 דולר ב-Stripe, 04.10 20:51 UTC. מסרה כתובת משלוח 100 Lincoln Road apt 1247, Miami Beach. אינה בלוח. לאמת אם הזמנה חדשה"
+      "detail": "1,600 דולר ב-Stripe, 04.10, יתרה על עסקה קיימת (לא מחזור חדש). מסרה כתובת משלוח 100 Lincoln Road apt 1247, Miami Beach. אינה בלוח לפי מייל וטלפון, לא נוצרה רשומה"
     },
     {
       "name": "Marci Reiter (m2reiter24@gmail.com)",
