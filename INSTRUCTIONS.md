@@ -155,7 +155,7 @@ Quo, Gmail עסקי, Gmail פרטי, Shopify, Stripe אם מחובר, Autocalls,
 ב. **כוונה שקשורה ליצירה:** שאלה על מחיר, גודל, משלוח, קומישן, זמינות, או התעניינות מפורשת ביצירה. **ברכת חג, תודה, מזל טוב או לייק אינם ליד.**
 ג. **בדיקת כפילות לפני יצירה, הכי חשוב.** חפש את המייל וגם את הטלפון בנפרד עם `contains_text` על `lead_email` ועל `lead_phone`. בלוח מעל 1,600 רשומות וכבר הרבה כפילויות. **בספק, אל תיצור ורשום בדוח.** לא להצליב לפי שם פרטי.
 
-**מה למלא** ב-`create_item` בקבוצה `group_mm5d4w50`: `name`, `lead_email`, `text_mksv58se` עם משפט או שניים במילים שלו, `color_mm5pwdxp` לפי הערוץ, `date_mm5fyywa` תאריך הפנייה, `date_mm5p2y2e` יום העסקים הבא, `lead_phone` אם יש, ו-`lead_status` ל-**Conversation Active**.
+**מה למלא** ב-`create_item` בקבוצה `group_mm5dtn6b` (Active Sales, לא New Leads: האוטומציה שמעבירה קבוצה פועלת רק על שינוי סטטוס מ-New Lead, ורשומה שנוצרת ישר כ-Conversation Active לא עוברת לבד, תוקן 07.10.2026): `name`, `lead_email`, `text_mksv58se` עם משפט או שניים במילים שלו, `color_mm5pwdxp` לפי הערוץ, `date_mm5fyywa` תאריך הפנייה, `date_mm5p2y2e` יום העסקים הבא, `lead_phone` אם יש, ו-`lead_status` ל-**Conversation Active**.
 
 **למה Conversation Active ולא New Lead.** האוטומציה `Monday Status New Lead Calls` מופעלת רק על New Lead ברשומה שנוצרה ב-10 הדקות האחרונות. **Conversation Active אינו ברשימת הסטטוסים שמתירים חיוג**, ולכן אפשר למלא טלפון בלי שהבוט יתקשר תוך דקות. זה גם נכון לגופו: מי שכתב ביוזמתו אינו ליד קר.
 
