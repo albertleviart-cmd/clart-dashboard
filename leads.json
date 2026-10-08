@@ -1,54 +1,54 @@
 {
-  "updatedAt": "2026-10-07T07:20:00+03:00",
-  "scanDate": "2026-10-07",
+  "updatedAt": "2026-10-08T07:15:00+03:00",
+  "scanDate": "2026-10-08",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "לידים ב-48 שעות: Penny Brown ו-Elizabeth Gray (קיימים). נוצרו Liron Taubs (גמייל) ו-Tammy (טופס שלא נכנס אוטומטית). עודכנו 6 רשומות: Penny, Noah, Kevin, Nivia, Cindy, Irene Reiss"
+      "note": "לידים ב-48 שעות: 9 רשומות (Liron, Tammy, 7 משיוך Stripe). עודכנו Noah Selling ו-Michael J Higer, נוצר Clements"
     },
     "quoMessages": {
       "status": "ok",
-      "note": "חלון 14 יום, 59 הודעות מ-19 שיחות. אין שיחה שהלקוח דיבר בה אחרון. list-tasks: 23 פתוחות, create-task החזיר שוב 402 (Open tasks limit reached)"
+      "note": "חלון 14 יום, 57 הודעות מ-18 שיחות. אין שיחה שהלקוח דיבר בה אחרון. לא נוצרו משימות"
     },
     "gmailBusiness": {
       "status": "ok",
-      "note": "שלושה חיפושים. buy.stripe.com 7 יום: ריק. סווף 30 יום: 50 שרשורים, עמוד ראשון בלבד. פניות חדשות: Liron Taubs (3 מיילים), Linda Collier (הזמנה #4256 לא הגיעה), Marc Danzis (כתובת לביקור), JNF, Roni (תיק לאירוע 9.11). callahan@mirevique.com נראה כמו פנייה קרה, לא נפתח ליד"
+      "note": "3 חיפושים. חיפוש 30 יום החזיר 201 שרשורים (נסרקו 50 ראשונים בלבד). ליד חדש: Clements. Noah Selling כתב שאין תקציב"
     },
     "gmailPrivate": {
       "status": "ok",
-      "note": "Composio, 56 הודעות ב-2 ימים. powerfulform: Tammy ב-06.10 20:25 UTC (לא הגיעה למנדיי). Park West: דרישת 35 יצירות מקור לאירוע VIP (מועבר מ-Isaac Aviram). Mercury: Stripe 4,162.14 ו-Shopify 2,896.40 נכנסו ב-05.10. השאר ספקים ופרסומות"
+      "note": "Composio, 2 חיפושים (60 ראשונות מכל אחד). אין ליד חדש. Laurie Reiskind (02.10, checking in) לא נבדקה לעומק"
     },
     "shopify": {
       "status": "ok",
-      "note": "הזמנה אמיתית חדשה: #4327 Marci Reiter 339.15 (We Shall Dance Again, 07.10 04:23 שעון ישראל). #4318 עד #4326 (9,204.39 דולר) מתויגות TEST MAPPING ו-DO NOT PRINT, מ-RV Print Factory, לא נספרות. bulk export הצליח"
+      "note": "#4327 Marci Reiter 339.15, #4328 adelbergdds@gmail.com 619.65 (07.10). 9 הזמנות TEST MAPPING לא נספרות"
     },
     "stripe": {
       "status": "ok",
-      "note": "חזר לעבוד. 5 חיובים אחרונים: Nivia Weitzner 2,400 (04.10 21:28 UTC), Georgi Miller 1,600 (04.10 20:51 UTC), ושלושה מ-28.09 (Yocheved, אחד הצליח). החיוב החמישי מלפני הריצה הקודמת, החלון מספיק"
+      "note": "חיוב חדש אחד: Michael J Higer 2,550$ (07.10), השלמת יתרה, נרשם Amount Paid 3,400 עם סימון. אין חיובים ממתינים"
     },
     "autocalls": {
       "status": "ok",
-      "note": "מאז 04.10: 14 שיחות. Valerie Kent (+14042343973) תא קולי 7 פעמים, ממשיכים לחייג אליה אחרי שענתה לאלברט ב-Quo. Elizabeth Gray (+19072081707): ב-05.10 22:44 שיחה completed 39 שניות, הסתיימה על ידי הלקוחה, answered_by ריק (ייתכן שיחה אמיתית, ההערה בלוח אומרת תא קולי), אחר כך 4 תאים קוליים"
+      "note": "6 שיחות outbound ב-07.10 (Valerie 404, 907...), כולן תא קולי, אין שיחה אמיתית"
     },
     "calendar": {
       "status": "ok",
-      "note": "היום 07.10 18:00 שעון ישראל שיחה עם Amy Grottolo (נדחתה מ-08.10). מחר ריק"
+      "note": "אין אירועים ב-08 עד 09.10 ביומן הראשי. ביקור Marc Danzis ב-08.10 10:00 לפי מייל"
     },
     "googleAnalytics": {
       "status": "ok",
-      "note": "properties/415263029, LA. 04.10: 175 סשנים, 05.10: 167, 06.10 (חלקי): 119. הכנסה אפס ושלוש עסקאות אפס. Unassigned 04.10 19.4 אחוז, 05.10 19.2, 06.10 28.6. Organic Search 7, 10, 1"
+      "note": "נכס 415263029"
     },
     "googleAds": {
       "status": "ok",
-      "note": "customer 7282991915, שקלים: 03.10 20.63, 04.10 0.04, 05.10 9.01, 06.10 15.88. סך 45.56 שקל, כ-15.19 דולר בשער הקבוע. 6 קליקים בשלושה ימים אחרונים, אפס המרות"
+      "note": "customer 7282991915"
     },
     "metaAds": {
-      "status": "ok",
-      "note": "400319919198934 הדולרי: 03.10 121.51, 04.10 206.28, 05.10 172.37, 06.10 154.74. סך 654.90 דולר ב-4 ימים (539 קליקים). הזמנות אמיתיות בשופיפיי בטווח: אחת (Marci 339.15 ב-07.10). החשבון השקלי לא נבדק"
+      "status": "error",
+      "note": "לא נמשך בריצה הזו (סכמת הכלי לא נטענה בזמן). Mercury: חיוב מטא 2,000$ ב-07.10 מהמייל הפרטי"
     },
     "whatsapp": {
       "status": "ok",
-      "note": "GREEN API: שתי קריאות bulk, ללא 429. נכנסות ב-5 ימים: 74 הודעות ב-13 צ'אטים, יוצאות 43 ב-7. נקראו 12 צ'אטים עם getChatHistory (הקבוצה לא). תוכן אמיתי: Penny, Noah, Kevin, Irene Reiss, Cindy, Georgi, Nivia, Jonathan Frankel, Karen (JNF)"
+      "note": "GREEN API: 2 קריאות bulk, 17 צ'אטים פעילים ב-5 ימים (15 פרטיים). getChatHistory על כולם בלי 429"
     },
     "greenApi": {
       "status": "ok",
@@ -57,163 +57,75 @@
   },
   "needsAnswer": [
     {
-      "name": "Penny Brown",
-      "why": "05.10 כתבה שתהיה בירושלים ב-2 וב-3.11 ושאלה כמה רחוק הסטודיו. כבר מעל יומיים בלי תשובה. רוצה לבקר ב-4 או 5.11 ולקנות את יצירת הלב והחמסה. אין מייל",
-      "channel": "WhatsApp",
-      "waitingDays": 2,
+      "name": "Noah Selling (Brooklyn)",
+      "why": "וואטסאפ: כתב ש-40x50 ימלא הקיר, מחכה להמלצת מחיר. מייל 07.10: מחוץ לתקציב (חייל לשעבר, הכנסה קבועה). טיוטה בגמייל עם פרינט, מחכה למחיר",
+      "channel": "Email+WhatsApp",
+      "waitingDays": 3,
       "urgency": "high"
     },
     {
-      "name": "Tammy (tamlhen62@gmail.com, 7042590237)",
-      "why": "פנייה בטופס האתר ב-06.10 23:25 שעון ישראל. לא נכנסה אוטומטית למנדיי כי הסנריו של Make נעצר באותה שעה. נוצרה רשומה ידנית. תשובת הטופס לא נקראה, לבדוק בלוח powerfulform",
+      "name": "Clements (clements.msc)",
+      "why": "אוהבים את The Dancer (זכר לבתם נעמי). עדיין לא נענו",
       "channel": "Email",
-      "waitingDays": 0,
+      "waitingDays": 1,
       "urgency": "high"
     },
     {
       "name": "Liron Taubs",
-      "why": "3 מיילים בעברית ב-05.10 בלילה. רוצה את Funky Frog, מתלבטת בין 120/80 ל-150/100, שואלת על גודל ביניים, מידות אמיתיות, עובי מסגרת שחורה, ומבקשת הנחה (הקוד ALBERT15 לא משתלב עם הנחת האתר, 2,431 שקל). טיוטה מוכנה עם חורים",
+      "why": "שלוש שאלות על גודל ומידות Funky Frog, לא נענתה מאז 05.10. הטיפול בטיוטה קיימת",
       "channel": "Email",
-      "waitingDays": 1,
-      "urgency": "high"
+      "waitingDays": 3,
+      "urgency": "medium"
     },
     {
-      "name": "Noah Selling",
-      "why": "05.10 כתב שגודל 40 על 50 ימלא הכי טוב את הקיר בסלון בברוקלין. הכדור אצלך: המלצה ומחיר למקור",
-      "channel": "WhatsApp",
+      "name": "Tammy",
+      "why": "טופס אתר 06.10, תשובה לא נקראה",
+      "channel": "Form",
       "waitingDays": 2,
-      "urgency": "high"
-    },
-    {
-      "name": "Linda Collier",
-      "why": "הזמנה #4256 (תיק 13x13, 12.10 דולר) מ-29.08 לא הגיעה אחרי 36 יום, פנתה שוב ב-06.10. טיוטה מוכנה, מחכה למספר מעקב",
-      "channel": "Email",
-      "waitingDays": 1,
       "urgency": "medium"
     },
     {
       "name": "Marc Danzis",
-      "why": "05.10 ביקש את כתובת הסטודיו לביקור ב-10:00. טיוטה מוכנה, מחכה לכתובת ולתאריך. הטיוטה הישנה לאשתו Ellen מ-29.09 עדיין לא נשלחה",
+      "why": "ביקור בסטודיו היום 10:00, Habaveli 17",
       "channel": "Email",
-      "waitingDays": 2,
-      "urgency": "high"
-    },
-    {
-      "name": "Irene Reiss",
-      "why": "06.10 כתבה שיתרתה 1,900 דולר ושילמה יתרה ב-3,000 שקל מזומן ל-Gal. רוצה כמה יצירות של Ofra Friedman לסלון ותמונות התקדמות מהציור שלה",
-      "channel": "WhatsApp",
-      "waitingDays": 1,
+      "waitingDays": 0,
       "urgency": "medium"
     },
     {
-      "name": "Kevin (16313796068)",
-      "why": "06.10 כתב שהוא שילם יתרה בפורטל. לא נמצא תשלום ב-Stripe או בשופיפיי. לאמת ואז לשלוח את היצירה",
-      "channel": "WhatsApp",
-      "waitingDays": 1,
-      "urgency": "medium"
-    },
-    {
-      "name": "Nivia Weitzner",
-      "why": "שילמה 2,400 דולר ב-04.10 ב-Stripe. לשלוח כתובת ומעקב. אולי תבקר בגלריה בדצמבר",
-      "channel": "WhatsApp",
-      "waitingDays": 3,
-      "urgency": "medium"
-    },
-    {
-      "name": "Jonathan Frankel (אירוע)",
-      "why": "05.10 ביקש לשלם חצי מראש וחצי אחרי, ושאל על טיסות. עסקת אירוע ולא ליד אמנות",
-      "channel": "WhatsApp",
-      "waitingDays": 2,
-      "urgency": "medium"
-    },
-    {
-      "name": "Friends of JNF, Michelle Zunenshine",
-      "why": "06.10 ביקשה לאשר מוצרים באמזון לפני שהיא קונה לאירוע. כדאי לענות לפני הקנייה",
+      "name": "Linda Collier",
+      "why": "הזמנה #4256 תקועה, אלברט הבטיח משלוח חדש",
       "channel": "Email",
       "waitingDays": 1,
-      "urgency": "medium"
-    },
-    {
-      "name": "Roni Shapiro (tepv.org)",
-      "why": "06.10 ביקשה המלצה מה להזמין לפרויקט התיקים של 9.11, שלחה קישור קנבס וגודל 13x15. מחכה להמלצה",
-      "channel": "Email",
-      "waitingDays": 1,
-      "urgency": "medium"
-    },
-    {
-      "name": "David Javitch (Dov)",
-      "why": "שאלת האינצ'ים מול הרגל על 30 על 30 עדיין פתוחה (עסקה של 3,500). אין מייל חדש מאז 04.10",
-      "channel": "Email",
-      "waitingDays": 3,
-      "urgency": "medium"
-    },
-    {
-      "name": "Sandra Stechman",
-      "why": "לינק 89 דולר מ-30.09 לא שולם (7 ימים). אלברט שאל אותה ב-04.10 אם תעדיף גודל גדול, לא ענתה",
-      "channel": "QUO",
-      "waitingDays": 3,
-      "urgency": "low"
-    },
-    {
-      "name": "Sheila (6145822128), Bharath (2135183037), Mona (9033364184), Roselynn (9149871595), Noah (7609779026)",
-      "why": "אין תגובה 10 עד 11 ימים אחרי הודעת הפתיחה. משימות Quo לא נוצרות (402). נוסחים בתקלות",
-      "channel": "QUO",
-      "waitingDays": 10,
       "urgency": "low"
     }
   ],
   "newYesterday": [
     {
-      "name": "Tammy",
-      "source": "טופס האתר",
-      "detail": "06.10 23:25, tamlhen62@gmail.com. הטופס לא הגיע למנדיי כי Make נעצר"
-    },
-    {
-      "name": "Liron Taubs",
+      "name": "Clements (clements.msc)",
       "source": "גמייל עסקי",
-      "detail": "רוצה את Funky Frog, שואלת גודל והנחה"
+      "detail": "אוהבים The Dancer"
     },
     {
-      "name": "Marci Reiter",
-      "source": "שופיפיי",
-      "detail": "הזמנה #4327, 339.15 דולר, We Shall Dance Again, אינה בלוח"
+      "name": "מבקר מארה\"ב (14104990262)",
+      "source": "וואטסאפ",
+      "detail": "רוצה לבקר בסטודיו 4-5.11, מעוניין בלב עם חמסה. לא נבדק מול הלוח"
     }
   ],
   "replied": [
     {
-      "name": "Liron Taubs",
-      "channel": "Email",
-      "said": "05.10: רוצה Funky Frog, שאלות גודל, מסגרת והנחה"
-    },
-    {
-      "name": "Penny Brown",
-      "channel": "WhatsApp",
-      "said": "05.10: תהיה בירושלים 2 ו-3.11, שאלה על המרחק לסטודיו"
-    },
-    {
       "name": "Noah Selling",
-      "channel": "WhatsApp",
-      "said": "05.10: 40 על 50 הכי מתאים לקיר"
+      "channel": "Email",
+      "said": "מחוץ לטווח המחיר כרגע"
     },
     {
-      "name": "Irene Reiss",
+      "name": "Kevin (16313796068)",
       "channel": "WhatsApp",
-      "said": "06.10: יתרה 1,900, רוצה עוד יצירות, מבקשת תמונות התקדמות"
+      "said": "שילם יתרה בפורטל, אשתו שילמה בכרטיס"
     },
     {
-      "name": "Kevin",
+      "name": "Cindy (12013200017)",
       "channel": "WhatsApp",
-      "said": "06.10: שילם יתרה בפורטל"
-    },
-    {
-      "name": "Cindy Goldstein",
-      "channel": "WhatsApp",
-      "said": "06.10: החבילה הגיעה"
-    },
-    {
-      "name": "Elizabeth Gray",
-      "channel": "Phone Call",
-      "said": "05.10 22:44 שיחה של 39 שניות שהסתיימה על ידיה, לא ברור אם שיחה אמיתית"
+      "said": "החבילה הגיעה, בודקת מסגור"
     }
   ],
   "revenue": {
@@ -225,127 +137,67 @@
     "cashNotTurnoverNote": "Nivia 2,400 ו-Georgi Miller 1,600, שתיהן יתרות על עסקאות קיימות (04.10, Stripe), לא מחזור חדש. Irene Reiss שילמה יתרה ב-3,000 שקל מזומן ל-Gal, לא נכלל כי לא ידוע הסכום בדולרים. Kevin אמור לשלם יתרה ב-Stripe ולא נמצא חיוב, לא מאומת",
     "openBalances": 13600,
     "openBalancesBreakdown": "Lisa Beth Meisel 2,925, David Javitch 2,625, Ruthy 2,400, Anthony 2,400, Marco Zarfati 2,400, Henry 850. ללא שינוי. Irene Reiss אומרת 1,900 ולא נכללה עד אימות",
-    "newStripeCashToday": 4000,
-    "newStripeCashNote": "Nivia 2,400 ו-Georgi Miller 1,600, שניהם 04.10",
+    "newStripeCashToday": 2550,
+    "newStripeCashNote": "Michael J Higer 2,550 השלמה על עסקה מ-27.07",
     "failedStripeToday": 0,
-    "newShopifyOrdersSinceLastRun": 1,
+    "newShopifyOrdersSinceLastRun": 2,
     "nonLeadShopifyOctober": 1195.1,
     "nonLeadShopifyNote": "Scott Diamond 855.95 (#4316) ועוד Marci Reiter 339.15 (#4327). לא כולל 9 הזמנות TEST MAPPING",
     "unpaidPaymentLinks": "Sandra Stechman 89 דולר, נשלח ב-30.09, 7 ימים (חרג)",
-    "currency": "USD"
+    "currency": "USD",
+    "openBalancesNote": "Henry 850 ו-Higer נסגרו. Higer היה 2,550 בפתוח"
   },
   "draftsPrepared": [
     {
-      "name": "Liron Taubs",
+      "name": "Noah Selling",
       "inbox": "business",
-      "gist": "תשובה בעברית: תודה, המלצת גודל, מידות, עובי מסגרת והנחה, שאלה אחת על איזה גודל מרגיש נכון",
+      "gist": "תודה ושירות, הצעת פרינט 40x50",
       "needsInput": true
     },
     {
-      "name": "Linda Collier",
+      "name": "Clements",
       "inbox": "business",
-      "gist": "התנצלות על 36 יום ושאלה אחת: האם הכתובת בהזמנה עדיין נכונה. מחכה למספר מעקב",
-      "needsInput": true
-    },
-    {
-      "name": "Marc Danzis",
-      "inbox": "business",
-      "gist": "אישור הביקור ב-10:00 ושאלה אחת: האם 10:00 עדיין מתאים. מחכה לכתובת ולתאריך",
-      "needsInput": true
+      "gist": "תנחומים על נעמי, שאלה על גדלים או תמונת קיר",
+      "needsInput": false
     }
   ],
-  "quoTasks": [
-    {
-      "name": "Sheila 6145822128",
-      "waitingDays": 11,
-      "asked": "לא נוצרה (402). Hi Sheila, just checking in on Together We Win. Do you have a spot in mind for it, or would a smaller print be a better fit?"
-    },
-    {
-      "name": "Bharath 2135183037",
-      "waitingDays": 11,
-      "asked": "לא נוצרה (402). Hi Bharath, just checking in. Which piece caught your eye, and where would you hang it?"
-    },
-    {
-      "name": "Mona 9033364184",
-      "waitingDays": 10,
-      "asked": "לא נוצרה (402). Hi Mona, just checking in on Alive Together. Where would it live in your home?"
-    },
-    {
-      "name": "Roselynn 9149871595",
-      "waitingDays": 10,
-      "asked": "לא נוצרה (402). Hi Roselynn, just checking in on the Tree of Life. Where were you thinking of hanging it?"
-    },
-    {
-      "name": "Noah 7609779026",
-      "waitingDays": 10,
-      "asked": "לא נוצרה (402). Hi Noah, just checking in. Which piece were you thinking about for your study?"
-    }
-  ],
+  "quoTasks": [],
   "mondayUpdated": {
-    "updated": 6,
-    "created": 2,
+    "updated": 2,
+    "created": 1,
     "details": [
-      "Penny Brown: הערה (ירושלים 2-3.11), פולואפ היום",
-      "Noah Selling: הערה (40x50), פולואפ היום",
-      "Kevin: הערה (שילם יתרה, לא מאומת), פולואפ היום, ערוץ WhatsApp",
-      "Nivia 3019221054: Amount Paid 2,400 מ-Stripe, הערה. Deal Value ו-Close Date לא נכתבו",
-      "Cindy: הערה (החבילה הגיעה). הסטטוס Closed נשאר",
-      "Irene Reiss: הערה (יתרה 1,900, 3,000 שקל), פולואפ היום",
-      "נוצר: Liron Taubs 3265785525, Conversation Active, New Leads",
-      "נוצר: Tammy 3265794555, Conversation Active, New Leads"
+      "Michael J Higer Amount Paid 3,400 (סימון stripe)",
+      "Noah Selling הערה, ערוץ, תאריך פעולה",
+      "נוצר Clements"
     ]
   },
   "faults": [
     {
-      "what": "סנריו Make 'leads from shop into flashy monday and manychat' נעצר ב-06.10 20:25 UTC עקב שגיאה. הפנייה של Tammy מאותה שעה לא נכנסה למנדיי. גם 'Integration Google Calendar_24' נעצר ב-06.10 08:52. כל ליד מהטופס עד לתיקון לא ייכנס אוטומטית",
+      "what": "סנריו Make \"leads from shop into flashy monday and manychat\" נעצר 06.10, וגם Integration Google Calendar_24. לידים מטופס עלולים לא להיכנס",
       "severity": "high"
     },
     {
-      "what": "משימות Quo חסומות ב-402 (23 משימות פתוחות, רבות בנות 10 ימים ומעלה). 5 משימות לא נוצרו (Sheila, Bharath, Mona, Roselynn, Noah), נוסחים ב-leads.json. צריך לסגור משימות ישנות או לשדרג תוכנית",
-      "severity": "high"
-    },
-    {
-      "what": "מטא 654.90 דולר ב-03.10 עד 06.10, וגוגל כ-15 דולר. בטווח הזה הזמנה אמיתית אחת בשופיפיי (339.15) ו-GA מראה הכנסה אפס. 9 הזמנות #4318 עד #4326 (9,204.39 דולר) הן TEST MAPPING מ-RV Print Factory ולא אמיתיות, לוודא שאינן נספרות בדוחות",
-      "severity": "high"
-    },
-    {
-      "what": "Unassigned ב-GA: 19.4, 19.2 ו-28.6 אחוז (06.10 יום חלקי), מעל הסף 15. Organic Search 7, 10 ו-1 סשנים ביום",
-      "severity": "medium"
-    },
-    {
-      "what": "Kevin כתב ששילם יתרה, אמור להיות ב-Stripe ולא נמצא חיוב אחרי 04.10, לא מאומת. Irene Reiss שילמה יתרה במזומן (3,000 שקל ל-Gal), הסכום בדולרים לא נרשם ב-Amount Paid, לעדכן ידנית",
-      "severity": "medium"
-    },
-    {
-      "what": "Autocalls ממשיך לחייג ל-Valerie Kent (תא קולי 7 פעמים) אחרי שענתה לאלברט ב-Quo. המלצה: להעביר ל-Conversation Active. Elizabeth Gray: שיחה של 39 שניות ב-05.10 שהסתיימה על ידיה, ההערה בלוח אומרת תא קולי, לבדוק",
-      "severity": "medium"
-    },
-    {
-      "what": "טיוטות שהתיישנו, לא לשלוח: Cindy Goldstein (החבילה הגיעה), Noah Selling, Valerie Kent, Aimee Gusmano (ביקשה הסרה, לא למחוק בלי החלטה), Angela, Erick Segura (אלברט ענה ב-05.10), Benjamin Lebedin (אלברט ענה ב-05.10)",
-      "severity": "medium"
-    },
-    {
-      "what": "Georgi Miller (georgimiller@aol.com) שילמה 1,600 דולר ב-Stripe ב-04.10 20:51 UTC ואינה בלוח. Marci Reiter הזמנה #4327 אינה בלוח. לא נוצרו רשומות, החלטה שלך",
-      "severity": "medium"
-    },
-    {
-      "what": "Nivia כפולה בלוח: 3019191701 ו-3019221054, אותו מייל",
+      "what": "Meta Ads לא נסרק בריצה הזו",
       "severity": "low"
     },
     {
-      "what": "Park West: דרישת מינימום 35 יצירות מקור לכל אירוע VIP, אחרת האירוע עלול להתבטל (מועבר מ-Isaac Aviram ב-06.10)",
-      "severity": "low"
-    },
-    {
-      "what": "callahan@mirevique.com שאל על חתימה במשלוח במייל גנרי. נראה כפנייה קרה או ספאם, לא נפתח ליד",
+      "what": "Georgi Miller: ייתכן כפילות עם georgi 2809025818",
       "severity": "low"
     }
   ],
-  "whatsappNote": "GREEN API פעיל, סרוק 07.10: 13 צ'אטים עם הודעות נכנסות ב-5 ימים. סריקה ידנית אחרונה: 27.09",
+  "whatsappNote": "GREEN API פעיל, סרוק 08.10: 17 צ'אטים פעילים ב-5 ימים (15 פרטיים, 2 קבוצות). עודכן 1, ללא ליד חדש בלוח מוואטסאפ",
   "meetings": [
     {
-      "when": "07.10 18:00 שעון ישראל",
-      "who": "Amy Grottolo, שיחת המשך (425 260 9595)"
+      "when": "08.10 10:00 שעון ישראל",
+      "who": "Marc Danzis, ביקור בסטודיו"
+    },
+    {
+      "when": "08.10",
+      "who": "Amy Yaffe (Quo), שיחת המשך לפי הודעה"
+    },
+    {
+      "when": "10.10",
+      "who": "Jennifer (Quo), שיחת המשך"
     }
   ],
   "customerMetrics": {
@@ -368,5 +220,17 @@
       "name": "Scott Diamond",
       "detail": "הזמנה #4316 ב-02.10, 855.95 דולר, אינו בלוח. דווח בעבר"
     }
-  ]
+  ],
+  "traffic": {
+    "sessionsYesterday": 103,
+    "avg7d": 189,
+    "googleAds7d": {
+      "spend": 98.43,
+      "clicks": 41,
+      "impressions": 223
+    },
+    "paidSearchYesterday": 5,
+    "organicSearchYesterday": 2,
+    "unassignedPct": 23
+  }
 }
