@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-10-10T08:00:00+03:00",
-  "scanDate": "2026-10-10",
+  "updatedAt": "2026-10-11T08:00:00+03:00",
+  "scanDate": "2026-10-11",
   "sources": {
     "monday": {
       "status": "ok",
@@ -8,47 +8,47 @@
     },
     "quoMessages": {
       "status": "ok",
-      "note": "חלון 14 יום, 65 הודעות מ-19 שיחות פתוחות. אחרונה נכנסת: Jennifer Nason (\"Around 29\", 09.10). משימה לא נוצרה: 402 Open tasks limit reached (23 משימות פתוחות ישנות)"
+      "note": "חלון 14 יום, 60 הודעות מ-18 שיחות. אחרונה נכנסת: Jennifer Nason (\"Around 29\", 09.10). Rebecca Williams קיבלה תשובה מאלברט 10.10. create-task נחסם 402 (מכסת משימות פתוחות)"
     },
     "gmailBusiness": {
       "status": "ok",
-      "note": "3 חיפושים. newer_than:2d: 34 שרשורים. buy.stripe.com: ריק. 30 יום: 50 שרשורים ראשונים. Clements השיב \"Yes please\" ל-09.10, Michal Weiss שואלת על צפי ויתרה (08.10), Noah Selling הודה, Steve (#4331) קיבל הבטחת החזר 09.10"
+      "note": "3 חיפושים. 2d: 19 שרשורים, buy.stripe.com ריק, סווף 30 יום: 50 שרשורים. חדש: Michal Weiss ענתה \"איזה פרטים צריך?\" (10.10), Sharri אישרה ייעוץ 11.10. אין ליד חדש מחוץ למנדיי"
     },
     "gmailPrivate": {
       "status": "error",
-      "note": "לא נסרק בריצה זו (Composio לא הופעל). הנתון הקודם מ-09.10 נשאר"
+      "note": "לא נסרק בריצה זו (Composio לא הופעל)"
     },
     "shopify": {
       "status": "error",
-      "note": "לא נסרק בריצה זו. הזמנה #4331 (Steve, סטרן NYU) הופיעה בגמייל העסקי עם בעיית הנחה 20 אחוז, אלברט הבטיח החזר. מדדי לקוחות לא עודכנו היום"
+      "note": "לא נסרק בריצה זו, מדדי לקוחות לא עודכנו"
     },
     "stripe": {
       "status": "ok",
-      "note": "GetCharges limit 100. חיוב חדש אחד מאז 07.10: ch_3UNvJc... Michael Higer 2,550$ (07.10), כבר רשום בסימון במנדיי. אין חיובים ממתינים"
+      "note": "GetCharges limit 100. אין חיוב חדש מאז Michael Higer 2,550$ (07.10, כבר רשום). אין ממתינים"
     },
     "autocalls": {
       "status": "ok",
-      "note": "9 שיחות מאז 09.10, כולן תא קולי/no-answer חוץ משיחה אחת עם Sharri (192 שניות, completed). תא קולי: Judi Klein, Rebecca Williams, Elizabeth (907-208-1707)"
+      "note": "8 שיחות 10.10, כולן no-answer/תא קולי (Judi Klein, Rebecca Williams). שיחה אחת completed עם Sharri (192 שנ, 10.10 00:23)"
     },
     "calendar": {
       "status": "ok",
-      "note": "10.10 19:15 Jennifer Nason (צריך לדחות), 11.10 13:00 פגישה אריאל, 11.10 19:45 Sharri (Calendly)"
+      "note": "11.10 13:00 פגישה אריאל, 11.10 19:45 Sharri. אירוע Jennifer 10.10 עבר"
     },
     "googleAnalytics": {
       "status": "error",
-      "note": "לא נסרק בריצה זו, נשאר הערך הקודם בדוח של 09.10"
+      "note": "לא נסרק בריצה זו"
     },
     "googleAds": {
       "status": "error",
-      "note": "לא נסרק בריצה זו, נשאר הערך הקודם בדוח של 09.10"
+      "note": "לא נסרק בריצה זו"
     },
     "metaAds": {
-      "status": "error",
-      "note": "לא נסרק בריצה זו, נשאר הערך הקודם בדוח של 09.10"
+      "status": "partial",
+      "note": "ads_insights_performance_trend בלבד, בלי נתוני הוצאה"
     },
     "whatsapp": {
       "status": "ok",
-      "note": "GREEN API: lastIncomingMessages 84 הודעות מ-16 צ'אטים ב-5 ימים. lastOutgoingMessages החזיר רשימה ריקה (חשוד, לא נבדק). לא נכתב כלום במנדיי מוואטסאפ"
+      "note": "lastIncomingMessages 59 הודעות, 11 צ'אטים פרטיים. lastOutgoingMessages ריק. נקרא בלבד"
     },
     "greenApi": {
       "status": "ok",
@@ -189,33 +189,29 @@
     "updated": 0,
     "created": 0,
     "details": [
-      "לא נכתב כלום בריצה זו"
+      "לא נכתב כלום בריצה זו, אין הוכחה חד משמעית לשינוי"
     ]
   },
   "faults": [
     {
-      "what": "Quo create-task נחסם 402 שוב, 23 משימות פתוחות ישנות. Jennifer Nason נשארה בלי משימה",
+      "what": "Quo create-task נחסם 402 שוב (מכסת משימות פתוחות). Jennifer Nason נשארה בלי משימה",
       "severity": "high"
     },
     {
-      "what": "Gmail פרטי, Shopify, GA, Google Ads, Meta Ads, מדדי לקוחות לא נסרקו בריצה זו",
+      "what": "Gmail פרטי, Shopify, GA, Google Ads ומדדי לקוחות לא נסרקו; Meta חלקי",
       "severity": "medium"
     },
     {
-      "what": "GREEN API lastOutgoingMessages החזיר ריק, לא ניתן לדעת על מי אלברט ענה בוואטסאפ",
+      "what": "GREEN API lastOutgoingMessages ריק שוב, אי אפשר לדעת על מי אלברט ענה בוואטסאפ",
       "severity": "medium"
     },
     {
-      "what": "כפילות David Starr (3269407487, 3269400523) נשארה, מקור: סנריו Make של טפסים",
+      "what": "כפילות David Starr (3269407487, 3269400523) נשארה",
       "severity": "low"
     }
   ],
-  "whatsappNote": "GREEN API פעיל, סרוק 10.10: 84 הודעות נכנסות, 16 צ'אטים ב-5 ימים. אין עדכונים במנדיי",
+  "whatsappNote": "GREEN API פעיל, סרוק 11.10 (נכנסות בלבד, 5 ימים). אין עדכונים במנדיי",
   "meetings": [
-    {
-      "when": "10.10 19:15",
-      "who": "Jennifer Nason (צריכה דחייה)"
-    },
     {
       "when": "11.10 13:00",
       "who": "פגישה אריאל"
