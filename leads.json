@@ -1,34 +1,34 @@
 {
-  "updatedAt": "2026-10-11T08:00:00+03:00",
-  "scanDate": "2026-10-11",
+  "updatedAt": "2026-10-12T07:10:00+03:00",
+  "scanDate": "2026-10-12",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "לידים ב-48 שעות: 7 רשומות (Clements, Tammy, David Starr x2 כפולים, Judi Klein, Rebecca Williams, Sharri). לא נכתב כלום במנדיי בריצה זו"
+      "note": "לידים ב-48 שעות: 5 (Robert Whelan, Shawn Leonard, Gail Johnson, Kuty Shalev, Yelena). נוצרו Morris Glen Levine ו-Joan Orlofsky. סינון contains_text על lead_email החזיר ריק גם לרשומות קיימות, בדיקת כפילות נעשתה לפי טלפון ושם. לוח CRM Tasks לא נשלף במלואו, לכן Next Action Date של Kuty נקבע בלי בדיקת משימות פתוחות"
     },
     "quoMessages": {
       "status": "ok",
-      "note": "חלון 14 יום, 60 הודעות מ-18 שיחות. אחרונה נכנסת: Jennifer Nason (\"Around 29\", 09.10). Rebecca Williams קיבלה תשובה מאלברט 10.10. create-task נחסם 402 (מכסת משימות פתוחות)"
+      "note": "חלון 14 יום (מ-28.09), 19 שיחות. אחרונה נכנסת ללא מענה: Jennifer Nason (\"Around 29\", 09.10). create-task נחסם שוב 402 (מכסת משימות פתוחות)"
     },
     "gmailBusiness": {
       "status": "ok",
-      "note": "3 חיפושים. 2d: 19 שרשורים, buy.stripe.com ריק, סווף 30 יום: 50 שרשורים. חדש: Michal Weiss ענתה \"איזה פרטים צריך?\" (10.10), Sharri אישרה ייעוץ 11.10. אין ליד חדש מחוץ למנדיי"
+      "note": "3 חיפושים. 2d: 26 שרשורים, buy.stripe.com ריק, סווף 30 יום: 50. חדשים: Morris Levine (שופיפיי, 12.10), Joan Orlofsky (שופיפיי, אלברט ענה). Michal Weiss שילמה 3,270 ש\"ח ב-Grow ב-11.10"
     },
     "gmailPrivate": {
-      "status": "error",
-      "note": "לא נסרק בריצה זו (Composio לא הופעל)"
+      "status": "ok",
+      "note": "Composio, 60 הודעות. אין ליד. Laurie Reiskind \"checking in\" (3 פעמים, 02 עד 08.10) לא נבדקה"
     },
     "shopify": {
-      "status": "error",
-      "note": "לא נסרק בריצה זו, מדדי לקוחות לא עודכנו"
+      "status": "ok",
+      "note": "4 הזמנות 09 עד 11.10 (#4330 עד #4333). מדדי לקוחות לא עודכנו היום"
     },
     "stripe": {
       "status": "ok",
-      "note": "GetCharges limit 100. אין חיוב חדש מאז Michael Higer 2,550$ (07.10, כבר רשום). אין ממתינים"
+      "note": "GetCharges limit 100. חיוב יחיד מאז 07.10: Michael Higer 2,550$ (כבר רשום). אין חדשים, אין ממתינים"
     },
     "autocalls": {
       "status": "ok",
-      "note": "8 שיחות 10.10, כולן no-answer/תא קולי (Judi Klein, Rebecca Williams). שיחה אחת completed עם Sharri (192 שנ, 10.10 00:23)"
+      "note": "20 שיחות אחרונות. Yelena (00:19, 151 שניות) ו-Shawn Leonard (179 שניות) שיחות אמיתיות. Kuty ו-Robert Whelan רק screening או תא קולי"
     },
     "calendar": {
       "status": "ok",
@@ -43,12 +43,12 @@
       "note": "לא נסרק בריצה זו"
     },
     "metaAds": {
-      "status": "partial",
-      "note": "ads_insights_performance_trend בלבד, בלי נתוני הוצאה"
+      "status": "error",
+      "note": "לא נסרק בריצה זו"
     },
     "whatsapp": {
       "status": "ok",
-      "note": "lastIncomingMessages 59 הודעות, 11 צ'אטים פרטיים. lastOutgoingMessages ריק. נקרא בלבד"
+      "note": "GREEN API: lastIncomingMessages 77 הודעות, lastOutgoing ריק. getChatHistory רק ל-2 צ'אטים, Kuty נכשל בפירסור (כנראה 429)"
     },
     "greenApi": {
       "status": "ok",
@@ -61,94 +61,99 @@
   },
   "needsAnswer": [
     {
-      "name": "Clements (Mathew)",
-      "why": "השיב \"Yes please\" על הצעה לפרט גדלים או לשלוח תמונה על קיר (הדנסר, בתו נעמי נפטרה). טיוטה מחכה למידות ומחירים",
+      "name": "Morris Glen Levine",
+      "why": "שאל במייל מחיר לציור העץ השחור Am Yisrael Chai ומבקש שיחה ASAP, 646-474-5537. נוצרה רשומה וטיוטה מחכה למחיר",
       "channel": "Email",
+      "waitingDays": 0,
+      "urgency": "high"
+    },
+    {
+      "name": "Yelena",
+      "why": "בחרה 60x40, מקורי שמן על קנבס, ושאלה \"60x40 inches, right?\" בוואטסאפ 11.10 23:14. ייעוץ היום 11:30",
+      "channel": "WhatsApp",
+      "waitingDays": 1,
+      "urgency": "high"
+    },
+    {
+      "name": "Jennifer Nason",
+      "why": "\"Around 29\" לשיחה חדשה (09.10), לא נענתה. צריך לאשר תאריך ולעדכן יומן",
+      "channel": "Quo",
+      "waitingDays": 3,
+      "urgency": "high"
+    },
+    {
+      "name": "Kuty Shalev",
+      "why": "שאלה בוואטסאפ 11.10 22:19: רוחב 6 רגל, איזה גובה, ועדיין מתלבטים בין רקע כחול לכהה",
+      "channel": "WhatsApp",
       "waitingDays": 1,
       "urgency": "high"
     },
     {
       "name": "Michal Weiss",
-      "why": "שילמה מקדמה 09.09, שואלת על צפי ומתי לשלם הפרש (08.10). טיוטה בעברית מחכה לסטטוס וסכום",
+      "why": "שילמה 3,270 ש\"ח ב-Grow ב-11.10, ואלברט אישר. עדיין אין רשומה שאפשר להצליב לרישום Amount Paid",
       "channel": "Email",
-      "waitingDays": 2,
-      "urgency": "high"
+      "waitingDays": 1,
+      "urgency": "medium"
     },
     {
-      "name": "Jennifer Nason",
-      "why": "בבית חולים, \"Around 29\" לשיחה חדשה. צריך לאשר תאריך ולדחות את אירוע 10.10 ביומן",
-      "channel": "Quo",
-      "waitingDays": 1,
-      "urgency": "high"
+      "name": "Clements (Mathew)",
+      "why": "השיב \"Yes please\" על הצעה לפרט גדלים. טיוטה מחכה למחיר",
+      "channel": "Email",
+      "waitingDays": 3,
+      "urgency": "medium"
     },
     {
       "name": "Heather Tadmor",
       "why": "שאלה על סטטוס הציור (08.10)",
       "channel": "WhatsApp",
-      "waitingDays": 2,
+      "waitingDays": 4,
       "urgency": "medium"
     },
     {
       "name": "Cindy Goldstein",
-      "why": "מאשרת שהקנבס 60x80 לפני מסגור (08.10)",
+      "why": "מאשרת קנבס 60x80 לפני מסגור (08.10)",
       "channel": "WhatsApp",
-      "waitingDays": 2,
+      "waitingDays": 4,
       "urgency": "medium"
-    },
-    {
-      "name": "Frankel",
-      "why": "שאלות על טיסה ו-\"just checking in\" (08.10)",
-      "channel": "WhatsApp",
-      "waitingDays": 2,
-      "urgency": "medium"
-    },
-    {
-      "name": "Colleen Eichor",
-      "why": "הודעה חדשה 10.10 01:30",
-      "channel": "WhatsApp",
-      "waitingDays": 0,
-      "urgency": "low"
-    },
-    {
-      "name": "David Javitch",
-      "why": "לא נענה מאז 04.10",
-      "channel": "Email",
-      "waitingDays": 6,
-      "urgency": "low"
     }
   ],
   "newYesterday": [
     {
-      "name": "Sharri",
-      "source": "טופס/Autocalls + Calendly",
-      "detail": "Heart of Protection, תקציב 2,500-3,500$, ייעוץ 11.10 19:45 שעון ישראל"
+      "name": "Joan Orlofsky",
+      "source": "טופס שופיפיי",
+      "detail": "Blue Tree of Life, רוצה להוסיף שמות משפחה. אלברט ענה, היא תשלח מידות"
     },
     {
-      "name": "Judi Klein",
-      "source": "טופס אתר",
-      "detail": "The movement, תא קולי"
+      "name": "Morris Glen Levine",
+      "source": "טופס שופיפיי (12.10)",
+      "detail": "ציור העץ השחור, מבקש הערכת מחיר ושיחה"
     },
     {
-      "name": "Rebecca Williams",
-      "source": "טופס אתר",
-      "detail": "ספינות דבורה, תא קולי"
+      "name": "Yelena",
+      "source": "Calendly + Autocalls",
+      "detail": "ייעוץ 12.10 11:30, תקציב 3,500-5,000$"
+    },
+    {
+      "name": "Shawn Leonard",
+      "source": "Calendly + Autocalls",
+      "detail": "ייעוץ 12.10 12:00 ET, מעוניין באריה כחול"
     }
   ],
   "replied": [
     {
-      "name": "Clements",
-      "channel": "Email",
-      "said": "Yes please, שלח גדלים"
+      "name": "Kuty Shalev",
+      "channel": "WhatsApp",
+      "said": "עדיין לא החליטו בין כחול לכהה, 6 רגל רוחב"
     },
     {
-      "name": "Jennifer Nason",
-      "channel": "Quo",
-      "said": "Around 29, בשבועיים הקרובים"
+      "name": "Yelena",
+      "channel": "WhatsApp",
+      "said": "60x40, מקורי שמן על קנבס"
     },
     {
-      "name": "Steve (#4331)",
-      "channel": "Email",
-      "said": "תודה על ההחזר"
+      "name": "Joan Orlofsky",
+      "channel": "WhatsApp",
+      "said": "תשלח מידות ושמות משפחה"
     }
   ],
   "revenue": {
@@ -163,14 +168,21 @@
     "newStripeCashToday": 0,
     "newStripeCashNote": "אין חיוב Stripe חדש מאז הריצה הקודמת",
     "failedStripeToday": 0,
-    "newShopifyOrdersSinceLastRun": 1,
+    "newShopifyOrdersSinceLastRun": 2,
     "nonLeadShopifyOctober": 1195.1,
     "nonLeadShopifyNote": "Scott Diamond 855.95 (#4316) ועוד Marci Reiter 339.15 (#4327). לא כולל 9 הזמנות TEST MAPPING",
     "unpaidPaymentLinks": "Sandra Stechman 89 דולר, נשלח ב-30.09, 7 ימים (חרג)",
     "currency": "USD",
-    "openBalancesNote": "Henry 850 ו-Higer נסגרו. Higer היה 2,550 בפתוח"
+    "openBalancesNote": "Henry 850 ו-Higer נסגרו. Higer היה 2,550 בפתוח",
+    "newShopifyNote": "#4332 Gabriel Messingher 364.65, #4333 Ilana Bittner 80.1 (לא בלוח לפי חיפוש, לא נרשמו)"
   },
   "draftsPrepared": [
+    {
+      "name": "Morris Glen Levine",
+      "inbox": "business",
+      "gist": "טיוטה חדשה: תודה, שאלה על גודל ומיקום, מחכה למחיר",
+      "needsInput": true
+    },
     {
       "name": "Clements",
       "inbox": "business",
@@ -186,23 +198,28 @@
   ],
   "quoTasks": [],
   "mondayUpdated": {
-    "updated": 0,
-    "created": 0,
+    "updated": 2,
+    "created": 2,
     "details": [
-      "לא נכתב כלום בריצה זו, אין הוכחה חד משמעית לשינוי"
+      "נוצרו Morris Glen Levine ו-Joan Orlofsky (Conversation Active)",
+      "עודכנו Kuty Shalev (Unreachable ל-Conversation Active, כי הגיבה בוואטסאפ) ו-Yelena (הערות)"
     ]
   },
   "faults": [
     {
-      "what": "Quo create-task נחסם 402 שוב (מכסת משימות פתוחות). Jennifer Nason נשארה בלי משימה",
+      "what": "Quo create-task נחסם 402 (מכסת משימות פתוחות). Jennifer Nason נשארת בלי משימה",
       "severity": "high"
     },
     {
-      "what": "Gmail פרטי, Shopify, GA, Google Ads ומדדי לקוחות לא נסרקו; Meta חלקי",
+      "what": "Michal Weiss: תשלום 3,270 ש\"ח ב-Grow (11.10) לא נרשם. אין רשומה בלוח שנמצאה לפי טלפון או שם, וסכום הדולר לא ידוע",
       "severity": "medium"
     },
     {
-      "what": "GREEN API lastOutgoingMessages ריק שוב, אי אפשר לדעת על מי אלברט ענה בוואטסאפ",
+      "what": "GA, Google Ads, Meta ומדדי לקוחות לא נסרקו; סינון lead_email ב-contains_text החזיר ריק, בדיקות כפילות לפי טלפון ושם",
+      "severity": "medium"
+    },
+    {
+      "what": "GREEN API lastOutgoingMessages ריק שוב",
       "severity": "medium"
     },
     {
@@ -210,15 +227,19 @@
       "severity": "low"
     }
   ],
-  "whatsappNote": "GREEN API פעיל, סרוק 11.10 (נכנסות בלבד, 5 ימים). אין עדכונים במנדיי",
+  "whatsappNote": "GREEN API פעיל, סרוק 12.10 (נכנסות בלבד, 5 ימים)",
   "meetings": [
     {
-      "when": "11.10 13:00",
-      "who": "פגישה אריאל"
+      "when": "12.10 11:30 ET",
+      "who": "Yelena (ייעוץ)"
     },
     {
-      "when": "11.10 19:45",
-      "who": "Sharri (ייעוץ, Heart of Protection)"
+      "when": "12.10 12:00 ET",
+      "who": "Shawn Leonard (ייעוץ)"
+    },
+    {
+      "when": "16.10 13:00",
+      "who": "Sharri (ייעוץ שני)"
     }
   ],
   "customerMetrics": {
