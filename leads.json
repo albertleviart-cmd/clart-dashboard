@@ -1,54 +1,54 @@
 {
-  "updatedAt": "2026-10-14T07:15:00+03:00",
-  "scanDate": "2026-10-14",
+  "updatedAt": "2026-10-15T07:10:00+03:00",
+  "scanDate": "2026-10-15",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "לידים ב-48 שעות: 8 רשומות (Sherie leggitt פעמיים, Morris Levine, Joan Orlofsky, Michele Bernstein, Mindy Horwitz, Elayne, Stewart). Elayne ו-Stewart: תא קולי, Unreachable. עודכנו Colleen, Kuty Shalev, Mindy Horwitz, Michele Bernstein. לא נשלפה רשימת משימות CRM ולכן לא נגעתי בשום תאריך פעולה ולא בוטלו משימות כפולות"
+      "note": "לידים ב-48 שעות: 8 רשומות (Mindy Horwitz, Elayne, Stewart, Sam Zadikoff, Mary, Ernest, Edwardt, Donna). עודכנו Sam Zadikoff ו-Stewart (Unreachable -> Conversation Active, הגיבו בוואטסאפ). לא נשלפה רשימת משימות CRM ולכן לא נגעתי בתאריכי פעולה ולא בוטלו משימות כפולות"
     },
     "quoMessages": {
       "status": "ok",
-      "note": "חלון 14 יום (מ-30.09), 18 שיחות. אחרונה נכנסת ללא מענה: Colleen (13.10, רוצה לראות הדמיה על קיר לפני תשלום, כבר יש לה משימה פתוחה), Jennifer Nason (Around 29, 09.10), Shawn Leonard (Yes, 12.10). create-task נחסם 402 (מכסת משימות פתוחות, 23 פתוחות)"
+      "note": "חלון 14 יום, 27 שיחות. אחרונה נכנסת ללא מענה: Colleen (14.10 21:14, תזמין בעוד כמה חודשים אחרי מעבר דירה, יש משימה פתוחה), Jennifer Nason (Around 29, 09.10, 6 ימים), Shawn Leonard (Yes, 12.10). לא נוצרו משימות: 23 משימות פתוחות ישנות (מ-26.09 עד 01.10), מכסה 402 לפי ריצה קודמת"
     },
     "gmailBusiness": {
       "status": "ok",
-      "note": "3 חיפושים. 2d: 50 שרשורים, buy.stripe.com ב-7 ימים ריק, סווף 30 יום: 50. כמעט הכול JNF, ספקים ואוטומטי. שרשור acscolorado (Mindy) נסגר בקנייה בשופיפיי. לא זוהה ליד חדש"
+      "note": "3 חיפושים. 2d: 50 שרשורים, buy.stripe.com ב-7 ימים ריק, סווף 30 יום: 50. שרשור Mathew Clements ממתין מ-09.10 (נוצרה טיוטה). שרשור Mindy Horwitz נסגר, שומרת על הגודל ותמסגר בעצמה"
     },
     "gmailPrivate": {
       "status": "ok",
-      "note": "Composio, 54 הודעות ב-2d. לא זוהה ליד חדש. FCI payoff instructions (הלוואה, לא לידים)"
+      "note": "Composio, 50 הודעות ב-2d. לא זוהה ליד חדש. UPS פתח פנייה על יצירה שהגיעה פגומה ללקוח בארה\"ב (פנייה 2139255)"
     },
     "shopify": {
       "status": "ok",
-      "note": "הזמנה חדשה #4334 Mindy Horwitz 242.10$ ב-13.10. מדדי לקוחות לא עודכנו היום (נשארים מ-09.10)"
+      "note": "הזמנות חדשות: #4335 Larry Mullne 381.65$ (14.10) ו-#4336 Joseph Tuso 775.20$ (14.10 22:46), אין להם רשומה בלוח לפי חיפוש מייל. #4334 Mindy כבר נרשמה. מדדי לקוחות לא עודכנו (נשארים מ-09.10)"
     },
     "stripe": {
       "status": "error",
-      "note": "Stripe דורש אימות מחדש (OAuth) ולכן לא נסרק, לא נרשם שום חיוב. ממתינים: Yelena כתבה בוואטסאפ 12.10 Payment is complete, Colleen קיבלה לינק תשלום 13.10 ולא שילמה עדיין"
+      "note": "Stripe דורש אימות OAuth מחדש, לא נסרק ולא נרשם שום חיוב. ממתינים: Yelena (Payment is complete, 12.10), Michele Bernstein (כתבה שמשלמת 2,800 ושילמה מקדמה, 14.10), Colleen (לינק נשלח 13.10)"
     },
     "autocalls": {
       "status": "ok",
-      "note": "4 שיחות מאז 13.10, כולן תא קולי: Stewart, Elayne (פעמיים), Michele Bernstein"
+      "note": "12 שיחות מאז 14.10, כולן תא קולי או ניתוק קצר מתחת ל-20 שניות, ללא שיחה אמיתית. נקודה: Sam Zadikoff ו-Stewart הגיבו אחר כך בוואטסאפ"
     },
     "calendar": {
-      "status": "ok",
-      "note": "16.10 10:00 ביקור סטודיו Marc Danzis, 16.10 20:00 Sharri"
+      "status": "error",
+      "note": "לא נסרק בריצה הזו. מהריצה הקודמת: 16.10 10:00 Marc Danzis, 16.10 20:00 Sharri"
     },
     "googleAnalytics": {
-      "status": "ok",
-      "note": "נכס 415263029: אתמול 167 סשנים מול ממוצע 7 ימים 174. Direct 54, Organic Social 47, Unassigned 34 (20%), Paid Search 10, Organic Search 7 (ממוצע 8)"
+      "status": "error",
+      "note": "לא נסרק בריצה הזו, הערך הישן נשאר"
     },
     "googleAds": {
-      "status": "ok",
-      "note": "אתמול 8.03$, 6 קליקים, 0 המרות. 7 ימים: 162.7$, 1 המרה"
+      "status": "error",
+      "note": "לא נסרק בריצה הזו, הערך הישן נשאר"
     },
     "metaAds": {
-      "status": "ok",
-      "note": "חשבון 400319919198934: אתמול כ-180.6$ (Originals Instant Form 75.5, TMA Listical OG Paintings 96.92, Leads CBO FB 8.15). trend החזיר ריק. חשבון השקלים לא נבדק"
+      "status": "partial",
+      "note": "חשבון 400319919198934: 5 קמפיינים פעילים (Originals Website Leads 14.10, Prints Test 13.10, TMA Listical OG Paintings, RM Sales 13.10, POD Birthday Sale). נתוני הוצאה לא נשלפו"
     },
     "whatsapp": {
       "status": "ok",
-      "note": "GREEN API: lastIncoming 140 הודעות ב-23 צ'אטים ב-5 ימים. lastOutgoing החזיר רשימה ריקה (חסר צד יוצא, לא ידוע מי ענה). לא בוצעה קריאת getChatHistory, ההקשר מההודעות הנכנסות בלבד"
+      "note": "GREEN API פעיל. lastIncoming החזיר 170 הודעות ב-5 ימים, lastOutgoing ריק (שוב), היסטוריית צ'אט מציגה בעיקר נכנסות. נבדקו 23 צ'אטים. עודכנו 2 רשומות"
     },
     "greenApi": {
       "status": "ok",
@@ -61,50 +61,57 @@
   },
   "needsAnswer": [
     {
-      "name": "Colleen",
-      "why": "מוכנה לשלם (כתובת חדשה, לינק נשלח), אבל רוצה לראות הדמיה על קיר לפני תשלום. הודעה אחרונה 13.10 23:57 שעון ישראל",
-      "channel": "Quo",
+      "name": "Michele Bernstein",
+      "why": "כתבה בוואטסאפ 14.10 שמשלמת 2,800 ושילמה מקדמה, שלחה כתובת (Armonk NY) וביקשה את היצירה בלי המילים בתחתית. Stripe מנותק, אי אפשר לאמת. צריך לאשר ולרשום",
+      "channel": "WhatsApp",
+      "waitingDays": 1,
+      "urgency": "high"
+    },
+    {
+      "name": "Stewart Wolf",
+      "why": "ביקש מחירים כולל משלוח ומסגור, ובלילה כתב שאולי יעדיף יצירה פחות שנויה במחלוקת למשרד",
+      "channel": "WhatsApp",
       "waitingDays": 1,
       "urgency": "high"
     },
     {
       "name": "Jennifer Nason",
-      "why": "ליד חם 5-10K, יצאה מבית חולים, ענתה Around 29 ב-09.10. לא נענתה 5 ימים",
+      "why": "ליד חם, יצאה מבית חולים, ענתה Around 29 ב-09.10, לא נענתה 6 ימים",
       "channel": "Quo",
-      "waitingDays": 5,
+      "waitingDays": 6,
       "urgency": "high"
     },
     {
-      "name": "Michele Bernstein",
-      "why": "לא אספנית, תקציב מוגבל, מתעניינת בפרינטים אחרי החוברת. מחכה למחיר",
-      "channel": "WhatsApp",
-      "waitingDays": 1,
+      "name": "Mathew Clements",
+      "why": "אמר כן לגדלים ותמונה על קיר ב-09.10, אהב את The Dancer (בתו נפטרה). טיוטה מוכנה עם חורים להשלמה",
+      "channel": "Gmail עסקי",
+      "waitingDays": 6,
       "urgency": "high"
     },
     {
-      "name": "Kuty Shalev",
-      "why": "שאלה מה הגובה ברוחב 6 רגל, ושאלה אם אפשר לראות את היצירה בניו יורק",
+      "name": "Sam Zadikoff",
+      "why": "ליד מהטופס, ענה בוואטסאפ שרוצה להראות לבתו לחדר שלה",
       "channel": "WhatsApp",
       "waitingDays": 1,
-      "urgency": "high"
+      "urgency": "medium"
     },
     {
       "name": "Shawn Leonard",
-      "why": "ענה Yes לדחיית השיחה ב-12.10. השיחה עוד לא נקבעה מחדש",
+      "why": "ענה Yes לדחיית השיחה ב-12.10, לקבוע שעה",
       "channel": "Quo",
+      "waitingDays": 3,
+      "urgency": "medium"
+    },
+    {
+      "name": "Kuty Shalev",
+      "why": "שאלה אם אפשר לראות ביצירה בניו יורק (13.10), ולא החליטה בין רקע כחול לכהה",
+      "channel": "WhatsApp",
       "waitingDays": 2,
       "urgency": "medium"
     },
     {
-      "name": "candreatos (WhatsApp 15616338862)",
-      "why": "כתבה מהאתר שרוצה עצה לפני הזמנה. אין רשומה במנדיי, לא נוצרה כי חיפוש טלפון אינו אמין",
-      "channel": "WhatsApp",
-      "waitingDays": 1,
-      "urgency": "medium"
-    },
-    {
-      "name": "Alla Bodner",
-      "why": "קירות גדולים, שואלת עלות משלוח",
+      "name": "candreatos (15616338862)",
+      "why": "רוצה עצה לפני הזמנה, 13.10, אין רשומה",
       "channel": "WhatsApp",
       "waitingDays": 2,
       "urgency": "medium"
@@ -112,46 +119,46 @@
   ],
   "newYesterday": [
     {
-      "name": "Elayne",
-      "source": "שיחת Autocalls",
-      "detail": "תא קולי"
+      "name": "Sam Zadikoff",
+      "source": "טופס האתר",
+      "detail": "אהב את הכותרת, ענה בוואטסאפ"
     },
     {
-      "name": "Stewart",
-      "source": "שיחת Autocalls",
-      "detail": "תא קולי"
+      "name": "Mary, Ernest, Edwardt, Donna",
+      "source": "מנדיי/Autocalls",
+      "detail": "תא קולי או ניתוק, Unreachable"
     },
     {
-      "name": "Mindy Horwitz",
+      "name": "Larry Mullne, Joseph Tuso",
       "source": "שופיפיי",
-      "detail": "הזמנה #4334, 242.10$"
+      "detail": "הזמנות #4335 381.65$ ו-#4336 775.20$, אין רשומה בלוח"
     }
   ],
   "replied": [
     {
       "name": "Colleen",
-      "channel": "Quo",
-      "said": "I can't just spend that much money on something before I can picture it"
+      "channel": "Quo + WhatsApp",
+      "said": "תזמין בעוד כמה חודשים אחרי מעבר דירה"
+    },
+    {
+      "name": "Stewart Wolf",
+      "channel": "WhatsApp",
+      "said": "שואל מחירים, אולי יצירה פחות שנויה במחלוקת"
+    },
+    {
+      "name": "Sam Zadikoff",
+      "channel": "WhatsApp",
+      "said": "אוהב, יראה לבתו"
     },
     {
       "name": "Michele Bernstein",
       "channel": "WhatsApp",
-      "said": "לא אספנית, מתעניינת גם בפרינטים"
-    },
-    {
-      "name": "Kuty Shalev",
-      "channel": "WhatsApp",
-      "said": "Is there a way to see it in person?"
+      "said": "ישלמו 2,800, שילמה מקדמה"
     },
     {
       "name": "Amy Yaffe",
       "channel": "WhatsApp",
-      "said": "Looks amazing!!"
-    },
-    {
-      "name": "Gail",
-      "channel": "Quo",
-      "said": "לא יכולה להרשות לעצמה, ימשיכו להסתכל"
+      "said": "מרוצה מאוד מהיצירה, קיבלה מחמאות"
     }
   ],
   "revenue": {
@@ -174,37 +181,50 @@
     "openBalancesNote": "Henry 850 ו-Higer נסגרו. Higer היה 2,550 בפתוח",
     "newShopifyNote": "#4332 Gabriel Messingher 364.65, #4333 Ilana Bittner 80.1 (לא בלוח לפי חיפוש, לא נרשמו)"
   },
-  "draftsPrepared": [],
+  "draftsPrepared": [
+    {
+      "name": "Mathew Clements",
+      "inbox": "business",
+      "gist": "תשובה לבקשת גדלים ותמונה על קיר, מחכה להשלמת מידות ומחירים ותמונה",
+      "needsInput": true
+    }
+  ],
   "quoTasks": [],
   "mondayUpdated": {
-    "updated": 4,
+    "updated": 2,
     "created": 0,
     "details": [
-      "Colleen: הערה, ערוץ QUO, תאריך קשר 13.10",
-      "Kuty Shalev: הערה, תאריך קשר 13.10",
-      "Mindy Horwitz: Deal Value 242.1, Close Date 13.10, Amount Paid 242.1, הערה",
-      "Michele Bernstein: הערה"
+      "Sam Zadikoff: Conversation Active, WhatsApp, הערה",
+      "Stewart: Conversation Active, WhatsApp, הערה"
     ]
   },
   "faults": [
     {
-      "what": "Stripe דורש אימות מחדש, לא נסרק. Yelena כתבה Payment is complete (12.10) ולא נרשם",
+      "what": "Stripe דורש אימות OAuth מחדש, לא נסרק. Michele Bernstein 2,800 (מקדמה), Yelena (Tree of Life 60x40) ו-Colleen לא ניתנים לאימות או רישום",
       "severity": "high"
     },
     {
-      "what": "יצירת משימות Quo נחסמת 402 (מכסת משימות פתוחות, 23 משימות ישנות מ-26.09 ואילך). נדרש סגירה ידנית של משימות ישנות. הנוסח המוצע ל-Jennifer Nason בדוח",
-      "severity": "high"
-    },
-    {
-      "what": "GREEN API lastOutgoingMessages החזיר ריק, לא ידוע מי כבר נענה בוואטסאפ",
+      "what": "Larry Mullne (#4335, 381.65$) ו-Joseph Tuso (#4336, 775.20$) הזמנות שופיפיי בלי רשומה בלוח. לא נוצרו כי חיפוש מייל בלוח לא אמין, צריך בדיקה ידנית",
       "severity": "medium"
     },
     {
-      "what": "אוטומציית משימות CRM לא נבדקה, לא נגעתי בתאריכי פעולה",
+      "what": "23 משימות Quo פתוחות ישנות (מ-26.09 עד 01.10) חוסמות יצירת משימות חדשות. צריך לסגור",
+      "severity": "medium"
+    },
+    {
+      "what": "GREEN API lastOutgoing ריק, אי אפשר לדעת מי ענה אחרון בוואטסאפ",
+      "severity": "medium"
+    },
+    {
+      "what": "לא נסרקו בריצה הזו: Google Analytics, Google Ads, הוצאת מטא, יומן, משימות CRM. הערכים הקודמים נשמרו",
+      "severity": "medium"
+    },
+    {
+      "what": "UPS פנייה 2139255: יצירה הגיעה פגומה ללקוח בארה\"ב, הוגשה בקשה לחקירה",
       "severity": "low"
     }
   ],
-  "whatsappNote": "GREEN API פעיל, סרוק 14.10 (נכנסות בלבד, 5 ימים, 23 צ'אטים, outgoing ריק)",
+  "whatsappNote": "GREEN API פעיל, סרוק 15.10 (נכנסות בלבד, 5 ימים, 23 צ'אטים נבדקו, outgoing ריק)",
   "meetings": [
     {
       "when": "16.10 10:00",
