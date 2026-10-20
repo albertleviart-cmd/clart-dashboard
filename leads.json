@@ -1,34 +1,34 @@
 {
-  "updatedAt": "2026-10-19T07:20:00+03:00",
-  "scanDate": "2026-10-19",
+  "updatedAt": "2026-10-20T07:30:00+03:00",
+  "scanDate": "2026-10-20",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "13 רשומות ב-48 שעות. עודכנו Kerri ו-Nancy (Unreachable -> Conversation Active), Mauri ו-Delta (הערות). לא נשלפו כל משימות CRM ולכן לא נגעתי בתאריכי פעולה ולא בוטלו כפילויות"
+      "note": "16 רשומות ב-48 שעות. עודכנה Mauri (הערה על תשלום שדווח). לא נשלפו משימות CRM, לא נגעתי בתאריכי פעולה"
     },
     "quoMessages": {
       "status": "ok",
-      "note": "חלון 14 יום, 43 שיחות. נכנסות ללא מענה: Mauri (19.10, מסכימה ל-583$ ושואלת איך משלמים), Delta (18.10, תקציב), Holly (17.10, 22x15 פרינט), Kerri (בוואטסאפ), Jennifer Nason (09.10), Shawn Leonard (12.10). לא נוצרו משימות: 402 Open tasks limit reached"
+      "note": "חלון 14 יום, 42 שיחות פעילות. נכנסות ללא מענה: Mauri (שילמה), 5164453486 (96x48, שאלת גודל), Louis (דגל אמריקאי/ישראלי, גודל לפי מחיר), Holly (22x15), Kerri (וואטסאפ), 14169908668 (מתנדבת באירוע טורונטו). לא נוצרו משימות: 402 Open tasks limit reached (23 משימות ישנות פתוחות מ-26.09 עד 04.10)"
     },
     "gmailBusiness": {
       "status": "ok",
-      "note": "3 חיפושים. 2d: 25 שרשורים, buy.stripe.com: שרשור ישן אחד (Hillary), סווף 30 יום: 50. נוצרו טיוטות: Adelberg (נזק במשלוח) ו-Marc Danzis (פרינט Tree of Life, מחכה למחיר)"
+      "note": "3 חיפושים. 2d: 38 שרשורים, buy.stripe.com: Hillary (ישן), סווף 30 יום: 50. ללא ליד חדש בגמייל. לא נוצרו טיוטות חדשות (טיוטות Adelberg ו-Marc Danzis מ-19.10 עדיין ממתינות)"
     },
     "gmailPrivate": {
-      "status": "ok",
-      "note": "Composio, 60 הודעות ב-2d. רק תשלום Stripe payout 1,500.20$ (לא חיוב לקוח). לא בוצע סווף 30 יום פרטי לעומק"
+      "status": "error",
+      "note": "לא נסרק בריצה הזו (לא נשלף דרך Composio)"
     },
     "shopify": {
       "status": "ok",
-      "note": "אין הזמנות חדשות מאז #4337 (15.10). #4335, #4336, #4337 עדיין בלי רשומה בלוח. מדדי לקוחות לא עודכנו (נשארים מ-09.10)"
+      "note": "הזמנה חדשה #4338 (19.10, 53.10$, countrygirl77775@comcast.net). #4335-4338 בלי רשומה בלוח"
     },
     "stripe": {
       "status": "error",
-      "note": "Stripe MCP דורש אימות מחדש (OAuth), לא נסרק. הריצה הבאה תשלים לפי סימון"
+      "note": "Stripe דורש אימות OAuth מחדש, לא נסרק. Mauri כתבה שהשלימה תשלום 583$ בלינק Stripe, לא אומת ולא נרשם"
     },
     "autocalls": {
       "status": "ok",
-      "note": "7 שיחות ב-18-19.10, כולן ללא שיחה אמיתית מלבד Rocco (176 שניות, קבע ייעוץ ל-19.10)"
+      "note": "20 שיחות אחרונות. שיחות אמיתיות: Samuel (106 שניות, ייעוץ 20.10 14:00 ET), Denise Wechsler (160 שניות, ייעוץ 21.10). השאר תא קולי או מתחת ל-20 שניות"
     },
     "calendar": {
       "status": "ok",
@@ -40,107 +40,98 @@
     },
     "googleAds": {
       "status": "ok",
-      "note": "17.34$ אתמול, 7 קליקים, 0 המרות"
+      "note": "אתמול (19.10, יום חלקי) 2.48$, 2 קליקים, 0 המרות. 7 ימים 126.4$, 44 קליקים, 0 המרות"
     },
     "metaAds": {
       "status": "ok",
-      "note": "416.55$ אתמול מול ממוצע 254 ל-7 ימים (1,778.61$ ב-7 ימים), 504 קליקים. חשבון שקלים לא נבדק"
+      "note": "הכלי החזיר רק הוצאה מצטברת לקמפיין ומגמות CTR, לא הוצאה יומית. לא חושב אתמול מול ממוצע. חשבון שקלים לא נבדק"
     },
     "whatsapp": {
       "status": "ok",
-      "note": "GREEN API: 89 הודעות נכנסות ב-5 ימים, 26 צ'אטים, 7 נבדקו לעומק. הודעות יוצאות לא הוחזרו"
+      "note": "GREEN API: lastIncoming 103 הודעות מ-27 צ'אטים ב-5 ימים, lastOutgoing ריק שוב. לא בוצע getChatHistory, נקרא מהנכנסות בלבד. לא נכתב במנדיי מוואטסאפ"
     },
     "greenApi": {
       "status": "ok",
-      "note": "GREEN API: lastIncoming 114 הודעות מ-22 צ'אטים ב-5 ימים, lastOutgoing ריק שוב. נבדקו 20 צ'אטים דרך getChatHistory. לא נכתב במנדיי מוואטסאפ"
+      "note": "GREEN API: lastIncoming 103 הודעות מ-27 צ'אטים ב-5 ימים, lastOutgoing ריק שוב. לא בוצע getChatHistory, נקרא מהנכנסות בלבד. לא נכתב במנדיי מוואטסאפ"
     },
     "analytics": {
       "status": "ok",
-      "note": "אתמול (17.10) 205 סשנים מול ממוצע 7 ימים כ-211. Unassigned 44 אחוז (90), Organic Social 47, Direct 42, Organic Search 7, Paid Search 7, Paid Social 3"
+      "note": "19.10 רק 17 סשנים מול ממוצע 7 ימים כ-268. נראה כנתון חלקי או תקלת מעקב, לבדוק. 7 ימים: Unassigned 664, Direct 472, Organic Social 460, Paid Search 95, Organic Search 81"
     }
   },
   "needsAnswer": [
     {
-      "name": "Mauri",
-      "why": "הסכימה לפרינט 60x40 עם מסגרת ב-583$ ושואלת איך משלמים. צריך לינק תשלום",
-      "channel": "Quo SMS",
+      "name": "Mauri Wills",
+      "why": "שילמה 583$ בלינק Stripe ושלחה כתובת. לאשר ולהתחיל הפקה, לרשום במנדיי",
+      "channel": "SMS",
       "waitingDays": 0,
       "urgency": "high"
     },
     {
-      "name": "Adelberg",
-      "why": "הזמנה הגיעה פגומה, מבקשים פתרון. UPS תיעד",
-      "channel": "Gmail עסקי",
-      "waitingDays": 0,
-      "urgency": "high"
-    },
-    {
-      "name": "Marc Danzis",
-      "why": "שואל מחיר פרינט Tree of Life (בנוסף לציור מותאם 42x30)",
-      "channel": "Gmail עסקי",
-      "waitingDays": 0,
+      "name": "5164453486 (Quo)",
+      "why": "שואלת על גודל 96x48 או 108x54 ליצירה, מחכה מ-19.10",
+      "channel": "SMS",
+      "waitingDays": 1,
       "urgency": "high"
     },
     {
       "name": "Kerri Snow",
-      "why": "שאלה כמה עולה תמונה קטנה יותר",
+      "why": "שאלה בוואטסאפ כמה עולה תמונה קטנה יותר",
       "channel": "WhatsApp",
-      "waitingDays": 0,
+      "waitingDays": 2,
       "urgency": "high"
     },
     {
-      "name": "Holly",
-      "why": "רוצה פרינט 22x15, מחכה למחיר",
-      "channel": "Quo SMS",
+      "name": "Holly (5592878535)",
+      "why": "פרינט 22x15, מחכה למחיר מ-17.10",
+      "channel": "SMS",
+      "waitingDays": 3,
+      "urgency": "medium"
+    },
+    {
+      "name": "Louis (5408484545)",
+      "why": "דגל אמריקאי/ישראלי, הגודל תלוי במחיר",
+      "channel": "SMS",
+      "waitingDays": 1,
+      "urgency": "medium"
+    },
+    {
+      "name": "Marc Danzis",
+      "why": "טיוטה מחכה למחיר פרינט Tree of Life",
+      "channel": "Email",
       "waitingDays": 2,
       "urgency": "medium"
     },
     {
-      "name": "Delta",
-      "why": "אחרי הצעת 539$ אמרה שצריכה לבדוק תקציב. צריך רגישות, ייעוץ ב-21.10",
-      "channel": "Quo SMS",
-      "waitingDays": 1,
+      "name": "Adelberg",
+      "why": "הזמנה פגומה, טיוטה מוכנה",
+      "channel": "Email",
+      "waitingDays": 2,
       "urgency": "medium"
     },
     {
-      "name": "Elayne",
-      "why": "חושבת על ציור בגודל בינוני, ממתינה להצעה",
+      "name": "Jody (וואטסאפ)",
+      "why": "חזרה אחרי שיפוץ, כתבה 20.10 06:51",
       "channel": "WhatsApp",
-      "waitingDays": 1,
-      "urgency": "medium"
-    },
-    {
-      "name": "Lee",
-      "why": "שלחה קישורים אחרי הייעוץ של 18.10",
-      "channel": "Quo SMS",
-      "waitingDays": 1,
-      "urgency": "medium"
-    },
-    {
-      "name": "Jennifer Nason",
-      "why": "כתבה 'Around 29' ב-09.10, ללא מענה",
-      "channel": "Quo SMS",
-      "waitingDays": 10,
-      "urgency": "low"
-    },
-    {
-      "name": "Shawn Leonard",
-      "why": "'Yes' ב-12.10 אחרי דחיית שיחה, ללא מענה",
-      "channel": "Quo SMS",
-      "waitingDays": 7,
+      "waitingDays": 0,
       "urgency": "low"
     }
   ],
   "newYesterday": [
     {
-      "name": "Rocco",
-      "source": "Calendly + Autocalls",
-      "detail": "קבע ייעוץ ל-19.10 20:30, מתעניין ב-Buckin Up"
+      "name": "Samuel",
+      "source": "Autocalls",
+      "detail": "ייעוץ 20.10 14:00 ET"
     },
     {
-      "name": "Brandy / Joan",
-      "source": "מנדיי",
-      "detail": "ללא מידע, Unreachable"
+      "name": "Denise B. Wechsler",
+      "source": "Calendly",
+      "detail": "ייעוץ 21.10"
+    },
+    {
+      "name": "jason",
+      "source": "טופס",
+      "detail": "New Lead, אותו טלפון כמו Samuel"
     }
   ],
   "replied": [
@@ -201,48 +192,47 @@
   ],
   "quoTasks": [],
   "mondayUpdated": {
-    "updated": 4,
+    "updated": 1,
     "created": 0,
     "details": [
-      "Kerri ו-Nancy: ל-Conversation Active",
-      "Mauri ו-Delta: הערות"
+      "Mauri: הערה על תשלום Stripe שדווח ולא אומת"
     ]
   },
   "faults": [
     {
-      "what": "Stripe MCP דורש אימות מחדש, לא נסרק. חיובים חדשים לא נרשמו",
+      "what": "Stripe מנותק (OAuth). Mauri דיווחה על תשלום 583$ שלא נרשם",
       "severity": "high"
     },
     {
-      "what": "Quo create-task חסום (402, 23 משימות ישנות פתוחות). לא נוצרו משימות",
+      "what": "Quo create-task חסום 402, 23 משימות ישנות פתוחות",
       "severity": "high"
     },
     {
-      "what": "כפילות ירון (506273423) ושתי רשומות TEST עדיין בלוח",
-      "severity": "low"
-    },
-    {
-      "what": "שופיפיי #4335-4337 עדיין בלי רשומה בלוח, אין הזמנות חדשות",
-      "severity": "low"
-    },
-    {
-      "what": "Unassigned ב-GA 38 אחוז מהסשנים, מעל 15",
+      "what": "Analytics: 17 סשנים ב-19.10 מול ~268 ממוצע, לבדוק מעקב",
       "severity": "medium"
     },
     {
-      "what": "הוצאת מטא אתמול 416.55$ מול ממוצע 254",
+      "what": "גמייל פרטי לא נסרק בריצה הזו",
       "severity": "medium"
+    },
+    {
+      "what": "Shopify #4335-4338 בלי רשומה בלוח",
+      "severity": "low"
+    },
+    {
+      "what": "jason ו-Samuel עם אותו טלפון 6815598265, כפילות אפשרית. ירון ושתי רשומות ירון אלישיב עם אותו טלפון",
+      "severity": "low"
     }
   ],
-  "whatsappNote": "GREEN API פעיל, סרוק 19.10 (נכנסות 5 ימים, 26 צ'אטים, 7 נבדקו לעומק)",
+  "whatsappNote": "GREEN API פעיל, סרוק 20.10 (נכנסות 5 ימים, 27 צ'אטים, ללא getChatHistory)",
   "meetings": [
     {
-      "when": "19.10 17:00",
-      "who": "Sharri"
+      "when": "20.10 14:00 ET",
+      "who": "Samuel"
     },
     {
-      "when": "19.10 20:30",
-      "who": "Rocco"
+      "when": "21.10 10:30 שעון ישראל",
+      "who": "Denise Wechsler"
     },
     {
       "when": "21.10 20:45",
@@ -271,11 +261,6 @@
     }
   ],
   "traffic": {
-    "sessionsYesterday": 204,
-    "avg7d": 237,
-    "unassignedPct": 38,
-    "organicSearch": 4,
-    "googleSpend": 17.34,
-    "metaSpend": 416.55
+    "note": "ראה sources.analytics ו-googleAds"
   }
 }
