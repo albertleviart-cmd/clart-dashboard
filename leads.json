@@ -1,54 +1,54 @@
 {
-  "updatedAt": "2026-10-20T07:30:00+03:00",
-  "scanDate": "2026-10-20",
+  "updatedAt": "2026-10-21T07:15:00+03:00",
+  "scanDate": "2026-10-21",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "16 רשומות ב-48 שעות. עודכנה Mauri (הערה על תשלום שדווח). לא נשלפו משימות CRM, לא נגעתי בתאריכי פעולה"
+      "note": "14 רשומות ב-48 שעות. עודכנו Mauri, Michele Bernstein, Yelena (Stripe), Elayne, ירון אלישיב (וואטסאפ). נוצרו Jody, Cheri Hurwitz, Pamela Gennert. לא נשלפו משימות CRM, לא נגעתי בתאריכי פעולה של לידים קיימים ולא בוטלו תזכורות כפולות"
     },
     "quoMessages": {
       "status": "ok",
-      "note": "חלון 14 יום, 42 שיחות פעילות. נכנסות ללא מענה: Mauri (שילמה), 5164453486 (96x48, שאלת גודל), Louis (דגל אמריקאי/ישראלי, גודל לפי מחיר), Holly (22x15), Kerri (וואטסאפ), 14169908668 (מתנדבת באירוע טורונטו). לא נוצרו משימות: 402 Open tasks limit reached (23 משימות ישנות פתוחות מ-26.09 עד 04.10)"
+      "note": "חלון 14 יום, 47 שיחות פעילות. נכנסות ללא מענה: Lee/5164453486 (Ok I will go with your opinion, אתמול), Holly 5592878535 (22x15 מ-17.10), 14169908668 (מתנדבת טורונטו, 19.10), Jen Nason 8452458055 (Around 29, מ-09.10). לא נוצרו משימות: 402 Open tasks limit reached (23 משימות ישנות פתוחות)"
     },
     "gmailBusiness": {
       "status": "ok",
-      "note": "3 חיפושים. 2d: 38 שרשורים, buy.stripe.com: Hillary (ישן), סווף 30 יום: 50. ללא ליד חדש בגמייל. לא נוצרו טיוטות חדשות (טיוטות Adelberg ו-Marc Danzis מ-19.10 עדיין ממתינות)"
+      "note": "3 חיפושים. 2d: 45 שרשורים, buy.stripe.com: Hillary (ישן, שולם), סווף 30 יום: 50. ללא ליד חדש. Denise Wechsler ביטלה (חירום רפואי בבעל), Delta ביטלה (מחלה). לא נוצרו טיוטות עסקיות חדשות, טיוטות Adelberg ו-Marc Danzis ממתינות"
     },
     "gmailPrivate": {
-      "status": "error",
-      "note": "לא נסרק בריצה הזו (לא נשלף דרך Composio)"
+      "status": "ok",
+      "note": "2d ו-30d נסרקו דרך Composio. ליד חדש: Pamela Gennert (מחיר Tree of Life), נוצרה רשומה וטיוטה עם חור למחיר. Kristen Dunlap (אירוע Palm Beach) אלברט ענה ב-20.10, מחכה לה"
     },
     "shopify": {
       "status": "ok",
-      "note": "הזמנה חדשה #4338 (19.10, 53.10$, countrygirl77775@comcast.net). #4335-4338 בלי רשומה בלוח"
+      "note": "מדדי לקוחות עודכנו (bulk). אין הזמנה חדשה נבדקה מעבר ל-#4338"
     },
     "stripe": {
-      "status": "error",
-      "note": "Stripe דורש אימות OAuth מחדש, לא נסרק. Mauri כתבה שהשלימה תשלום 583$ בלינק Stripe, לא אומת ולא נרשם"
+      "status": "ok",
+      "note": "מחובר. 6 חיובים מאז 07.10: נרשמו Mauri 583 (מלא), Michele Bernstein 700 (מקדמה מ-2,800), Yelena 850 (Amount Paid בלבד, מחיר לא ידוע). ממתינים לאלברט: Gregory/Sharri Rochlin 925 (ל-Sharri כבר רשום Amount Paid 3,700, חריגה), חיוב 950 בלי משלם מ-19.10 (נראה 25% מ-3,800 של Lee). Higer כבר נרשם"
     },
     "autocalls": {
       "status": "ok",
-      "note": "20 שיחות אחרונות. שיחות אמיתיות: Samuel (106 שניות, ייעוץ 20.10 14:00 ET), Denise Wechsler (160 שניות, ייעוץ 21.10). השאר תא קולי או מתחת ל-20 שניות"
+      "note": "30 שיחות אחרונות. שיחות אמיתיות: Samuel (106 שניות), Denise (160 שניות, ביטלה), Rocco. השאר תא קולי או קצר"
     },
     "calendar": {
       "status": "ok",
-      "note": "Sharri 19.10 17:00, Rocco 19.10 20:30 (שעון ישראל)"
+      "note": "21.10: הרב Shawn תזכורת 10:00, Denise 10:30 (בוטלה), Delta 20:45 (בוטלה). 22.10 10:00 לבדוק אם קריסטין (Palm Beach) ענתה"
     },
     "googleAnalytics": {
-      "status": "ok",
-      "note": "204 סשנים אתמול מול ממוצע 237 ל-7 ימים"
+      "status": "error",
+      "note": "לא נשלף בריצה הזו (לא הופעל Composio google_analytics). ערך אתמול נשמר"
     },
     "googleAds": {
-      "status": "ok",
-      "note": "אתמול (19.10, יום חלקי) 2.48$, 2 קליקים, 0 המרות. 7 ימים 126.4$, 44 קליקים, 0 המרות"
+      "status": "error",
+      "note": "לא נשלף בריצה הזו. ערך אתמול נשמר"
     },
     "metaAds": {
-      "status": "ok",
-      "note": "הכלי החזיר רק הוצאה מצטברת לקמפיין ומגמות CTR, לא הוצאה יומית. לא חושב אתמול מול ממוצע. חשבון שקלים לא נבדק"
+      "status": "error",
+      "note": "הכלי החזיר רק מגמות CTR, לא הוצאה. לא חושב. מגמה: Lion of Judah CTR +205%"
     },
     "whatsapp": {
       "status": "ok",
-      "note": "GREEN API: lastIncoming 103 הודעות מ-27 צ'אטים ב-5 ימים, lastOutgoing ריק שוב. לא בוצע getChatHistory, נקרא מהנכנסות בלבד. לא נכתב במנדיי מוואטסאפ"
+      "note": "GREEN API: 138 הודעות נכנסות מ-28 צ'אטים ב-5 ימים, lastOutgoing ריק שוב. getChatHistory רץ על כל 28, ללא 429. עודכנו Elayne, ירון אלישיב; נוצרו Jody, Cheri Hurwitz"
     },
     "greenApi": {
       "status": "ok",
@@ -61,112 +61,155 @@
   },
   "needsAnswer": [
     {
-      "name": "Mauri Wills",
-      "why": "שילמה 583$ בלינק Stripe ושלחה כתובת. לאשר ולהתחיל הפקה, לרשום במנדיי",
-      "channel": "SMS",
-      "waitingDays": 0,
+      "name": "Yelena (וואטסאפ)",
+      "why": "שילמה 850$ ב-12.10, שלחה שמות למכתב ליום הולדת ב-18.10, ב-20.10 שאלה אם קיבלת. חסר מחיר עסקה",
+      "channel": "WhatsApp",
+      "waitingDays": 3,
       "urgency": "high"
     },
     {
-      "name": "5164453486 (Quo)",
-      "why": "שואלת על גודל 96x48 או 108x54 ליצירה, מחכה מ-19.10",
-      "channel": "SMS",
+      "name": "Lee 5164453486",
+      "why": "אישר גודל 70 (\"I will go with your opinion\"). חיוב 950$ בלי משלם מ-19.10 נראה שלו",
+      "channel": "Quo",
+      "waitingDays": 1,
+      "urgency": "high"
+    },
+    {
+      "name": "Cheri Hurwitz",
+      "why": "שואלת מחיר 48x40 וצעדים הבאים, מדברת עם בעלה",
+      "channel": "WhatsApp",
       "waitingDays": 1,
       "urgency": "high"
     },
     {
       "name": "Kerri Snow",
-      "why": "שאלה בוואטסאפ כמה עולה תמונה קטנה יותר",
+      "why": "שאלה כמה עולה תמונה קטנה יותר",
       "channel": "WhatsApp",
-      "waitingDays": 2,
+      "waitingDays": 3,
       "urgency": "high"
     },
     {
-      "name": "Holly (5592878535)",
-      "why": "פרינט 22x15, מחכה למחיר מ-17.10",
-      "channel": "SMS",
-      "waitingDays": 3,
-      "urgency": "medium"
+      "name": "Holly 5592878535",
+      "why": "22x15 הדפס, שלחה תמונת קיר",
+      "channel": "Quo",
+      "waitingDays": 4,
+      "urgency": "high"
     },
     {
-      "name": "Louis (5408484545)",
-      "why": "דגל אמריקאי/ישראלי, הגודל תלוי במחיר",
-      "channel": "SMS",
+      "name": "Pamela Gennert",
+      "why": "מבקשת טווח מחיר Tree of Life. טיוטה מחכה לפרטי מחיר",
+      "channel": "Email פרטי",
       "waitingDays": 1,
       "urgency": "medium"
     },
     {
-      "name": "Marc Danzis",
-      "why": "טיוטה מחכה למחיר פרינט Tree of Life",
-      "channel": "Email",
-      "waitingDays": 2,
-      "urgency": "medium"
-    },
-    {
-      "name": "Adelberg",
-      "why": "הזמנה פגומה, טיוטה מוכנה",
-      "channel": "Email",
-      "waitingDays": 2,
-      "urgency": "medium"
-    },
-    {
-      "name": "Jody (וואטסאפ)",
-      "why": "חזרה אחרי שיפוץ, כתבה 20.10 06:51",
+      "name": "Michele Bernstein",
+      "why": "שילמה מקדמה 700, שואלת לוח זמנים",
       "channel": "WhatsApp",
-      "waitingDays": 0,
+      "waitingDays": 1,
+      "urgency": "medium"
+    },
+    {
+      "name": "Jody 7324391193",
+      "why": "רוצה לראות מקוריים, פגשה ב-Rutgers Hillel",
+      "channel": "WhatsApp",
+      "waitingDays": 1,
+      "urgency": "medium"
+    },
+    {
+      "name": "ירון (Y.E)",
+      "why": "מתעניין ב-150x100 טורקיז, שאל על תליה ומחיר",
+      "channel": "WhatsApp",
+      "waitingDays": 1,
+      "urgency": "medium"
+    },
+    {
+      "name": "Elayne",
+      "why": "חושבת על גודל בינוני, תהיה באטלנטה",
+      "channel": "WhatsApp",
+      "waitingDays": 2,
+      "urgency": "low"
+    },
+    {
+      "name": "14169908668",
+      "why": "מתנדבת בטורונטו, רוצה פגישה בישראל 4-18.11",
+      "channel": "Quo",
+      "waitingDays": 2,
+      "urgency": "low"
+    },
+    {
+      "name": "Jen Nason 8452458055",
+      "why": "לקבוע מחדש שיחה סביב 29.10",
+      "channel": "Quo",
+      "waitingDays": 12,
       "urgency": "low"
     }
   ],
   "newYesterday": [
     {
-      "name": "Samuel",
-      "source": "Autocalls",
-      "detail": "ייעוץ 20.10 14:00 ET"
+      "name": "Pamela Gennert",
+      "source": "Email פרטי",
+      "detail": "Tree of Life, מחיר"
     },
     {
-      "name": "Denise B. Wechsler",
-      "source": "Calendly",
-      "detail": "ייעוץ 21.10"
+      "name": "Cheri Hurwitz",
+      "source": "WhatsApp",
+      "detail": "Heart of Protection בהזמנה אישית, מבולטימור"
     },
     {
-      "name": "jason",
-      "source": "טופס",
-      "detail": "New Lead, אותו טלפון כמו Samuel"
+      "name": "Jody",
+      "source": "WhatsApp",
+      "detail": "קראה את סיפור האספן, רוצה מקוריים"
+    },
+    {
+      "name": "Bonnie",
+      "source": "Autocalls/מנדיי",
+      "detail": "Unreachable, אין תשובה"
     }
   ],
   "replied": [
     {
-      "name": "Kerri",
-      "channel": "WhatsApp",
-      "said": "כמה יעלה גודל קטן יותר"
-    },
-    {
-      "name": "Nancy",
-      "channel": "Quo",
-      "said": "אוהבת Blue Life, עברה דירה, תחזור"
-    },
-    {
       "name": "Mauri",
       "channel": "Quo",
-      "said": "מסכימה ל-583$, שואלת איך משלמים"
+      "said": "מסגרת שחורה"
     },
     {
-      "name": "Delta",
+      "name": "Lee",
       "channel": "Quo",
-      "said": "צריכה לבדוק תקציב"
+      "said": "Ok I will go with your opinion"
+    },
+    {
+      "name": "Cheri Hurwitz",
+      "channel": "WhatsApp",
+      "said": "מחיר יותר מדי, שואלת 48x40"
+    },
+    {
+      "name": "Yelena",
+      "channel": "WhatsApp",
+      "said": "מחכה לאישור קבלת הודעה"
+    },
+    {
+      "name": "Elayne",
+      "channel": "WhatsApp",
+      "said": "בינוני, Atlanta"
+    },
+    {
+      "name": "ירון",
+      "channel": "WhatsApp",
+      "said": "150x100 טורקיז"
     }
   ],
   "revenue": {
-    "monthToDate": 488.85,
+    "monthToDate": 11372.85,
     "monthToDateMonth": "אוקטובר 2026",
-    "monthToDateNote": "Benjamin Lebedin 246.75 ועוד Mindy Horwitz 242.10 (שופיפיי #4334, Close Date 13.10). Stripe לא נסרק",
+    "monthToDateNote": "לפי Close Date באוקטובר: Lee 3,800, Sharri 3,700, Michele Bernstein 2,800 (חדש), Mauri 583 (חדש), Benjamin 246.75, Mindy 242.10. Lee ו-Sharri: Amount Paid שווה ל-Deal Value אבל ב-Stripe נכנסו 925 ל-Sharri ו-950 בלי משלם, ייתכן ש-Amount Paid מנופח",
     "septemberFinal": 12862,
-    "cashNotTurnover": 4000,
-    "cashNotTurnoverNote": "Nivia 2,400 ו-Georgi Miller 1,600, שתיהן יתרות על עסקאות קיימות (04.10, Stripe), לא מחזור חדש. Irene Reiss שילמה יתרה ב-3,000 שקל מזומן ל-Gal, לא נכלל כי לא ידוע הסכום בדולרים. Kevin אמור לשלם יתרה ב-Stripe ולא נמצא חיוב, לא מאומת",
-    "openBalances": 13600,
-    "openBalancesBreakdown": "Lisa Beth Meisel 2,925, David Javitch 2,625, Ruthy 2,400, Anthony 2,400, Marco Zarfati 2,400, Henry 850. ללא שינוי. Irene Reiss אומרת 1,900 ולא נכללה עד אימות",
-    "newStripeCashToday": null,
-    "newStripeCashNote": "Stripe לא נסרק (דורש אימות)",
+    "cashNotTurnover": 0,
+    "cashNotTurnoverNote": "אין השלמות חדשות היום",
+    "openBalances": 15700,
+    "openBalancesBreakdown": "הקודם 13,600 ועוד Michele Bernstein 2,100",
+    "newStripeCashToday": 2133,
+    "newStripeCashNote": "583+700+850 נרשמו. 925 ו-950 ממתינים לאלברט",
     "failedStripeToday": 0,
     "newShopifyOrdersSinceLastRun": 0,
     "nonLeadShopifyOctober": 1195.1,
@@ -174,77 +217,80 @@
     "unpaidPaymentLinks": "Sandra Stechman 89 דולר, נשלח ב-30.09, 7 ימים (חרג)",
     "currency": "USD",
     "openBalancesNote": "Henry 850 ו-Higer נסגרו. Higer היה 2,550 בפתוח",
-    "newShopifyNote": "#4335 Larry Mullne 381.65, #4336 Joseph Tuso 775.20, #4337 Justin Harelik 644.30, אין להם רשומה בלוח, לא נרשמו"
+    "newShopifyNote": "לא נבדקו הזמנות חדשות מעבר לקודם"
   },
   "draftsPrepared": [
     {
-      "name": "Adelberg",
-      "inbox": "business",
-      "gist": "התנצלות, בקשת תמונות ומספר הזמנה",
-      "needsInput": false
-    },
-    {
-      "name": "Marc Danzis",
-      "inbox": "business",
-      "gist": "מחיר פרינט Tree of Life",
+      "name": "Pamela Gennert",
+      "inbox": "private",
+      "gist": "Delray Beach מנובמבר, מחיר Tree of Life תלוי גודל ומקור מול פרינט, שאלה על גודל או תקציב",
       "needsInput": true
     }
   ],
   "quoTasks": [],
   "mondayUpdated": {
-    "updated": 1,
-    "created": 0,
+    "updated": 5,
+    "created": 3,
     "details": [
-      "Mauri: הערה על תשלום Stripe שדווח ולא אומת"
+      "Mauri: Deal 583, Close 19.10, Amount Paid 583 [stripe:ch_3USOjE...]",
+      "Michele Bernstein: Deal 2800, Close 14.10, Amount Paid 700 [stripe:ch_3UQYZd...]",
+      "Yelena: Amount Paid 850 בלבד [stripe:ch_3UPo3z...]",
+      "Elayne: Unreachable -> Conversation Active",
+      "ירון אלישיב: New Lead -> Conversation Active",
+      "נוצרו: Jody, Cheri Hurwitz, Pamela Gennert"
     ]
   },
   "faults": [
     {
-      "what": "Stripe מנותק (OAuth). Mauri דיווחה על תשלום 583$ שלא נרשם",
+      "what": "Quo create-task נחסם 402 (Open tasks limit, 23 משימות ישנות מ-26.09 עד 04.10). נוסחי המשימות בדוח",
       "severity": "high"
     },
     {
-      "what": "Quo create-task חסום 402, 23 משימות ישנות פתוחות",
-      "severity": "high"
-    },
-    {
-      "what": "Analytics: 17 סשנים ב-19.10 מול ~268 ממוצע, לבדוק מעקב",
+      "what": "Sharri/Greg Rochlin: חיוב 925$ ב-Stripe (20.10) לא נרשם כי Amount Paid כבר 3,700 (שווה ל-Deal Value). בדוק שהמקדמה בפועל 925 ותקן",
       "severity": "medium"
     },
     {
-      "what": "גמייל פרטי לא נסרק בריצה הזו",
+      "what": "חיוב 950$ ב-Stripe מ-19.10 16:56 UTC בלי פרטי משלם. נראה כמקדמה 25% מ-3,800 של Lee, אבל ל-Lee כבר רשום Amount Paid 3,800. אלברט מחליט",
       "severity": "medium"
     },
     {
-      "what": "Shopify #4335-4338 בלי רשומה בלוח",
+      "what": "Yelena: חיוב 850 נרשם כ-Amount Paid בלבד. חסר מחיר העסקה ו-Close Date (נראה 3,400)",
+      "severity": "medium"
+    },
+    {
+      "what": "כפילות: ירון (3291246542) ו-ירון אלישיב (3291244893) באותו טלפון. jason (3294832396) ו-Samuel (3294828949) באותו טלפון. Bonnie ו-Albert (בדיקה) כרשומות חדשות",
       "severity": "low"
     },
     {
-      "what": "jason ו-Samuel עם אותו טלפון 6815598265, כפילות אפשרית. ירון ושתי רשומות ירון אלישיב עם אותו טלפון",
+      "what": "לא בוצע שלב ביטול תזכורות כפולות ושליפת משימות CRM. לא נגעתי בתאריכי פעולה של לידים קיימים",
+      "severity": "low"
+    },
+    {
+      "what": "GA, גוגל אדס והוצאת מטא לא נשלפו בריצה הזו",
+      "severity": "low"
+    },
+    {
+      "what": "Denise Wechsler ו-Delta ביטלו ייעוץ, שתיהן עם סיבה (רפואית/מחלה). לא להציק",
       "severity": "low"
     }
   ],
-  "whatsappNote": "GREEN API פעיל, סרוק 20.10 (נכנסות 5 ימים, 27 צ'אטים, ללא getChatHistory)",
+  "whatsappNote": "GREEN API פעיל, נסרק 21.10: 28 צ'אטים, getChatHistory על כולם",
   "meetings": [
     {
-      "when": "20.10 14:00 ET",
-      "who": "Samuel"
+      "when": "21.10 10:00 תזכורת",
+      "who": "הרב Shawn (Har Zion)"
     },
     {
-      "when": "21.10 10:30 שעון ישראל",
-      "who": "Denise Wechsler"
-    },
-    {
-      "when": "21.10 20:45",
-      "who": "Delta"
+      "when": "22.10 10:00 תזכורת",
+      "who": "קריסטין (Palm Beach)"
     }
   ],
   "customerMetrics": {
-    "ltv": 268.08,
-    "avgDaysBetweenPurchases": 76.5,
-    "purchaserCount": 2912,
-    "repeatCustomerCount": 301,
-    "computedAt": "2026-10-09T07:40:00+03:00"
+    "ltv": 268.67,
+    "avgDaysBetweenPurchases": 76.1,
+    "purchaserCount": 2919,
+    "repeatCustomerCount": 303,
+    "computedAt": "2026-10-21T07:12:00+03:00"
   },
   "nonLeadPayers": [
     {
