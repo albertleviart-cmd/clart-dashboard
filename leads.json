@@ -1,38 +1,38 @@
 {
-  "updatedAt": "2026-10-22T07:20:00+03:00",
-  "scanDate": "2026-10-22",
+  "updatedAt": "2026-10-23T07:20:00+03:00",
+  "scanDate": "2026-10-23",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "19 רשומות ב-48 שעות (רובן שיחות Autocalls: Roy Rocco, Annette x2, Stephani x3 כפילויות, Carol, Sheryl-Anne, Raymond, Bonnie, Sal, Aleshia, Lisa, Dillon, Andrew). נוצרה Alison Lemkin (וואטסאפ). עודכנו Cheri Hurwitz, Sara Webb. לא נשלפו משימות CRM ולא נגעתי בתאריכי פעולה, לא בוטלו תזכורות כפולות"
+      "note": "16 רשומות ב-48 שעות. לא בוצעו עדכונים בלוח בריצה זו (שלב CRM Tasks וביטול תזכורות כפולות לא הורצו)"
     },
     "quoMessages": {
       "status": "ok",
-      "note": "חלון 14 יום, 49 שיחות פעילות. נכנסות ללא מענה: Louis 5408484545 (אפשרויות נוספות, מ-21.10), Lee 5164453486 (אישר גודל, 20.10), Holly 5592878535 (22x15, מ-17.10), 4169908668 (מתנדבת טורונטו), Jen Nason 8452458055. create-task נכשל שוב 402 Open tasks limit reached, לא נוצרו משימות"
+      "note": "חלון 14 יום, 49 שיחות פעילות. נכנסות ללא מענה: Louis 5408484545 (אפשרויות נוספות, מ-21.10), Holly 5592878535 (תמונה מ-17.10), 4169908668. create-task נכשל 402 Open tasks limit reached (23 משימות ישנות פתוחות), לא נוצרו משימות"
     },
     "gmailBusiness": {
       "status": "error",
-      "note": "קונקטור Gmail נפל בריצה (needs sign in again). לא נסרקו שלושת החיפושים. ערך אתמול נשמר, אין לדעת אם נכנס ליד עסקי"
+      "note": "קונקטור Gmail דורש התחברות מחדש (needs sign in again). לא נסרקו שלושת החיפושים, ולא נוצרו טיוטות עסקיות"
     },
     "gmailPrivate": {
       "status": "ok",
-      "note": "חיפוש 2 ימים דרך Composio (60 הודעות, ללא סווף 30 יום). Kristen Dunlap (Palm Beach) ענתה 20.10 17:56 ושאלה זמינות ל-16 במרץ + שכר הרצאה + נסיעות. הוכנה טיוטה פרטית עם חורים. ללא ליד חדש"
+      "note": "חיפוש 2 ימים וסווף 30 יום דרך Composio נשלפו (60 הודעות כל אחד), לא נותחו לעומק. Pamela Gennert כתבה 22.10 ושאלה אם יש סטודיו בישראל. לא נוצרו טיוטות חדשות"
     },
     "shopify": {
       "status": "error",
-      "note": "לא נבדקו הזמנות חדשות ולא חושבו מדדי לקוחות מחדש. נשמרו ערכי אתמול"
+      "note": "לא נסרק בריצה זו"
     },
     "stripe": {
       "status": "ok",
-      "note": "GetCharges limit 100. 6 חיובים מאז 07.10 ללא חדשים מאתמול, כולם כבר ידועים. נרשמו קודם Mauri, Michele, Yelena. ממתינים לאלברט: Gregory/Sharri Rochlin 925 (ל-Sharri כבר רשום 3,700), חיוב 950 בלי משלם מ-19.10 (נראה 25% מ-3,800 של Lee). לא נכתב כלום חדש"
+      "note": "100 חיובים נשלפו. 6 חיובים מאז 07.10 בתוך 30 יום. 3 עם סימון (Higer, Alex/Yelena, Bernstein, Mauri). ממתינים לאלברט: 950$ מ-19.10 בלי פרטי משלם, ו-925$ מ-20.10 של Greg Rochlin (grochlin@quarryws.com), שייך כנראה ל-Sharri (3274087367) שכבר יש לה Amount Paid 3700 שווה ל-Deal Value, בלם: לא נרשם"
     },
     "autocalls": {
       "status": "ok",
-      "note": "30 שיחות אחרונות. שיחות אמיתיות: חיבור 171 שניות (+18609304424 Carol, קבעה ייעוץ), 86 שניות (Sheryl-Anne, קבעה ייעוץ). השאר תא קולי או קצר"
+      "note": "7 שיחות ב-24 שעות, כולן תא קולי או screening או שיחות בדיקה"
     },
     "calendar": {
-      "status": "ok",
-      "note": "22.10: 10:00 לבדוק אם קריסטין ענתה (ענתה), 18:00 Carol, 20:00 Sheryl-Anne Sastow. 23.10 17:30 לשלוח הודעה ל-Joan"
+      "status": "error",
+      "note": "לא נסרק בריצה זו"
     },
     "googleAnalytics": {
       "status": "error",
@@ -57,73 +57,59 @@
   },
   "needsAnswer": [
     {
-      "name": "Cheri & David Hurwitz",
-      "why": "סרטון חדר ותמונות, שואלים איזה גודל מתאים ומתי נוסע לארה\"ב (וואטסאפ, קבוצה חדשה)",
+      "name": "Hurwitz (קבוצת וואטסאפ)",
+      "why": "\"We love the 50x50! Pricing?\" מ-22.10 23:03 צריך מחיר ואישור גוון כחול נוסף",
       "channel": "WhatsApp",
-      "waitingDays": 0,
+      "waitingDays": 1,
       "urgency": "high"
     },
     {
-      "name": "Kristen Dunlap (Palm Beach)",
-      "why": "שואלת זמינות ל-16.03 ושכר הרצאה ונסיעות. טיוטה מחכה עם חורים",
-      "channel": "Email פרטי",
+      "name": "Cheri Hurwitz / David",
+      "why": "מחכים להמלצת גודל וגם שאלו מתי אתה בארה\"ב",
+      "channel": "WhatsApp",
       "waitingDays": 2,
       "urgency": "high"
     },
     {
       "name": "Alison Lemkin",
-      "why": "ליד חדש מהאתר, עצה לחדר אוכל וחדר משפחה, אהבה את החמסה, שאלה על משלוח לארה\"ב",
+      "why": "שאלה אם שולחים לארה\"ב ורוצה עצה, 21.10",
       "channel": "WhatsApp",
-      "waitingDays": 0,
+      "waitingDays": 2,
       "urgency": "high"
     },
     {
-      "name": "Louis (5408484545)",
-      "why": "ביקש אפשרויות נוספות אחרי מחיר 3,000 עד 4,000",
-      "channel": "Quo",
-      "waitingDays": 1,
-      "urgency": "medium"
-    },
-    {
-      "name": "Lee",
-      "why": "כתב Ok I will go with your opinion (70 אינץ'), מחכה לצעדים הבאים ולאישור חיוב 950",
+      "name": "Louis 5408484545",
+      "why": "ביקש אפשרויות נוספות, מ-21.10",
       "channel": "Quo",
       "waitingDays": 2,
-      "urgency": "medium"
+      "urgency": "high"
     },
     {
-      "name": "Yelena Amkhanitsky",
-      "why": "שלחה שמות למכתב מ-18.10 ושאלה אם קיבלת, 3 ימים",
+      "name": "Yelena (Pud)",
+      "why": "שלחה שמות לחריטה ב-18.10 ושאלה ב-20.10 אם קיבלת",
       "channel": "WhatsApp",
       "waitingDays": 3,
       "urgency": "high"
     },
     {
-      "name": "Michele Bernstein",
-      "why": "שאלה על לוח זמנים ואם התערוכות מגיעות לניו יורק",
-      "channel": "WhatsApp",
+      "name": "Pamela Gennert",
+      "why": "שאלה אם יש סטודיו בישראל, וחכה למחיר ל-Tree of Life",
+      "channel": "Gmail פרטי",
       "waitingDays": 1,
       "urgency": "medium"
     },
     {
-      "name": "Sara Webb",
-      "why": "כתבה שנגעת בנשמה ושהיא מצפה לציור, לבדוק אם סגרה",
+      "name": "Jody 7324391193",
+      "why": "רוצה לראות מקוריים, ללא מענה",
       "channel": "WhatsApp",
-      "waitingDays": 0,
+      "waitingDays": 3,
       "urgency": "medium"
     },
     {
-      "name": "Holly (5592878535)",
-      "why": "22x15 מ-17.10",
+      "name": "Holly 5592878535",
+      "why": "שלחה תמונה 17.10",
       "channel": "Quo",
-      "waitingDays": 5,
-      "urgency": "medium"
-    },
-    {
-      "name": "Jody",
-      "why": "רוצה לראות מקוריים (20.10)",
-      "channel": "WhatsApp",
-      "waitingDays": 2,
+      "waitingDays": 6,
       "urgency": "medium"
     }
   ],
@@ -186,71 +172,40 @@
     "openBalancesNote": "Henry 850 ו-Higer נסגרו. Higer היה 2,550 בפתוח",
     "newShopifyNote": "לא נבדקו הזמנות חדשות מעבר לקודם"
   },
-  "draftsPrepared": [
-    {
-      "name": "Kristen Dunlap",
-      "inbox": "private",
-      "gist": "תשובה עם זמינות 16.03, שכר ונסיעות",
-      "needsInput": true
-    }
-  ],
+  "draftsPrepared": [],
   "quoTasks": [],
   "mondayUpdated": {
-    "updated": 2,
-    "created": 1,
-    "details": [
-      "Alison Lemkin נוצרה",
-      "Cheri Hurwitz הערות",
-      "Sara Webb הערות"
-    ]
+    "updated": 0,
+    "created": 0,
+    "details": []
   },
   "faults": [
     {
-      "what": "Sharri/Greg Rochlin: חיוב 925$ ב-Stripe (20.10) לא נרשם כי Amount Paid כבר 3,700 (שווה ל-Deal Value). בדוק שהמקדמה בפועל 925 ותקן",
-      "severity": "medium"
-    },
-    {
-      "what": "חיוב 950$ ב-Stripe מ-19.10 16:56 UTC בלי פרטי משלם. נראה כמקדמה 25% מ-3,800 של Lee, אבל ל-Lee כבר רשום Amount Paid 3,800. אלברט מחליט",
-      "severity": "medium"
-    },
-    {
-      "what": "Yelena: חיוב 850 נרשם כ-Amount Paid בלבד. חסר מחיר העסקה ו-Close Date (נראה 3,400)",
-      "severity": "medium"
-    },
-    {
-      "what": "כפילות: ירון (3291246542) ו-ירון אלישיב (3291244893) באותו טלפון. jason (3294832396) ו-Samuel (3294828949) באותו טלפון. Bonnie ו-Albert (בדיקה) כרשומות חדשות",
-      "severity": "low"
-    },
-    {
-      "what": "לא בוצע שלב ביטול תזכורות כפולות ושליפת משימות CRM. לא נגעתי בתאריכי פעולה של לידים קיימים",
-      "severity": "low"
-    },
-    {
-      "what": "GA, גוגל אדס והוצאת מטא לא נשלפו בריצה הזו",
-      "severity": "low"
-    },
-    {
-      "what": "Denise Wechsler ו-Delta ביטלו ייעוץ, שתיהן עם סיבה (רפואית/מחלה). לא להציק",
-      "severity": "low"
-    },
-    {
-      "what": "Gmail עסקי נפל (sign in again): לא נסרק החיפוש העסקי היום",
+      "what": "Gmail עסקי מנותק (דורש התחברות מחדש)",
       "severity": "high"
     },
     {
-      "what": "Quo create-task חסום 402 (limit משימות פתוחות), לא נוצרו משימות. Louis, Lee, Holly בלי משימה",
+      "what": "Quo create-task חסום 402, 23 משימות פתוחות מ-26.09 עד 01.10 חוסמות יצירה חדשה",
+      "severity": "high"
+    },
+    {
+      "what": "Stripe 950$ מ-19.10 (ch_3USJrn37dfJIOq2B0pDHo1W9) בלי פרטי משלם, ממתין לאלברט",
       "severity": "medium"
     },
     {
-      "what": "GA, Google Ads, Meta ו-Shopify לא נשלפו בריצה הזו",
+      "what": "Stripe 925$ מ-20.10 (ch_3USRfX37dfJIOq2B0y7QQ5Dl) Greg Rochlin, כנראה של Sharri 3274087367 שכבר Amount Paid=Deal Value 3700. בלם, לא נרשם",
       "severity": "medium"
     },
     {
-      "what": "כפילויות Stephani x3 ו-Annette x2 ברשומות שנוצרו מ-Autocalls",
+      "what": "כפילויות: Stephani x3, Annette x2",
       "severity": "low"
+    },
+    {
+      "what": "Shopify, Calendar, Analytics, Google Ads, Meta Ads, מדדי לקוחות לא נסרקו בריצה זו, הערכים הישנים נשמרו",
+      "severity": "medium"
     }
   ],
-  "whatsappNote": "GREEN API פעיל, נסרק 22.10: 28 צ'אטים, getChatHistory על כולם",
+  "whatsappNote": "נסרק דרך GREEN API: 30 צ'אטים פעילים ב-5 ימים (lastOutgoingMessages החזיר רשימה ריקה, ההיסטוריה של כל צ'אט כן הכילה הודעות יוצאות). לא עודכן מנדיי.",
   "meetings": [
     {
       "when": "22.10 18:00",
