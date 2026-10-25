@@ -1,34 +1,34 @@
 {
-  "updatedAt": "2026-10-24T07:20:00+03:00",
-  "scanDate": "2026-10-24",
+  "updatedAt": "2026-10-25T07:10:00+03:00",
+  "scanDate": "2026-10-25",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "9 רשומות ב-48 שעות (Cindy, Jennifer, Alan, Roy Rocco, Annette x2 מאוטומציית Autocalls, David, Alison, בדיקת Test Eventspage). עודכנה הערה אחת (Cheri Hurwitz). שלב CRM Tasks וביטול תזכורות כפולות לא הורצו"
+      "note": "6 רשומות ב-48 שעות. נוצרה Phyllis Gilmore, עודכנו Alan ו-Cindy. שלב CRM Tasks וביטול תזכורות כפולות לא הורצו"
     },
     "quoMessages": {
-      "status": "ok",
-      "note": "חלון 14 יום, 48 שיחות פעילות. נכנסות ללא מענה: Louis 5408484545 (21.10), 5164453486 (20.10 'I will go with your opinion'), 4169908668 (19.10, מתנדב באירוע בטורונטו ורוצה פגישה), 7079411312 (18.10), Holly 5592878535 (תמונה 17.10). create-task נכשל שוב 402 Open tasks limit reached"
+      "status": "error",
+      "note": "Quo דורש התחברות OAuth, לא נסרק. משימות Quo לא נוצרו"
     },
     "gmailBusiness": {
-      "status": "error",
-      "note": "קונקטור Gmail דורש התחברות מחדש (needs sign in again). לא נסרקו שלושת החיפושים ולא נוצרו טיוטות עסקיות"
+      "status": "ok",
+      "note": "שלושת החיפושים רצו (2 ימים, לינקי תשלום 7 ימים, סווף 30 יום). ליד חדש אחד: Phyllis Gilmore"
     },
     "gmailPrivate": {
-      "status": "ok",
-      "note": "חיפוש 2 ימים וסווף 30 יום דרך Composio נשלפו (60 הודעות כל אחד), מיילים אוטומטיים ושיווקיים בלבד בתצוגה המקדימה, לא נותחו לעומק. לא נוצרו טיוטות"
+      "status": "error",
+      "note": "לא נסרק בריצה הזו (Composio לא הורץ)"
     },
     "shopify": {
       "status": "ok",
-      "note": "4 הזמנות חדשות מאז 21.10: #4344 Tari roth 530.10, #4343 Roman Mueller 152.10, #4342 Julie Weinstein 124.20, #4341 Aryeh Austin-Elbaz 188.10. מדדי לקוחות חושבו מ-bulk operation"
+      "note": "הזמנות אחרונות #4345 עד #4338, כולן שולמו (120.69$ עד 530.1$)"
     },
     "stripe": {
       "status": "ok",
-      "note": "100 חיובים נשלפו. 7 חיובים מ-07.10 בתוך 30 יום. חדש: 875$ מ-23.10 של Cheri Hurwitz (d@trigroupllc.com), לא נרשם כי המייל לא תואם לרשומה הקיימת (אותו שם מלא, טלפון 4109356901, בלי מייל), ממתין לאלברט. עדיין ממתינים: 950$ מ-19.10 בלי פרטי משלם, 925$ מ-20.10 של Greg Rochlin. השאר מסומנים"
+      "note": "7 חיובים מאז 07.10. 4 כבר מסומנים. ממתינים לאלברט: Cheri Hurwitz 875$ (ch_3UTj9337dfJIOq2B0b3C5l2Y), Gregory/Rochlin 925$ (ch_3USRfX37dfJIOq2B0BmqXwx8, שייך כנראה ל-Sharri שכבר Amount Paid 3,700 מלא, בלם), חיוב 950$ ללא פרטי משלם (ch_3USJrn37dfJIOq2B0pDHo1W9, 19.10). לא נכתב כלום"
     },
     "autocalls": {
       "status": "ok",
-      "note": "6 שיחות מאז 23.10: Cindy 297 שניות ו-Alan 113 שניות הן שיחות אמיתיות (שני הלידים כבר Conversation Active), Jennifer תא קולי, 2 שיחות web בדיקה"
+      "note": "2 שיחות מאז 24.10: Michael (121 שניות, שיחה אמיתית), Jennifer (תא קולי)"
     },
     "calendar": {
       "status": "ok",
@@ -48,118 +48,96 @@
     },
     "whatsapp": {
       "status": "ok",
-      "note": "GREEN API: lastIncoming 214 הודעות מ-33 צ'אטים ב-5 ימים, lastOutgoing ריק שוב. getChatHistory רץ על כל 33 ללא 429. עודכן Cheri Hurwitz (הערה). לא נוצרו רשומות חדשות"
+      "note": "GREEN API: 181 הודעות נכנסות ב-5 ימים, 32 צ'אטים. lastOutgoing ריק"
+    },
+    "ads": {
+      "status": "error",
+      "note": "GA, Google Ads ו-Meta לא נסרקו בריצה הזו"
     }
   },
   "needsAnswer": [
     {
-      "name": "Cheri & David Hurwitz",
-      "why": "שילמו 875$ ב-23.10 (Payment made) ועדיין מחכים להמלצת גודל, ושאלו מתי אתה בארה\"ב. חיוב לא נרשם, צריך אישור שלך",
-      "channel": "WhatsApp",
-      "waitingDays": 1,
+      "name": "Phyllis Gilmore",
+      "why": "רוצה לקנות The Dancer במתנה לנכדה, מבקשת שיתקשר. טיוטה מוכנה, נוצרה רשומה",
+      "channel": "Email",
+      "waitingDays": 0,
       "urgency": "high"
     },
     {
-      "name": "Alison Lemkin",
-      "why": "שאלה אם שולחים לארה\"ב ורוצה עצה, אוהבת חמסה, 22.10",
+      "name": "Cindy Smukler",
+      "why": "שאלה על טווחי מחירים, מבקשת טלפון אחרי 10:00. פגישה היום 11:15 ET",
+      "channel": "WhatsApp",
+      "waitingDays": 0,
+      "urgency": "high"
+    },
+    {
+      "name": "Cheri Hurwitz",
+      "why": "שילמו 875$ ב-23.10, מחכים להמלצת גודל וצעדים הבאים",
       "channel": "WhatsApp",
       "waitingDays": 2,
       "urgency": "high"
     },
     {
-      "name": "Louis 5408484545",
-      "why": "ביקש אפשרויות נוספות, 21.10",
-      "channel": "Quo",
-      "waitingDays": 3,
+      "name": "Michal Weiss",
+      "why": "שואלת איפה ההזמנה שלה, אלברט הבטיח לברר ולעדכן ביום ראשון",
+      "channel": "Email",
+      "waitingDays": 2,
       "urgency": "high"
     },
     {
       "name": "Yelena (Pud)",
-      "why": "שאלה אם קיבלת את הודעת השמות לחריטה (21.10 'Pls let me know if you got my last message')",
+      "why": "שילמה 12.10, שלחה פרטים ב-18.10 ושאלה ב-20.10 אם התקבל",
+      "channel": "WhatsApp",
+      "waitingDays": 4,
+      "urgency": "medium"
+    },
+    {
+      "name": "Alison Lemkin",
+      "why": "שאלה על משלוח לארה\"ב ואוהבת hamsa",
       "channel": "WhatsApp",
       "waitingDays": 3,
-      "urgency": "high"
+      "urgency": "medium"
     },
     {
-      "name": "David 18455960101",
-      "why": "שלח 3 תמונות ב-22.10 20:00, עץ החיים $3,400 או $3,700",
+      "name": "Kerri Snow",
+      "why": "שאלה כמה עולה תמונה קטנה יותר ואמרה שתחזור",
       "channel": "WhatsApp",
-      "waitingDays": 2,
-      "urgency": "medium"
-    },
-    {
-      "name": "Jody 7324391193",
-      "why": "רוצה לראות מקוריים (20.10)",
-      "channel": "WhatsApp",
-      "waitingDays": 4,
-      "urgency": "medium"
-    },
-    {
-      "name": "5164453486",
-      "why": "כתב 'I will go with your opinion' ב-20.10",
-      "channel": "Quo",
-      "waitingDays": 4,
-      "urgency": "medium"
-    },
-    {
-      "name": "4169908668",
-      "why": "מתנדב באירוע בטורונטו ורוצה לקבוע פגישה",
-      "channel": "Quo",
-      "waitingDays": 5,
-      "urgency": "medium"
-    },
-    {
-      "name": "Pamela Gennert",
-      "why": "שאלה אם יש סטודיו בישראל (22.10)",
-      "channel": "Gmail פרטי",
-      "waitingDays": 2,
-      "urgency": "medium"
-    },
-    {
-      "name": "14148031809",
-      "why": "חזרה ב-24.10 02:17, הייתה חולה ועוברת ניתוח גדול, אולי לא תקציב. תגובה אנושית קצרה",
-      "channel": "WhatsApp",
-      "waitingDays": 0,
+      "waitingDays": 7,
       "urgency": "low"
     }
   ],
   "newYesterday": [
     {
-      "name": "Cindy (6103040882)",
+      "name": "Phyllis Gilmore",
+      "source": "Email",
+      "detail": "The Dancer במתנה לנכדה"
+    },
+    {
+      "name": "Michael",
       "source": "Autocalls",
-      "detail": "שיחה 297 שניות, קבעה ייעוץ 25.10 17:15"
+      "detail": "ייעוץ נקבע ל-25.10 11:45 ET"
     },
     {
-      "name": "Alan (6142886631)",
-      "source": "Autocalls",
-      "detail": "שיחה 113 שניות"
-    },
-    {
-      "name": "Roy Rocco",
-      "source": "Autocalls/Quo",
-      "detail": "Strong Together לחדר עבודה, נשלחה לו הודעה ב-22.10"
-    },
-    {
-      "name": "Annette (6616073364)",
-      "source": "Autocalls/Quo",
-      "detail": "שאלה על ההבדל בין קנבס רגיל למשובח, נענתה 22.10"
+      "name": "Carol",
+      "source": "טופס",
+      "detail": "New Lead, עדיין בלי פעילות"
     }
   ],
   "replied": [
     {
-      "name": "Cheri Hurwitz",
+      "name": "Alan Porter",
       "channel": "WhatsApp",
-      "said": "Payment made"
+      "said": "אין לו 3k, מחוץ לתקציב"
     },
     {
-      "name": "David 19787604800",
+      "name": "Cindy Smukler",
       "channel": "WhatsApp",
-      "said": "התרגש מהתמונה של היצירה המוכנה"
+      "said": "מבקשת טווחי מחירים וטלפון אחרי 10:00"
     },
     {
-      "name": "Mauri/Quo 5408484545 Louis",
-      "channel": "Quo",
-      "said": "אפשרויות נוספות?"
+      "name": "Beth Underwood",
+      "channel": "WhatsApp",
+      "said": "קיבלה את היצירה ומאושרת"
     }
   ],
   "revenue": {
@@ -182,13 +160,22 @@
     "openBalancesNote": "Henry 850 ו-Higer נסגרו. Higer היה 2,550 בפתוח",
     "newShopifyNote": "לא נבדקו הזמנות חדשות מעבר לקודם"
   },
-  "draftsPrepared": [],
+  "draftsPrepared": [
+    {
+      "name": "Phyllis Gilmore",
+      "inbox": "business",
+      "gist": "תודה, גודל וצבעים ניתנים להתאמה, מבקש מידות וזמן לשיחה",
+      "needsInput": true
+    }
+  ],
   "quoTasks": [],
   "mondayUpdated": {
-    "updated": 1,
-    "created": 0,
+    "updated": 2,
+    "created": 1,
     "details": [
-      "Cheri Hurwitz: נוספה הערה על 'Payment made' וחיוב Stripe 875$, בלי Amount Paid ובלי סימון"
+      "Alan: הערה + No Budget Now",
+      "Cindy: הערה, ערוץ WhatsApp",
+      "Phyllis Gilmore: נוצרה"
     ]
   },
   "faults": [
@@ -201,27 +188,31 @@
       "severity": "high"
     },
     {
-      "what": "Stripe 875$ מ-23.10 (ch_3UTj9337dfJIOq2B0b3C5l2Y) Cheri Hurwitz, d@trigroupllc.com. רשומה קיימת 3298652411 בלי מייל, אותו שם וקבוצת וואטסאפ שכתבה Payment made באותה דקה. לא נרשם, ממתין לאישור אלברט ולמחיר עסקה (875 נראה 25% מ-3,500)",
-      "severity": "medium"
-    },
-    {
-      "what": "Stripe 950$ מ-19.10 (ch_3USJrn37dfJIOq2B0pDHo1W9) בלי פרטי משלם, ממתין לאלברט",
-      "severity": "medium"
-    },
-    {
-      "what": "Stripe 925$ מ-20.10 (ch_3USRfX37dfJIOq2B0BmqXwx8) Greg Rochlin, כנראה של Sharri 3274087367 שכבר Amount Paid=Deal Value. בלם, לא נרשם",
-      "severity": "medium"
-    },
-    {
       "what": "כפילויות: Annette x2 (6616073364), Stephani x3",
       "severity": "low"
     },
     {
       "what": "שלב CRM Tasks וביטול תזכורות כפולות לא הורצו, אין טיוטות פרטיות כי לא נותחו שרשורים",
       "severity": "low"
+    },
+    {
+      "what": "Stripe 875$ Cheri Hurwitz ממתין לאישור שיוך ולמחיר עסקה",
+      "severity": "medium"
+    },
+    {
+      "what": "Stripe 925$ מ-grochlin@quarryws.com (Greg Rochlin, בעלה של Sharri): לרשומה Sharri כבר Amount Paid 3,700 מלא, לא נרשם",
+      "severity": "medium"
+    },
+    {
+      "what": "Stripe 950$ מ-19.10 בלי פרטי משלם, של מי?",
+      "severity": "medium"
+    },
+    {
+      "what": "Quo דורש התחברות מחדש, 14 יום לא נסרקו",
+      "severity": "high"
     }
   ],
-  "whatsappNote": "נסרק דרך GREEN API: 33 צ'אטים פעילים ב-5 ימים (lastOutgoing ריק, ההיסטוריה של כל צ'אט כן מחזירה הודעות). עודכנה רשומה אחת במנדיי.",
+  "whatsappNote": "נסרק דרך GREEN API 25.10: 32 צ'אטים פעילים ב-5 ימים. עודכנו Alan ו-Cindy.",
   "meetings": [
     {
       "when": "25.10 17:15",
