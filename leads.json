@@ -1,54 +1,54 @@
 {
-  "updatedAt": "2026-10-26T07:30:00+03:00",
-  "scanDate": "2026-10-26",
+  "updatedAt": "2026-10-28T07:20:00+03:00",
+  "scanDate": "2026-10-28",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "13 רשומות ב-48 שעות נבדקו. נוצרו 4 לידים חדשים (Elaine Eisenberg, Heather Horowitz, Daniel Lentz, Carlos de la Parra Huerta). שלב CRM Tasks וביטול תזכורות כפולות לא הורצו"
+      "note": "20 רשומות ב-48 שעות נבדקו. נוצרו 2 לידים מוואטסאפ (Sandi McDaniel, Kuty Shalev), עודכנה Kerri. שלב CRM Tasks וביטול תזכורות כפולות לא הורצו"
     },
     "quoMessages": {
       "status": "ok",
-      "note": "נסרק 14 יום, 53 שיחות. 3 שיחות תלויות, אבל create-task נכשל ב-402 (Open tasks limit reached), לא נוצרו משימות. הנוסח בדוח"
+      "note": "נסרק 14 יום, 59 שיחות, 11 עם הודעה אחרונה נכנסת, רובן תודה או אוטומטי. 2 תלויות אמיתיות (John, Jeff). create-task חסום, 23 משימות ישנות פתוחות, לא נוצרו משימות. הנוסח בדוח"
     },
     "gmailBusiness": {
-      "status": "ok",
-      "note": "שלושת החיפושים רצו. גל תגובות חריג לדיוור על הסיור בארה\"ב: כ-25 פניות 'Tell me about the Baltimore/Washington/Virginia event' ב-24 שעות. לא נוצרו רשומות וטיוטות, חסרים פרטי האירועים"
+      "status": "error",
+      "note": "חיפושי search_threads נכשלו: Resource has been exhausted (quota). לא נסרק היום"
     },
     "gmailPrivate": {
-      "status": "ok",
-      "note": "סווף 30 יום דרך Composio, נבדקו רק תצוגות מקדימות. נמצא Heather Horowitz (קיר חדש 5'4 על 7'9), נוצרה רשומה"
+      "status": "error",
+      "note": "לא הורץ: Composio לא נקרא בריצה הזו"
     },
     "shopify": {
       "status": "ok",
-      "note": "הזמנות #4338 עד #4346. #4346 31.67$ שולמה 25.10, #4345 120.69$ הוחזרה. מדדי לקוחות עודכנו ב-bulk"
+      "note": "הזמנות #4347 ו-#4348 חדשות מ-26.10 (404.10 ו-160.20 דולר, שולמו). לא הוצלבו מול מנדיי. מדדי לקוחות לא עודכנו, נשארו הישנים"
     },
     "stripe": {
-      "status": "ok",
-      "note": "8 חיובים מאז 07.10. 5 כבר מסומנים. חדש: Ruthy Rosenbaum 3,125$ (ch_3UUYVq37dfJIOq2B0a78OfT4, 25.10) על רשומת Ruthy: Deal 3,200, Amount Paid 800, ועוד 3,125 עולה על העסקה ב-725$, בלם, לא נכתב. נשארים ממתינים: Cheri כבר מסומנת, Gregory 925$ (ch_3USRfX37dfJIOq2B0BmqXwx8, בלם), 950$ בלי משלם (ch_3USJrn37dfJIOq2B0pDHo1W9). לא נכתב כלום"
+      "status": "error",
+      "note": "קונקטור Stripe לא מאומת בריצה הזו (דורש הרשאה). סעיף 4 לא הורץ, ריצה הבאה תשלים לפי סימון"
     },
     "autocalls": {
       "status": "ok",
-      "note": "12 שיחות מאז 25.10. אמיתיות: Christie (151 שניות, ייעוץ 27.10), Rachel (147 שניות, ייעוץ 26.10), Ihor Bohdan (70 שניות, מספר אולי שגוי). שאר תאי קוליים או אין מענה"
+      "note": "שיחה אחת מאז 27.10: Rhondq, תא קולי, ללא שיחה אמיתית"
     },
     "calendar": {
       "status": "ok",
       "note": "2 ייעוצים: Rachel 26.10 18:30 שעון ישראל, Christie 27.10 21:00"
     },
     "googleAnalytics": {
-      "status": "ok",
-      "note": "אתמול 239 סשנים מול ממוצע 7 ימים 289 (מינוס 17%). Unassigned 101 (42%), Direct 69, Organic Search 22 (ממוצע 11), Organic Social 16, Paid Search 14, Paid Social 8"
+      "status": "error",
+      "note": "לא הורץ בריצה הזו"
     },
     "googleAds": {
-      "status": "ok",
-      "note": "אתמול 9.62$, 7 קליקים, 0 המרות. ממוצע 6 ימים 12.7$"
+      "status": "error",
+      "note": "לא הורץ בריצה הזו"
     },
     "metaAds": {
-      "status": "ok",
-      "note": "400319919198934: אתמול 276.62$, 379 קליקים. ממוצע 6 ימים 273.5$. חשבון השקלים 2111326855852065: 0 הוצאה"
+      "status": "error",
+      "note": "לא הורץ בריצה הזו"
     },
     "whatsapp": {
       "status": "ok",
-      "note": "GREEN API: 31 צ'אטים פעילים ב-5 ימים (30 אישיים, קבוצה אחת דולגה), 30 היסטוריות נמשכו בלי שגיאות. נוצרו 3 לידים. getChatHistory מחזיר בעיקר הודעות נכנסות, ולכן לא נכתבה שום הערה על שתיקה"
+      "note": "GREEN API: 177 הודעות נכנסות ב-5 ימים, 34 צאטים. lastOutgoingMessages החזיר רשימה ריקה, לכן לא ניתן לאמת מי ענה אחרון"
     },
     "ads": {
       "status": "error",
@@ -61,135 +61,118 @@
   },
   "needsAnswer": [
     {
-      "name": "גל פניות אירועי הסיור (כ-25 מיילים)",
-      "why": "שואלים איפה ומתי באלטימור, וושינגטון, וירג'יניה. צריך נוסח כללי עם פרטי האירועים. כולל לקוחות קיימים כמו Lindsay Kagin. Jodi Spitzer שואלת על דאלאס, abl714 על נאפלס",
+      "name": "גל פניות אירועי הסיור",
+      "why": "לא נסרק היום (Gmail quota). נשאר מהדוח הקודם: צריך נוסח כללי עם פרטי האירועים",
       "channel": "Email",
+      "waitingDays": 2,
+      "urgency": "high"
+    },
+    {
+      "name": "Kerri (404-229-7525)",
+      "why": "כתבה 28.10 Suggest something for me please, שאלה קודם על מחיר גודל קטן",
+      "channel": "WhatsApp",
       "waitingDays": 0,
       "urgency": "high"
     },
     {
-      "name": "Heather Horowitz",
-      "why": "חוזרת לקיר חדש 5'4 על 7'9, כתבה בגמייל הפרטי. נוצרה רשומה",
-      "channel": "Email",
-      "waitingDays": 1,
+      "name": "Debbie Berkowitz (Temple Chai, AZ)",
+      "why": "רוצה לדון באירוע בסקוטסדייל ובמה כרוך בטור",
+      "channel": "WhatsApp",
+      "waitingDays": 2,
       "urgency": "high"
     },
     {
       "name": "Elaine Eisenberg",
-      "why": "הופנתה על ידי Andrea Bier, רוצה United in Strength למטבח, רוחב 22 עד 30 אינץ, תשלח תמונה. נוצרה רשומה",
+      "why": "28.10 בעלה לא אהב את החמסה, אוהב עץ האושר, מבקשת מוקאפ עם הספה ויותר כחול",
       "channel": "WhatsApp",
       "waitingDays": 0,
       "urgency": "high"
-    },
-    {
-      "name": "Lee (516-445-3486)",
-      "why": "אישר 70 אינץ ('I will go with your opinion'), 6 ימים בלי המשך",
-      "channel": "Quo",
-      "waitingDays": 6,
-      "urgency": "high"
-    },
-    {
-      "name": "Holly (559-287-8535)",
-      "why": "שאלה מחיר, ביקשה 22x15, שלחה תמונת קיר, 9 ימים בלי תשובה",
-      "channel": "Quo",
-      "waitingDays": 9,
-      "urgency": "high"
-    },
-    {
-      "name": "Ruthy Rosenbaum",
-      "why": "שילמה 3,125$ ב-25.10 אבל היתרה על העסקה 2,400$. לבדוק אם נוסף פריט או עסקה",
-      "channel": "Stripe",
-      "waitingDays": 1,
-      "urgency": "high"
-    },
-    {
-      "name": "Phyllis Gilmore",
-      "why": "טיוטה מוכנה מאתמול, מחכה להשלמה",
-      "channel": "Email",
-      "waitingDays": 1,
-      "urgency": "medium"
-    },
-    {
-      "name": "Daniel Lentz",
-      "why": "מחירי 3 עד 4 אלף, צריך לראות עוד יצירות. נוצרה רשומה",
-      "channel": "WhatsApp",
-      "waitingDays": 0,
-      "urgency": "medium"
-    },
-    {
-      "name": "Carlos de la Parra Huerta",
-      "why": "רוצה מקור, שואל אם אפשר להגיע לאירוע מונטריאול בלי כרטיס. נוצרה רשומה",
-      "channel": "WhatsApp",
-      "waitingDays": 0,
-      "urgency": "medium"
     },
     {
       "name": "John (613-242-3977)",
-      "why": "We Will Dance Again, ענה 'Depending on pricing'",
+      "why": "Depending on pricing אחרי שאלת גודל, We Will Dance Again",
       "channel": "Quo",
+      "waitingDays": 3,
+      "urgency": "medium"
+    },
+    {
+      "name": "Sandi McDaniel",
+      "why": "רוצה עצה לפני הזמנה, מובטלת, שאלה אם אלברט מגיע לאזור",
+      "channel": "WhatsApp",
+      "waitingDays": 2,
+      "urgency": "medium"
+    },
+    {
+      "name": "Kuty Shalev",
+      "why": "שואלת גובה ומחיר לרוחב 6 פיט וכחול או כהה, ואם מגיע לניו יורק",
+      "channel": "WhatsApp",
+      "waitingDays": 2,
+      "urgency": "medium"
+    },
+    {
+      "name": "Jeff וחברתו (416-990-8668)",
+      "why": "מתנדבת באירוע טורונטו, רוצים להיפגש בישראל 4 עד 18.11",
+      "channel": "Quo",
+      "waitingDays": 9,
+      "urgency": "medium"
+    },
+    {
+      "name": "Julia Glasper",
+      "why": "רוצה עצה לפני הזמנה, כתבה 27.10",
+      "channel": "WhatsApp",
       "waitingDays": 1,
       "urgency": "medium"
     },
     {
-      "name": "Hillary Nadelman",
-      "why": "שואלת על משלוח, ענית שיישלח היום ושתשלח מעקב",
-      "channel": "Email",
-      "waitingDays": 0,
-      "urgency": "medium"
+      "name": "Cindy Goldstein (Closed)",
+      "why": "שואלת מי מארח את אירוע באלטימור",
+      "channel": "WhatsApp",
+      "waitingDays": 2,
+      "urgency": "low"
     }
   ],
   "newYesterday": [
     {
-      "name": "Elaine Eisenberg",
+      "name": "Sandi McDaniel",
       "source": "WhatsApp",
-      "detail": "United in Strength למטבח"
+      "detail": "עצה לפני הזמנה"
     },
     {
-      "name": "Heather Horowitz",
-      "source": "Gmail פרטי",
-      "detail": "קיר חדש 5'4 על 7'9"
-    },
-    {
-      "name": "Daniel Lentz",
+      "name": "Kuty Shalev",
       "source": "WhatsApp",
-      "detail": "אוהב כמה יצירות, 3 עד 4 אלף"
+      "detail": "מחיר וגובה לרוחב 6 פיט"
     },
     {
-      "name": "Carlos de la Parra Huerta",
-      "source": "WhatsApp",
-      "detail": "מקור, אוטווה/מונטריאול"
-    },
-    {
-      "name": "Donna McCarroll",
-      "source": "טופס",
-      "detail": "כתבה שהמחירים גבוהים, כבר ברשומה"
+      "name": "Rhondq, Eva, Kathleen, Estella Gamez, Anni, FRAN Levin, Dawn Tovrog, D, Frank",
+      "source": "טופס אתר",
+      "detail": "לידים חדשים במנדיי ב-48 שעות"
     }
   ],
   "replied": [
     {
-      "name": "Lee",
-      "channel": "Quo",
-      "said": "אישר גודל 70 אינץ לפי המלצתך"
-    },
-    {
-      "name": "Ruthy Rosenbaum",
+      "name": "Anthony Shapiro",
       "channel": "WhatsApp",
-      "said": "שלחה כתובת משלוח, שילמה 3,125$"
+      "said": "אישר כתובת ושילם"
     },
     {
-      "name": "Lindsay Kagin",
-      "channel": "Email",
-      "said": "קנתה בעבר, רוצה להגיע לאירוע בוושינגטון"
-    },
-    {
-      "name": "Sandi McDaniel",
+      "name": "Beth Underwood",
       "channel": "WhatsApp",
-      "said": "מובטלת, אוהבת את העבודות, לא לקנייה כרגע"
+      "said": "שלחה כתובת ושילמה"
     },
     {
-      "name": "Kerry (4148031809)",
+      "name": "Ilene Kruger",
       "channel": "WhatsApp",
-      "said": "ניתוח גדול, רוצה לקנות אחרי"
+      "said": "כתובת למשלוח"
+    },
+    {
+      "name": "Marnie Gershowitz",
+      "channel": "WhatsApp",
+      "said": "מחוץ לארהב, אפשר שיחה לפי שעון ישראל. עדיין Unreachable"
+    },
+    {
+      "name": "Kathleen Williams",
+      "channel": "WhatsApp",
+      "said": "מצאה משהו אחר, לא מעוניינת"
     }
   ],
   "revenue": {
@@ -204,58 +187,47 @@
     "newStripeCashToday": 0,
     "newStripeCashNote": "Ruthy 3,125$ ממתין לאלברט. Gregory 925 ו-950 בלי משלם עדיין ממתינים",
     "failedStripeToday": 0,
-    "newShopifyOrdersSinceLastRun": 1,
+    "newShopifyOrdersSinceLastRun": 2,
     "nonLeadShopifyOctober": 1195.1,
     "nonLeadShopifyNote": "4 הזמנות שופיפיי חדשות 21 עד 23.10 בסך 994.50, לא הוצלבו מול מנדיי",
     "unpaidPaymentLinks": "אין לינק Stripe חדש ב-7 ימים",
     "currency": "USD",
     "openBalancesNote": "Henry 850 ו-Higer נסגרו. Higer היה 2,550 בפתוח",
-    "newShopifyNote": "לא נבדקו הזמנות חדשות מעבר לקודם"
+    "newShopifyNote": "#4347 404.10 ו-#4348 160.20 מ-26.10, לא הוצלבו"
   },
   "draftsPrepared": [],
   "quoTasks": [],
   "mondayUpdated": {
-    "updated": 0,
-    "created": 4,
+    "updated": 1,
+    "created": 2,
     "details": [
-      "נוצרו: Elaine Eisenberg, Heather Horowitz, Daniel Lentz, Carlos de la Parra Huerta"
+      "נוצרו: Sandi McDaniel, Kuty Shalev",
+      "עודכנה: Kerri (Notes ותאריך פעולה)"
     ]
   },
   "faults": [
     {
-      "what": "Quo create-task חסום 402 (Open tasks limit), 23 משימות פתוחות מ-ספטמבר חוסמות. 3 שיחות תלויות ללא משימה: Holly, Lee, John",
+      "what": "Gmail עסקי: quota exhausted, לא נסרק. סווף 30 יום וגל פניות הסיור לא נבדקו",
       "severity": "high"
     },
     {
-      "what": "Quo create-task חסום 402, 23 משימות פתוחות ישנות חוסמות יצירה. 5 שיחות תלויות ללא משימה",
+      "what": "Stripe לא מאומת, לא נרשמו חיובים חדשים. Ruthy 3,125, Gregory 925 ו-950 בלי משלם עדיין ממתינים לאלברט",
       "severity": "high"
     },
     {
-      "what": "כפילויות: Annette x2 (6616073364), Stephani x3",
-      "severity": "low"
-    },
-    {
-      "what": "שלב CRM Tasks וביטול תזכורות כפולות לא הורצו, אין טיוטות פרטיות כי לא נותחו שרשורים",
-      "severity": "low"
-    },
-    {
-      "what": "Stripe 925$ מ-grochlin@quarryws.com (Greg Rochlin, בעלה של Sharri): לרשומה Sharri כבר Amount Paid 3,700 מלא, לא נרשם",
+      "what": "Quo create-task חסום (23 משימות ישנות פתוחות מ-26 עד 30.09), לא נוצרו משימות",
       "severity": "medium"
     },
     {
-      "what": "Stripe 950$ מ-19.10 בלי פרטי משלם, של מי?",
+      "what": "GA, Google Ads, Meta וגמייל פרטי לא הורצו בריצה הזו",
       "severity": "medium"
     },
     {
-      "what": "Stripe 3,125$ מ-Ruthy (rbennett4@tuukka.co) עולה על יתרת העסקה (3,200 עסקה, 800 שולם) ב-725$. לא נכתב",
-      "severity": "medium"
-    },
-    {
-      "what": "שלב CRM Tasks וביטול תזכורות כפולות לא הורצו שוב היום",
+      "what": "Marnie Gershowitz עדיין Unreachable למרות שהגיבה בוואטסאפ. Dawn Tovrog עדיין New Lead. לא שיניתי, מומלץ Conversation Active",
       "severity": "low"
     }
   ],
-  "whatsappNote": "נסרק דרך GREEN API 26.10: 31 צ'אטים פעילים ב-5 ימים. נוצרו 3 לידים (Elaine, Daniel, Carlos).",
+  "whatsappNote": "נסרק דרך GREEN API 28.10: 34 צאטים פעילים ב-5 ימים. נוצרו 2 לידים, עודכן 1. lastOutgoing ריק",
   "meetings": [
     {
       "when": "26.10 18:30 שעון ישראל",
