@@ -1,241 +1,286 @@
 {
-  "updatedAt": "2026-10-28T07:20:00+03:00",
-  "scanDate": "2026-10-28",
+  "updatedAt": "2026-10-29T07:20:00+03:00",
+  "scanDate": "2026-10-29",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "20 רשומות ב-48 שעות נבדקו. נוצרו 2 לידים מוואטסאפ (Sandi McDaniel, Kuty Shalev), עודכנה Kerri. שלב CRM Tasks וביטול תזכורות כפולות לא הורצו"
+      "note": "14 רשומות ב-48 שעות נבדקו. נוצרו 2 (Stephanie Gonzalez, Nava Blankenstein), עודכנו 8. שלב CRM Tasks וביטול תזכורות כפולות לא הורצו, לא נגעתי בתאריכי פעולה של לידים קיימים"
     },
     "quoMessages": {
       "status": "ok",
-      "note": "נסרק 14 יום, 59 שיחות, 11 עם הודעה אחרונה נכנסת, רובן תודה או אוטומטי. 2 תלויות אמיתיות (John, Jeff). create-task חסום, 23 משימות ישנות פתוחות, לא נוצרו משימות. הנוסח בדוח"
+      "note": "נסרק 14 יום, 53 שיחות, 10 עם הודעה אחרונה נכנסת. 3 תלויות אמיתיות (Jeff/טורונטו, John, Lee). create-task נכשל 402 Open tasks limit reached (23 משימות ישנות פתוחות), לא נוצרו משימות. הנוסח בדוח"
     },
     "gmailBusiness": {
-      "status": "error",
-      "note": "חיפושי search_threads נכשלו: Resource has been exhausted (quota). לא נסרק היום"
+      "status": "ok",
+      "note": "חיפוש 2 ימים וסטריפ ב-7 ימים עבדו. סווף 30 יום עם category:primary מחזיר ריק (התיבה מסווגת Personal), הוחלף בחיפוש in:inbox ובדיקת 28 שרשורים. 3 טיוטות עסקיות נוספו"
     },
     "gmailPrivate": {
-      "status": "error",
-      "note": "לא הורץ: Composio לא נקרא בריצה הזו"
+      "status": "ok",
+      "note": "Composio, 60 הודעות ב-2 ימים. רק ליד אחד: Heather Horowitz (טיוטה פרטית נוצרה). השאר ספקים ועניינים אישיים"
     },
     "shopify": {
       "status": "ok",
-      "note": "הזמנות #4347 ו-#4348 חדשות מ-26.10 (404.10 ו-160.20 דולר, שולמו). לא הוצלבו מול מנדיי. מדדי לקוחות לא עודכנו, נשארו הישנים"
+      "note": "הזמנות חדשות מ-28.10: #4349 306.99, #4350 55.79, #4351 169.29 דולר, שולמו. לא הוצלבו מול מנדיי. #4329 (Betsy Perlman) עדיין Unfulfilled. מדדי לקוחות לא עודכנו"
     },
     "stripe": {
       "status": "error",
-      "note": "קונקטור Stripe לא מאומת בריצה הזו (דורש הרשאה). סעיף 4 לא הורץ, ריצה הבאה תשלים לפי סימון"
+      "note": "קונקטור Stripe לא מאומת בריצה הזו. סעיף 4 לא הורץ, ריצה הבאה תשלים לפי סימון"
     },
     "autocalls": {
       "status": "ok",
-      "note": "שיחה אחת מאז 27.10: Rhondq, תא קולי, ללא שיחה אמיתית"
+      "note": "9 שיחות מאז 27.10, כולן תא קולי או ניתוק מהיר, ללא שיחה אמיתית"
     },
     "calendar": {
       "status": "ok",
-      "note": "2 ייעוצים: Rachel 26.10 18:30 שעון ישראל, Christie 27.10 21:00"
+      "note": "היום 29.10 12:00 סדנת אומנות תל אביב PTSD. אין ייעוצים"
     },
     "googleAnalytics": {
-      "status": "error",
-      "note": "לא הורץ בריצה הזו"
+      "status": "ok",
+      "note": "נכס 415263029. אתמול (27.10) 347 סשנים מול ממוצע 379 ב-7 ימים. Email 60 מול 116, Paid Search 23 מול 11, Organic Search 14 מול 14. Unassigned 49 אחוז אתמול"
     },
     "googleAds": {
-      "status": "error",
-      "note": "לא הורץ בריצה הזו"
+      "status": "ok",
+      "note": "אתמול 44.35$ בקמפיין Brand Search, 16 קליקים, 0 המרות"
     },
     "metaAds": {
-      "status": "error",
-      "note": "לא הורץ בריצה הזו"
+      "status": "ok",
+      "note": "חשבון 400319919198934 אתמול 201.48$, 280 קליקים, ROAS 2.36. חשבון השקלים לא נבדק"
     },
     "whatsapp": {
       "status": "ok",
-      "note": "GREEN API: 177 הודעות נכנסות ב-5 ימים, 34 צאטים. lastOutgoingMessages החזיר רשימה ריקה, לכן לא ניתן לאמת מי ענה אחרון"
+      "note": "GREEN API: 167 הודעות נכנסות ב-5 ימים, 33 צ'אטים. lastOutgoingMessages ריק והיסטוריה חסרה הודעות יוצאות, לכן לא ניתן לאמת מי ענה אחרון. נוצרו 2 לידים, עודכנו 6"
     },
     "ads": {
-      "status": "error",
-      "note": "GA, Google Ads ו-Meta לא נסרקו בריצה הזו"
+      "status": "ok",
+      "note": "מטא 201.48$ וגוגל 44.35$ אתמול. הכנסה GA ל-7 ימים לפני אתמול 2,229$, ראה analytics"
     },
     "analytics": {
       "status": "ok",
-      "note": "נכס 415263029. אתמול 556 סשנים מול ממוצע 261 (6 ימים). Email 313 (דיוור הסיור). Unassigned 25%. Organic Search 5 מול 12.6 ליום. הכנסה GA 29.70$"
+      "note": "נכס 415263029. אתמול (27.10) 347 סשנים מול ממוצע 379 ב-7 ימים. Email 60 מול 116, Paid Search 23 מול 11, Organic Search 14 מול 14. Unassigned 49 אחוז אתמול"
     }
   },
   "needsAnswer": [
     {
-      "name": "גל פניות אירועי הסיור",
-      "why": "לא נסרק היום (Gmail quota). נשאר מהדוח הקודם: צריך נוסח כללי עם פרטי האירועים",
+      "name": "Rabbi Shawn (Har Zion Temple, PA)",
+      "why": "מארח אירוע 7.03, בישראל עד 2.11, הציע שחמישי בבוקר אולי יתאים. דחוף. טיוטה מחכה",
       "channel": "Email",
-      "waitingDays": 2,
+      "waitingDays": 3,
       "urgency": "high"
     },
     {
-      "name": "Kerri (404-229-7525)",
-      "why": "כתבה 28.10 Suggest something for me please, שאלה קודם על מחיר גודל קטן",
+      "name": "Nava Blankenstein (טורונטו)",
+      "why": "רוצה ערב ציור לבית הכנסת, שואלת מחיר וכמה משתתפים",
       "channel": "WhatsApp",
-      "waitingDays": 0,
+      "waitingDays": 1,
+      "urgency": "high"
+    },
+    {
+      "name": "Elaine Eisenberg",
+      "why": "בחרה עץ האושר 30 אינץ, מחכה למוקאפ עם הספה, יותר כחול, ומחיר",
+      "channel": "WhatsApp",
+      "waitingDays": 1,
+      "urgency": "high"
+    },
+    {
+      "name": "Lee (5164453486)",
+      "why": "אישר 70 אינץ, 'I will go with your opinion', צריך לינק מקדמה",
+      "channel": "Quo SMS",
+      "waitingDays": 9,
+      "urgency": "high"
+    },
+    {
+      "name": "Kerri Snow",
+      "why": "28.10 ביקשה 'Suggest something for me please'",
+      "channel": "WhatsApp",
+      "waitingDays": 1,
       "urgency": "high"
     },
     {
       "name": "Debbie Berkowitz (Temple Chai, AZ)",
       "why": "רוצה לדון באירוע בסקוטסדייל ובמה כרוך בטור",
       "channel": "WhatsApp",
-      "waitingDays": 2,
+      "waitingDays": 3,
       "urgency": "high"
     },
     {
-      "name": "Elaine Eisenberg",
-      "why": "28.10 בעלה לא אהב את החמסה, אוהב עץ האושר, מבקשת מוקאפ עם הספה ויותר כחול",
-      "channel": "WhatsApp",
-      "waitingDays": 0,
-      "urgency": "high"
+      "name": "Jeff ו... (416-990-8668)",
+      "why": "מתנדבת באירוע טורונטו, רוצים להיפגש בישראל 4-18.11",
+      "channel": "Quo SMS",
+      "waitingDays": 10,
+      "urgency": "medium"
     },
     {
       "name": "John (613-242-3977)",
-      "why": "Depending on pricing אחרי שאלת גודל, We Will Dance Again",
-      "channel": "Quo",
-      "waitingDays": 3,
+      "why": "'Depending on pricing', מחכה למחיר",
+      "channel": "Quo SMS",
+      "waitingDays": 4,
       "urgency": "medium"
     },
     {
-      "name": "Sandi McDaniel",
-      "why": "רוצה עצה לפני הזמנה, מובטלת, שאלה אם אלברט מגיע לאזור",
-      "channel": "WhatsApp",
+      "name": "paramountpaint88",
+      "why": "שוקל Light of Torah כמתנה לבית כנסת, אין לו מחיר. טיוטה מחכה למחירים",
+      "channel": "Email",
       "waitingDays": 2,
       "urgency": "medium"
     },
     {
-      "name": "Kuty Shalev",
-      "why": "שואלת גובה ומחיר לרוחב 6 פיט וכחול או כהה, ואם מגיע לניו יורק",
-      "channel": "WhatsApp",
+      "name": "Betsy Perlman (הזמנה #4329)",
+      "why": "שואלת תאריך אספקה, ההזמנה עדיין Unfulfilled. טיוטה מחכה לתאריך",
+      "channel": "Email",
       "waitingDays": 2,
       "urgency": "medium"
     },
     {
-      "name": "Jeff וחברתו (416-990-8668)",
-      "why": "מתנדבת באירוע טורונטו, רוצים להיפגש בישראל 4 עד 18.11",
-      "channel": "Quo",
-      "waitingDays": 9,
-      "urgency": "medium"
-    },
-    {
-      "name": "Julia Glasper",
-      "why": "רוצה עצה לפני הזמנה, כתבה 27.10",
+      "name": "Stephanie Gonzalez, Alison Lemkin, Sandi McDaniel, Kuty Shalev, Julia, Carlos de la Parra, Marnie Gershowitz",
+      "why": "פניות וואטסאפ פתוחות: עצה לפני הזמנה, תמונות קירות, מחיר וגובה, שיחה",
       "channel": "WhatsApp",
       "waitingDays": 1,
       "urgency": "medium"
     },
     {
-      "name": "Cindy Goldstein (Closed)",
-      "why": "שואלת מי מארח את אירוע באלטימור",
-      "channel": "WhatsApp",
-      "waitingDays": 2,
-      "urgency": "low"
+      "name": "Heather Horowitz",
+      "why": "קיר 5'4 על 7'9, חוזרת אחרי שנה. טיוטה פרטית מחכה",
+      "channel": "Email פרטי",
+      "waitingDays": 4,
+      "urgency": "medium"
+    },
+    {
+      "name": "Denise Bouchard Wechsler",
+      "why": "בעלה חולה לימפומה, תקציב נמוך, שאלה פעמיים על טווח מחירים. טיוטה מחכה",
+      "channel": "Email",
+      "waitingDays": 4,
+      "urgency": "medium"
     }
   ],
   "newYesterday": [
     {
-      "name": "Sandi McDaniel",
+      "name": "Stephanie Gonzalez",
       "source": "WhatsApp",
-      "detail": "עצה לפני הזמנה"
+      "detail": "עצה לפני הזמנה, תבנית מתמונה"
     },
     {
-      "name": "Kuty Shalev",
+      "name": "Nava Blankenstein",
       "source": "WhatsApp",
-      "detail": "מחיר וגובה לרוחב 6 פיט"
+      "detail": "ערב ציור לבית כנסת בטורונטו"
     },
     {
-      "name": "Rhondq, Eva, Kathleen, Estella Gamez, Anni, FRAN Levin, Dawn Tovrog, D, Frank",
-      "source": "טופס אתר",
-      "detail": "לידים חדשים במנדיי ב-48 שעות"
+      "name": "Alison, Janet, Judy, Evangeline, Rhondq",
+      "source": "Autocalls/טופס",
+      "detail": "נוצרו במנדיי ב-48 שעות, תא קולי בלבד"
     }
   ],
   "replied": [
     {
-      "name": "Anthony Shapiro",
+      "name": "Elaine Eisenberg",
       "channel": "WhatsApp",
-      "said": "אישר כתובת ושילם"
+      "said": "בעלה אוהב עץ האושר, ביקשה מוקאפ"
     },
     {
-      "name": "Beth Underwood",
+      "name": "Carlos de la Parra",
       "channel": "WhatsApp",
-      "said": "שלחה כתובת ושילמה"
-    },
-    {
-      "name": "Ilene Kruger",
-      "channel": "WhatsApp",
-      "said": "כתובת למשלוח"
-    },
-    {
-      "name": "Marnie Gershowitz",
-      "channel": "WhatsApp",
-      "said": "מחוץ לארהב, אפשר שיחה לפי שעון ישראל. עדיין Unreachable"
+      "said": "האירוע במונטריאול לנשים בלבד, שאל על אוטווה"
     },
     {
       "name": "Kathleen Williams",
       "channel": "WhatsApp",
-      "said": "מצאה משהו אחר, לא מעוניינת"
+      "said": "מצאה משהו אחר"
+    },
+    {
+      "name": "Rachel Sattler",
+      "channel": "Email",
+      "said": "Thank you, לא נדרש מענה"
     }
   ],
   "revenue": {
     "monthToDate": 11371.85,
     "monthToDateMonth": "אוקטובר 2026",
-    "monthToDateNote": "לפי Close Date באוקטובר: Lee 3,800, Sharri 3,700, Michele Bernstein 2,800, Mauri 583, Benjamin 246.75, Mindy 242.10",
+    "monthToDateNote": "לפי Close Date באוקטובר: Lee 3,800, Sharri 3,700, Michele Bernstein 2,800, Mauri 583, Benjamin 246.75, Mindy 242.10. ללא שינוי",
     "septemberFinal": 12862,
     "cashNotTurnover": 0,
     "cashNotTurnoverNote": "לא נרשמו השלמות היום. 3,125$ של Ruthy בבלם",
     "openBalances": 15700,
     "openBalancesBreakdown": "הקודם 13,600 ועוד Michele Bernstein 2,100",
     "newStripeCashToday": 0,
-    "newStripeCashNote": "Ruthy 3,125$ ממתין לאלברט. Gregory 925 ו-950 בלי משלם עדיין ממתינים",
+    "newStripeCashNote": "Stripe מנותק, לא נבדק. Ruthy 3,125$ ו-Gregory 925/950 בלי משלם עדיין ממתינים לאלברט",
     "failedStripeToday": 0,
-    "newShopifyOrdersSinceLastRun": 2,
+    "newShopifyOrdersSinceLastRun": 3,
     "nonLeadShopifyOctober": 1195.1,
     "nonLeadShopifyNote": "4 הזמנות שופיפיי חדשות 21 עד 23.10 בסך 994.50, לא הוצלבו מול מנדיי",
     "unpaidPaymentLinks": "אין לינק Stripe חדש ב-7 ימים",
     "currency": "USD",
     "openBalancesNote": "Henry 850 ו-Higer נסגרו. Higer היה 2,550 בפתוח",
-    "newShopifyNote": "#4347 404.10 ו-#4348 160.20 מ-26.10, לא הוצלבו"
+    "newShopifyNote": "#4349 306.99, #4350 55.79, #4351 169.29 מ-28.10, לא הוצלבו"
   },
-  "draftsPrepared": [],
+  "draftsPrepared": [
+    {
+      "name": "Rabbi Shawn (Har Zion)",
+      "inbox": "business",
+      "gist": "הצעת חמישי בבוקר",
+      "needsInput": true
+    },
+    {
+      "name": "Denise Bouchard Wechsler",
+      "inbox": "business",
+      "gist": "אמפתיה ושאלה על צבע, טווח מחירים חסר",
+      "needsInput": true
+    },
+    {
+      "name": "paramountpaint88",
+      "inbox": "business",
+      "gist": "Light of Torah למתנה לבית כנסת, מחירים חסרים",
+      "needsInput": true
+    },
+    {
+      "name": "Betsy Perlman",
+      "inbox": "business",
+      "gist": "הזמנה #4329 בייצור, תאריך אספקה חסר",
+      "needsInput": true
+    },
+    {
+      "name": "Heather Horowitz",
+      "inbox": "private",
+      "gist": "קיר 5'4 על 7'9, מבקש תמונה של הקיר",
+      "needsInput": false
+    }
+  ],
   "quoTasks": [],
   "mondayUpdated": {
-    "updated": 1,
+    "updated": 8,
     "created": 2,
     "details": [
-      "נוצרו: Sandi McDaniel, Kuty Shalev",
-      "עודכנה: Kerri (Notes ותאריך פעולה)"
+      "נוצרו: Stephanie Gonzalez, Nava Blankenstein",
+      "עודכנו הערות: Elaine, Carlos, Alison Lemkin, Penny Brown, Jennifer Dzikowski",
+      "Marnie Gershowitz: Unreachable -> Conversation Active",
+      "Jodie (Kathleen Williams): -> Not Interested Now"
     ]
   },
   "faults": [
     {
-      "what": "Gmail עסקי: quota exhausted, לא נסרק. סווף 30 יום וגל פניות הסיור לא נבדקו",
+      "what": "Stripe לא מאומת, לא נרשמו חיובים חדשים. Ruthy 3,125, Gregory 925 ו-950 בלי משלם ממתינים לאלברט",
       "severity": "high"
     },
     {
-      "what": "Stripe לא מאומת, לא נרשמו חיובים חדשים. Ruthy 3,125, Gregory 925 ו-950 בלי משלם עדיין ממתינים לאלברט",
+      "what": "Quo create-task נכשל 402 Open tasks limit reached: 23 משימות ישנות פתוחות מ-26 עד 30.09. נדרש לסגור משימות כדי שאוטומציה תעבוד. 3 תלויות ללא משימה: Jeff, John, Lee",
       "severity": "high"
     },
     {
-      "what": "Quo create-task חסום (23 משימות ישנות פתוחות מ-26 עד 30.09), לא נוצרו משימות",
+      "what": "שלב CRM Tasks וביטול תזכורות כפולות במנדיי לא הורצו ביום השני ברצף",
       "severity": "medium"
     },
     {
-      "what": "GA, Google Ads, Meta וגמייל פרטי לא הורצו בריצה הזו",
-      "severity": "medium"
-    },
-    {
-      "what": "Marnie Gershowitz עדיין Unreachable למרות שהגיבה בוואטסאפ. Dawn Tovrog עדיין New Lead. לא שיניתי, מומלץ Conversation Active",
+      "what": "סווף 30 יום בגמייל עסקי עם category:primary מחזיר ריק, יש לתקן את ההוראות ל-in:inbox. Dawn Tovrog עדיין New Lead למרות תשובה בוואטסאפ",
       "severity": "low"
     }
   ],
-  "whatsappNote": "נסרק דרך GREEN API 28.10: 34 צאטים פעילים ב-5 ימים. נוצרו 2 לידים, עודכן 1. lastOutgoing ריק",
+  "whatsappNote": "נסרק דרך GREEN API 29.10: 33 צ'אטים פעילים ב-5 ימים. נוצרו 2 לידים. lastOutgoing ריק ומשיכת היסטוריה חסרה הודעות יוצאות",
   "meetings": [
     {
-      "when": "26.10 18:30 שעון ישראל",
-      "who": "Rachel, ייעוץ (208-916-4670)"
+      "when": "29.10 12:00 שעון ישראל",
+      "who": "סדנת אומנות תל אביב PTSD"
     },
     {
-      "when": "27.10 21:00 שעון ישראל",
-      "who": "Christie, ייעוץ (407-837-0304)"
+      "when": "3.12",
+      "who": "בולטימור, אירוע FIDF (Penny Brown תגיע)"
     }
   ],
   "customerMetrics": {
@@ -260,13 +305,13 @@
     }
   ],
   "traffic": {
-    "note": "ראה sources.analytics, googleAds, metaAds",
-    "date": "2026-10-25",
-    "sessions": 556,
-    "avg7": 261,
-    "metaSpendUSD": 276.62,
-    "googleSpendUSD": 9.62,
-    "organicSearch": 5,
-    "unassignedPct": 25
+    "note": "ראה sources.googleAnalytics, googleAds, metaAds",
+    "date": "2026-10-27",
+    "sessions": 347,
+    "avg7": 379,
+    "metaSpendUSD": 201.48,
+    "googleSpendUSD": 44.35,
+    "organicSearch": 14,
+    "unassignedPct": 49
   }
 }
