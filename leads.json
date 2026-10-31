@@ -1,168 +1,118 @@
 {
-  "updatedAt": "2026-10-30T07:30:00+03:00",
-  "scanDate": "2026-10-30",
+  "updatedAt": "2026-10-31T07:15:00+03:00",
+  "scanDate": "2026-10-31",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "9 רשומות ב-48 שעות נבדקו. נוצר 1 (Mike Larks), עודכנו 3 (Fran Levin ל-Conversation Active, Nava, Stephanie). שלב CRM Tasks וביטול תזכורות כפולות לא הורצו, לא נגעתי בתאריכי פעולה של לידים קיימים"
+      "note": "4 רשומות ב-48 שעות נבדקו (Emily, Mike Larks, Nava, Stephanie). עודכנו 2: Elaine Eisenberg (הערה), Janet (Conversation Active, הגיבה ב-Quo). שלב CRM Tasks וביטול תזכורות כפולות לא הורצו, לא נגעתי בתאריכי פעולה"
     },
     "quoMessages": {
       "status": "ok",
-      "note": "נסרק 14 יום, 48 שיחות פעילות, 9 עם הודעה אחרונה נכנסת. תלויות אמיתיות: Jeff/טורונטו, John, Lee. create-task לא נוצר: 23 משימות ישנות פתוחות (מגבלה 402 מריצה קודמת, לא ניסיתי שוב). הנוסח בדוח"
+      "note": "נסרק 14 יום, 46 שיחות פעילות. הודעה אחרונה נכנסת וללא מענה: Janet (מחיר, 31.10), Elaine/Kerri בוואטסאפ. create-task נכשל שוב ב-402 Open tasks limit reached (23 משימות ישנות). הנוסח בדוח"
     },
     "gmailBusiness": {
       "status": "ok",
-      "note": "חיפוש 2 ימים עבד. סווף 30 יום לא הורץ בריצה הזו (הקודם החזיר ריק בגלל סיווג Personal). 3 טיוטות עסקיות נוספו"
+      "note": "חיפוש 2 ימים עבד (20 שרשורים). סווף 30 יום עם category:primary החזיר ריק, חשוד בסיווג. לא נוצרו טיוטות בריצה הזו"
     },
     "gmailPrivate": {
-      "status": "ok",
-      "note": "Composio, 60 הודעות ב-2 ימים. רק Carlos (Order 4350, גם בעסקי). השאר ספקים ועניינים אישיים"
+      "status": "error",
+      "note": "Composio לא הורץ בריצה הזו (לא נטען). הערך הקודם לא עודכן"
     },
     "shopify": {
-      "status": "ok",
-      "note": "אין הזמנות חדשות מאז #4351. #4350 (Carlos, כיסוי אייפון) מבקש הגעה עד 3.11. מדדי לקוחות לא עודכנו"
+      "status": "error",
+      "note": "לא נסרק בריצה הזו (זמן). הערך הקודם מ-30.10 לא עודכן"
     },
     "stripe": {
       "status": "error",
-      "note": "קונקטור Stripe דורש אימות מחדש (OAuth) בריצה הזו. סעיף 4 לא הורץ, ריצה הבאה תשלים לפי סימון"
+      "note": "כלי Stripe דורש אימות OAuth מחדש, סעיף תשלומים לא הורץ"
     },
     "autocalls": {
-      "status": "ok",
-      "note": "9 שיחות מאז 28.10, כולן תא קולי או ניתוק מהיר, ללא שיחה אמיתית"
+      "status": "error",
+      "note": "לא נסרק בריצה הזו (זמן). הערך הקודם מ-30.10 לא עודכן"
     },
     "calendar": {
-      "status": "ok",
-      "note": "אין אירועים ב-30.10 ו-31.10"
+      "status": "error",
+      "note": "לא נסרק בריצה הזו (זמן). הערך הקודם מ-30.10 לא עודכן"
     },
     "googleAnalytics": {
       "status": "ok",
       "note": "נכס 415263029. 29.10 (יום חלקי לפי שעון LA) 215 סשנים מול ממוצע 386 ב-7 ימים. Organic Search 4 מול 15 ליום, Email 17 מול 126, Unassigned 49 אחוז"
     },
     "googleAds": {
-      "status": "ok",
-      "note": "29.10: 19.24$ בקמפיין Brand Search, 7 קליקים, 0 המרות"
+      "status": "error",
+      "note": "לא נסרק בריצה הזו (זמן). הערך הקודם מ-30.10 לא עודכן"
     },
     "metaAds": {
-      "status": "ok",
-      "note": "חשבון 400319919198934 אתמול (29.10) 267.35$, 292 קליקים, ROAS לא זמין. חשבון השקלים לא נבדק"
+      "status": "error",
+      "note": "לא נסרק בריצה הזו (זמן). הערך הקודם מ-30.10 לא עודכן"
     },
     "whatsapp": {
       "status": "ok",
-      "note": "GREEN API: 161 הודעות נכנסות ב-5 ימים, 31 צ'אטים. lastOutgoingMessages ריק, getChatHistory כן מחזיר הודעות יוצאות (100 מתוך 429). נוצרו 0, עודכנו 2"
+      "note": "GREEN API: lastIncomingMessages החזיר 121 הודעות ב-29 צ'אטים ב-5 ימים. lastOutgoingMessages ריק (ידוע). getChatHistory על 2 צ'אטים. נוצרו 0, עודכנו 1 (Elaine)"
     },
     "ads": {
-      "status": "ok",
-      "note": "מטא 267.35$ וגוגל 19.24$ ב-29.10"
+      "status": "error",
+      "note": "לא נסרק בריצה הזו (זמן). הערך הקודם מ-30.10 לא עודכן"
     },
     "analytics": {
-      "status": "ok",
-      "note": "נכס 415263029. 29.10 (יום חלקי לפי שעון LA) 215 סשנים מול ממוצע 386 ב-7 ימים. Organic Search 4 מול 15 ליום, Email 17 מול 126, Unassigned 49 אחוז"
+      "status": "error",
+      "note": "לא נסרק בריצה הזו (זמן). הערך הקודם מ-30.10 לא עודכן"
     }
   },
   "needsAnswer": [
     {
-      "name": "Fran Levin (2GNJ, ניו ג'רזי)",
-      "why": "מסיבת ציור 10.11, מחכה לשעת שיחה היום 12:00-14:00 או 16:00-19:00 EST, 732-735-6691",
-      "channel": "email",
+      "name": "Elaine Eisenberg",
+      "why": "שאלה ב-30.10 ערב כמה עולה עץ האושר 30 אינץ, מחכה גם למוקאפ מתוקן (יותר כחול, פחות כתום וורוד). לא נענתה מאז 27.10",
+      "channel": "WhatsApp",
+      "waitingDays": 4,
+      "urgency": "high"
+    },
+    {
+      "name": "Janet (+16265593939)",
+      "why": "ענתה \"What is the price\" ב-31.10 אחרי הודעת הפתיחה",
+      "channel": "Quo",
       "waitingDays": 0,
       "urgency": "high"
     },
     {
-      "name": "Carlos de la Parra (Order 4350)",
-      "why": "כיסוי אייפון לאמא, חייב להגיע לפני 3.11",
-      "channel": "email",
-      "waitingDays": 0,
-      "urgency": "high"
+      "name": "Michael Oren",
+      "why": "ב-30.10 ביקש את הציור מהתמונה הראשונה עם המסגרת מהשנייה, שאל איך עושים. אין רשומה בלוח לפי הטלפון, לבדוק אם קיים לקוח",
+      "channel": "WhatsApp",
+      "waitingDays": 1,
+      "urgency": "medium"
     },
     {
       "name": "Nava Blankenstein",
-      "why": "שואלת מחיר ערב ציור לבית הכנסת וכמה משתתפים (JNF), טורונטו",
-      "channel": "whatsapp",
-      "waitingDays": 1,
-      "urgency": "high"
+      "why": "שאלה כמה עולה אירוע JNF וערב לבית כנסת",
+      "channel": "WhatsApp",
+      "waitingDays": 2,
+      "urgency": "medium"
     },
     {
       "name": "Mike Larks",
-      "why": "מציע אירוע ציור בנורת'ברוק/שיקגו, 773-860-4307",
-      "channel": "email",
-      "waitingDays": 1,
-      "urgency": "medium"
-    },
-    {
-      "name": "Lee 516-445-3486",
-      "why": "אישר 70 אינץ, מחכה ללינק מקדמה",
-      "channel": "quo",
-      "waitingDays": 10,
-      "urgency": "high"
-    },
-    {
-      "name": "Jeff, טורונטו 416-990-8668",
-      "why": "מתנדב באירוע, רוצה פגישה בישראל",
-      "channel": "quo",
-      "waitingDays": 11,
-      "urgency": "medium"
-    },
-    {
-      "name": "John 613-242-3977",
-      "why": "Depending on pricing",
-      "channel": "quo",
-      "waitingDays": 5,
-      "urgency": "medium"
-    },
-    {
-      "name": "Stephanie Gonzalez",
-      "why": "תשלח תמונת תבנית מחר בבוקר",
-      "channel": "whatsapp",
-      "waitingDays": 0,
-      "urgency": "low"
-    },
-    {
-      "name": "Carlos (Ottawa)",
-      "why": "האירוע רק לנשים, שואל על אירוע קרוב באוטווה, רוצה מקור",
-      "channel": "whatsapp",
-      "waitingDays": 1,
-      "urgency": "medium"
-    },
-    {
-      "name": "Kerri Snow",
-      "why": "אישרה את ההבהרה, ביקשה הצעה",
-      "channel": "whatsapp",
-      "waitingDays": 0,
+      "why": "הציע לארגן אירוע ציור בצפון שיקגו, מחכה לתשובה מ-29.10",
+      "channel": "Email",
+      "waitingDays": 2,
       "urgency": "medium"
     }
   ],
   "newYesterday": [
     {
-      "name": "Mike Larks",
-      "source": "Gmail עסקי",
-      "detail": "אירוע ציור בצפון שיקגו"
-    },
-    {
-      "name": "Fran Levin",
-      "source": "Gmail עסקי",
-      "detail": "כבר היה ב-New Lead, הגיבה והפכה פעילה"
+      "name": "Emily",
+      "source": "Autocalls/Monday",
+      "detail": "נוצרה 31.10, תא קולי בלבד"
     }
   ],
   "replied": [
     {
-      "name": "Fran Levin",
-      "channel": "email",
-      "said": "מסיבת ציור 10.11, זמינה לשיחה היום"
+      "name": "Janet",
+      "channel": "Quo",
+      "said": "What is the price"
     },
     {
-      "name": "Nava Blankenstein",
-      "channel": "whatsapp",
-      "said": "שואלת עלות אירוע JNF"
-    },
-    {
-      "name": "Alyse (chitowngirl30)",
-      "channel": "email",
-      "said": "I love your art, תגובה לוולקם, לא ליד"
-    },
-    {
-      "name": "Kathleen Williams",
-      "channel": "whatsapp",
-      "said": "מצאה משהו אחר"
+      "name": "Elaine Eisenberg",
+      "channel": "WhatsApp",
+      "said": "מחירון ועדכון צבעים למוקאפ"
     }
   ],
   "revenue": {
@@ -185,55 +135,39 @@
     "openBalancesNote": "Henry 850 ו-Higer נסגרו. Higer היה 2,550 בפתוח",
     "newShopifyNote": "#4349 306.99, #4350 55.79, #4351 169.29 מ-28.10, לא הוצלבו"
   },
-  "draftsPrepared": [
-    {
-      "name": "Fran Levin",
-      "inbox": "business",
-      "gist": "מאשר מסיבת ציור ומציע שעת שיחה היום",
-      "needsInput": true
-    },
-    {
-      "name": "Mike Larks",
-      "inbox": "business",
-      "gist": "תודה, שואל איזה חודש מתאים",
-      "needsInput": true
-    },
-    {
-      "name": "Carlos de la Parra",
-      "inbox": "business",
-      "gist": "הזמנה #4350, מבקש כתובת",
-      "needsInput": true
-    }
-  ],
+  "draftsPrepared": [],
   "quoTasks": [],
   "mondayUpdated": {
-    "updated": 3,
-    "created": 1,
+    "updated": 2,
+    "created": 0,
     "details": [
-      "Fran Levin: New Lead ל-Conversation Active, ערוץ Email",
-      "Mike Larks נוצר ב-Active Sales",
-      "Nava ו-Stephanie: נוספה הערה מוואטסאפ"
+      "Elaine Eisenberg: הערה",
+      "Janet: Unreachable ל-Conversation Active והערה"
     ]
   },
   "faults": [
     {
-      "what": "Stripe דורש אימות OAuth מחדש, סעיף תשלומים לא הורץ",
+      "what": "Stripe דורש אימות OAuth מחדש, סעיף תשלומים לא הורץ (יומיים ברצף)",
       "severity": "high"
     },
     {
-      "what": "Quo: 23 משימות ישנות פתוחות (מספטמבר), לא נוצרו משימות חדשות. כדאי לסגור ישנות",
+      "what": "Quo: 23 משימות ישנות פתוחות מספטמבר חוסמות יצירת משימות חדשות (402). לסגור ידנית",
+      "severity": "high"
+    },
+    {
+      "what": "Gmail פרטי, שופיפיי, אוטוקולס, גוגל, מטא ואנליטיקס לא נסרקו בריצה הזו",
       "severity": "medium"
     },
     {
-      "what": "CRM Tasks: שלב ביטול תזכורות כפולות לא הורץ",
+      "what": "CRM Tasks: ביטול תזכורות כפולות לא הורץ",
       "severity": "medium"
     },
     {
-      "what": "מדדי לקוחות (LTV) לא עודכנו בריצה זו, הערך מ-26.10",
+      "what": "Michael Oren (וואטסאפ 12019238386) לא נמצא בלוח לפי טלפון, לבדוק",
       "severity": "low"
     }
   ],
-  "whatsappNote": "נסרק דרך GREEN API 30.10: 31 צ'אטים פעילים ב-5 ימים. נוצרו 0 לידים, עודכנו 2",
+  "whatsappNote": "נסרק דרך GREEN API 31.10: 29 צ'אטים פעילים ב-5 ימים. נוצרו 0, עודכנו 1",
   "meetings": [],
   "customerMetrics": {
     "ltv": 268.58,
