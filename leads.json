@@ -1,54 +1,54 @@
 {
-  "updatedAt": "2026-10-31T07:15:00+03:00",
-  "scanDate": "2026-10-31",
+  "updatedAt": "2026-11-01T07:30:00+03:00",
+  "scanDate": "2026-11-01",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "4 רשומות ב-48 שעות נבדקו (Emily, Mike Larks, Nava, Stephanie). עודכנו 2: Elaine Eisenberg (הערה), Janet (Conversation Active, הגיבה ב-Quo). שלב CRM Tasks וביטול תזכורות כפולות לא הורצו, לא נגעתי בתאריכי פעולה"
+      "note": "6 רשומות ב-48 שעות נבדקו (Sharmion, TEST Legendary Media, Katy, Paula, Emily, Mike Larks). נוצר Michael Oren, עודכן Irene Reiss. CRM Tasks וביטול תזכורות כפולות לא הורצו"
     },
     "quoMessages": {
       "status": "ok",
-      "note": "נסרק 14 יום, 46 שיחות פעילות. הודעה אחרונה נכנסת וללא מענה: Janet (מחיר, 31.10), Elaine/Kerri בוואטסאפ. create-task נכשל שוב ב-402 Open tasks limit reached (23 משימות ישנות). הנוסח בדוח"
+      "note": "נסרק 14 יום, 47 שיחות. create-task חסום: 23 משימות ישנות פתוחות (402), לא נוצרו משימות. הנוסח בדוח"
     },
     "gmailBusiness": {
       "status": "ok",
-      "note": "חיפוש 2 ימים עבד (20 שרשורים). סווף 30 יום עם category:primary החזיר ריק, חשוד בסיווג. לא נוצרו טיוטות בריצה הזו"
+      "note": "חיפוש 2 ימים (25 שרשורים) וסווף 30 יום ללא category:primary. לא נמצא ליד חדש שאינו ברשימה. חיפוש buy.stripe.com לא הורץ. לא נוצרו טיוטות"
     },
     "gmailPrivate": {
-      "status": "error",
-      "note": "Composio לא הורץ בריצה הזו (לא נטען). הערך הקודם לא עודכן"
+      "status": "ok",
+      "note": "Composio, חיפוש 2 ימים: 60 הודעות, נראות ספק/ניוזלטר (Printify הזמנות בהמתנה בגלל תשלום שנכשל). לא נבדק לעומק"
     },
     "shopify": {
-      "status": "error",
-      "note": "לא נסרק בריצה הזו (זמן). הערך הקודם מ-30.10 לא עודכן"
+      "status": "ok",
+      "note": "הזמנה #4352 30.10, 188.10 דולר, Stephanie Elliott, PAID. customerMetrics לא עודכן"
     },
     "stripe": {
       "status": "error",
-      "note": "כלי Stripe דורש אימות OAuth מחדש, סעיף תשלומים לא הורץ"
+      "note": "Stripe MCP דורש אימות OAuth מחדש, סעיף 4 לא הורץ"
     },
     "autocalls": {
-      "status": "error",
-      "note": "לא נסרק בריצה הזו (זמן). הערך הקודם מ-30.10 לא עודכן"
+      "status": "ok",
+      "note": "8 שיחות מ-31.10, כולן תא קולי או ניתוק מהיר. אין שיחה אמיתית"
     },
     "calendar": {
       "status": "error",
       "note": "לא נסרק בריצה הזו (זמן). הערך הקודם מ-30.10 לא עודכן"
     },
     "googleAnalytics": {
-      "status": "ok",
-      "note": "נכס 415263029. 29.10 (יום חלקי לפי שעון LA) 215 סשנים מול ממוצע 386 ב-7 ימים. Organic Search 4 מול 15 ליום, Email 17 מול 126, Unassigned 49 אחוז"
+      "status": "error",
+      "note": "לא הורץ בריצה הזו"
     },
     "googleAds": {
       "status": "error",
-      "note": "לא נסרק בריצה הזו (זמן). הערך הקודם מ-30.10 לא עודכן"
+      "note": "לא הורץ בריצה הזו"
     },
     "metaAds": {
       "status": "error",
-      "note": "לא נסרק בריצה הזו (זמן). הערך הקודם מ-30.10 לא עודכן"
+      "note": "נמצאו חשבונות (400319919198934 USD פעיל), insights לא נמשכו"
     },
     "whatsapp": {
       "status": "ok",
-      "note": "GREEN API: lastIncomingMessages החזיר 121 הודעות ב-29 צ'אטים ב-5 ימים. lastOutgoingMessages ריק (ידוע). getChatHistory על 2 צ'אטים. נוצרו 0, עודכנו 1 (Elaine)"
+      "note": "GREEN API: lastIncomingMessages החזיר 79 הודעות ב-22 צ'אטים ב-5 ימים. lastOutgoingMessages ריק (ידוע). נוצר Michael Oren, עודכן Irene Reiss"
     },
     "ads": {
       "status": "error",
@@ -62,57 +62,76 @@
   "needsAnswer": [
     {
       "name": "Elaine Eisenberg",
-      "why": "שאלה ב-30.10 ערב כמה עולה עץ האושר 30 אינץ, מחכה גם למוקאפ מתוקן (יותר כחול, פחות כתום וורוד). לא נענתה מאז 27.10",
+      "why": "שאלה ב-30.10 כמה עולה עץ האושר 30 אינץ, מחכה למוקאפ מתוקן (יותר כחול, פחות כתום וורוד)",
       "channel": "WhatsApp",
-      "waitingDays": 4,
+      "waitingDays": 2,
       "urgency": "high"
     },
     {
-      "name": "Janet (+16265593939)",
-      "why": "ענתה \"What is the price\" ב-31.10 אחרי הודעת הפתיחה",
-      "channel": "Quo",
-      "waitingDays": 0,
+      "name": "Irene Reiss",
+      "why": "ב-31.10 שאלה מתי מציגים בניו ג'רזי וביקשה הזמנה לשתף. לקוחה משלמת, ציור בהפקה",
+      "channel": "WhatsApp",
+      "waitingDays": 1,
       "urgency": "high"
     },
     {
       "name": "Michael Oren",
-      "why": "ב-30.10 ביקש את הציור מהתמונה הראשונה עם המסגרת מהשנייה, שאל איך עושים. אין רשומה בלוח לפי הטלפון, לבדוק אם קיים לקוח",
+      "why": "ב-30.10 כתב שרוצה לדבר על ציור ושלח שתי תמונות. נפתחה רשומה",
       "channel": "WhatsApp",
-      "waitingDays": 1,
+      "waitingDays": 2,
+      "urgency": "high"
+    },
+    {
+      "name": "John (+16132423977)",
+      "why": "ב-25.10 ענה Depending on pricing על We Will Dance Again, לא נענה",
+      "channel": "Quo",
+      "waitingDays": 7,
+      "urgency": "medium"
+    },
+    {
+      "name": "Toronto couple (+14169908668)",
+      "why": "19.10 מזמינים להיפגש בישראל 4 עד 18.11 ומתנדבים באירוע בטורונטו, לא נענו",
+      "channel": "Quo",
+      "waitingDays": 13,
       "urgency": "medium"
     },
     {
       "name": "Nava Blankenstein",
-      "why": "שאלה כמה עולה אירוע JNF וערב לבית כנסת",
+      "why": "שאלה על עלות אירוע JNF, מחכה מ-28.10",
       "channel": "WhatsApp",
-      "waitingDays": 2,
+      "waitingDays": 4,
       "urgency": "medium"
     },
     {
       "name": "Mike Larks",
-      "why": "הציע לארגן אירוע ציור בצפון שיקגו, מחכה לתשובה מ-29.10",
+      "why": "הצעה לארגן אירוע ציור משותף בנורת'ברוק, מחכה מ-29.10",
       "channel": "Email",
-      "waitingDays": 2,
+      "waitingDays": 3,
       "urgency": "medium"
     }
   ],
   "newYesterday": [
     {
-      "name": "Emily",
+      "name": "Michael Oren",
+      "source": "WhatsApp",
+      "detail": "רוצה לדבר על ציור, שלח תמונות"
+    },
+    {
+      "name": "Sharmion",
       "source": "Autocalls/Monday",
-      "detail": "נוצרה 31.10, תא קולי בלבד"
+      "detail": "תא קולי בלבד"
     }
   ],
   "replied": [
     {
-      "name": "Janet",
-      "channel": "Quo",
-      "said": "What is the price"
+      "name": "Irene Reiss",
+      "channel": "WhatsApp",
+      "said": "I LOVE LOVE LOVE IT, שאלה על תערוכה בניו ג'רזי"
     },
     {
       "name": "Elaine Eisenberg",
       "channel": "WhatsApp",
-      "said": "מחירון ועדכון צבעים למוקאפ"
+      "said": "שאלה שוב על מחיר, רוצה פחות כתום/ורוד"
     }
   ],
   "revenue": {
@@ -138,36 +157,32 @@
   "draftsPrepared": [],
   "quoTasks": [],
   "mondayUpdated": {
-    "updated": 2,
-    "created": 0,
+    "updated": 1,
+    "created": 1,
     "details": [
-      "Elaine Eisenberg: הערה",
-      "Janet: Unreachable ל-Conversation Active והערה"
+      "Michael Oren: נוצר, Conversation Active",
+      "Irene Reiss: הערה"
     ]
   },
   "faults": [
     {
-      "what": "Stripe דורש אימות OAuth מחדש, סעיף תשלומים לא הורץ (יומיים ברצף)",
+      "what": "Stripe מנותק (OAuth), תשלומים לא נסרקו",
       "severity": "high"
     },
     {
-      "what": "Quo: 23 משימות ישנות פתוחות מספטמבר חוסמות יצירת משימות חדשות (402). לסגור ידנית",
-      "severity": "high"
-    },
-    {
-      "what": "Gmail פרטי, שופיפיי, אוטוקולס, גוגל, מטא ואנליטיקס לא נסרקו בריצה הזו",
+      "what": "Quo create-task חסום 402: 23 משימות ישנות פתוחות, לסגור ידנית",
       "severity": "medium"
     },
     {
-      "what": "CRM Tasks: ביטול תזכורות כפולות לא הורץ",
+      "what": "GA, Google Ads, Meta insights, CRM Tasks, customerMetrics לא הורצו",
       "severity": "medium"
     },
     {
-      "what": "Michael Oren (וואטסאפ 12019238386) לא נמצא בלוח לפי טלפון, לבדוק",
-      "severity": "low"
+      "what": "Printify: 2 הזמנות בהמתנה בגלל תשלום שנכשל",
+      "severity": "medium"
     }
   ],
-  "whatsappNote": "נסרק דרך GREEN API 31.10: 29 צ'אטים פעילים ב-5 ימים. נוצרו 0, עודכנו 1",
+  "whatsappNote": "נסרק דרך GREEN API 01.11: 22 צ'אטים פעילים ב-5 ימים. נוצר 1, עודכן 1",
   "meetings": [],
   "customerMetrics": {
     "ltv": 268.58,
