@@ -1,22 +1,22 @@
 {
-  "updatedAt": "2026-11-01T07:30:00+03:00",
-  "scanDate": "2026-11-01",
+  "updatedAt": "2026-11-02T07:10:00+03:00",
+  "scanDate": "2026-11-02",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "6 רשומות ב-48 שעות נבדקו (Sharmion, TEST Legendary Media, Katy, Paula, Emily, Mike Larks). נוצר Michael Oren, עודכן Irene Reiss. CRM Tasks וביטול תזכורות כפולות לא הורצו"
+      "note": "48 שעות: 14 רשומות נבדקו, כולן אוטומטיות/כפילויות של Autocalls. עודכנו 4 רשומות. CRM Tasks וביטול תזכורות כפולות לא הורצו, לא נגעתי בתאריכי פעולה"
     },
     "quoMessages": {
       "status": "ok",
-      "note": "נסרק 14 יום, 47 שיחות. create-task חסום: 23 משימות ישנות פתוחות (402), לא נוצרו משימות. הנוסח בדוח"
+      "note": "נסרק 14 יום, 42 שיחות. create-task חסום שוב (402, 23 משימות ישנות פתוחות מספטמבר). הנוסח בדוח"
     },
     "gmailBusiness": {
       "status": "ok",
-      "note": "חיפוש 2 ימים (25 שרשורים) וסווף 30 יום ללא category:primary. לא נמצא ליד חדש שאינו ברשימה. חיפוש buy.stripe.com לא הורץ. לא נוצרו טיוטות"
+      "note": "2 ימים (15 שרשורים), buy.stripe.com (2, שניהם יוצאים), וסווף 30 יום ללא category:primary. 2 טיוטות נוצרו. אחד ביקש הסרה מהרשימה"
     },
     "gmailPrivate": {
-      "status": "ok",
-      "note": "Composio, חיפוש 2 ימים: 60 הודעות, נראות ספק/ניוזלטר (Printify הזמנות בהמתנה בגלל תשלום שנכשל). לא נבדק לעומק"
+      "status": "error",
+      "note": "Composio לא הורץ בריצה הזו (לא נבדק)"
     },
     "shopify": {
       "status": "ok",
@@ -24,11 +24,11 @@
     },
     "stripe": {
       "status": "error",
-      "note": "Stripe MCP דורש אימות OAuth מחדש, סעיף 4 לא הורץ"
+      "note": "Stripe MCP דורש אימות OAuth, סעיף 4 לא הורץ"
     },
     "autocalls": {
       "status": "ok",
-      "note": "8 שיחות מ-31.10, כולן תא קולי או ניתוק מהיר. אין שיחה אמיתית"
+      "note": "11 שיחות מ-01.11, תאי קול או קצרות. שיחה אמיתית אחת: Debbie 101 שניות, ייעוץ נקבע להיום"
     },
     "calendar": {
       "status": "error",
@@ -44,11 +44,11 @@
     },
     "metaAds": {
       "status": "error",
-      "note": "נמצאו חשבונות (400319919198934 USD פעיל), insights לא נמשכו"
+      "note": "לא הורץ בריצה הזו"
     },
     "whatsapp": {
       "status": "ok",
-      "note": "GREEN API: lastIncomingMessages החזיר 79 הודעות ב-22 צ'אטים ב-5 ימים. lastOutgoingMessages ריק (ידוע). נוצר Michael Oren, עודכן Irene Reiss"
+      "note": "GREEN API: lastIncoming החזיר 68 הודעות מ-22 צ'אטים ב-5 ימים. lastOutgoing החזיר רשימה ריקה, ולכן ההקשר של הודעות אלברט חסר. נבדקו לעומק 5 צ'אטים"
     },
     "ads": {
       "status": "error",
@@ -61,129 +61,170 @@
   },
   "needsAnswer": [
     {
-      "name": "Elaine Eisenberg",
-      "why": "שאלה ב-30.10 כמה עולה עץ האושר 30 אינץ, מחכה למוקאפ מתוקן (יותר כחול, פחות כתום וורוד)",
+      "name": "Irene Reiss",
+      "why": "שאלה מה היתרה ואיפה לינק תשלום, נתנה כתובת משלוח",
       "channel": "WhatsApp",
-      "waitingDays": 2,
+      "waitingDays": 0,
       "urgency": "high"
     },
     {
-      "name": "Irene Reiss",
-      "why": "ב-31.10 שאלה מתי מציגים בניו ג'רזי וביקשה הזמנה לשתף. לקוחה משלמת, ציור בהפקה",
+      "name": "Carolyn Hockstein",
+      "why": "UPS דורש SSN, סירבה, החבילה עלולה לחזור. טיוטה מוכנה עם חור",
+      "channel": "Email",
+      "waitingDays": 3,
+      "urgency": "high"
+    },
+    {
+      "name": "Lee",
+      "why": "אישרה גודל 70 אינץ' ('I will go with your opinion'), מקדמה שולמה, לא נענתה",
+      "channel": "Quo",
+      "waitingDays": 13,
+      "urgency": "high"
+    },
+    {
+      "name": "Nava Blankenstein",
+      "why": "שואלת מחיר ערב ציור לבית כנסת בטורונטו ואירוע JNF",
+      "channel": "WhatsApp",
+      "waitingDays": 4,
+      "urgency": "high"
+    },
+    {
+      "name": "Marnie Gershowitz",
+      "why": "מבקשת עלות משוערת לאירוע לוועדה",
       "channel": "WhatsApp",
       "waitingDays": 1,
       "urgency": "high"
     },
     {
-      "name": "Michael Oren",
-      "why": "ב-30.10 כתב שרוצה לדבר על ציור ושלח שתי תמונות. נפתחה רשומה",
+      "name": "Yelena",
+      "why": "כתבה Paid ב-01.11 ושאלה על ימים נוספים בתערוכה, לבדוק תשלום ב-Stripe",
       "channel": "WhatsApp",
-      "waitingDays": 2,
-      "urgency": "high"
+      "waitingDays": 1,
+      "urgency": "medium"
     },
     {
-      "name": "John (+16132423977)",
-      "why": "ב-25.10 ענה Depending on pricing על We Will Dance Again, לא נענה",
+      "name": "Carlos de la Parra Huerta",
+      "why": "הזמנה 4350 מארזת טלפון, מעדיף משלוח אליו. טיוטה מוכנה",
+      "channel": "Email",
+      "waitingDays": 2,
+      "urgency": "medium"
+    },
+    {
+      "name": "John",
+      "why": "ענה 'Depending on pricing' ב-25.10, לא נענה",
+      "channel": "Quo",
+      "waitingDays": 8,
+      "urgency": "medium"
+    },
+    {
+      "name": "Christie",
+      "why": "ענתה 'I will when I get off work' ב-26.10",
       "channel": "Quo",
       "waitingDays": 7,
       "urgency": "medium"
     },
     {
-      "name": "Toronto couple (+14169908668)",
-      "why": "19.10 מזמינים להיפגש בישראל 4 עד 18.11 ומתנדבים באירוע בטורונטו, לא נענו",
+      "name": "Bronna (iifc.ca)",
+      "why": "מתנדבת באירוע בטורונטו, רוצה פגישה בישראל, 14 יום",
       "channel": "Quo",
-      "waitingDays": 13,
-      "urgency": "medium"
-    },
-    {
-      "name": "Nava Blankenstein",
-      "why": "שאלה על עלות אירוע JNF, מחכה מ-28.10",
-      "channel": "WhatsApp",
-      "waitingDays": 4,
-      "urgency": "medium"
-    },
-    {
-      "name": "Mike Larks",
-      "why": "הצעה לארגן אירוע ציור משותף בנורת'ברוק, מחכה מ-29.10",
-      "channel": "Email",
-      "waitingDays": 3,
-      "urgency": "medium"
+      "waitingDays": 14,
+      "urgency": "low"
     }
   ],
   "newYesterday": [
     {
-      "name": "Michael Oren",
-      "source": "WhatsApp",
-      "detail": "רוצה לדבר על ציור, שלח תמונות"
+      "name": "Bill",
+      "source": "Monday/Autocalls",
+      "detail": "New Lead 02.11, כפילות עם רשומה Unreachable, תא קולי"
     },
     {
-      "name": "Sharmion",
-      "source": "Autocalls/Monday",
-      "detail": "תא קולי בלבד"
+      "name": "Jennifer",
+      "source": "Monday",
+      "detail": "New Lead 02.11 jendrew84@gmail.com, עדיין לא חויג"
     }
   ],
   "replied": [
     {
-      "name": "Irene Reiss",
-      "channel": "WhatsApp",
-      "said": "I LOVE LOVE LOVE IT, שאלה על תערוכה בניו ג'רזי"
+      "name": "Debbie",
+      "channel": "Autocalls",
+      "said": "שיחה של 101 שניות, ייעוץ נקבע ל-02.11 13:30"
     },
     {
-      "name": "Elaine Eisenberg",
+      "name": "Sharri Rochlin",
       "channel": "WhatsApp",
-      "said": "שאלה שוב על מחיר, רוצה פחות כתום/ורוד"
+      "said": "UPS אומר שנמסר, תבדוק עם השוער"
+    },
+    {
+      "name": "Fran Levin",
+      "channel": "Email",
+      "said": "רוצה אירוע במרץ, אלברט שלח PDF ומחכה"
     }
   ],
   "revenue": {
-    "monthToDate": 11371.85,
-    "monthToDateMonth": "אוקטובר 2026",
-    "monthToDateNote": "לפי Close Date באוקטובר: Lee 3,800, Sharri 3,700, Michele Bernstein 2,800, Mauri 583, Benjamin 246.75, Mindy 242.10. ללא שינוי",
-    "septemberFinal": 12862,
-    "cashNotTurnover": 0,
-    "cashNotTurnoverNote": "לא נרשמו השלמות היום. 3,125$ של Ruthy בבלם",
-    "openBalances": 15700,
-    "openBalancesBreakdown": "הקודם 13,600 ועוד Michele Bernstein 2,100",
-    "newStripeCashToday": 0,
-    "newStripeCashNote": "Stripe מנותק, לא נבדק. Ruthy 3,125$ ו-Gregory 925/950 בלי משלם עדיין ממתינים לאלברט",
-    "failedStripeToday": 0,
-    "newShopifyOrdersSinceLastRun": 3,
-    "nonLeadShopifyOctober": 1195.1,
-    "nonLeadShopifyNote": "4 הזמנות שופיפיי חדשות 21 עד 23.10 בסך 994.50, לא הוצלבו מול מנדיי",
-    "unpaidPaymentLinks": "אין לינק Stripe חדש ב-7 ימים",
+    "monthToDate": null,
+    "cashNotTurnover": null,
+    "openBalances": null,
     "currency": "USD",
-    "openBalancesNote": "Henry 850 ו-Higer נסגרו. Higer היה 2,550 בפתוח",
-    "newShopifyNote": "#4349 306.99, #4350 55.79, #4351 169.29 מ-28.10, לא הוצלבו"
+    "note": "לא חושב בריצה הזו. Stripe מנותק"
   },
-  "draftsPrepared": [],
+  "draftsPrepared": [
+    {
+      "name": "Carlos de la Parra Huerta",
+      "inbox": "business",
+      "gist": "אישור משלוח אליו, שאלה אחת",
+      "needsInput": true
+    },
+    {
+      "name": "Carolyn Hockstein",
+      "inbox": "business",
+      "gist": "הרגעה ובדיקת חלופה מול UPS",
+      "needsInput": true
+    }
+  ],
   "quoTasks": [],
   "mondayUpdated": {
-    "updated": 1,
-    "created": 1,
+    "updated": 4,
+    "created": 0,
     "details": [
-      "Michael Oren: נוצר, Conversation Active",
-      "Irene Reiss: הערה"
+      "Yelena: הערה",
+      "Irene Reiss: הערה",
+      "John: סטטוס Conversation Active וערוץ QUO",
+      "Marnie Gershowitz: הערה"
     ]
   },
   "faults": [
     {
-      "what": "Stripe מנותק (OAuth), תשלומים לא נסרקו",
+      "what": "create-task ב-Quo חסום, 23 משימות פתוחות מ-26.09 עד 01.10 (402). צריך לסגור ישנות",
       "severity": "high"
     },
     {
-      "what": "Quo create-task חסום 402: 23 משימות ישנות פתוחות, לסגור ידנית",
+      "what": "Stripe מנותק (OAuth). Yelena כתבה Paid ב-01.11, לא נרשם סכום",
+      "severity": "high"
+    },
+    {
+      "what": "GREEN API lastOutgoingMessages מחזיר ריק, חסרות הודעות יוצאות של אלברט",
       "severity": "medium"
     },
     {
-      "what": "GA, Google Ads, Meta insights, CRM Tasks, customerMetrics לא הורצו",
+      "what": "שרשור Michal Wiess (עברית) קיבלה את הציור, ציטוט גדול מדי לקריאה מלאה. אין צורך בפעולה",
+      "severity": "low"
+    },
+    {
+      "what": "paramountpaint88@gmail.com ביקש הסרה מרשימת התפוצה של flashy",
       "severity": "medium"
     },
     {
-      "what": "Printify: 2 הזמנות בהמתנה בגלל תשלום שנכשל",
-      "severity": "medium"
+      "what": "Bill ו-Debbie: רשומות כפולות באותו מייל וטלפון",
+      "severity": "low"
     }
   ],
-  "whatsappNote": "נסרק דרך GREEN API 01.11: 22 צ'אטים פעילים ב-5 ימים. נוצר 1, עודכן 1",
-  "meetings": [],
+  "whatsappNote": "נסרק דרך GREEN API ב-02.11, 22 צ'אטים פעילים ב-5 ימים (נכנסות בלבד)",
+  "meetings": [
+    {
+      "when": "02.11 13:30",
+      "who": "Debbie, ייעוץ אישי"
+    }
+  ],
   "customerMetrics": {
     "ltv": 268.58,
     "avgDaysBetweenPurchases": 77.0,
