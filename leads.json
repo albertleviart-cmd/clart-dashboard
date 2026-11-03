@@ -1,34 +1,34 @@
 {
-  "updatedAt": "2026-11-02T07:10:00+03:00",
-  "scanDate": "2026-11-02",
+  "updatedAt": "2026-11-03T07:15:00+03:00",
+  "scanDate": "2026-11-03",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "48 שעות: 14 רשומות נבדקו, כולן אוטומטיות/כפילויות של Autocalls. עודכנו 4 רשומות. CRM Tasks וביטול תזכורות כפולות לא הורצו, לא נגעתי בתאריכי פעולה"
+      "note": "48 שעות: 10 רשומות נבדקו, רובן אוטומטיות או כפילויות Autocalls. לא עודכנו רשומות, CRM Tasks לא הורץ"
     },
     "quoMessages": {
       "status": "ok",
-      "note": "נסרק 14 יום, 42 שיחות. create-task חסום שוב (402, 23 משימות ישנות פתוחות מספטמבר). הנוסח בדוח"
+      "note": "נסרק 14 יום, 45 שיחות. create-task חסום (402, תקרת משימות פתוחות). נוסח בדוח"
     },
     "gmailBusiness": {
       "status": "ok",
-      "note": "2 ימים (15 שרשורים), buy.stripe.com (2, שניהם יוצאים), וסווף 30 יום ללא category:primary. 2 טיוטות נוצרו. אחד ביקש הסרה מהרשימה"
+      "note": "2 ימים, סווף 30 יום עם category:primary החזיר ריק. טיוטה אחת נוצרה"
     },
     "gmailPrivate": {
-      "status": "error",
-      "note": "Composio לא הורץ בריצה הזו (לא נבדק)"
+      "status": "ok",
+      "note": "Composio, 2 ימים: ליד חדש Joshua Goldberger מ-powerfulform, ללא פניות נוספות"
     },
     "shopify": {
       "status": "ok",
-      "note": "הזמנה #4352 30.10, 188.10 דולר, Stephanie Elliott, PAID. customerMetrics לא עודכן"
+      "note": "הזמנה אחרונה #4352 30.10, 188.10 דולר. customerMetrics לא עודכן"
     },
     "stripe": {
       "status": "error",
-      "note": "Stripe MCP דורש אימות OAuth, סעיף 4 לא הורץ"
+      "note": "Stripe MCP דורש אימות OAuth, סעיף 4 לא הורץ. Mercury: payout 17,012.41 דולר ב-02.11 ממתין לשיוך"
     },
     "autocalls": {
       "status": "ok",
-      "note": "11 שיחות מ-01.11, תאי קול או קצרות. שיחה אמיתית אחת: Debbie 101 שניות, ייעוץ נקבע להיום"
+      "note": "5 שיחות, תאי קול או קצרות, ללא שיחה אמיתית חדשה"
     },
     "calendar": {
       "status": "error",
@@ -36,19 +36,19 @@
     },
     "googleAnalytics": {
       "status": "error",
-      "note": "לא הורץ בריצה הזו"
+      "note": "לא הורץ בריצה זו"
     },
     "googleAds": {
       "status": "error",
-      "note": "לא הורץ בריצה הזו"
+      "note": "לא הורץ בריצה זו"
     },
     "metaAds": {
       "status": "error",
-      "note": "לא הורץ בריצה הזו"
+      "note": "לא הורץ בריצה זו"
     },
     "whatsapp": {
       "status": "ok",
-      "note": "GREEN API: lastIncoming החזיר 68 הודעות מ-22 צ'אטים ב-5 ימים. lastOutgoing החזיר רשימה ריקה, ולכן ההקשר של הודעות אלברט חסר. נבדקו לעומק 5 צ'אטים"
+      "note": "GREEN API: 73 הודעות נכנסות ב-5 ימים, 18 צאטים, נקראו 8. מנדיי לא עודכן"
     },
     "ads": {
       "status": "error",
@@ -61,86 +61,67 @@
   },
   "needsAnswer": [
     {
-      "name": "Irene Reiss",
-      "why": "שאלה מה היתרה ואיפה לינק תשלום, נתנה כתובת משלוח",
+      "name": "Yelena Amkhanitsky",
+      "why": "שילמה, שואלת על מספר מעקב",
       "channel": "WhatsApp",
       "waitingDays": 0,
       "urgency": "high"
     },
     {
-      "name": "Carolyn Hockstein",
-      "why": "UPS דורש SSN, סירבה, החבילה עלולה לחזור. טיוטה מוכנה עם חור",
+      "name": "Ilene Kruger",
+      "why": "קיבלה את הציור, שואלת על חתך בפינה והוראות מסגור",
+      "channel": "WhatsApp",
+      "waitingDays": 0,
+      "urgency": "high"
+    },
+    {
+      "name": "19734322742",
+      "why": "המעצבת רוצה 24x36 ומחיר",
+      "channel": "WhatsApp",
+      "waitingDays": 1,
+      "urgency": "high"
+    },
+    {
+      "name": "Joshua Goldberger",
+      "why": "שאל מחיר דרך טופס האתר",
       "channel": "Email",
-      "waitingDays": 3,
+      "waitingDays": 0,
       "urgency": "high"
     },
     {
-      "name": "Lee",
-      "why": "אישרה גודל 70 אינץ' ('I will go with your opinion'), מקדמה שולמה, לא נענתה",
+      "name": "Jennifer",
+      "why": "ביקשה שיחה ב-09.11 בסביבות 12:00",
       "channel": "Quo",
-      "waitingDays": 13,
-      "urgency": "high"
+      "waitingDays": 0,
+      "urgency": "medium"
     },
     {
-      "name": "Nava Blankenstein",
-      "why": "שואלת מחיר ערב ציור לבית כנסת בטורונטו ואירוע JNF",
+      "name": "Toronto 14165054337",
+      "why": "מחיר אירוע לבית כנסת",
+      "channel": "WhatsApp",
+      "waitingDays": 5,
+      "urgency": "medium"
+    },
+    {
+      "name": "Michael Oren",
+      "why": "ציור ומסגרת מצילומים",
       "channel": "WhatsApp",
       "waitingDays": 4,
-      "urgency": "high"
-    },
-    {
-      "name": "Marnie Gershowitz",
-      "why": "מבקשת עלות משוערת לאירוע לוועדה",
-      "channel": "WhatsApp",
-      "waitingDays": 1,
-      "urgency": "high"
-    },
-    {
-      "name": "Yelena",
-      "why": "כתבה Paid ב-01.11 ושאלה על ימים נוספים בתערוכה, לבדוק תשלום ב-Stripe",
-      "channel": "WhatsApp",
-      "waitingDays": 1,
       "urgency": "medium"
     },
     {
-      "name": "Carlos de la Parra Huerta",
-      "why": "הזמנה 4350 מארזת טלפון, מעדיף משלוח אליו. טיוטה מוכנה",
+      "name": "Shira Cohen",
+      "why": "מחכה לפרטי אירוע בולטימור 03.12",
       "channel": "Email",
-      "waitingDays": 2,
-      "urgency": "medium"
-    },
-    {
-      "name": "John",
-      "why": "ענה 'Depending on pricing' ב-25.10, לא נענה",
-      "channel": "Quo",
-      "waitingDays": 8,
-      "urgency": "medium"
-    },
-    {
-      "name": "Christie",
-      "why": "ענתה 'I will when I get off work' ב-26.10",
-      "channel": "Quo",
-      "waitingDays": 7,
-      "urgency": "medium"
-    },
-    {
-      "name": "Bronna (iifc.ca)",
-      "why": "מתנדבת באירוע בטורונטו, רוצה פגישה בישראל, 14 יום",
-      "channel": "Quo",
-      "waitingDays": 14,
+      "waitingDays": 0,
       "urgency": "low"
     }
   ],
   "newYesterday": [
     {
-      "name": "Bill",
-      "source": "Monday/Autocalls",
-      "detail": "New Lead 02.11, כפילות עם רשומה Unreachable, תא קולי"
-    },
-    {
-      "name": "Jennifer",
-      "source": "Monday",
-      "detail": "New Lead 02.11 jendrew84@gmail.com, עדיין לא חויג"
+      "name": "Joshua Goldberger",
+      "source": "powerfulform",
+      "detail": "שאל מחיר על ציור"
     }
   ],
   "replied": [
@@ -169,60 +150,37 @@
   },
   "draftsPrepared": [
     {
-      "name": "Carlos de la Parra Huerta",
+      "name": "Joshua Goldberger",
       "inbox": "business",
-      "gist": "אישור משלוח אליו, שאלה אחת",
-      "needsInput": true
-    },
-    {
-      "name": "Carolyn Hockstein",
-      "inbox": "business",
-      "gist": "הרגעה ובדיקת חלופה מול UPS",
+      "gist": "שאלת מחיר",
       "needsInput": true
     }
   ],
   "quoTasks": [],
   "mondayUpdated": {
-    "updated": 4,
+    "updated": 0,
     "created": 0,
-    "details": [
-      "Yelena: הערה",
-      "Irene Reiss: הערה",
-      "John: סטטוס Conversation Active וערוץ QUO",
-      "Marnie Gershowitz: הערה"
-    ]
+    "details": []
   },
   "faults": [
     {
-      "what": "create-task ב-Quo חסום, 23 משימות פתוחות מ-26.09 עד 01.10 (402). צריך לסגור ישנות",
+      "what": "Stripe מנותק (OAuth). payout 17,012.41 דולר ב-02.11 לא נבדק מול מנדיי",
       "severity": "high"
     },
     {
-      "what": "Stripe מנותק (OAuth). Yelena כתבה Paid ב-01.11, לא נרשם סכום",
-      "severity": "high"
-    },
-    {
-      "what": "GREEN API lastOutgoingMessages מחזיר ריק, חסרות הודעות יוצאות של אלברט",
+      "what": "Quo create-task נכשל 402, תקרת משימות פתוחות",
       "severity": "medium"
     },
     {
-      "what": "שרשור Michal Wiess (עברית) קיבלה את הציור, ציטוט גדול מדי לקריאה מלאה. אין צורך בפעולה",
-      "severity": "low"
-    },
-    {
-      "what": "paramountpaint88@gmail.com ביקש הסרה מרשימת התפוצה של flashy",
-      "severity": "medium"
-    },
-    {
-      "what": "Bill ו-Debbie: רשומות כפולות באותו מייל וטלפון",
+      "what": "כפילויות בלוח: Bill, Debbie",
       "severity": "low"
     }
   ],
-  "whatsappNote": "נסרק דרך GREEN API ב-02.11, 22 צ'אטים פעילים ב-5 ימים (נכנסות בלבד)",
+  "whatsappNote": "נסרק ב-GREEN API 03.11, 18 צאטים פעילים. מנדיי לא עודכן",
   "meetings": [
     {
-      "when": "02.11 13:30",
-      "who": "Debbie, ייעוץ אישי"
+      "when": "09.11 12:00",
+      "who": "Jennifer (שיחה)"
     }
   ],
   "customerMetrics": {
