@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-04T08:10:00+02:00",
+  "updatedAt": "2026-11-04T20:08:24+02:00",
   "sources": {
     "monday": {
       "status": "ok",
@@ -45,20 +45,20 @@
         "count": 0
       },
       "spendBreakdown": {
-        "meta": 3.22,
-        "google": 16.03
+        "meta": 91.06,
+        "google": 17.01
       },
-      "spend": 19.25,
+      "spend": 108.07,
       "analytics": {
-        "sessions": 194,
-        "transactions": 1
+        "sessions": 20,
+        "transactions": 0
       },
       "funnel": {
-        "visitors": 194,
-        "productViews": 174,
-        "addToCart": 4,
-        "checkout": 1,
-        "purchases": 1
+        "visitors": 20,
+        "productViews": 11,
+        "addToCart": 1,
+        "checkout": 0,
+        "purchases": 0
       }
     },
     "yesterday": {
@@ -83,20 +83,20 @@
         "count": 0
       },
       "spendBreakdown": {
-        "meta": 237.24,
+        "meta": 238.95,
         "google": 6.1
       },
-      "spend": 243.34,
+      "spend": 245.05,
       "analytics": {
-        "sessions": 346,
-        "transactions": 0
+        "sessions": 227,
+        "transactions": 1
       },
       "funnel": {
-        "visitors": 346,
-        "productViews": 259,
-        "addToCart": 4,
-        "checkout": 5,
-        "purchases": 0
+        "visitors": 227,
+        "productViews": 194,
+        "addToCart": 5,
+        "checkout": 2,
+        "purchases": 1
       }
     },
     "last3d": {
@@ -121,19 +121,19 @@
         "count": 0
       },
       "spendBreakdown": {
-        "meta": 1096.88,
-        "google": 52.01
+        "meta": 1098.59,
+        "google": 52.99
       },
-      "spend": 1148.89,
+      "spend": 1151.58,
       "analytics": {
-        "sessions": 1131,
+        "sessions": 948,
         "transactions": 1
       },
       "funnel": {
-        "visitors": 1131,
-        "productViews": 918,
-        "addToCart": 24,
-        "checkout": 15,
+        "visitors": 948,
+        "productViews": 759,
+        "addToCart": 15,
+        "checkout": 12,
         "purchases": 1
       }
     },
@@ -169,18 +169,18 @@
         "count": 0
       },
       "spendBreakdown": {
-        "meta": 2052.64,
+        "meta": 2054.35,
         "google": 64.6
       },
-      "spend": 2117.24,
+      "spend": 2118.95,
       "analytics": {
-        "sessions": 2290,
+        "sessions": 1997,
         "transactions": 4
       },
       "funnel": {
-        "visitors": 2290,
-        "productViews": 2016,
-        "addToCart": 42,
+        "visitors": 1997,
+        "productViews": 1735,
+        "addToCart": 43,
         "checkout": 35,
         "purchases": 4
       }
@@ -267,19 +267,19 @@
         "count": 5
       },
       "spendBreakdown": {
-        "meta": 7312.09,
+        "meta": 7313.8,
         "google": 207.56
       },
-      "spend": 7519.65,
+      "spend": 7521.36,
       "analytics": {
-        "sessions": 8605,
+        "sessions": 8411,
         "transactions": 26
       },
       "funnel": {
-        "visitors": 8605,
-        "productViews": 6691,
-        "addToCart": 310,
-        "checkout": 238,
+        "visitors": 8411,
+        "productViews": 6571,
+        "addToCart": 302,
+        "checkout": 229,
         "purchases": 26
       }
     },
@@ -305,19 +305,19 @@
         "count": 0
       },
       "spendBreakdown": {
-        "meta": 1100.1,
-        "google": 53.86
+        "meta": 1189.65,
+        "google": 54.84
       },
-      "spend": 1153.96,
+      "spend": 1244.49,
       "analytics": {
-        "sessions": 896,
+        "sessions": 948,
         "transactions": 1
       },
       "funnel": {
-        "visitors": 896,
-        "productViews": 728,
-        "addToCart": 13,
-        "checkout": 11,
+        "visitors": 948,
+        "productViews": 759,
+        "addToCart": 15,
+        "checkout": 12,
         "purchases": 1
       }
     }
@@ -632,7 +632,7 @@
         "date": "2026-11-04",
         "siteRevenue": 0.0,
         "closedDealsRevenue": 0,
-        "spend": 19.25,
+        "spend": 108.07,
         "roasSite": 0.0,
         "roasTotal": 0.0
       }
