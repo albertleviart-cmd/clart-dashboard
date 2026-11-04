@@ -1,54 +1,54 @@
 {
-  "updatedAt": "2026-11-03T07:15:00+03:00",
-  "scanDate": "2026-11-03",
+  "updatedAt": "2026-11-04T07:10:00+03:00",
+  "scanDate": "2026-11-04",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "48 שעות: 10 רשומות נבדקו, רובן אוטומטיות או כפילויות Autocalls. לא עודכנו רשומות, CRM Tasks לא הורץ"
+      "note": "48 שעות: 4 רשומות (Barbara, Joshua Goldberger, 2x Bill כפילות), אוטומטיות. עודכנו 2 רשומות מוואטסאפ. CRM Tasks לא נסרק במלואו"
     },
     "quoMessages": {
       "status": "ok",
-      "note": "נסרק 14 יום, 45 שיחות. create-task חסום (402, תקרת משימות פתוחות). נוסח בדוח"
+      "note": "נסרק 14 יום, 39 שיחות. create-task חסום 402 (23 משימות פתוחות ישנות מספטמבר). נוסח בדוח"
     },
     "gmailBusiness": {
       "status": "ok",
-      "note": "2 ימים, סווף 30 יום עם category:primary החזיר ריק. טיוטה אחת נוצרה"
+      "note": "2 ימים + סווף 30 יום. טיוטה אחת נוצרה (Sandy Needle)"
     },
     "gmailPrivate": {
       "status": "ok",
-      "note": "Composio, 2 ימים: ליד חדש Joshua Goldberger מ-powerfulform, ללא פניות נוספות"
+      "note": "Composio, 2 ימים: נשלף, נראו רק Uber ו-Composio, 58 הודעות נוספות לא נבדקו לעומק"
     },
     "shopify": {
       "status": "ok",
-      "note": "הזמנה אחרונה #4352 30.10, 188.10 דולר. customerMetrics לא עודכן"
+      "note": "הזמנה אחרונה #4353 03.11, 530.10 דולר (Nikki Kreymer). customerMetrics לא עודכן"
     },
     "stripe": {
       "status": "error",
-      "note": "Stripe MCP דורש אימות OAuth, סעיף 4 לא הורץ. Mercury: payout 17,012.41 דולר ב-02.11 ממתין לשיוך"
+      "note": "Stripe MCP דורש אימות OAuth, סעיף 4 לא הורץ"
     },
     "autocalls": {
       "status": "ok",
-      "note": "5 שיחות, תאי קול או קצרות, ללא שיחה אמיתית חדשה"
+      "note": "20 שיחות אחרונות, ללא שיחה אמיתית חדשה מלבד Barbara ב-03.11 (33 שניות) ושיחות קצרות"
     },
     "calendar": {
       "status": "error",
-      "note": "לא נסרק בריצה הזו (זמן). הערך הקודם מ-30.10 לא עודכן"
+      "note": "לא נסרק בריצה הזו"
     },
     "googleAnalytics": {
       "status": "error",
-      "note": "לא הורץ בריצה זו"
+      "note": "לא נסרק בריצה הזו (זמן). הערך הקודם נשמר"
     },
     "googleAds": {
       "status": "error",
-      "note": "לא הורץ בריצה זו"
+      "note": "לא נסרק בריצה הזו (זמן). הערך הקודם נשמר"
     },
     "metaAds": {
       "status": "error",
-      "note": "לא הורץ בריצה זו"
+      "note": "לא נסרק בריצה הזו (זמן). הערך הקודם נשמר"
     },
     "whatsapp": {
       "status": "ok",
-      "note": "GREEN API: 73 הודעות נכנסות ב-5 ימים, 18 צאטים, נקראו 8. מנדיי לא עודכן"
+      "note": "GREEN API: 85 הודעות נכנסות ב-5 ימים, 20 צ'אטים (19 פרטיים), נקראה היסטוריה לכולם. lastOutgoingMessages החזיר רשימה ריקה. עודכנו 2 רשומות"
     },
     "ads": {
       "status": "error",
@@ -61,84 +61,110 @@
   },
   "needsAnswer": [
     {
-      "name": "Yelena Amkhanitsky",
-      "why": "שילמה, שואלת על מספר מעקב",
+      "name": "לקוחה 19734322742 (Elaine Eisenberg)",
+      "why": "המעצבת מבקשת 24x36, שאלה אם המחיר זהה, מחכה למחיר ולמוקאפ מ-27.10",
       "channel": "WhatsApp",
-      "waitingDays": 0,
+      "waitingDays": 8,
       "urgency": "high"
+    },
+    {
+      "name": "Marnie Gershowitz (בית כנסת)",
+      "why": "רוצים הדגמה חיה ויצירה לבית הכנסת, מבקשים עלות משוערת מאז 01.11",
+      "channel": "WhatsApp",
+      "waitingDays": 3,
+      "urgency": "high"
+    },
+    {
+      "name": "Irene Reiss",
+      "why": "כתבה שפשוט שילמה את היתרה (02.11) ושואלת על לינק תשלום ויתרה. לוודא קבלת תשלום",
+      "channel": "WhatsApp",
+      "waitingDays": 2,
+      "urgency": "high"
+    },
+    {
+      "name": "Yelena Amkhanitsky",
+      "why": "שילמה, מבקשת מספר מעקב",
+      "channel": "WhatsApp",
+      "waitingDays": 1,
+      "urgency": "medium"
     },
     {
       "name": "Ilene Kruger",
-      "why": "קיבלה את הציור, שואלת על חתך בפינה והוראות מסגור",
-      "channel": "WhatsApp",
-      "waitingDays": 0,
-      "urgency": "high"
-    },
-    {
-      "name": "19734322742",
-      "why": "המעצבת רוצה 24x36 ומחיר",
+      "why": "קיבלה ציור, שאלה על חתך בפינה והוראות מסגור",
       "channel": "WhatsApp",
       "waitingDays": 1,
-      "urgency": "high"
+      "urgency": "medium"
     },
     {
-      "name": "Joshua Goldberger",
-      "why": "שאל מחיר דרך טופס האתר",
-      "channel": "Email",
-      "waitingDays": 0,
-      "urgency": "high"
-    },
-    {
-      "name": "Jennifer",
-      "why": "ביקשה שיחה ב-09.11 בסביבות 12:00",
-      "channel": "Quo",
+      "name": "Tracie (JNF Toronto)",
+      "why": "שאלות על צבעים לערב עץ החיים ב-26.11 והעדפת חדר במלון",
+      "channel": "WhatsApp",
       "waitingDays": 0,
       "urgency": "medium"
     },
     {
-      "name": "Toronto 14165054337",
-      "why": "מחיר אירוע לבית כנסת",
+      "name": "Sandy Needle",
+      "why": "האירוע בווירג'יניה לא מציין מיקום. טיוטה מחכה למיקום",
+      "channel": "Email עסקי",
+      "waitingDays": 1,
+      "urgency": "medium"
+    },
+    {
+      "name": "Michael Oren",
+      "why": "ציור ומסגרת מצילומים, מחכה מ-30.10",
       "channel": "WhatsApp",
       "waitingDays": 5,
       "urgency": "medium"
     },
     {
-      "name": "Michael Oren",
-      "why": "ציור ומסגרת מצילומים",
-      "channel": "WhatsApp",
-      "waitingDays": 4,
+      "name": "Jennifer (845-245-8055)",
+      "why": "ביקשה שיחה ביום שני 09.11 בצהריים",
+      "channel": "Quo",
+      "waitingDays": 1,
       "urgency": "medium"
     },
     {
-      "name": "Shira Cohen",
-      "why": "מחכה לפרטי אירוע בולטימור 03.12",
-      "channel": "Email",
-      "waitingDays": 0,
+      "name": "John (613-242-3977)",
+      "why": "ענה 'Depending on pricing' ב-25.10 ולא קיבל מחיר",
+      "channel": "Quo",
+      "waitingDays": 10,
+      "urgency": "medium"
+    },
+    {
+      "name": "Christie (407-837-0304)",
+      "why": "אמרה שתחזור אחרי העבודה ב-26.10, שיחה שנקבעה",
+      "channel": "Quo",
+      "waitingDays": 9,
       "urgency": "low"
     }
   ],
   "newYesterday": [
     {
-      "name": "Joshua Goldberger",
-      "source": "powerfulform",
-      "detail": "שאל מחיר על ציור"
+      "name": "Nikki Kreymer",
+      "source": "Shopify #4353",
+      "detail": "530.10$, תשלום מלא"
+    },
+    {
+      "name": "Barbara (910-604-0222)",
+      "source": "Autocalls/Quo",
+      "detail": "שיחה 33 שניות, שיתפה סיפור על Phoenix, Albert שלח הודעה ב-03.11"
     }
   ],
   "replied": [
     {
-      "name": "Debbie",
-      "channel": "Autocalls",
-      "said": "שיחה של 101 שניות, ייעוץ נקבע ל-02.11 13:30"
-    },
-    {
-      "name": "Sharri Rochlin",
+      "name": "Marnie Gershowitz",
       "channel": "WhatsApp",
-      "said": "UPS אומר שנמסר, תבדוק עם השוער"
+      "said": "הדגמה חיה ויצירה לבית הכנסת"
     },
     {
-      "name": "Fran Levin",
+      "name": "Elaine Eisenberg",
+      "channel": "WhatsApp",
+      "said": "24x36, האם המחיר זהה"
+    },
+    {
+      "name": "Shira Cohen / Randi Albertsen / Phyllis Solomon",
       "channel": "Email",
-      "said": "רוצה אירוע במרץ, אלברט שלח PDF ומחכה"
+      "said": "אישרו הגעה לאירועי בולטימור ו-DC"
     }
   ],
   "revenue": {
@@ -150,37 +176,56 @@
   },
   "draftsPrepared": [
     {
-      "name": "Joshua Goldberger",
+      "name": "Sandy Needle",
       "inbox": "business",
-      "gist": "שאלת מחיר",
+      "gist": "האירוע בווירג'יניה 01.12, מחכה להשלמת מיקום",
       "needsInput": true
     }
   ],
   "quoTasks": [],
   "mondayUpdated": {
-    "updated": 0,
+    "updated": 2,
     "created": 0,
-    "details": []
+    "details": [
+      "Elaine Eisenberg: הערה (24x36, שאלה על מחיר)",
+      "Marnie Gershowitz: הערה והגדרת Next Action 04.11"
+    ]
   },
   "faults": [
     {
-      "what": "Stripe מנותק (OAuth). payout 17,012.41 דולר ב-02.11 לא נבדק מול מנדיי",
+      "what": "Stripe דורש OAuth, תשלומים מ-07.10 לא נבדקו",
       "severity": "high"
     },
     {
-      "what": "Quo create-task נכשל 402, תקרת משימות פתוחות",
+      "what": "Quo create-task חסום 402, 23 משימות פתוחות ישנות מספטמבר צריכות סגירה",
       "severity": "medium"
     },
     {
-      "what": "כפילויות בלוח: Bill, Debbie",
+      "what": "Irene Reiss כתבה שהעבירה את היתרה (02.11), אין רישום ב-Amount Paid, צריך אימות ידני",
+      "severity": "medium"
+    },
+    {
+      "what": "כפילות Bill (שתי רשומות, אותו מייל וטלפון)",
       "severity": "low"
+    },
+    {
+      "what": "GA, גוגל ומטא לא נסרקו",
+      "severity": "medium"
     }
   ],
-  "whatsappNote": "נסרק ב-GREEN API 03.11, 18 צאטים פעילים. מנדיי לא עודכן",
+  "whatsappNote": "נסרק דרך GREEN API ב-04.11, 20 צ'אטים פעילים ב-5 ימים",
   "meetings": [
     {
       "when": "09.11 12:00",
       "who": "Jennifer (שיחה)"
+    },
+    {
+      "when": "01.12-03.12",
+      "who": "אירועי FIDF: וירג'יניה, DC, בולטימור"
+    },
+    {
+      "when": "26.11",
+      "who": "JNF Toronto, ערב עץ החיים"
     }
   ],
   "customerMetrics": {
