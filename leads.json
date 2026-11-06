@@ -1,38 +1,38 @@
 {
-  "updatedAt": "2026-11-05T07:10:00+03:00",
-  "scanDate": "2026-11-05",
+  "updatedAt": "2026-11-06T07:20:00+03:00",
+  "scanDate": "2026-11-06",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "48 שעות: 6 רשומות (Test, Iris, akash, Hal Brager, Barbara, Joshua). נוצרו 2, עודכנה 1. CRM Tasks לא נסרק"
+      "note": "48 שעות: 12 רשומות. נוצרה 1 (Betsy Distelburger), עודכנו 3 (Elaine, Carlos, Marnie). CRM Tasks לא נסרק, תאריכי פעולה לא שונו"
     },
     "quoMessages": {
       "status": "ok",
-      "note": "נסרק 14 יום, 39 שיחות. create-task חסום 402 (Open tasks limit). נוסח בדוח"
+      "note": "נסרק 14 יום, 42 שיחות. create-task חסום 402 (Open tasks limit, 23 משימות פתוחות ישנות מ-27.09). נוסח בדוח"
     },
     "gmailBusiness": {
       "status": "ok",
-      "note": "3 חיפושים. טיוטה אחת (Eileen Lebowitz). חיפוש Stripe 7 ימים ריק"
+      "note": "חיפוש 2 ימים וסווף 30 יום בוצעו. חיפוש Stripe 7 ימים ריק. טיוטה אחת (Mike Larks) עם חורים"
     },
     "gmailPrivate": {
       "status": "ok",
-      "note": "Composio 2 ימים: נראו רק Uber ו-Fiverr, שאר ההודעות לא נבדקו לעומק"
+      "note": "Composio 2 ימים: Stripe payout 849.32$ ו-Uber, לא נבדק לעומק. סווף 30 יום פרטי לא בוצע"
     },
     "shopify": {
       "status": "ok",
-      "note": "הזמנות אחרונות #4354-#4356 ב-04.11 (161.10, 353.50, 39.69 דולר). customerMetrics לא עודכן"
+      "note": "הזמנות #4354-#4359 מ-04.11 עד 05.11 (39.69 עד 353.5 דולר). customerMetrics לא עודכן"
     },
     "stripe": {
       "status": "error",
-      "note": "Stripe MCP דורש אימות OAuth, סעיף 4 לא הורץ"
+      "note": "Stripe MCP דורש אימות OAuth, סעיף 4 לא הורץ. ממתין: Elaine Eisenberg כתבה בוואטסאפ ששילמה מקדמה 750$"
     },
     "autocalls": {
       "status": "ok",
-      "note": "7 שיחות מאז 03.11, אין שיחה אמיתית חדשה. Iris 28 שניות, ללא התחייבות"
+      "note": "13 שיחות מאז 04.11. Sandi 288 שניות (שיחה אמיתית). Dollie 34 שניות"
     },
     "calendar": {
-      "status": "error",
-      "note": "לא נסרק בריצה הזו"
+      "status": "ok",
+      "note": "טיסה לדייטונה 06.11 19:35, אירוע JNF אטלנטה הלילה"
     },
     "googleAnalytics": {
       "status": "error",
@@ -48,7 +48,7 @@
     },
     "whatsapp": {
       "status": "ok",
-      "note": "GREEN API: lastIncomingMessages 5 ימים, 87 הודעות, 19 צ'אטים. lastOutgoingMessages החזיר רשימה ריקה, לא ברור אם תקלה"
+      "note": "GREEN API: lastIncomingMessages (GET, 5 ימים) החזיר 103 הודעות מ-20 צ'אטים. lastOutgoingMessages החזיר ריק. נשלפה היסטוריה ל-5 צ'אטים"
     },
     "ads": {
       "status": "error",
@@ -62,74 +62,95 @@
   "needsAnswer": [
     {
       "name": "Elaine Eisenberg",
-      "why": "רוצה להזמין, שואלת על מקדמה באשראי, משלוח וזמן הכנה, ועל מחיר ל-24x36",
+      "why": "כתבה בוואטסאפ ששילמה מקדמה 750$ ושאלה על משלוח וזמן הכנה. עדיין לא נענו המחיר, המוקאפ והזמן",
       "channel": "WhatsApp",
-      "waitingDays": 0,
+      "waitingDays": 1,
+      "urgency": "high"
+    },
+    {
+      "name": "Carlos de la Parra Huerta",
+      "why": "שואל מ-28.10 אם אלברט יהיה באוטווה, כתב עכשיו Haven't heard d back",
+      "channel": "WhatsApp",
+      "waitingDays": 9,
       "urgency": "high"
     },
     {
       "name": "Marnie Gershowitz",
-      "why": "רוצים הדגמה חיה ויצירה לבית כנסת, מחכים לעלות משוערת מאז 01.11",
+      "why": "בית כנסת, רוצה הדגמה חיה, שואלת מחיר ואם אלברט בלונג איילנד במרץ",
       "channel": "WhatsApp",
-      "waitingDays": 4,
+      "waitingDays": 1,
       "urgency": "high"
     },
     {
-      "name": "Eileen Lebowitz",
-      "why": "שואלת מחיר פרינט של Light of Torah",
-      "channel": "Email",
-      "waitingDays": 0,
-      "urgency": "medium"
-    },
-    {
-      "name": "972506809308 (עברית, פרפרים)",
-      "why": "שואלת על ההבדל בין מודפס ללא מודפס, מתנה לאמא",
+      "name": "Betsy Distelburger",
+      "why": "מחכה לציור מעל שנה, שואלת אם נשאר בארה\"ב",
       "channel": "WhatsApp",
       "waitingDays": 1,
+      "urgency": "high"
+    },
+    {
+      "name": "Mike Larks",
+      "why": "שש שאלות על אירוע שיקגו, טיוטה עם חורים מחכה",
+      "channel": "Email",
+      "waitingDays": 1,
       "urgency": "medium"
     },
     {
-      "name": "Amber (+16084810721)",
-      "why": "הגיבה להודעה מ-02.11",
-      "channel": "Quo",
+      "name": "Eileen Lebowitz",
+      "why": "מחיר פרינט Light of Torah, טיוטה מ-05.11 מחכה",
+      "channel": "Email",
       "waitingDays": 1,
+      "urgency": "medium"
+    },
+    {
+      "name": "Amber",
+      "why": "הודעה חמה על אלברט, ללא מענה 2 ימים",
+      "channel": "Quo",
+      "waitingDays": 2,
       "urgency": "low"
     },
     {
       "name": "Jennifer (+18452458055)",
       "why": "ביקשה שיחה ביום שני 09.11 בסביבות 12:00",
       "channel": "Quo",
-      "waitingDays": 2,
+      "waitingDays": 3,
       "urgency": "medium"
+    },
+    {
+      "name": "Ellen Simon",
+      "why": "אהבה את הציורים החדשים: Maybe I need another",
+      "channel": "Email",
+      "waitingDays": 1,
+      "urgency": "low"
     }
   ],
   "newYesterday": [
     {
-      "name": "Eileen Lebowitz",
-      "source": "מייל (ניוזלטר)",
-      "detail": "מחיר פרינט Light of Torah"
+      "name": "Betsy Distelburger",
+      "source": "WhatsApp",
+      "detail": "הופנתה על ידי Andrea Bier, ציור שמחכה לו שנה"
     },
     {
-      "name": "972506809308",
-      "source": "WhatsApp",
-      "detail": "ציורי פרפרים במתנה"
+      "name": "Nica (+14042476545)",
+      "source": "Quo",
+      "detail": "פגשה את אלברט הלילה, רוצה We Will Dance Again 35x35, אלברט ענה"
+    },
+    {
+      "name": "Sandi",
+      "source": "Monday/Autocalls",
+      "detail": "שיחה 288 שניות, Light of Torah"
     }
   ],
   "replied": [
     {
-      "name": "Elaine Eisenberg",
-      "channel": "WhatsApp",
-      "said": "הולכת להזמין"
-    },
-    {
-      "name": "Marnie Gershowitz",
-      "channel": "WhatsApp",
-      "said": "הדגמה חיה"
-    },
-    {
-      "name": "Amber",
+      "name": "Debbie",
       "channel": "Quo",
-      "said": "ענתה להודעת היכרות"
+      "said": "ביקשה לבטל הזמנה כי עוברת דירה, אלברט ענה"
+    },
+    {
+      "name": "Ellen Simon, Lissa Sweeney, Laurie Reiskind",
+      "channel": "Email",
+      "said": "תגובות חיוביות לניוזלטר הציורים החדשים"
     }
   ],
   "revenue": {
@@ -137,61 +158,54 @@
     "cashNotTurnover": null,
     "openBalances": null,
     "currency": "USD",
-    "note": "לא חושב בריצה הזו. Stripe מנותק"
+    "note": "לא חושב מחדש בריצה הזו"
   },
   "draftsPrepared": [
     {
-      "name": "Eileen Lebowitz",
+      "name": "Mike Larks",
       "inbox": "business",
-      "gist": "מחירי פרינט כלליים, שאלה על גודל",
+      "gist": "תשובה לשש שאלות על אירוע שיקגו",
       "needsInput": true
     }
   ],
   "quoTasks": [],
   "mondayUpdated": {
-    "updated": 1,
-    "created": 2,
+    "updated": 3,
+    "created": 1,
     "details": [
-      "Elaine: הערה 05.11",
-      "נוצר Eileen Lebowitz",
-      "נוצר ליד וואטסאפ 972506809308"
+      "Elaine Eisenberg: הערה על 750$ ללא Amount Paid",
+      "Carlos: הערה",
+      "Marnie: הערה",
+      "נוצר Betsy Distelburger"
     ]
   },
   "faults": [
     {
-      "what": "Quo create-task חסום 402 (Open tasks limit reached), נוצרו 0 משימות",
-      "severity": "medium"
-    },
-    {
-      "what": "Stripe דורש OAuth, תשלומים לא נסרקו",
+      "what": "Stripe מנותק (OAuth). Elaine Eisenberg דיווחה על מקדמה 750$ שלא נרשמה",
       "severity": "high"
     },
     {
-      "what": "GREEN API lastOutgoingMessages החזיר ריק",
-      "severity": "low"
+      "what": "Quo create-task חסום 402, 23 משימות פתוחות ישנות מ-27.09 עד 04.10",
+      "severity": "high"
     },
     {
-      "what": "GA, Google Ads, Meta Ads ויומן לא נסרקו",
+      "what": "Make: הסצנריו leads from shop into flashy monday and manychat נעצר בשגיאה 04.11",
       "severity": "medium"
     },
     {
-      "what": "Make: סנריו leads from shop into flashy monday and manychat נעצר בשגיאה 04.11",
+      "what": "GA, Google Ads, Meta Ads לא נסרקו",
       "severity": "medium"
     }
   ],
-  "whatsappNote": "נסרק דרך GREEN API 05.11: 19 צ'אטים פעילים ב-5 ימים",
+  "whatsappNote": "נסרק 06.11 דרך GREEN API: 20 צ'אטים פעילים ב-5 ימים",
   "meetings": [
     {
-      "when": "09.11 12:00",
-      "who": "Jennifer (שיחה)"
+      "when": "06.11 19:35",
+      "who": "טיסה לדייטונה DL 2827"
     },
     {
-      "when": "01.12-03.12",
-      "who": "אירועי FIDF: וירג'יניה, DC, בולטימור"
-    },
-    {
-      "when": "26.11",
-      "who": "JNF Toronto, ערב עץ החיים"
+      "when": "05.11 לילה",
+      "who": "אירוע JNF אטלנטה"
     }
   ],
   "customerMetrics": {
