@@ -1,54 +1,54 @@
 {
-  "updatedAt": "2026-11-09T07:10:00+03:00",
-  "scanDate": "2026-11-09",
+  "updatedAt": "2026-11-11T07:15:00+03:00",
+  "scanDate": "2026-11-11",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "48 שעות: 17 רשומות. עודכנה sharon. CRM Tasks לא נסרק, לא נגעתי בתאריכי פעולה"
+      "note": "48 שעות: 4 רשומות (Miriam Engel, Nancy Marie, Tammy, Susan Ebner). CRM Tasks לא נסרק, לא נגעתי בתאריכי פעולה"
     },
     "quoMessages": {
       "status": "ok",
-      "note": "נסרק 14 יום, 44 שיחות. לא נוצרה משימה: Summer כתבה שתחזור אחרי שתסדר רכב, Cynthia אמרה שאין לה תקציב"
+      "note": "נסרק 14 יום, 41 שיחות פתוחות. 4 שיחות תלויות, אבל יצירת משימות נכשלה: 402 Open tasks limit reached (23 משימות ישנות מספטמבר עדיין פתוחות)"
     },
     "gmailBusiness": {
       "status": "ok",
-      "note": "3 חיפושים. 2 טיוטות (Eileen Lebowitz, Helen Sutker)"
+      "note": "3 חיפושים. 4 טיוטות (Kancher, Thea Thatcher, Joe Tuso, Barbara Wofsy)"
     },
     "gmailPrivate": {
       "status": "ok",
-      "note": "סווף 30 יום הורץ, 60 הודעות, בעיקר Stripe payout ו-Mercury. payout 2,765.06$ בדרך. נבדק ברמת כותרות בלבד"
+      "note": "סווף 30 יום, 60 הודעות, נבדק ברמת כותרות. פגישה עם עורך דין Wildes על ויזה, מועד 23.11 11:00 EST ממתין לאישור"
     },
     "shopify": {
-      "status": "ok",
-      "note": "הזמנות #4365-#4373 מ-07 עד 09.11. customerMetrics לא עודכן"
+      "status": "error",
+      "note": "שאילתת הזמנות נכשלה (Customer.email deprecated), לא תוקן בריצה. customerMetrics לא עודכן"
     },
     "stripe": {
       "status": "error",
-      "note": "Stripe MCP דורש אימות OAuth. סעיף 4 לא הורץ. Elaine Eisenberg כתבה ששילמה מקדמה 750$ ב-06.11 ועדיין לא נרשם"
+      "note": "Stripe MCP דורש אימות OAuth. סעיף 4 לא הורץ. Elaine Eisenberg עדיין ממתינה לרישום מקדמה 750$"
     },
     "autocalls": {
-      "status": "ok",
-      "note": "8 שיחות 08-09.11, כולן תא קולי או אין מענה. Susan Ebner 58 שניות, שיחה אמיתית"
+      "status": "error",
+      "note": "לא נסרק בריצה הזו"
     },
     "calendar": {
       "status": "ok",
-      "note": "טיסה לדייטונה 06.11 19:35, אירוע JNF אטלנטה הלילה"
+      "note": "מרים אנגל היום 17:00 ישראל. JNF סן דייגו מ-12.11"
     },
     "googleAnalytics": {
       "status": "error",
-      "note": "לא נסרק בריצה הזו"
+      "note": "לא הורץ בריצה הזו"
     },
     "googleAds": {
       "status": "error",
-      "note": "לא נסרק בריצה הזו"
+      "note": "לא הורץ בריצה הזו"
     },
     "metaAds": {
       "status": "error",
-      "note": "נקרא רק performance_trend, בלי הוצאה בדולרים"
+      "note": "לא הורץ בריצה הזו"
     },
     "whatsapp": {
       "status": "ok",
-      "note": "lastIncoming 95 הודעות, 21 צ'אטים פעילים, כולם נקראו בלי 429. lastOutgoing החזיר רשימה ריקה"
+      "note": "GREEN API: lastIncomingMessages החזיר 113 הודעות, 27 צ׳אטים. lastOutgoingMessages החזיר רשימה ריקה. היסטוריה ל-11 צ׳אטים, 7 נחסמו ב-429 ונקלטו בניסיון שני"
     },
     "ads": {
       "status": "error",
@@ -61,79 +61,146 @@
   },
   "needsAnswer": [
     {
-      "name": "sharon (יוסטון)",
-      "why": "שואלת איפה משלמים מקדמה, רוצה מקור 50x40 ממוסגר, כ-3,500$",
-      "channel": "WhatsApp",
-      "waitingDays": 0,
-      "urgency": "high"
-    },
-    {
-      "name": "Elaine Eisenberg",
-      "why": "כתבה ב-06.11 ששילמה מקדמה 750$, צריך לאשר ולרשום",
-      "channel": "WhatsApp",
-      "waitingDays": 3,
-      "urgency": "high"
-    },
-    {
-      "name": "לקוח 19142134887",
-      "why": "רוצה 60x40, שאלה כמה עולה, מחכה למחיר",
+      "name": "Sharon (WhatsApp)",
+      "why": "רוצה את הרקדנית הכחולה 40x50 ממוסגרת ושאלה איפה משלמים מקדמה מ-09.11. ממתינה ללינק",
       "channel": "WhatsApp",
       "waitingDays": 2,
       "urgency": "high"
     },
     {
-      "name": "Long Island synagogue 16317676898",
-      "why": "שואלת מחיר לדמו חי ואם אלברט ליד לונג איילנד במרץ",
-      "channel": "WhatsApp",
-      "waitingDays": 4,
-      "urgency": "medium"
-    },
-    {
-      "name": "Alyssa",
-      "why": "מבולבלת מ-143 קנדי, שואלת אם התמונות קטנות",
+      "name": "Irene Reiss (WhatsApp)",
+      "why": "ב-10.11 ביקשה לנצל הצעת הדפס נוסף כדי לקנות עוד יצירה. גם לינק יתרה פתוח מ-02.11",
       "channel": "WhatsApp",
       "waitingDays": 1,
-      "urgency": "medium"
+      "urgency": "high"
     },
     {
-      "name": "Robin Leavy",
-      "why": "מעוניינת ברקדנית ובלב, שואלת על תוכנית ב-JNF",
-      "channel": "WhatsApp",
+      "name": "Michael Kancher, CRJ Orlando",
+      "why": "140 נרשמים לאירוע שלישי הבא, צריך טיסה, לילות ורכב. טיוטה ממתינה להשלמה",
+      "channel": "Email",
       "waitingDays": 1,
-      "urgency": "medium"
+      "urgency": "high"
     },
     {
-      "name": "Eileen Lebowitz",
-      "why": "שואלת מחיר פרינט Light of Torah",
-      "channel": "Email",
-      "waitingDays": 4,
-      "urgency": "medium"
-    },
-    {
-      "name": "Helen Sutker",
-      "why": "שואלת אם אלברט יגיע לדאלאס",
-      "channel": "Email",
+      "name": "Tracie (אירוע טורונטו)",
+      "why": "שואלת על כוסות וצנצנות לחץ וגם אם עם חמסה צריך פחות צבעים. 110 נרשמים",
+      "channel": "WhatsApp",
       "waitingDays": 0,
+      "urgency": "high"
+    },
+    {
+      "name": "Murali",
+      "why": "שאל מחיר ל-3 על 3 רגל",
+      "channel": "WhatsApp",
+      "waitingDays": 1,
+      "urgency": "medium"
+    },
+    {
+      "name": "Denise",
+      "why": "מעוניינת בגודל כ-2 על 4 רגל, חדר שינה או אוכל, מחכה להצעה",
+      "channel": "WhatsApp",
+      "waitingDays": 1,
+      "urgency": "medium"
+    },
+    {
+      "name": "Karen Silber",
+      "why": "רוצה את ספר האמנות, קנתה הדפס באירוע",
+      "channel": "WhatsApp",
+      "waitingDays": 0,
+      "urgency": "medium"
+    },
+    {
+      "name": "Joseph Tuso",
+      "why": "הזמנה #4336 מתנה, מתי יישלח. טיוטה ממתינה להשלמה",
+      "channel": "Email",
+      "waitingDays": 2,
+      "urgency": "medium"
+    },
+    {
+      "name": "Barbara Wofsy",
+      "why": "שאלה תאריכים בקליפורניה וניו ג׳רזי. טיוטה ממתינה להשלמה",
+      "channel": "Email",
+      "waitingDays": 2,
+      "urgency": "medium"
+    },
+    {
+      "name": "Bronna",
+      "why": "כתבה ב-09.11 תגיד לי יום ושעה למפגש",
+      "channel": "Quo",
+      "waitingDays": 2,
+      "urgency": "medium"
+    },
+    {
+      "name": "Janet +16265593939",
+      "why": "שאלה מחיר ב-31.10, 11 ימים בלי מחיר",
+      "channel": "Quo",
+      "waitingDays": 11,
+      "urgency": "medium"
+    },
+    {
+      "name": "Jennifer +18452458055",
+      "why": "ביקשה שיחה ב-09.11 בצהריים, לא ברור אם בוצעה",
+      "channel": "Quo",
+      "waitingDays": 8,
+      "urgency": "medium"
+    },
+    {
+      "name": "Eliot G (Temple Israel, West Bloomfield)",
+      "why": "ביקש לארגן אירוע במישיגן. אין רשומה במנדיי, חסר מייל",
+      "channel": "WhatsApp",
+      "waitingDays": 2,
+      "urgency": "medium"
+    },
+    {
+      "name": "Thea Thatcher",
+      "why": "שאלה על חתימה במשלוח והחזקה לאיסוף. טיוטה ממתינה להשלמה",
+      "channel": "Email",
+      "waitingDays": 1,
       "urgency": "low"
     }
   ],
   "newYesterday": [
     {
-      "name": "Susan Ebner",
-      "source": "Events page",
-      "detail": "מארגנת אירוע תורמים בדלאוור, 125-150 אנשים, שאלה על 2027-2028"
+      "name": "Miriam Engel",
+      "source": "מנדיי (טופס), JLIC",
+      "detail": "רוצה אירוע לארגון ללא מטרות רווח. ייעוץ קבוע להיום 17:00 שעון ישראל"
+    },
+    {
+      "name": "Nancy Marie",
+      "source": "מנדיי",
+      "detail": "תא קולי בלבד"
+    },
+    {
+      "name": "Tammy",
+      "source": "מנדיי, דף אירועים",
+      "detail": "אירוע ציור במקדש בבוורלי MA, תא קולי"
     }
   ],
   "replied": [
     {
-      "name": "Elaine Eisenberg",
+      "name": "Irene Reiss",
       "channel": "WhatsApp",
-      "said": "שילמה מקדמה 750$ ב-06.11"
+      "said": "האירוע היה מעולה, רוצה עוד יצירה"
     },
     {
-      "name": "Nica",
-      "channel": "Quo",
-      "said": "רוצה We Will Dance Again 35x35, קיבלה לינק"
+      "name": "Karen Silber",
+      "channel": "WhatsApp",
+      "said": "רוצה את ספר האמנות"
+    },
+    {
+      "name": "Murali",
+      "channel": "WhatsApp",
+      "said": "3 על 3 רגל ומחיר"
+    },
+    {
+      "name": "Denise",
+      "channel": "WhatsApp",
+      "said": "2 על 4 רגל"
+    },
+    {
+      "name": "Anthony Shapiro",
+      "channel": "WhatsApp",
+      "said": "פתח את היצירה אצל המסגר, מרוצה מאוד"
     }
   ],
   "revenue": {
@@ -141,53 +208,80 @@
     "cashNotTurnover": null,
     "openBalances": null,
     "currency": "USD",
-    "note": "לא חושב מחדש בריצה הזו"
+    "note": "לא חושב מחדש בריצה הזו. Stripe מנותק"
   },
   "draftsPrepared": [
     {
-      "name": "Eileen Lebowitz",
+      "name": "Michael Kancher",
       "inbox": "business",
-      "gist": "מחיר פרינט Light of Torah",
+      "gist": "טיסה ולילות לאירוע אורלנדו",
       "needsInput": true
     },
     {
-      "name": "Helen Sutker",
+      "name": "Thea Thatcher",
       "inbox": "business",
-      "gist": "דאלאס",
+      "gist": "חתימה והחזקה במשלוח",
+      "needsInput": true
+    },
+    {
+      "name": "Joseph Tuso",
+      "inbox": "business",
+      "gist": "מועד משלוח הזמנה 4336",
+      "needsInput": true
+    },
+    {
+      "name": "Barbara Wofsy",
+      "inbox": "business",
+      "gist": "תאריכי קליפורניה וניו ג׳רזי",
       "needsInput": true
     }
   ],
   "quoTasks": [],
   "mondayUpdated": {
-    "updated": 1,
+    "updated": 4,
     "created": 0,
     "details": [
-      "sharon: Conversation Active, WhatsApp, הערות"
+      "Irene Reiss: הערה",
+      "Karen Silber: Unreachable ל-Conversation Active",
+      "Murali: Unreachable ל-Conversation Active",
+      "Denise: Unreachable ל-Conversation Active"
     ]
   },
   "faults": [
     {
-      "what": "Stripe מנותק (OAuth), Elaine Eisenberg 750$ לא נרשם",
+      "what": "Quo create-task נכשל 402 Open tasks limit reached. 4 משימות לא נוצרו (Bronna, Janet, Jennifer, +16178427683). יש 23 משימות פתוחות ישנות מ-26 עד 30 ספטמבר, כדאי לסגור",
       "severity": "high"
     },
     {
-      "what": "כפילויות: Sandi x3 (ssander@knightsigns.com), Kathy x2 (reed55kathy@gmail.com)",
+      "what": "Stripe MCP לא מאומת, סעיף 4 לא הורץ ימים רצופים",
+      "severity": "high"
+    },
+    {
+      "what": "Sharon: מחכה ללינק מקדמה כבר יומיים. Irene Reiss: לינק יתרה פתוח מ-02.11",
+      "severity": "high"
+    },
+    {
+      "what": "Sandi (ssander@knightsigns.com) כפולה 3 פעמים במנדיי, 3338576739 3338576760 3338571545",
       "severity": "low"
     },
     {
-      "what": "GA, Google Ads והוצאת מטא לא נסרקו",
+      "what": "Tracie (טורונטו) ו-Renee Santangelo לא נמצאו במנדיי לפי טלפון. לא נוצרו רשומות, אין מייל",
+      "severity": "low"
+    },
+    {
+      "what": "לא הורצו: Shopify (שאילתה נכשלה), Autocalls, Google Analytics, Google Ads, Meta",
       "severity": "medium"
     }
   ],
-  "whatsappNote": "נסרק 09.11 דרך GREEN API: 21 צ'אטים פעילים ב-5 ימים",
+  "whatsappNote": "נסרק 11.11 דרך GREEN API: 27 צ׳אטים פעילים ב-5 ימים",
   "meetings": [
     {
-      "when": "08.11 לילה",
-      "who": "Temple Beth-El, Ormond Beach"
+      "when": "11.11 17:00 ישראל",
+      "who": "Miriam Engel, ייעוץ"
     },
     {
-      "when": "09.11 בוקר",
-      "who": "שיחה עם Caroline (Quo)"
+      "when": "12.11 עד 15.11",
+      "who": "כנס JNF, סן דייגו"
     }
   ],
   "customerMetrics": {
