@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-13T08:10:00+02:00",
+  "updatedAt": "2026-11-13T20:27:45+02:00",
   "sources": {
     "monday": {
       "status": "ok",
@@ -18,8 +18,8 @@
       "note": ""
     },
     "googleAnalytics": {
-      "status": "ok",
-      "note": ""
+      "status": "error",
+      "note": "GA4 API חסום: 429 Exhausted server errors quota, חוזר בתוך שעה. periods.*.analytics ו-funnel נשארו מהריצה הקודמת."
     }
   },
   "metaAccountNote": "חשבון Albert Levi Art (USD) בלבד, חשבון ILS בלי הוצאה ב-30 הימים האחרונים",
@@ -31,10 +31,20 @@
   "periods": {
     "today": {
       "site": {
-        "revenue": 136.89,
-        "orders": 1
+        "revenue": 837.09,
+        "orders": 3
       },
       "byState": [
+        {
+          "state": "NJ",
+          "revenue": 404.1,
+          "orders": 1
+        },
+        {
+          "state": "CT",
+          "revenue": 296.1,
+          "orders": 1
+        },
         {
           "state": "TX",
           "revenue": 136.89,
@@ -42,19 +52,19 @@
         }
       ],
       "repeatCustomers": {
-        "count": 0,
-        "totalCustomers": 1,
-        "percent": 0.0
+        "count": 1,
+        "totalCustomers": 3,
+        "percent": 33.3
       },
       "closedDeals": {
         "count": 0,
         "revenue": 0
       },
       "spendBreakdown": {
-        "meta": 4.75,
-        "google": 0.29
+        "meta": 128.52,
+        "google": 12.28
       },
-      "spend": 5.04,
+      "spend": 140.8,
       "analytics": {
         "sessions": 644,
         "transactions": 2
@@ -94,10 +104,10 @@
         "revenue": 0
       },
       "spendBreakdown": {
-        "meta": 293.14,
+        "meta": 294.9,
         "google": 14.32
       },
-      "spend": 307.46,
+      "spend": 309.22,
       "analytics": {
         "sessions": 315,
         "transactions": 2
@@ -112,28 +122,28 @@
     },
     "last3d": {
       "site": {
-        "revenue": 1104.39,
-        "orders": 5
+        "revenue": 1804.59,
+        "orders": 7
       },
       "byState": [
+        {
+          "state": "NJ",
+          "revenue": 556.2,
+          "orders": 2
+        },
         {
           "state": "OK",
           "revenue": 467.1,
           "orders": 1
         },
         {
+          "state": "CT",
+          "revenue": 456.3,
+          "orders": 2
+        },
+        {
           "state": "MO",
           "revenue": 188.1,
-          "orders": 1
-        },
-        {
-          "state": "CT",
-          "revenue": 160.2,
-          "orders": 1
-        },
-        {
-          "state": "NJ",
-          "revenue": 152.1,
           "orders": 1
         },
         {
@@ -143,19 +153,19 @@
         }
       ],
       "repeatCustomers": {
-        "count": 1,
-        "totalCustomers": 5,
-        "percent": 20.0
+        "count": 2,
+        "totalCustomers": 7,
+        "percent": 28.6
       },
       "closedDeals": {
         "count": 0,
         "revenue": 0
       },
       "spendBreakdown": {
-        "meta": 996.38,
-        "google": 24.51
+        "meta": 998.14,
+        "google": 36.5
       },
-      "spend": 1020.89,
+      "spend": 1034.64,
       "analytics": {
         "sessions": 1793,
         "transactions": 6
@@ -170,8 +180,8 @@
     },
     "last7d": {
       "site": {
-        "revenue": 3800.54,
-        "orders": 16
+        "revenue": 4500.74,
+        "orders": 18
       },
       "byState": [
         {
@@ -180,9 +190,19 @@
           "orders": 2
         },
         {
+          "state": "NJ",
+          "revenue": 556.2,
+          "orders": 2
+        },
+        {
           "state": "OK",
           "revenue": 467.1,
           "orders": 1
+        },
+        {
+          "state": "CT",
+          "revenue": 456.3,
+          "orders": 2
         },
         {
           "state": "AZ",
@@ -215,16 +235,6 @@
           "orders": 1
         },
         {
-          "state": "CT",
-          "revenue": 160.2,
-          "orders": 1
-        },
-        {
-          "state": "NJ",
-          "revenue": 152.1,
-          "orders": 1
-        },
-        {
           "state": "MA",
           "revenue": 80.1,
           "orders": 1
@@ -236,19 +246,19 @@
         }
       ],
       "repeatCustomers": {
-        "count": 3,
-        "totalCustomers": 16,
-        "percent": 18.8
+        "count": 4,
+        "totalCustomers": 18,
+        "percent": 22.2
       },
       "closedDeals": {
         "count": 0,
         "revenue": 0
       },
       "spendBreakdown": {
-        "meta": 2325.33,
+        "meta": 2327.09,
         "google": 86.32
       },
-      "spend": 2411.65,
+      "spend": 2413.41,
       "analytics": {
         "sessions": 3446,
         "transactions": 23
@@ -263,8 +273,8 @@
     },
     "last30d": {
       "site": {
-        "revenue": 10698.07,
-        "orders": 45
+        "revenue": 11398.27,
+        "orders": 47
       },
       "byState": [
         {
@@ -284,7 +294,12 @@
         },
         {
           "state": "CT",
-          "revenue": 545.4,
+          "revenue": 841.5,
+          "orders": 4
+        },
+        {
+          "state": "NJ",
+          "revenue": 585.9,
           "orders": 3
         },
         {
@@ -338,11 +353,6 @@
           "orders": 1
         },
         {
-          "state": "NJ",
-          "revenue": 181.8,
-          "orders": 2
-        },
-        {
           "state": "MI",
           "revenue": 80.1,
           "orders": 1
@@ -359,19 +369,19 @@
         }
       ],
       "repeatCustomers": {
-        "count": 7,
-        "totalCustomers": 44,
-        "percent": 15.9
+        "count": 8,
+        "totalCustomers": 46,
+        "percent": 17.4
       },
       "closedDeals": {
         "count": 4,
         "revenue": 10883
       },
       "spendBreakdown": {
-        "meta": 8782.94,
+        "meta": 8784.7,
         "google": 259.33
       },
-      "spend": 9042.27,
+      "spend": 9044.03,
       "analytics": {
         "sessions": 10731,
         "transactions": 45
@@ -386,8 +396,8 @@
     },
     "monthToDate": {
       "site": {
-        "revenue": 6295.41,
-        "orders": 28
+        "revenue": 6995.61,
+        "orders": 30
       },
       "byState": [
         {
@@ -401,9 +411,19 @@
           "orders": 6
         },
         {
+          "state": "NJ",
+          "revenue": 556.2,
+          "orders": 2
+        },
+        {
           "state": "OK",
           "revenue": 467.1,
           "orders": 1
+        },
+        {
+          "state": "CT",
+          "revenue": 456.3,
+          "orders": 2
         },
         {
           "state": "OH",
@@ -451,16 +471,6 @@
           "orders": 1
         },
         {
-          "state": "CT",
-          "revenue": 160.2,
-          "orders": 1
-        },
-        {
-          "state": "NJ",
-          "revenue": 152.1,
-          "orders": 1
-        },
-        {
           "state": "MI",
           "revenue": 80.1,
           "orders": 1
@@ -472,19 +482,19 @@
         }
       ],
       "repeatCustomers": {
-        "count": 4,
-        "totalCustomers": 27,
-        "percent": 14.8
+        "count": 5,
+        "totalCustomers": 29,
+        "percent": 17.2
       },
       "closedDeals": {
         "count": 0,
         "revenue": 0
       },
       "spendBreakdown": {
-        "meta": 4032.18,
-        "google": 152.42
+        "meta": 4157.71,
+        "google": 164.41
       },
-      "spend": 4184.6,
+      "spend": 4322.12,
       "analytics": {
         "sessions": 4848,
         "transactions": 27
@@ -806,11 +816,11 @@
       },
       {
         "date": "2026-11-13",
-        "siteRevenue": 136.89,
+        "siteRevenue": 837.09,
         "closedDealsRevenue": 0,
-        "spend": 5.04,
-        "roasSite": 27.16,
-        "roasTotal": 27.16
+        "spend": 140.8,
+        "roasSite": 5.94,
+        "roasTotal": 5.94
       }
     ]
   }
