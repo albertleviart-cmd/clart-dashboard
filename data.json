@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-15T08:10:00+02:00",
+  "updatedAt": "2026-11-15T20:10:00+02:00",
   "sources": {
     "monday": {
       "status": "ok",
@@ -51,20 +51,20 @@
         "revenue": 0
       },
       "spendBreakdown": {
-        "meta": 6.47,
-        "google": 3.99
+        "meta": 120.05,
+        "google": 10.5
       },
-      "spend": 10.46,
+      "spend": 130.55,
       "analytics": {
-        "sessions": 226,
-        "transactions": 2
+        "sessions": 39,
+        "transactions": 0
       },
       "funnel": {
-        "visitors": 226,
-        "productViews": 231,
-        "addToCart": 6,
-        "checkout": 3,
-        "purchases": 2
+        "visitors": 39,
+        "productViews": 33,
+        "addToCart": 5,
+        "checkout": 0,
+        "purchases": 0
       }
     },
     "yesterday": {
@@ -89,19 +89,19 @@
         "revenue": 0
       },
       "spendBreakdown": {
-        "meta": 219.01,
+        "meta": 219.12,
         "google": 24.21
       },
-      "spend": 243.22,
+      "spend": 243.33,
       "analytics": {
-        "sessions": 303,
+        "sessions": 268,
         "transactions": 2
       },
       "funnel": {
-        "visitors": 303,
-        "productViews": 301,
-        "addToCart": 4,
-        "checkout": 2,
+        "visitors": 268,
+        "productViews": 250,
+        "addToCart": 6,
+        "checkout": 3,
         "purchases": 2
       }
     },
@@ -142,18 +142,18 @@
         "revenue": 0
       },
       "spendBreakdown": {
-        "meta": 776.67,
-        "google": 47.96
+        "meta": 776.78,
+        "google": 54.47
       },
-      "spend": 824.63,
+      "spend": 831.25,
       "analytics": {
-        "sessions": 1284,
+        "sessions": 1370,
         "transactions": 7
       },
       "funnel": {
-        "visitors": 1284,
-        "productViews": 1152,
-        "addToCart": 18,
+        "visitors": 1370,
+        "productViews": 1204,
+        "addToCart": 23,
         "checkout": 8,
         "purchases": 7
       }
@@ -215,19 +215,19 @@
         "revenue": 0
       },
       "spendBreakdown": {
-        "meta": 2252.33,
+        "meta": 2252.44,
         "google": 114.06
       },
-      "spend": 2366.39,
+      "spend": 2366.5,
       "analytics": {
-        "sessions": 3067,
+        "sessions": 3195,
         "transactions": 16
       },
       "funnel": {
-        "visitors": 3067,
-        "productViews": 2486,
-        "addToCart": 81,
-        "checkout": 15,
+        "visitors": 3195,
+        "productViews": 2591,
+        "addToCart": 98,
+        "checkout": 21,
         "purchases": 16
       }
     },
@@ -338,20 +338,20 @@
         "revenue": 8083
       },
       "spendBreakdown": {
-        "meta": 8635.76,
+        "meta": 8635.87,
         "google": 278.06
       },
-      "spend": 8913.82,
+      "spend": 8913.93,
       "analytics": {
-        "sessions": 10592,
-        "transactions": 45
+        "sessions": 10786,
+        "transactions": 46
       },
       "funnel": {
-        "visitors": 10592,
-        "productViews": 8507,
-        "addToCart": 330,
-        "checkout": 202,
-        "purchases": 45
+        "visitors": 10786,
+        "productViews": 8724,
+        "addToCart": 350,
+        "checkout": 203,
+        "purchases": 46
       }
     },
     "monthToDate": {
@@ -451,35 +451,35 @@
         "revenue": 0
       },
       "spendBreakdown": {
-        "meta": 4517.43,
-        "google": 200.09
+        "meta": 4631.12,
+        "google": 206.6
       },
-      "spend": 4717.52,
+      "spend": 4837.72,
       "analytics": {
-        "sessions": 5241,
-        "transactions": 30
+        "sessions": 5599,
+        "transactions": 32
       },
       "funnel": {
-        "visitors": 5241,
-        "productViews": 4391,
-        "addToCart": 128,
-        "checkout": 48,
-        "purchases": 30
+        "visitors": 5599,
+        "productViews": 4749,
+        "addToCart": 156,
+        "checkout": 55,
+        "purchases": 32
       }
     }
   },
   "leadVelocity": {
-    "today": 1,
+    "today": 3,
     "yesterday": 3,
-    "last7d": 19,
-    "last14d": 57,
-    "last30d": 154
+    "last7d": 21,
+    "last14d": 59,
+    "last30d": 156
   },
   "leadSources": {
     "today": {
-      "total": 1,
+      "total": 3,
       "form": 1,
-      "other": 0
+      "other": 2
     },
     "yesterday": {
       "total": 3,
@@ -487,26 +487,26 @@
       "other": 0
     },
     "last7d": {
-      "total": 19,
+      "total": 21,
       "form": 9,
-      "other": 10
+      "other": 12
     },
     "last14d": {
-      "total": 57,
+      "total": 59,
       "form": 16,
-      "other": 41
+      "other": 43
     },
     "last30d": {
-      "total": 154,
+      "total": 156,
       "form": 42,
-      "other": 112
+      "other": 114
     }
   },
   "funnel": [
     {
       "key": "new",
       "label": "ליד חדש",
-      "count": 39
+      "count": 41
     },
     {
       "key": "working",
@@ -539,7 +539,7 @@
       "count": 593
     }
   ],
-  "totalLeads": 1842,
+  "totalLeads": 1844,
   "history": {
     "days": [
       {
@@ -778,9 +778,9 @@
         "date": "2026-11-15",
         "siteRevenue": 298.08,
         "closedDealsRevenue": 0,
-        "spend": 10.46,
-        "roasSite": 28.5,
-        "roasTotal": 28.5
+        "spend": 130.55,
+        "roasSite": 2.28,
+        "roasTotal": 2.28
       }
     ]
   }
