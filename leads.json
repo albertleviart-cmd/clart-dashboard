@@ -1,54 +1,54 @@
 {
-  "updatedAt": "2026-11-14T07:30:00+02:00",
-  "scanDate": "2026-11-14",
+  "updatedAt": "2026-11-15T07:10:00+02:00",
+  "scanDate": "2026-11-15",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "48 שעות: 7 רשומות. נוצרו 3 מוואטסאפ: Yoni Padan, Diana Sklar, Belinda Schneeweiss. CRM Tasks לא נסרק, לא נגעתי בתאריכי פעולה"
+      "note": "48 שעות: 6 רשומות. עודכן Yoni Padan, נוצר Larry Dubin. CRM Tasks לא נסרק, לא נגעתי בתאריכי פעולה ובביטולי משימות כפולות"
     },
     "quoMessages": {
       "status": "ok",
-      "note": "נסרק 14 יום, 37 שיחות פתוחות. create-task נכשל שוב: 402 Open tasks limit reached"
+      "note": "נסרק 14 יום, 34 שיחות פתוחות. create-task נכשל שוב: 402 Open tasks limit (23 משימות פתוחות ישנות מספטמבר-אוקטובר)"
     },
     "gmailBusiness": {
       "status": "ok",
-      "note": "3 חיפושים. סווף 30 יום עם סינון category:primary החזיר חריגת גודל ולא נקרא. 2 טיוטות חדשות: Miriam Engel, Riverside Chanukah"
+      "note": "newer_than:2d, חיפוש buy.stripe.com (ריק), וסווף 30 יום (דף ראשון, 201 שרשורים, לא נסרק במלואו). טיוטה חדשה: Larry Dubin"
     },
     "gmailPrivate": {
-      "status": "error",
-      "note": "לא הורץ בריצה הזו (Composio לא נקרא). הערך הישן נשמר"
+      "status": "ok",
+      "note": "Composio, 2 ימים: אין פנייה מלקוח. Etsy sale 137.55$ (David Treyster), סבב כשלונות GitHub albert-art-dashboard, Printseekers breach"
     },
     "shopify": {
-      "status": "error",
-      "note": "לא הורץ בריצה הזו. customerMetrics לא עודכן"
+      "status": "ok",
+      "note": "5 הזמנות 13-14.11. customerMetrics לא חושב מחדש בריצה הזו"
     },
     "stripe": {
       "status": "ok",
-      "note": "GetCharges 100, החלון מגיע רק עד 06.11: ייתכן שנכנסו יותר מ-100 חיובים ב-30 יום. חיובים חדשים עם פרטי משלם: אין. חיובים בלי פרטי משלם 13.11 ו-14.11 כולל 3,600$, 3,800$ ו-4,100$ ב-13.11, לא נרשמו, ממתינים לאלברט"
+      "note": "GetCharges 100 מכסה רק עד 06.11 ב-30 יום: יש יותר מ-100 חיובים. כמעט כולם בלי פרטי משלם. עם פרטי משלם: Shaun Liebskind (כבר מסומן) ו-Elaine Eisenberg (כבר מסומנת). לא נרשם חיוב חדש"
     },
     "autocalls": {
       "status": "ok",
-      "note": "3 שיחות מ-12.11: 2 ל-Dana stover (30 ו-102 שניות), 1 ל-Alejandro (51 שניות)"
+      "note": "2 שיחות 13.11 ל-+18643464588, בדיקות Rachel Test. אין שיחה אמיתית חדשה"
     },
     "calendar": {
       "status": "ok",
       "note": "כנס JNF סן דייגו עד 15.11. ייעוץ Alejandro Altaras 16.11 10:00 ET"
     },
     "googleAnalytics": {
-      "status": "error",
-      "note": "לא הורץ"
+      "status": "ok",
+      "note": "נכס 415263029"
     },
     "googleAds": {
-      "status": "error",
-      "note": "לא הורץ"
+      "status": "ok",
+      "note": "7 ימים: 342.17$ הוצאה, 135 קליקים, 4 המרות, ערך 6,527$"
     },
     "metaAds": {
-      "status": "error",
-      "note": "לא הורץ"
+      "status": "ok",
+      "note": "רק רשימת קמפיינים: 3 פעילים (Sales Prints 29.10, Website Leads 14.10, Temple Emanuel WL). הוצאה ל-7 ימים לא נשלפה"
     },
     "whatsapp": {
       "status": "ok",
-      "note": "GREEN API: 120 הודעות נכנסות ב-5 ימים, כ-24 צ׳אטים. lastOutgoing החזיר ריק. לא עודכן מנדיי מהוואטסאפ בריצה הזו"
+      "note": "GREEN API: 106 הודעות נכנסות ב-5 ימים, 25 צ'אטים. lastOutgoing ריק. נקראו 12 הצ'אטים הפעילים ביותר"
     },
     "ads": {
       "status": "error",
@@ -61,127 +61,119 @@
   },
   "needsAnswer": [
     {
-      "name": "Yoni Padan",
-      "why": "רוצה ציור מקורי עם מסגרת זהב, שלח תמונה (וואטסאפ)",
-      "channel": "WhatsApp",
+      "name": "Larry Dubin",
+      "why": "קנה We Will Dance Again באירוע, שואל אם Silent Flight המקור בשמן זמין. ביקש טלפון 414-915-7834",
+      "channel": "Email business",
       "waitingDays": 0,
       "urgency": "high"
     },
     {
-      "name": "Belinda Schneeweiss",
-      "why": "הדפס עץ החיים 20x30 לקנדה, שואלת על משלוח ועלויות",
+      "name": "Yoni Padan",
+      "why": "רוצה מקור עם מסגרת זהב, גר ב-Broomall PA ושאל איפה אלברט. ימדוד קיר וישלח תמונות",
+      "channel": "WhatsApp",
+      "waitingDays": 1,
+      "urgency": "high"
+    },
+    {
+      "name": "Mitch Cabin",
+      "why": "קנה עץ החיים בכנס באורמונד ביץ', שואל מה המידות",
       "channel": "WhatsApp",
       "waitingDays": 2,
+      "urgency": "medium"
+    },
+    {
+      "name": "Belinda Schneeweiss",
+      "why": "הדפס עץ החיים 20x30 לקנדה, שאלה על משלוח ועלויות",
+      "channel": "WhatsApp",
+      "waitingDays": 3,
       "urgency": "high"
     },
     {
       "name": "Diana Sklar",
       "why": "שאלה כמה גדולה יצירה מריל באינסטגרם",
       "channel": "WhatsApp",
-      "waitingDays": 0,
+      "waitingDays": 1,
       "urgency": "medium"
     },
     {
       "name": "Miriam Engel (JLIC)",
-      "why": "שואלת מה העלות לתוכנית ל-30 עד 50 איש דרך כרטיסים. טיוטה מחכה לסכום",
+      "why": "עלות לתוכנית ל-30 עד 50 איש. טיוטה מחכה לסכום",
       "channel": "Email business",
-      "waitingDays": 1,
+      "waitingDays": 2,
       "urgency": "high"
     },
     {
       "name": "Rabbi Shmuel Fuss (Riverside)",
-      "why": "פסטיבל חנוכה 7.12, שואל על זמינות ושכר",
+      "why": "פסטיבל חנוכה 7.12, זמינות ושכר. טיוטה מחכה",
       "channel": "Email business",
-      "waitingDays": 1,
+      "waitingDays": 2,
+      "urgency": "high"
+    },
+    {
+      "name": "Rachelle Weiss Crane (JCC Dallas)",
+      "why": "מעוניינים להביא את התוכנית לדאלאס",
+      "channel": "Email business",
+      "waitingDays": 3,
       "urgency": "high"
     },
     {
       "name": "Jon Wittenberg",
-      "why": "דמי יבוא קנדיים דחופים, הלקוח מסרב לשלם",
+      "why": "דמי יבוא קנדיים, מסרב לשלם, שלח עוד מייל 13.11",
       "channel": "Email + Quo",
-      "waitingDays": 0,
-      "urgency": "high"
-    },
-    {
-      "name": "Sandi Sander",
-      "why": "רוצה כרטיסים לאירוע בטורונטו, האתר מבקש מנוי",
-      "channel": "Monday form",
-      "waitingDays": 0,
-      "urgency": "medium"
-    },
-    {
-      "name": "Bronna",
-      "why": "ביקשה יום ושעה לשיחה ב-09.11",
-      "channel": "Quo",
-      "waitingDays": 5,
-      "urgency": "high"
-    },
-    {
-      "name": "Jennifer",
-      "why": "ביקשה טלפון ב-09.11 בצהריים",
-      "channel": "Quo",
-      "waitingDays": 11,
+      "waitingDays": 2,
       "urgency": "high"
     },
     {
       "name": "Rhoda Yaverbaum",
       "why": "הזמנה 4307 שולמה ולא התקבלו 3 קנבסים. טיוטה מחכה",
       "channel": "Email business",
-      "waitingDays": 2,
+      "waitingDays": 3,
       "urgency": "high"
     },
     {
-      "name": "Sharon G",
-      "why": "משלוח לקנדה. טיוטה מחכה לזמן ועלות",
-      "channel": "Email business",
-      "waitingDays": 2,
-      "urgency": "medium"
+      "name": "Bronna",
+      "why": "ביקשה יום ושעה לשיחה ב-09.11",
+      "channel": "Quo",
+      "waitingDays": 6,
+      "urgency": "high"
     },
     {
-      "name": "Eliot Globerson",
-      "why": "שואל איפה לקנות חולצה. טיוטה מחכה",
-      "channel": "Email business",
+      "name": "Jennifer",
+      "why": "ביקשה טלפון ב-09.11 בצהריים",
+      "channel": "Quo",
+      "waitingDays": 12,
+      "urgency": "high"
+    },
+    {
+      "name": "Sandi Sander",
+      "why": "רוצה כרטיסים לאירוע בטורונטו, האתר מבקש מנוי",
+      "channel": "Monday form",
       "waitingDays": 1,
-      "urgency": "low"
+      "urgency": "medium"
     }
   ],
   "newYesterday": [
     {
-      "name": "Sandi Sander",
-      "source": "טופס Events",
-      "detail": "קלגרי, רוצה כרטיסים לאירוע בטורונטו"
+      "name": "Larry Dubin",
+      "source": "Email business",
+      "detail": "קונה קיים, שואל על Silent Flight. נוצרה רשומה"
     },
     {
-      "name": "Yoni Padan",
-      "source": "WhatsApp",
-      "detail": "רוצה ציור מקורי, נוצרה רשומה"
-    },
-    {
-      "name": "Diana Sklar",
-      "source": "WhatsApp",
-      "detail": "שאלה על גודל יצירה, נוצרה רשומה"
-    },
-    {
-      "name": "Belinda Schneeweiss",
-      "source": "WhatsApp",
-      "detail": "הדפס עץ החיים לקנדה, נוצרה רשומה"
+      "name": "Rachelle Weiss Crane (JCC Dallas)",
+      "source": "Email business",
+      "detail": "פנייה לאירוע בדאלאס, ממליצה Esther Rose. אין רשומה, לבדוק"
     }
   ],
   "replied": [
     {
-      "name": "Miriam Engel",
-      "channel": "Email",
-      "said": "30 עד 50 איש דרך כרטיסים, כמה העלות"
-    },
-    {
-      "name": "Rabbi Shawn Hazani (Har Zion)",
-      "channel": "Email",
-      "said": "מבטלים את אירוע 7.3"
-    },
-    {
-      "name": "Denise",
+      "name": "Yoni Padan",
       "channel": "WhatsApp",
-      "said": "צריכה למדוד קיר, תחזור ב-21.11"
+      "said": "ימדוד ויעביר תמונות, גר בפילדלפיה"
+    },
+    {
+      "name": "Nancy Brems-Osborne",
+      "channel": "Email",
+      "said": "צריכה לחכות, כסף תפוס במעבר דירה"
     }
   ],
   "revenue": {
@@ -189,7 +181,7 @@
     "cashNotTurnover": null,
     "openBalances": null,
     "currency": "USD",
-    "note": "לא חושב מחדש בריצה הזו. Stripe חזר: 3 השלמות/מקדמות נרשמו, 2 רשומות חדשות. רישומי Close Date לא נוגעו"
+    "note": "לא חושב מחדש. Shopify 13-14.11: 5 הזמנות, 1,305.04$"
   },
   "draftsPrepared": [
     {
@@ -221,35 +213,50 @@
       "inbox": "business",
       "gist": "איפה ההזמנה #4307",
       "needsInput": true
+    },
+    {
+      "name": "Larry Dubin",
+      "inbox": "business",
+      "gist": "תשובה על Silent Flight, חור למחיר וזמינות",
+      "needsInput": true
     }
   ],
   "quoTasks": [],
   "mondayUpdated": {
-    "updated": 0,
-    "created": 3,
+    "updated": 1,
+    "created": 1,
     "details": [
-      "נוצרו Yoni Padan, Diana Sklar, Belinda Schneeweiss"
+      "Yoni Padan: הערה ותאריך פעולה 16.11",
+      "Larry Dubin: נוצר, Conversation Active"
     ]
   },
   "faults": [
     {
-      "what": "Quo create-task נכשל 402 Open tasks limit. אין אפשרות ליצור משימות. מועמדות: Bronna, Jennifer",
+      "what": "Quo create-task נכשל 402 Open tasks limit. יש 23 משימות פתוחות ישנות. מועמדות: Bronna, Jennifer. אי אפשר לסגור אותן מהרוטינה",
       "severity": "high"
     },
     {
-      "what": "Stripe: 100 חיובים מכסים רק עד 06.11, עשרות חיובים בלי פרטי משלם (כולל 3,600$, 3,800$, 4,100$ ב-13.11) לא נרשמו",
+      "what": "Stripe: 100 חיובים מכסים רק עד 06.11, כ-90 חיובים בלי פרטי משלם (כולל 4,650$ ב-14.11, 4,100$ ו-3,800$ ו-3,600$ ב-13.11, 3,800$ ב-08.11) לא נרשמו, ממתינים לאלברט",
       "severity": "medium"
     },
     {
-      "what": "גמייל פרטי, שופיפיי, Analytics, Google Ads ו-Meta לא נסרקו בריצה הזו",
+      "what": "Jon Wittenberg: מסרב לשלם דמי יבוא קנדיים. דורש תשובה",
       "severity": "medium"
     },
     {
-      "what": "Jon Wittenberg: מסרב לשלם דמי יבוא קנדיים, UPS Import Fees. דורש תשובה",
-      "severity": "medium"
+      "what": "סווף 30 יום בגמייל העסקי: דף ראשון בלבד מ-201 שרשורים",
+      "severity": "low"
+    },
+    {
+      "what": "Unassigned ב-Analytics 23% מהסשנים אתמול",
+      "severity": "low"
+    },
+    {
+      "what": "גיטהאב albert-art-dashboard (ריפו אחר): הרצות יומיות נכשלות 13-14.11",
+      "severity": "low"
     }
   ],
-  "whatsappNote": "נסרק ב-14.11 דרך GREEN API (נכנסות בלבד, 5 ימים, 29 צ'אטים). lastOutgoing החזיר ריק",
+  "whatsappNote": "נסרק דרך GREEN API 15.11: 25 צ'אטים פעילים ב-5 ימים",
   "meetings": [
     {
       "when": "16.11 10:00 ET",
