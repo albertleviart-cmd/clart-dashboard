@@ -1,34 +1,34 @@
 {
-  "updatedAt": "2026-11-16T06:15:00+02:00",
-  "scanDate": "2026-11-16",
+  "updatedAt": "2026-11-17T06:15:00+02:00",
+  "scanDate": "2026-11-17",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "48 שעות: 6 רשומות (Robin ו-Sayeda מהאתר בלי פעילות בערוצים). נוצר Jamie, עודכנו Marnie, sharon, Yoni Padan. CRM Tasks לא נסרק, לא נגעתי בתאריכי פעולה ובביטולי משימות כפולות"
+      "note": "48 שעות: 7 רשומות. עודכן Alejandro. CRM Tasks לא נסרק, לא נגעתי בתאריכי פעולה ובביטולי משימות כפולות"
     },
     "quoMessages": {
       "status": "ok",
-      "note": "נסרק 14 יום, 35 שיחות פתוחות. create-task נכשל: 402 Open tasks limit (23 משימות פתוחות ישנות מספטמבר). שיחה אחת תלויה: Hal M"
+      "note": "נסרק 14 יום, 34 שיחות פתוחות. create-task נכשל שוב: 402 Open tasks limit (23 משימות ישנות מספטמבר-אוקטובר פתוחות). שיחה תלויה: Hal M"
     },
     "gmailBusiness": {
       "status": "ok",
-      "note": "רק newer_than:2d (23 שרשורים). לא רצו buy.stripe.com והסווף ל-30 יום הפעם"
+      "note": "רצו newer_than:2d וסווף 30 יום. buy.stripe.com לא רץ"
     },
     "gmailPrivate": {
-      "status": "error",
-      "note": "לא נסרק בריצה הזו"
+      "status": "ok",
+      "note": "Composio GMAIL_FETCH_EMAILS 60 הודעות אחרונות, נבדקו רק כותרות. לא נמצא ליד חדש בכותרות הנראות. 201 תוצאות בסך הכל, לא נסרקו כולן"
     },
     "shopify": {
-      "status": "ok",
-      "note": "3 הזמנות 14-16.11 (#4383-#4385). customerMetrics לא חושב מחדש"
+      "status": "error",
+      "note": "השאילתה נפלה: Customer.email deprecated בסכמה 2026-10. לא נבדקו הזמנות היום. customerMetrics לא חושב מחדש"
     },
     "stripe": {
       "status": "ok",
-      "note": "GetCharges 100 מכסה רק עד 06.11, יש יותר מ-100 חיובים ב-30 יום. 13 חיובים ב-48 שעות אחרונות ו-30 מ-14.11 ללא פרטי משלם (בערך 14,704$). עם פרטי משלם רק Shaun Liebskind (כבר מסומן). לא נרשם חיוב חדש"
+      "note": "GetCharges 100 מכסה עד 06.11. 13 חיובים מ-14.11 ללא פרטי משלם (4,555$ סך הכל). עם פרטי משלם רק Shaun Liebskind (כבר מסומן). לא נרשם חיוב חדש"
     },
     "autocalls": {
       "status": "ok",
-      "note": "list-calls 15-16.11: אין שיחות"
+      "note": "list-calls 16-17.11: אין שיחות"
     },
     "calendar": {
       "status": "error",
@@ -36,19 +36,19 @@
     },
     "googleAnalytics": {
       "status": "error",
-      "note": "לא נסרק בריצה הזו, נשאר הערך הישן"
+      "note": "לא נסרק בריצה הזו"
     },
     "googleAds": {
       "status": "error",
-      "note": "לא נסרק בריצה הזו, נשאר הערך הישן"
+      "note": "לא נסרק בריצה הזו"
     },
     "metaAds": {
-      "status": "error",
-      "note": "לא נסרק בריצה הזו, נשאר הערך הישן"
+      "status": "ok",
+      "note": "חשבון USD 16.11: הוצאה 346.13$, 6,662 חשיפות, 339 קליקים"
     },
     "whatsapp": {
       "status": "ok",
-      "note": "GREEN API 16.11: lastIncomingMessages החזיר 91 הודעות מ-23 צ'אטים. lastOutgoingMessages החזיר רשימה ריקה. נשלפה היסטוריה לכל 23. נוצר Jamie, עודכנו 3 רשומות"
+      "note": "GREEN API: lastIncomingMessages החזיר 78 הודעות מ-20 צ'אטים. lastOutgoingMessages החזיר רשימה ריקה והיסטוריית צ'אט מציגה רק הודעות נכנסות, לכן אין נראות להודעות שאלברט שלח. לא נכתב דבר במנדיי מוואטסאפ"
     },
     "ads": {
       "status": "error",
@@ -61,94 +61,78 @@
   },
   "needsAnswer": [
     {
-      "name": "sharon (Houston, 50x40 רקדנית כחולה)",
-      "why": "ביקשה לשלם מקדמה ב-09.11, הודעה קולית ב-12.11, אין מענה. צריך לינק מקדמה",
-      "channel": "WhatsApp",
-      "waitingDays": 7,
-      "urgency": "high"
-    },
-    {
-      "name": "Jamie (חדש)",
-      "why": "רוצה Tree of Life עם Stronger Together, 60x40 או 70x50, מחכה להצעה",
-      "channel": "WhatsApp",
-      "waitingDays": 0,
-      "urgency": "high"
-    },
-    {
-      "name": "Marnie Gershowitz",
-      "why": "בית כנסת, הוועדה אישרה את הרעיון, מחכה לעלות ותאריכים מ-05.11",
-      "channel": "WhatsApp",
-      "waitingDays": 11,
-      "urgency": "high"
-    },
-    {
-      "name": "Yoni Padan",
-      "why": "50x50 מקור, מחכה להצעת מחיר ולתשובה על מיקום",
-      "channel": "WhatsApp",
-      "waitingDays": 1,
-      "urgency": "medium"
-    },
-    {
       "name": "Hal M",
-      "why": "שירותי אורחים, 24 על 10-12 אינץ. ייתכן אותו Hal Brager מהזמנה #4385",
+      "why": "ענה בקוואו על שאלת גודל: חדר אורחים, עד 24 אינץ' רוחב ו-10-12 גובה",
       "channel": "Quo",
+      "waitingDays": 1,
+      "urgency": "high"
+    },
+    {
+      "name": "Michael Wallk",
+      "why": "פגש אותך, מעדיף קנבס על פני הדפס, מחכה למחיר",
+      "channel": "Email עסקי",
       "waitingDays": 0,
-      "urgency": "medium"
+      "urgency": "high"
     },
     {
-      "name": "Diana Sklar",
-      "why": "שאלה על גודל ריל, בלי מענה מאז 14.11",
-      "channel": "WhatsApp",
-      "waitingDays": 2,
-      "urgency": "medium"
+      "name": "Perri Wittgrove",
+      "why": "קנתה דנסר חדש ורוצה גם הדפס של הדנסר למורה לריקודי עם",
+      "channel": "Email עסקי",
+      "waitingDays": 1,
+      "urgency": "high"
     },
     {
-      "name": "Brian Cohen",
-      "why": "שאל אם יהיו יצירות למכירה באירוע JNF Canada. לא במנדיי, לא נוצר",
-      "channel": "WhatsApp",
+      "name": "Alejandro Altaras",
+      "why": "פספסתם פגישת ייעוץ, רוצה לקבוע מחדש, We Will Dance Again",
+      "channel": "Email עסקי",
+      "waitingDays": 1,
+      "urgency": "high"
+    },
+    {
+      "name": "Miriam Engel (JLIC)",
+      "why": "שואלת איך לממן אירוע ציור חי, 50-80 איש, וחודש מועדף",
+      "channel": "Email עסקי",
       "waitingDays": 1,
       "urgency": "medium"
-    },
-    {
-      "name": "Mitch Cabin",
-      "why": "קנה Tree of Life בבית כנסת, שואל מימדים",
-      "channel": "WhatsApp",
-      "waitingDays": 3,
-      "urgency": "low"
     }
   ],
   "newYesterday": [
     {
-      "name": "Robin",
-      "source": "טופס אתר",
-      "detail": "בלי פעילות בערוצים"
+      "name": "Stacie Gabert",
+      "source": "טופס אירועים",
+      "detail": "Temple Sinai, South Burlington, 100 איש"
     },
     {
-      "name": "Sayeda",
+      "name": "Jason Birnhak",
       "source": "טופס אתר",
-      "detail": "בלי פעילות בערוצים"
+      "detail": "ללא פרטים"
     },
     {
-      "name": "Jamie",
-      "source": "WhatsApp",
-      "detail": "Tree of Life + Stronger Together"
+      "name": "Alejandro Altaras",
+      "source": "טופס אתר",
+      "detail": "We Will Dance Again לסלון, מעורב Am Israel Chai"
     }
   ],
   "replied": [
     {
+      "name": "Hal M",
+      "channel": "Quo",
+      "said": "חדר אורחים, עד 24x12 אינץ'"
+    },
+    {
       "name": "Larry Dubin",
       "channel": "Quo",
-      "said": "15.11 החליטו לחכות, יחזרו בעוד כמה חודשים"
+      "said": "מחכים כמה חודשים עד שהקירות יבנו"
     },
     {
-      "name": "Belinda Schneeweiss",
+      "name": "Sharri",
       "channel": "WhatsApp",
-      "said": "בונים בית, יאשרו גודל וצבע בהמשך"
+      "said": "קיבלו את הציור ואוהבים אותו"
     },
     {
-      "name": "Eileen Lebowitz",
+      "name": "Eliot Globerson",
       "channel": "Email",
-      "said": "אין תקציב כרגע"
+      "said": "קיבל וכבר תלה את הציור"
     }
   ],
   "revenue": {
@@ -156,41 +140,69 @@
     "cashNotTurnover": null,
     "openBalances": null,
     "currency": "USD",
-    "note": "לא חושב מחדש. Shopify 14-16.11: 3 הזמנות, 925.38$"
+    "note": "לא חושב מחדש היום. שופיפיי לא נבדק"
   },
-  "draftsPrepared": [],
+  "draftsPrepared": [
+    {
+      "name": "Michael Wallk",
+      "inbox": "business",
+      "gist": "קנבס במקום הדפס",
+      "needsInput": true
+    },
+    {
+      "name": "Perri Wittgrove",
+      "inbox": "business",
+      "gist": "הדפס של הדנסר",
+      "needsInput": true
+    },
+    {
+      "name": "Alejandro Altaras",
+      "inbox": "business",
+      "gist": "קביעה מחדש של ייעוץ",
+      "needsInput": true
+    },
+    {
+      "name": "Miriam Engel",
+      "inbox": "business",
+      "gist": "מבנה מימון לאירוע JLIC",
+      "needsInput": true
+    }
+  ],
   "quoTasks": [],
   "mondayUpdated": {
-    "updated": 3,
-    "created": 1,
+    "updated": 1,
+    "created": 0,
     "details": [
-      "Jamie נוצר",
-      "Marnie, sharon, Yoni Padan: הערות"
+      "Alejandro: סטטוס Conversation Active, ערוץ Email, Last Contacted 16.11, הערה"
     ]
   },
   "faults": [
     {
-      "what": "Quo create-task נכשל 402: 23 משימות ישנות מספטמבר חוסמות. לסגור או למחוק אותן",
+      "what": "Quo create-task נכשל 402: 23 משימות ישנות פתוחות חוסמות. משימת Hal M לא נוצרה",
       "severity": "high"
     },
     {
-      "what": "Stripe: יותר מ-100 חיובים ב-30 יום ורובם בלי פרטי משלם (14,704$ מ-14.11), לא ניתן לשייך",
+      "what": "Shopify graphql נכשל על Customer.email deprecated, להחליף ב-defaultEmailAddress.emailAddress",
       "severity": "medium"
     },
     {
-      "what": "lastOutgoingMessages של GREEN API החזיר ריק, לכן 'ממתין' בוואטסאפ נקבע לפי הודעות נכנסות והיסטוריה בלבד",
+      "what": "GREEN API לא מחזיר הודעות יוצאות, אין נראות למי ענית בוואטסאפ",
+      "severity": "medium"
+    },
+    {
+      "what": "Stripe: 13 חיובים בין 14-15.11 ללא פרטי משלם, 4,555$, ממתין לשיוך של אלברט",
+      "severity": "medium"
+    },
+    {
+      "what": "Google Analytics ו-Google Ads לא נסרקו",
       "severity": "low"
-    },
-    {
-      "what": "גמייל פרטי, GA, Google Ads, Meta, סווף 30 יום ו-customerMetrics לא נסרקו בריצה הזו",
-      "severity": "medium"
     }
   ],
-  "whatsappNote": "נסרק דרך GREEN API 16.11: 23 צ'אטים פעילים ב-5 ימים",
+  "whatsappNote": "נסרק דרך GREEN API 17.11: 20 צ'אטים פעילים ב-5 ימים, נכנסות בלבד. לא נכתב במנדיי",
   "meetings": [
     {
-      "when": "16.11 10:00 ET",
-      "who": "Alejandro Altaras (ייעוץ)"
+      "when": "17.11 ערב ובהמשך 18.11 02:00 שעון ישראל",
+      "who": "CRJ אורלנדו: An Evening of Art and Inspiration"
     }
   ],
   "customerMetrics": {
@@ -225,8 +237,11 @@
     "unassignedPct": 49
   },
   "ads": {
-    "status": "ok",
-    "note": "Meta בלבד, ראה metaAds"
+    "meta": {
+      "spend": 346.13,
+      "date": "2026-11-16",
+      "clicks": 339
+    }
   },
   "analytics": {
     "status": "error",
