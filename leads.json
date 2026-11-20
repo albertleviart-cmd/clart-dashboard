@@ -1,50 +1,50 @@
 {
-  "updatedAt": "2026-11-19T06:20:00+02:00",
-  "scanDate": "2026-11-19",
+  "updatedAt": "2026-11-20T06:30:00+02:00",
+  "scanDate": "2026-11-20",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "48 שעות: 9 רשומות נבדקו. נוצרה רשומה אחת (Perri Wittgrove, מתשלום Stripe). CRM Tasks לא נסרק"
+      "note": "48 שעות: 5 רשומות נבדקו. נוצרו 2 רשומות מתשלומי Stripe (Julie Levitt, Sharon Abercia). CRM Tasks ו-ביטול תזכורות כפולות לא הורצו בריצה הזו"
     },
     "quoMessages": {
       "status": "ok",
-      "note": "נסרק 14 יום מ-05.11, 40 שיחות פתוחות. create-task נכשל שוב 402 Open tasks limit (23 משימות ישנות מ-ספטמבר עדיין פתוחות). שיחה תלויה: Sandi Sander (ממתינה יום וחצי), Bronna (10 ימים)"
+      "note": "נסרק 14 יום מ-06.11, 41 שיחות פתוחות. create-task נכשל 402 Open tasks limit (23 משימות ישנות מ-ספטמבר עדיין פתוחות). שיחה תלויה: +14169908668 (טורונטו, ממתין מ-19.11 לאישור יום ושעה)"
     },
     "gmailBusiness": {
       "status": "ok",
-      "note": "רצו שלושת החיפושים (newer_than:2d, buy.stripe.com 7d, סווף 30 יום primary)"
+      "note": "רצו שלושת החיפושים. סווף 30 יום נשלף עם 50 שרשורים ראשונים בלבד"
     },
     "gmailPrivate": {
-      "status": "ok",
-      "note": "נסרק דרך Composio, 3 ימים. אין לידים. רק פגישת ויזה (Wildes & Weinberg) ומיילים פיננסיים"
+      "status": "error",
+      "note": "לא נסרק בריצה הזו (לא הורץ). נשאר מהריצה הקודמת"
     },
     "shopify": {
-      "status": "ok",
-      "note": "הזמנות #4386-#4399 ב-17-18.11 נשלפו. customerMetrics לא חושב מחדש: bulk operation הופעל אבל קישור ההורדה לא מוחזר בכלי, והגיבוי בדפדוף לא הורץ. נשאר הערך מ-26.10"
+      "status": "error",
+      "note": "לא נסרק בריצה הזו. customerMetrics נשאר מ-26.10"
     },
     "stripe": {
       "status": "ok",
-      "note": "GetCharges 100 מכסה עד 08.11 וגם החיוב ה-100 בתוך 30 יום (has_more true): נכנסו יותר מ-100 חיובים בחודש, חלק לא נראה. חיובים חדשים עם פרטי משלם: Perri Wittgrove 100$ (19.11, נרשם, רשומה חדשה). ממתינים לאלברט: Sharon Abercia 875$ (18.11, כנראה sharon ביוסטון 2733489627, 875=25% מ-3,500 והיא כתבה בוואטסאפ שילמה ב-17.11) ו-Jonatan Padan 940$ (18.11, כנראה Yoni Padan 3358026956, כתב בוצע בוואטסאפ ומייל padani@gmail.com). Shaun Liebskind 60$ כבר נרשם. כ-90 חיובים ללא פרטי משלם"
+      "note": "GetCharges 100 כיסה עד 08.11 וגם החיוב ה-100 בתוך 30 יום (has_more true), כלומר יותר מ-100 חיובים בחודש, חלק לא נבדק. נרשמו 2: Julie Levitt 36$ ו-Sharon Abercia 875$ (רשומות חדשות). ממתינים לאלברט: חיובים בלי פרטי משלם (כ-60 חיובים בין 11.11 ל-18.11, רובם 100$-250$ וגם 4,650$ ב-14.11, 4,100$, 3,800$, 3,600$ ב-13.11, 975$ ו-450$ ב-18.11), ו-Yoni Padan (940$ מ-yoni@benarijewelers.com, 17.11) שמצוי במנדיי עם מייל אחר, לא נרשם"
     },
     "autocalls": {
-      "status": "ok",
-      "note": "list-calls: 19.11 Doris (תא קולי), 18.11 Brenda (27 שניות, ענתה, נרשמה כמעוניינת בפגישה), 17.11 Scott Greenstone תא קולי. שיחה אמיתית ארוכה אחת בחלון: 17.11 Ari 77 שניות (לא מעוניין)"
+      "status": "error",
+      "note": "לא נסרק בריצה הזו"
     },
     "googleAnalytics": {
-      "status": "ok",
-      "note": "נכס 415263029, יום אחרון 17.11 (שעון לוס אנג'לס)"
+      "status": "error",
+      "note": "לא נסרק בריצה הזו. נשאר מהריצה הקודמת"
     },
     "googleAds": {
-      "status": "ok",
-      "note": "customer 7282991915 עד 18.11"
+      "status": "error",
+      "note": "לא נסרק בריצה הזו. נשאר מהריצה הקודמת"
     },
     "metaAds": {
-      "status": "ok",
-      "note": "חשבון USD 400319919198934, אתמול. חשבון השקלים לא נבדק"
+      "status": "error",
+      "note": "לא נסרק בריצה הזו. נשאר מהריצה הקודמת"
     },
     "whatsapp": {
       "status": "ok",
-      "note": "GREEN API: lastIncomingMessages 126 הודעות מ-24 צ'אטים (5 ימים). lastOutgoingMessages ריק, אין נראות להודעות יוצאות. getChatHistory על כל הקבוצה, כל המקרים נטענו (עם ניסיון חוזר), נראות רק להודעות נכנסות. לא נכתב דבר במנדיי כי אי אפשר לדעת אם אלברט ענה"
+      "note": "GREEN API: 26 צ'אטים עם הודעות נכנסות ב-5 ימים. lastOutgoingMessages החזיר ריק ו-POST החזיר 404, אין נראות להודעות יוצאות. לא נכתב דבר במנדיי"
     },
     "calendar": {
       "status": "error",
@@ -53,96 +53,56 @@
   },
   "needsAnswer": [
     {
-      "name": "Jill Rosenthal",
-      "why": "תהיה באירוע בולטימור ב-3.12, מתעניינת ב-Tree of Life Am Yisrael Chai, מקווה להזמין שם",
-      "channel": "Email עסקי",
-      "waitingDays": 1,
-      "urgency": "high"
-    },
-    {
-      "name": "Heather Cohen",
-      "why": "שלחה תמונות חדר האוכל ומידות (90 אינץ בין העיגולים, 65 עד הקרניז), שואלת מה דעתך על יצירה. סגנון מודרני, סגול ואפור",
-      "channel": "Email עסקי",
-      "waitingDays": 1,
-      "urgency": "high"
-    },
-    {
-      "name": "Sandi Sander",
-      "why": "קנתה #4388 Heart of Protection embellished (715.51$), מבקשת חתימה ושאלה על אירוע בקלגרי",
+      "name": "ליד טורונטו +14169908668",
+      "why": "הציע ללכת לפגוש ביום ה/ו, מחכה לאישור יום ושעה מ-19.11",
       "channel": "Quo",
-      "waitingDays": 1.5,
+      "waitingDays": 1,
       "urgency": "high"
     },
     {
-      "name": "Michael Wallk",
-      "why": "כתב ב-17.11 שנהנה להכיר ויש לו רעיונות. עדיין בלי תשובה",
-      "channel": "Email עסקי",
-      "waitingDays": 2,
-      "urgency": "medium"
-    },
-    {
-      "name": "Alejandro Altaras",
-      "why": "לא הצליח להגיע ל-Calendly, ובוואטסאפ שלח תמונות של החלל ב-17.11",
-      "channel": "Email + WhatsApp",
-      "waitingDays": 2,
-      "urgency": "medium"
-    },
-    {
-      "name": "Belinda Schneeweiss",
-      "why": "שלחה תמונת Tree of Life ב-20x30 ב-17.11, מחכה להצעה",
-      "channel": "WhatsApp (דורש בדיקה, אין נראות ליוצא)",
+      "name": "Jill Rosenthal",
+      "why": "תגיע לאירוע בולטימור 03.12, רוצה Tree of Life Am Yisrael Chai ולהזמין שם",
+      "channel": "Gmail עסקי",
       "waitingDays": 2,
       "urgency": "medium"
     },
     {
       "name": "Rachel Sandler (JCA Jacksonville)",
-      "why": "שואלת אם תחזור לפלורידה ב-2027, תכנון אירוע",
-      "channel": "Email עסקי",
+      "why": "שואלת על חזרה לפלורידה ב-2027, תוכנית ליהדות",
+      "channel": "Gmail עסקי",
+      "waitingDays": 2,
+      "urgency": "medium"
+    },
+    {
+      "name": "Renee & Sam Green",
+      "why": "רוצים הדפס מעוטר, מחכים שאלברט יציע שעה לשיחה",
+      "channel": "WhatsApp",
       "waitingDays": 1,
       "urgency": "medium"
     },
     {
-      "name": "Rhoda Yaverbaum",
-      "why": "מבקשת מספר מעקב להדפסים חדשים (הזמנה #4307)",
-      "channel": "Email עסקי",
-      "waitingDays": 2,
-      "urgency": "medium"
-    },
-    {
-      "name": "Rabbi (Jewish Riverside)",
-      "why": "שאלה על Live Painting לחנוכה, הגיב ב-17.11",
-      "channel": "Email עסקי",
-      "waitingDays": 2,
-      "urgency": "low"
-    },
-    {
-      "name": "Sofia (JNF Toronto)",
-      "why": "שאלה אם תגיע לאירוע בטורונטו עם החבר שלך",
+      "name": "Temple Chai Scottsdale",
+      "why": "רוצים לחקור את החוויה לתורמי מעגל הרבנים, ממתינים לפרטים",
       "channel": "WhatsApp",
       "waitingDays": 0,
-      "urgency": "low"
+      "urgency": "medium"
     }
   ],
   "newYesterday": [
     {
-      "name": "Valerie Kent",
-      "source": "מנדיי",
-      "detail": "נוצרה 18.11, אלברט שלח לה הודעה ב-Quo"
+      "name": "Julie Levitt",
+      "source": "Stripe",
+      "detail": "36$, רשומה חדשה במנדיי"
     },
     {
-      "name": "Brenda (כפילות)",
-      "source": "מנדיי",
-      "detail": "שתי רשומות 18.11, ענתה בשיחה והסכימה לפגישה, אלברט שלח לה הודעה ב-Quo"
-    },
-    {
-      "name": "Doris",
-      "source": "מנדיי",
-      "detail": "19.11, שאלה על גודל הפאזל של We Will Dance Again, תא קולי"
+      "name": "Sharon Abercia",
+      "source": "Stripe",
+      "detail": "875$, רשומה חדשה במנדיי"
     },
     {
       "name": "Perri Wittgrove",
       "source": "Stripe",
-      "detail": "הדפס 100$ שולם 19.11, גם הזמינה ציור מקור באירוע"
+      "detail": "100$ הדפס, נרשם 19.11"
     }
   ],
   "replied": [
@@ -172,67 +132,54 @@
     "cashNotTurnover": null,
     "openBalances": null,
     "currency": "USD",
-    "note": "לא חושב מחדש. הזמנות שופיפיי 17-18.11 כ-3,970$. ללא סכום מחזור לפי Close Date"
+    "note": "לא חושב מחדש בריצה הזו"
   },
   "draftsPrepared": [
     {
-      "name": "Heather Cohen",
-      "inbox": "business",
-      "gist": "תודה על התמונות, הצעת גודל רחב אופקי",
-      "needsInput": true
-    },
-    {
       "name": "Jill Rosenthal",
       "inbox": "business",
-      "gist": "שמח לפגוש בבולטימור, שאלה על גודל ומיקום",
+      "gist": "תודה, מצפה לפגוש בבולטימור 03.12, שואל איזה גודל",
       "needsInput": true
     },
     {
       "name": "Rachel Sandler",
       "inbox": "business",
-      "gist": "שמח להביא תוכנית ליקסונוויל, מתי השנה מתאים",
+      "gist": "תודה על הפנייה מ-JCA Jacksonville, שואל על חודשים ב-2027",
       "needsInput": true
     }
   ],
   "quoTasks": [],
   "mondayUpdated": {
     "updated": 0,
-    "created": 1,
+    "created": 2,
     "details": [
-      "נוצרה Perri Wittgrove 3368889668: Amount Paid 100, Deal Value 100, Close Date 19.11 (הדפס 100$ בלינק, תשלום מלא), סימון stripe"
+      "Julie Levitt 3371593311 (Amount Paid 36)",
+      "Sharon Abercia 3371597796 (Amount Paid 875, ייתכן מקדמה)"
     ]
   },
   "faults": [
     {
-      "what": "Quo create-task נכשל שוב 402: 23 משימות ישנות פתוחות מספטמבר. נחוץ לסגור כדי ששום משימה חדשה לא תיכשל. לא נוצרה משימה ל-Sandi Sander",
+      "what": "Quo create-task נכשל 402: 23 משימות ישנות מ-ספטמבר חוסמות, לסגור אותן. משימה שלא נוצרה: ליד טורונטו +14169908668",
       "severity": "high"
     },
     {
-      "what": "Stripe ממתינים לשיוך אלברט: Sharon Abercia 875$ (כנראה sharon 2733489627) ו-Jonatan Padan 940$ (כנראה Yoni Padan 3358026956)",
+      "what": "Stripe: יותר מ-100 חיובים בחודש, חלק מהחיובים מ-08.11 ואילך מעבר לחלון",
       "severity": "medium"
     },
     {
-      "what": "Stripe: 100 החיובים מכסים רק עד 08.11 ויש יותר חיובים בחלון 30 יום. הרבה חיובי 100$ עד 975$ בלי פרטי משלם (כ-90)",
+      "what": "Stripe: כ-60 חיובים בלי מייל או שם משלם (11.11-18.11, כולל 4,650$ ב-14.11 ו-4,100$/3,800$/3,600$ ב-13.11). אלברט צריך לשייך",
       "severity": "medium"
     },
     {
-      "what": "כפילויות: Joey Chorvinsky (3362817896, 3362821629) ו-Brenda (3368341569, 3368344241), אותו מייל וטלפון",
-      "severity": "low"
-    },
-    {
-      "what": "Perri Wittgrove הזמינה גם ציור מקור באירוע ב-15.11 שלא נרשם במנדיי, רק ההדפס נרשם",
+      "what": "Stripe: Yoni Padan 940$ ב-17.11 ממייל benarijewelers, במנדיי קיים עם מייל אחר ובלי Deal Value, 940 אינו 25 אחוז מ-3,900. לא נרשם",
       "severity": "medium"
     },
     {
-      "what": "customerMetrics לא עודכן, נשאר מ-26.10. bulk operation לא מחזיר קישור הורדה דרך הכלי",
-      "severity": "low"
-    },
-    {
-      "what": "יומן Google לא נסרק",
-      "severity": "low"
+      "what": "לא נסרקו בריצה הזו: גמייל פרטי, שופיפיי, Autocalls, Analytics, Google Ads, Meta Ads, יומן, CRM Tasks, customerMetrics",
+      "severity": "medium"
     }
   ],
-  "whatsappNote": "GREEN API: 24 צ'אטים פעילים ב-5 ימים, אין נראות להודעות יוצאות. לא נכתב דבר במנדיי. דורש בדיקה שלך: Belinda Schneeweiss, Alejandro Altaras, Joan Orlofsky (שמות הילדים לעץ החיים), Karen (מבקשת וידאו לאירוע), Brian Cohen (JNF קנדה), Sofia (טורונטו)",
+  "whatsappNote": "GREEN API: 26 צ'אטים פעילים ב-5 ימים, אין נראות להודעות יוצאות. לא נכתב דבר במנדיי. דורש בדיקה שלך: Renee & Sam Green, Temple Chai Scottsdale, ליד Toronto (JNF קנדה), Larry/Lisa על גודל 20x30, Yoni Padan (שילם 17.11 וכתב בוצע)",
   "meetings": [
     {
       "when": "01.12 (שעות 11, 12, 13, 14 EST אפשריות)",
