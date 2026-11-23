@@ -1,34 +1,34 @@
 {
-  "updatedAt": "2026-11-22T07:10:00+02:00",
-  "scanDate": "2026-11-22",
+  "updatedAt": "2026-11-23T07:20:00+02:00",
+  "scanDate": "2026-11-23",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "48 שעות: 9 רשומות נבדקו. עודכנו Jason (Stripe 2,000$) ו-Allison, נוצרה רשומה לליד ASL. משימות CRM Tasks וביטול תזכורות כפולות לא הורצו"
+      "note": "48 שעות: 8 רשומות נבדקו (Beth Lehrer, Raymond, ליד ASL ועוד). לא נכתב כלום במנדיי בריצה הזו. CRM Tasks וביטול תזכורות כפולות לא הורצו"
     },
     "quoMessages": {
       "status": "ok",
-      "note": "נסרק 14 יום מ-08.11, 38 שיחות פתוחות. משימות לא נוצרות. הודעה אחרונה נכנסת: +19498728917 (Fred Forster, כתובת בקורונה דל מאר, ללא טקסט נוסף), +14165051223 No thanks"
+      "note": "נסרק 14 יום מ-09.11, 35 שיחות פתוחות. משימות לא נוצרות"
     },
     "gmailBusiness": {
       "status": "ok",
-      "note": "רצו שלושת החיפושים. סווף 30 יום עם category:primary החזיר ריק, כנראה סיווג תיבה. נבדק שרשור Jason Mendelsohn"
+      "note": "רצו שלושת החיפושים. סווף 30 יום עם category:primary החזיר ריק, כנראה סיווג תיבה. Renee Rosner כבר קיבלה אישור הזמנה ב-22.11"
     },
     "gmailPrivate": {
-      "status": "error",
-      "note": "לא נסרק בריצה הזו, Composio לא הורץ. לא נוחשו נתונים"
+      "status": "ok",
+      "note": "Composio רץ, נסרקו רק כותרות. 31 הודעות ב-48 שעות: Etsy 241.63$, התראות Stripe ו-GitHub. לא נבדק לעומק שרשור אנושי"
     },
     "shopify": {
       "status": "ok",
-      "note": "הזמנות 21.11: #4419 עד #4422, סה\"כ 1,531.80$. customerMetrics לא עודכן, נשאר מ-26.10"
+      "note": "הזמנות 22.11: #4423 עד #4427 (80.10, 128.79, 404.10, 404.10, 188.10 דולר). #4427 של Jason Mendelsohn"
     },
     "stripe": {
       "status": "ok",
-      "note": "GetCharges 100 כיסה עד 08.11, has_more true, החיוב ה-100 בתוך 30 יום (יותר מ-100 חיובים בחודש). נרשם: Jason 2,000$. כבר היו רשומים: Julie, Perri, Sharon, Yoni, Shaun. רוב חיובי האירועים (80$ עד 4,650$) ללא פרטי משלם, לא נרשמו, כולל 726$ ב-20.11 ו-150$ ב-18.11. אלברט לומר של מי"
+      "note": "100 חיובים נמשכו, מגיעים רק עד 13.11, has_more true (פחות מ-30 יום, תקלה). חיובים עם פרטי משלם: Jason, Julie Levitt, Perri Wittgrove, Sharon Abercia, Yoni Padan, כולם כבר מסומנים. אין חיוב שנרשם היום. עשרות חיובי אירוע בלי פרטי משלם ממתינים לאלברט"
     },
     "autocalls": {
       "status": "ok",
-      "note": "5 שיחות 21-22.11, כולן Rachel Test. אין שיחה אמיתית חדשה"
+      "note": "7 שיחות ב-22.11. שיחה אמיתית: Beth Lehrer 204 שניות, Raymond 125 שניות (נקבע ייעוץ 28.11 10:00 ET). Richard תא קולי, Abby ו-Allison קצרות"
     },
     "googleAnalytics": {
       "status": "error",
@@ -39,108 +39,119 @@
       "note": "לא הורץ בריצה הזו"
     },
     "metaAds": {
-      "status": "ok",
-      "note": "חשבון USD, 21.11: הוצאה 1,033.81$, 1,196 קליקים, 24,175 חשיפות. קפיצה חדה מול 313$ ב-18.11"
+      "status": "error",
+      "note": "ads_get_ad_entities לא החזיר הוצאה יומית, לא נוחשו נתונים"
     },
     "whatsapp": {
       "status": "ok",
-      "note": "GREEN API: lastIncomingMessages החזיר 193 הודעות מ-28 צ'אטים ב-5 ימים. lastOutgoingMessages החזיר 0 (חריג, לבדוק). נקראה היסטוריה ל-5 צ'אטים"
+      "note": "GREEN API: 19 צ'אטים פעילים ב-5 ימים (נכנסות 132). יוצאות החזיר 0 שוב. 7 צ'אטים החזירו שגיאה בהיסטוריה"
     },
     "calendar": {
       "status": "error",
       "note": "לא נסרק בריצה הזו, נשאר הערך הישן"
+    },
+    "ga": {
+      "status": "error",
+      "note": "לא הורץ בריצה הזו"
     }
   },
   "needsAnswer": [
     {
-      "name": "Jason Mendelsohn (Ashar Group)",
-      "why": "שאל מתי יקבל את הציור המקורי (3,000$), ביקש שיחה בוואטסאפ 407-782-5614, ושילם 2,000$ ב-Stripe ב-21.11",
-      "channel": "Gmail עסקי",
+      "name": "Jason (+15164591762)",
+      "why": "שלח מידות 65x69 אינץ עם תמונה ב-22.11 אחרי תזכורת שלך. מחכה להצעת גודל ומחיר",
+      "channel": "Quo",
       "waitingDays": 1,
+      "urgency": "high"
+    },
+    {
+      "name": "Jason Mendelsohn (Ashar Group)",
+      "why": "שילם 2,000$, הזמין #4427 ב-22.11, מחכה לתאריך משלוח המקורי 3,000$. טיוטה מוכנה מאתמול",
+      "channel": "Gmail עסקי",
+      "waitingDays": 2,
       "urgency": "high"
     },
     {
       "name": "ליד טורונטו (JNF) +14169908668",
-      "why": "ביקשה Thursday או Friday בבוקר לביקור, מחכה לאישור יום ושעה",
+      "why": "הציעה חמישי או שישי בבוקר, מחכה לאישור יום ושעה (הצעת 26 או 27.11)",
       "channel": "Quo",
-      "waitingDays": 3,
+      "waitingDays": 4,
       "urgency": "high"
     },
     {
       "name": "Belinda Schneeweiss (קנדה)",
-      "why": "ב-20.11 כתבה שחשבה שתישלח לה לינק תשלום על הדפס עץ החיים 20x30. אין לה מייל במנדיי",
+      "why": "ב-20.11 כתבה שחשבה שתישלח לה לינק תשלום להדפס עץ החיים 20x30",
+      "channel": "WhatsApp",
+      "waitingDays": 3,
+      "urgency": "high"
+    },
+    {
+      "name": "Henry (+12064594221)",
+      "why": "הציור תלוי אצלם ב-22.11, ביקש שתשלח לו הדפס. לקוח קיים",
+      "channel": "WhatsApp",
+      "waitingDays": 1,
+      "urgency": "medium"
+    },
+    {
+      "name": "Beth Lehrer",
+      "why": "רוצה ציור גדול עם ahava בסגנון Colors of Protection, קולורדו. שיחה 204 שניות ללא פגישה. טיוטה מוכנה",
+      "channel": "Autocalls",
+      "waitingDays": 1,
+      "urgency": "medium"
+    },
+    {
+      "name": "Allison (+19085102941)",
+      "why": "שאלה אם הדפס מעוטר מגיע מתוח על מסגרת או גלול, ב-21.11",
       "channel": "WhatsApp",
       "waitingDays": 2,
-      "urgency": "high"
+      "urgency": "medium"
     },
     {
       "name": "Debbie Berkowitz (Temple Chai)",
-      "why": "ב-20.11 ביקשה לבחון חוויה לתורמי מעגל הרבנים. אין מייל במנדיי",
+      "why": "ב-20.11 ביקשה חוויה לתורמי מעגל הרבנים, אין מייל",
       "channel": "WhatsApp",
-      "waitingDays": 2,
-      "urgency": "high"
-    },
-    {
-      "name": "Allison (9085102941)",
-      "why": "שאלה אם הדפס מעוטר מגיע מתוח על מסגרת או גלול, ומה ההבדל מאטסי. ראתה אותו בכנס JNF",
-      "channel": "WhatsApp",
-      "waitingDays": 1,
-      "urgency": "medium"
-    },
-    {
-      "name": "ליד ASL (4074174994)",
-      "why": "מבקשת ציור של אישה עושה את הסימן ב-ASL ל-Jewish. אין שם, נוצרה רשומה",
-      "channel": "WhatsApp",
-      "waitingDays": 1,
-      "urgency": "medium"
-    },
-    {
-      "name": "Fred Forster / Aviva (+19498728917)",
-      "why": "ב-22.11 שלחו הודעות עם שם וכתובת בקורונה דל מאר, בלי שאלה",
-      "channel": "Quo",
-      "waitingDays": 0,
-      "urgency": "medium"
-    },
-    {
-      "name": "+15126941088",
-      "why": "שאלה מחיר, אלברט ענה 4,500$ ב-19.11, הכדור אצלו, בדיקה למעקב",
-      "channel": "Quo",
       "waitingDays": 3,
+      "urgency": "medium"
+    },
+    {
+      "name": "Fred Forster (+19498728917)",
+      "why": "שלח שם וכתובת בקורונה דל מאר ללא שאלה. לא ברור מה רצה",
+      "channel": "Quo",
+      "waitingDays": 1,
       "urgency": "low"
     }
   ],
   "newYesterday": [
     {
-      "name": "ליד ASL (4074174994)",
-      "source": "וואטסאפ",
-      "detail": "נוצרה רשומה חדשה"
+      "name": "Beth Lehrer",
+      "source": "טופס אתר ואחר כך Autocalls",
+      "detail": "ציור ahava גדול, קולורדו"
+    },
+    {
+      "name": "Raymond",
+      "source": "Autocalls",
+      "detail": "ייעוץ נקבע ל-28.11 10:00 ET (Calendly)"
     },
     {
       "name": "Jason Mendelsohn",
-      "source": "Stripe",
-      "detail": "2,000$ ב-21.11"
-    },
-    {
-      "name": "Allison",
-      "source": "וואטסאפ",
-      "detail": "הגיבה, סטטוס עודכן מ-Unreachable ל-Conversation Active"
+      "source": "שופיפיי",
+      "detail": "הזמנה #4427 188.10$"
     }
   ],
   "replied": [
     {
-      "name": "Alyssa (+14165051223)",
+      "name": "Jason (+15164591762)",
       "channel": "Quo",
-      "said": "No thanks"
+      "said": "מידות 65x69 אינץ"
     },
     {
-      "name": "Allison",
+      "name": "Henry",
       "channel": "WhatsApp",
-      "said": "שאלה על הדפס מעוטר מתוח או גלול"
+      "said": "הציור תלוי, ביקש הדפס"
     },
     {
-      "name": "Jason Mendelsohn",
-      "channel": "Gmail",
-      "said": "שאל על זמן אספקה וביקש וואטסאפ"
+      "name": "Renee & Sam Green",
+      "channel": "WhatsApp",
+      "said": "כתובת משלוח וביקשו אישור במייל (נשלח ב-22.11)"
     }
   ],
   "revenue": {
@@ -152,53 +163,51 @@
   },
   "draftsPrepared": [
     {
-      "name": "Jason Mendelsohn",
+      "name": "Beth Lehrer",
       "inbox": "business",
-      "gist": "אישור שיחה בוואטסאפ והבטחה לפרט שם את התזמון, בלי תאריך אספקה",
+      "gist": "שאלה על מידות הקיר לציור ahava גדול, בלי מחיר",
       "needsInput": false
     }
   ],
   "quoTasks": [],
   "mondayUpdated": {
-    "updated": 2,
-    "created": 1,
+    "updated": 0,
+    "created": 0,
     "details": [
-      "Jason: Amount Paid 2,000 וסימון Stripe, Deal Value ו-Close Date ריקים (לא ברור מקדמה על המקורי)",
-      "Allison: Unreachable ל-Conversation Active, WhatsApp, הערות",
-      "נוצרה רשומה לליד ASL 4074174994"
+      "לא נכתב כלום: אין חיוב Stripe חדש עם פרטי משלם, ולידים חדשים כבר היו ברשומות"
     ]
   },
   "faults": [
     {
-      "what": "Stripe: יותר מ-100 חיובים ב-30 יום, רובם חיובי אירוע ללא פרטי משלם (726$ ב-20.11, 150$ ב-18.11, 4,650$ ב-14.11 ועוד). לא נרשמו. אלברט לומר של מי",
+      "what": "Stripe: חלון 100 החיובים מגיע רק עד 13.11, יותר מ-100 חיובים ב-30 יום. רוב החיובים בלי פרטי משלם (2,500$ ב-22.11, 975$ ו-450$ ב-18.11, 781$ ו-923$ ב-22.11 ועוד). לא נרשמו. אלברט לומר של מי",
       "severity": "medium"
     },
     {
-      "what": "Jason Mendelsohn שילם 2,000$ ולא ברור אם מקדמה על ציור מקורי ב-3,000$ או משהו אחר. להשלים Deal Value ו-Close Date",
+      "what": "GREEN API: lastOutgoingMessages מחזיר 0 הודעות שוב, ו-7 צ'אטים נכשלו בהיסטוריה (פורמט chatId)",
       "severity": "medium"
+    },
+    {
+      "what": "GA, Google Ads ו-Meta לא נסרקו, מדדי לקוחות לא עודכנו, CRM Tasks וביטול תזכורות כפולות לא הורצו",
+      "severity": "medium"
+    },
+    {
+      "what": "גמייל פרטי נסרק ברמת כותרות בלבד",
+      "severity": "low"
     },
     {
       "what": "כפילות: Arthur (lucraricapital) בשתי רשומות, 3373511712 ו-3373515220",
       "severity": "low"
-    },
-    {
-      "what": "גמייל פרטי, GA, Google Ads, מדדי לקוחות ו-CRM Tasks לא הורצו בריצה הזו",
-      "severity": "medium"
-    },
-    {
-      "what": "GREEN API lastOutgoingMessages החזיר 0 הודעות, לא ניתן לדעת מי ענה אחרון ממה שיצא. סימן אפשרי לשינוי בקריאה",
-      "severity": "medium"
-    },
-    {
-      "what": "Meta: הוצאה 1,033.81$ ב-21.11 מול 313$ ב-18.11, לבדוק",
-      "severity": "low"
     }
   ],
-  "whatsappNote": "GREEN API: 28 צ'אטים פעילים ב-5 ימים (רק נכנסות, יוצאות החזיר 0). עודכנה Allison ונוצרה רשומה לליד ASL. דורש בדיקה שלך: Belinda ו-Debbie (Temple Chai) מחכות ובלי מייל, 19173090795 (לקוח ששאל על שיחה קצרה), 2349079725811 (נראה פרילנסר, לא ליד)",
+  "whatsappNote": "GREEN API: 19 צ'אטים פעילים ב-5 ימים, יוצאות 0. לא עודכן מנדיי. דורש בדיקה שלך: Henry (הדפס), Belinda, Debbie, Allison, 13864055975 (הצפה, יחזור בערך 1.12), 2349079725811 (נראה פרילנסר)",
   "meetings": [
     {
       "when": "25-27.11",
       "who": "JNF טורונטו וביקור ליד טורונטו"
+    },
+    {
+      "when": "28.11 10:00 ET",
+      "who": "Raymond, ייעוץ אישי"
     }
   ],
   "customerMetrics": {
@@ -223,7 +232,7 @@
     }
   ],
   "traffic": {
-    "note": "GA לא נסרק ב-22.11. מטא נסרק",
+    "note": "GA לא נסרק ב-23.11, ערכים ישנים",
     "date": "2026-11-17",
     "sessions": 629,
     "avg7": 370,
