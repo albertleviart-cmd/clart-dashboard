@@ -1,54 +1,54 @@
 {
-  "updatedAt": "2026-11-23T07:20:00+02:00",
-  "scanDate": "2026-11-23",
+  "updatedAt": "2026-11-24T07:15:00+02:00",
+  "scanDate": "2026-11-24",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "48 שעות: 8 רשומות נבדקו (Beth Lehrer, Raymond, ליד ASL ועוד). לא נכתב כלום במנדיי בריצה הזו. CRM Tasks וביטול תזכורות כפולות לא הורצו"
+      "note": "48 שעות: 6 רשומות. עודכנו Belinda ו-Beth. CRM Tasks לא הורצו"
     },
     "quoMessages": {
       "status": "ok",
-      "note": "נסרק 14 יום מ-09.11, 35 שיחות פתוחות. משימות לא נוצרות"
+      "note": "14 יום, 33 שיחות פתוחות"
     },
     "gmailBusiness": {
       "status": "ok",
-      "note": "רצו שלושת החיפושים. סווף 30 יום עם category:primary החזיר ריק, כנראה סיווג תיבה. Renee Rosner כבר קיבלה אישור הזמנה ב-22.11"
+      "note": "רצו שלושת החיפושים, סווף 30 יום ריק"
     },
     "gmailPrivate": {
-      "status": "ok",
-      "note": "Composio רץ, נסרקו רק כותרות. 31 הודעות ב-48 שעות: Etsy 241.63$, התראות Stripe ו-GitHub. לא נבדק לעומק שרשור אנושי"
+      "status": "error",
+      "note": "לא נסרק בריצה הזו"
     },
     "shopify": {
-      "status": "ok",
-      "note": "הזמנות 22.11: #4423 עד #4427 (80.10, 128.79, 404.10, 404.10, 188.10 דולר). #4427 של Jason Mendelsohn"
+      "status": "error",
+      "note": "שאילתת הזמנות נכשלה בגלל Customer.email deprecated; מדדי לקוחות לא עודכנו"
     },
     "stripe": {
       "status": "ok",
-      "note": "100 חיובים נמשכו, מגיעים רק עד 13.11, has_more true (פחות מ-30 יום, תקלה). חיובים עם פרטי משלם: Jason, Julie Levitt, Perri Wittgrove, Sharon Abercia, Yoni Padan, כולם כבר מסומנים. אין חיוב שנרשם היום. עשרות חיובי אירוע בלי פרטי משלם ממתינים לאלברט"
+      "note": "חיוב חדש אחד נרשם: Belinda 209$. 20 חיובים בלי משלם ממתינים לאלברט. החלון עד 13.11 בלבד"
     },
     "autocalls": {
       "status": "ok",
-      "note": "7 שיחות ב-22.11. שיחה אמיתית: Beth Lehrer 204 שניות, Raymond 125 שניות (נקבע ייעוץ 28.11 10:00 ET). Richard תא קולי, Abby ו-Allison קצרות"
+      "note": "3 שיחות, אף אחת אמיתית חדשה"
     },
     "googleAnalytics": {
       "status": "error",
-      "note": "לא הורץ בריצה הזו"
+      "note": "לא נסרק בריצה הזו"
     },
     "googleAds": {
       "status": "error",
-      "note": "לא הורץ בריצה הזו"
+      "note": "לא נסרק בריצה הזו"
     },
     "metaAds": {
       "status": "error",
-      "note": "ads_get_ad_entities לא החזיר הוצאה יומית, לא נוחשו נתונים"
+      "note": "לא נסרק בריצה הזו"
     },
     "whatsapp": {
       "status": "ok",
       "note": "GREEN API: 19 צ'אטים פעילים ב-5 ימים (נכנסות 132). יוצאות החזיר 0 שוב. 7 צ'אטים החזירו שגיאה בהיסטוריה"
     },
     "calendar": {
-      "status": "error",
-      "note": "לא נסרק בריצה הזו, נשאר הערך הישן"
+      "status": "ok",
+      "note": "JNF טורונטו 25 עד 27.11"
     },
     "ga": {
       "status": "error",
@@ -58,100 +58,62 @@
   "needsAnswer": [
     {
       "name": "Jason (+15164591762)",
-      "why": "שלח מידות 65x69 אינץ עם תמונה ב-22.11 אחרי תזכורת שלך. מחכה להצעת גודל ומחיר",
+      "why": "שאל אם 3,800$ ממוסגר כולל משלוח לניו יורק ואיזו מסגרת. רוצה להתחיל מיד",
       "channel": "Quo",
       "waitingDays": 1,
       "urgency": "high"
-    },
-    {
-      "name": "Jason Mendelsohn (Ashar Group)",
-      "why": "שילם 2,000$, הזמין #4427 ב-22.11, מחכה לתאריך משלוח המקורי 3,000$. טיוטה מוכנה מאתמול",
-      "channel": "Gmail עסקי",
-      "waitingDays": 2,
-      "urgency": "high"
-    },
-    {
-      "name": "ליד טורונטו (JNF) +14169908668",
-      "why": "הציעה חמישי או שישי בבוקר, מחכה לאישור יום ושעה (הצעת 26 או 27.11)",
-      "channel": "Quo",
-      "waitingDays": 4,
-      "urgency": "high"
-    },
-    {
-      "name": "Belinda Schneeweiss (קנדה)",
-      "why": "ב-20.11 כתבה שחשבה שתישלח לה לינק תשלום להדפס עץ החיים 20x30",
-      "channel": "WhatsApp",
-      "waitingDays": 3,
-      "urgency": "high"
-    },
-    {
-      "name": "Henry (+12064594221)",
-      "why": "הציור תלוי אצלם ב-22.11, ביקש שתשלח לו הדפס. לקוח קיים",
-      "channel": "WhatsApp",
-      "waitingDays": 1,
-      "urgency": "medium"
     },
     {
       "name": "Beth Lehrer",
-      "why": "רוצה ציור גדול עם ahava בסגנון Colors of Protection, קולורדו. שיחה 204 שניות ללא פגישה. טיוטה מוכנה",
-      "channel": "Autocalls",
-      "waitingDays": 1,
-      "urgency": "medium"
-    },
-    {
-      "name": "Allison (+19085102941)",
-      "why": "שאלה אם הדפס מעוטר מגיע מתוח על מסגרת או גלול, ב-21.11",
-      "channel": "WhatsApp",
-      "waitingDays": 2,
-      "urgency": "medium"
-    },
-    {
-      "name": "Debbie Berkowitz (Temple Chai)",
-      "why": "ב-20.11 ביקשה חוויה לתורמי מעגל הרבנים, אין מייל",
-      "channel": "WhatsApp",
-      "waitingDays": 3,
-      "urgency": "medium"
-    },
-    {
-      "name": "Fred Forster (+19498728917)",
-      "why": "שלח שם וכתובת בקורונה דל מאר ללא שאלה. לא ברור מה רצה",
+      "why": "שלחה תמונות וקיר 228x94, רוצה אותיות עבריות של אהבה. מחכה להצעה",
       "channel": "Quo",
+      "waitingDays": 0,
+      "urgency": "high"
+    },
+    {
+      "name": "ליד ASL Jewish (+14074174994)",
+      "why": "תיארה ציור של אישה עושה סימן Jewish ב-ASL בצבעי עץ החיים",
+      "channel": "WhatsApp",
       "waitingDays": 1,
-      "urgency": "low"
+      "urgency": "medium"
+    },
+    {
+      "name": "Belinda Schneeweiss",
+      "why": "שילמה 209$, שאלה על עמלות מכס לטורונטו",
+      "channel": "WhatsApp",
+      "waitingDays": 1,
+      "urgency": "medium"
+    },
+    {
+      "name": "ליד טורונטו (JNF) +14169908668",
+      "why": "מחכה לאישור יום ושעה, 26 או 27.11",
+      "channel": "Quo",
+      "waitingDays": 5,
+      "urgency": "high"
     }
   ],
   "newYesterday": [
     {
-      "name": "Beth Lehrer",
-      "source": "טופס אתר ואחר כך Autocalls",
-      "detail": "ציור ahava גדול, קולורדו"
+      "name": "Margie Starnes",
+      "source": "טופס",
+      "detail": "תיק טוט, JNF. קיבלה מידות"
     },
     {
-      "name": "Raymond",
-      "source": "Autocalls",
-      "detail": "ייעוץ נקבע ל-28.11 10:00 ET (Calendly)"
-    },
-    {
-      "name": "Jason Mendelsohn",
-      "source": "שופיפיי",
-      "detail": "הזמנה #4427 188.10$"
+      "name": "Belinda Schneeweiss",
+      "source": "Stripe",
+      "detail": "209$"
     }
   ],
   "replied": [
     {
+      "name": "Beth Lehrer",
+      "channel": "Quo",
+      "said": "קיר 228x94, אותיות עבריות של אהבה"
+    },
+    {
       "name": "Jason (+15164591762)",
       "channel": "Quo",
-      "said": "מידות 65x69 אינץ"
-    },
-    {
-      "name": "Henry",
-      "channel": "WhatsApp",
-      "said": "הציור תלוי, ביקש הדפס"
-    },
-    {
-      "name": "Renee & Sam Green",
-      "channel": "WhatsApp",
-      "said": "כתובת משלוח וביקשו אישור במייל (נשלח ב-22.11)"
+      "said": "שאל על מסגרת ומשלוח ל-3,800$"
     }
   ],
   "revenue": {
@@ -165,49 +127,42 @@
     {
       "name": "Beth Lehrer",
       "inbox": "business",
-      "gist": "שאלה על מידות הקיר לציור ahava גדול, בלי מחיר",
+      "gist": "מוקאפ על קיר הבית, שאלה על פריסת האותיות, בלי מחיר",
       "needsInput": false
     }
   ],
   "quoTasks": [],
   "mondayUpdated": {
-    "updated": 0,
+    "updated": 2,
     "created": 0,
     "details": [
-      "לא נכתב כלום: אין חיוב Stripe חדש עם פרטי משלם, ולידים חדשים כבר היו ברשומות"
+      "Belinda: Amount Paid 209 וסימון Stripe",
+      "Beth Lehrer: הערה וערוץ"
     ]
   },
   "faults": [
     {
-      "what": "Stripe: חלון 100 החיובים מגיע רק עד 13.11, יותר מ-100 חיובים ב-30 יום. רוב החיובים בלי פרטי משלם (2,500$ ב-22.11, 975$ ו-450$ ב-18.11, 781$ ו-923$ ב-22.11 ועוד). לא נרשמו. אלברט לומר של מי",
+      "what": "Stripe: 20 חיובים בלי פרטי משלם (2,500$, 923$, 781$, 800$, 726$, 500$ ועוד) לא נרשמו. אלברט לומר של מי",
       "severity": "medium"
     },
     {
-      "what": "GREEN API: lastOutgoingMessages מחזיר 0 הודעות שוב, ו-7 צ'אטים נכשלו בהיסטוריה (פורמט chatId)",
+      "what": "GREEN API: lastOutgoingMessages מחזיר 0 והיסטוריה נכנסת בלבד",
       "severity": "medium"
     },
     {
-      "what": "GA, Google Ads ו-Meta לא נסרקו, מדדי לקוחות לא עודכנו, CRM Tasks וביטול תזכורות כפולות לא הורצו",
+      "what": "GA, Google Ads, Meta, גמייל פרטי, מדדי לקוחות וקבוצת CRM Tasks לא הורצו. שאילתת הזמנות בשופיפיי נכשלה",
       "severity": "medium"
-    },
-    {
-      "what": "גמייל פרטי נסרק ברמת כותרות בלבד",
-      "severity": "low"
-    },
-    {
-      "what": "כפילות: Arthur (lucraricapital) בשתי רשומות, 3373511712 ו-3373515220",
-      "severity": "low"
     }
   ],
-  "whatsappNote": "GREEN API: 19 צ'אטים פעילים ב-5 ימים, יוצאות 0. לא עודכן מנדיי. דורש בדיקה שלך: Henry (הדפס), Belinda, Debbie, Allison, 13864055975 (הצפה, יחזור בערך 1.12), 2349079725811 (נראה פרילנסר)",
+  "whatsappNote": "נסרקו 17 צ'אטים פעילים ב-5 ימים דרך GREEN API, הודעות נכנסות בלבד",
   "meetings": [
     {
       "when": "25-27.11",
-      "who": "JNF טורונטו וביקור ליד טורונטו"
+      "who": "JNF טורונטו"
     },
     {
       "when": "28.11 10:00 ET",
-      "who": "Raymond, ייעוץ אישי"
+      "who": "Raymond (סומן לא רלוונטי, לבדוק ולבטל)"
     }
   ],
   "customerMetrics": {
