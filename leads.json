@@ -1,18 +1,18 @@
 {
-  "updatedAt": "2026-11-24T07:15:00+02:00",
-  "scanDate": "2026-11-24",
+  "updatedAt": "2026-11-25T08:00:00+02:00",
+  "scanDate": "2026-11-25",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "48 שעות: 6 רשומות. עודכנו Belinda ו-Beth. CRM Tasks לא הורצו"
+      "note": "48 שעות: 5 רשומות (Lari Konfidan x3 כפילות, Eli Coen ספק, Margie). נוצרו 2: Rachel Sandler, נדב תובל. עודכנה Heather Cohen. CRM Tasks לא הורצו"
     },
     "quoMessages": {
-      "status": "ok",
-      "note": "14 יום, 33 שיחות פתוחות"
+      "status": "error",
+      "note": "Quo דורש התחברות מחדש (OAuth), לא נסרק. 14 יום לא נבדקו"
     },
     "gmailBusiness": {
       "status": "ok",
-      "note": "רצו שלושת החיפושים, סווף 30 יום ריק"
+      "note": "רצו שלושת החיפושים. סווף 30 יום category:primary החזיר ריק, נמצאו שרשורים דרך חיפוש 2d: Rachel Sandler, Heather Cohen"
     },
     "gmailPrivate": {
       "status": "error",
@@ -20,15 +20,15 @@
     },
     "shopify": {
       "status": "error",
-      "note": "שאילתת הזמנות נכשלה בגלל Customer.email deprecated; מדדי לקוחות לא עודכנו"
+      "note": "לא נשלף בריצה הזו, מדדי לקוחות לא עודכנו"
     },
     "stripe": {
       "status": "ok",
-      "note": "חיוב חדש אחד נרשם: Belinda 209$. 20 חיובים בלי משלם ממתינים לאלברט. החלון עד 13.11 בלבד"
+      "note": "אין חיוב חדש עם משלם מזוהה שלא נרשם. כל המזוהים (Belinda, Jason, Julie, Perri, Sharon, Yoni) כבר מסומנים. עשרות חיובים בלי פרטי משלם ממתינים לאלברט. החלון מגיע רק עד 13.11, יותר מ-100 חיובים ב-30 יום"
     },
     "autocalls": {
       "status": "ok",
-      "note": "3 שיחות, אף אחת אמיתית חדשה"
+      "note": "3 שיחות מאז 24.11, כולן שיחות בדיקה או תא קולי. שיחה אחת 51 שניות ל-+19175992650 (Lari Konfidan)"
     },
     "googleAnalytics": {
       "status": "error",
@@ -44,7 +44,7 @@
     },
     "whatsapp": {
       "status": "ok",
-      "note": "GREEN API: 19 צ'אטים פעילים ב-5 ימים (נכנסות 132). יוצאות החזיר 0 שוב. 7 צ'אטים החזירו שגיאה בהיסטוריה"
+      "note": "GREEN API: 20 צ'אטים פעילים ב-5 ימים (118 הודעות נכנסות). lastOutgoing מחזיר 0 שוב, הקשר יוצא חסר. לא נקרא getChatHistory"
     },
     "calendar": {
       "status": "ok",
@@ -57,63 +57,80 @@
   },
   "needsAnswer": [
     {
-      "name": "Jason (+15164591762)",
-      "why": "שאל אם 3,800$ ממוסגר כולל משלוח לניו יורק ואיזו מסגרת. רוצה להתחיל מיד",
-      "channel": "Quo",
-      "waitingDays": 1,
+      "name": "Heather Cohen",
+      "why": "שלחה ב-23.11 העדפות לקומישן (עץ אפור, סגול) ושאלה על סקיצה, גודל ומחיר מדויק. טיוטה מוכנה",
+      "channel": "Email עסקי",
+      "waitingDays": 2,
       "urgency": "high"
     },
     {
-      "name": "Beth Lehrer",
-      "why": "שלחה תמונות וקיר 228x94, רוצה אותיות עבריות של אהבה. מחכה להצעה",
-      "channel": "Quo",
-      "waitingDays": 0,
+      "name": "Rachel Sandler (JCA Jacksonville)",
+      "why": "שאלה ב-23.11 אם יש עוד נסיעות לפלורידה ושזה יוריד נסיעות. אירוע 4,500$. טיוטה מוכנה",
+      "channel": "Email עסקי",
+      "waitingDays": 2,
       "urgency": "high"
+    },
+    {
+      "name": "נדב תובל",
+      "why": "רוצה להזמין ציור של עצמו, כתב ב-24.11 בוואטסאפ. אין מייל",
+      "channel": "WhatsApp",
+      "waitingDays": 1,
+      "urgency": "medium"
+    },
+    {
+      "name": "Mimi McCorquodale",
+      "why": "כתבה שהציור יוצב בחדר תפילה ושתשלח תמונה בשנת 2027. אין שאלה, תגובה חמה אופציונלית",
+      "channel": "WhatsApp",
+      "waitingDays": 1,
+      "urgency": "low"
+    },
+    {
+      "name": "Karen (+15149831142)",
+      "why": "27 הודעות ב-5 ימים, האחרונה: But if not Sunday. לבדוק בוואטסאפ מה מתואם",
+      "channel": "WhatsApp",
+      "waitingDays": 0,
+      "urgency": "medium"
     },
     {
       "name": "ליד ASL Jewish (+14074174994)",
-      "why": "תיארה ציור של אישה עושה סימן Jewish ב-ASL בצבעי עץ החיים",
+      "why": "ב-23.11 תיארה ציור של אישה עושה את הסימן Jewish ב-ASL בצבעי עץ החיים. בלי מייל",
       "channel": "WhatsApp",
-      "waitingDays": 1,
-      "urgency": "medium"
-    },
-    {
-      "name": "Belinda Schneeweiss",
-      "why": "שילמה 209$, שאלה על עמלות מכס לטורונטו",
-      "channel": "WhatsApp",
-      "waitingDays": 1,
-      "urgency": "medium"
-    },
-    {
-      "name": "ליד טורונטו (JNF) +14169908668",
-      "why": "מחכה לאישור יום ושעה, 26 או 27.11",
-      "channel": "Quo",
-      "waitingDays": 5,
+      "waitingDays": 2,
       "urgency": "high"
     }
   ],
   "newYesterday": [
     {
-      "name": "Margie Starnes",
-      "source": "טופס",
-      "detail": "תיק טוט, JNF. קיבלה מידות"
+      "name": "Lari Konfidan",
+      "source": "טופס או שיחה, 3 רשומות כפולות במנדיי",
+      "detail": "ביקשה פגישה עם אלברט, EST, יום לאחר מכן"
     },
     {
-      "name": "Belinda Schneeweiss",
-      "source": "Stripe",
-      "detail": "209$"
+      "name": "Rachel Sandler",
+      "source": "מייל, נוצרה היום",
+      "detail": "JCC ג'קסונוויל, אירוע 2027"
+    },
+    {
+      "name": "נדב תובל",
+      "source": "וואטסאפ, נוצרה היום",
+      "detail": "רוצה להזמין ציור"
     }
   ],
   "replied": [
     {
-      "name": "Beth Lehrer",
-      "channel": "Quo",
-      "said": "קיר 228x94, אותיות עבריות של אהבה"
+      "name": "Heather Cohen",
+      "channel": "Email",
+      "said": "פירטה העדפות לציור, שאלה על סקיצה, גודל ומחיר"
     },
     {
-      "name": "Jason (+15164591762)",
-      "channel": "Quo",
-      "said": "שאל על מסגרת ומשלוח ל-3,800$"
+      "name": "Rachel Sandler",
+      "channel": "Email",
+      "said": "שאלה אם יש עוד נסיעות לפלורידה"
+    },
+    {
+      "name": "Jordan Siegel (FIDF)",
+      "channel": "Email",
+      "said": "תודה, יעביר לצוות, אולי בשנה החדשה. בלי פעולה"
     }
   ],
   "revenue": {
@@ -125,36 +142,51 @@
   },
   "draftsPrepared": [
     {
-      "name": "Beth Lehrer",
+      "name": "Heather Cohen",
       "inbox": "business",
-      "gist": "מוקאפ על קיר הבית, שאלה על פריסת האותיות, בלי מחיר",
+      "gist": "מסכם העדפות, מבטיח ויז'ואל לפני ציור, טווח 3,500 עד 4,500, שאלה על רוחב",
+      "needsInput": false
+    },
+    {
+      "name": "Rachel Sandler",
+      "inbox": "business",
+      "gist": "סיבוב בפלורידה חולק עלויות, מרץ 2027, שאלה על תאריכים",
       "needsInput": false
     }
   ],
   "quoTasks": [],
   "mondayUpdated": {
-    "updated": 2,
-    "created": 0,
+    "updated": 1,
+    "created": 2,
     "details": [
-      "Belinda: Amount Paid 209 וסימון Stripe",
-      "Beth Lehrer: הערה וערוץ"
+      "נוצרה Rachel Sandler",
+      "נוצרה נדב תובל",
+      "עודכנה Heather Cohen (הערה)"
     ]
   },
   "faults": [
     {
-      "what": "Stripe: 20 חיובים בלי פרטי משלם (2,500$, 923$, 781$, 800$, 726$, 500$ ועוד) לא נרשמו. אלברט לומר של מי",
+      "what": "Quo דורש התחברות מחדש, לא נסרק. שיחות תלויות ב-14 יום לא זוהו",
+      "severity": "high"
+    },
+    {
+      "what": "Lari Konfidan נוצרה 3 פעמים (3384576070, 3384580652, 3384594013), ושתיים New Leads עם חיוג אוטומטי. לא נמחק",
       "severity": "medium"
     },
     {
-      "what": "GREEN API: lastOutgoingMessages מחזיר 0 והיסטוריה נכנסת בלבד",
+      "what": "חיובי Stripe בלי פרטי משלם (עשרות, בהם 2,500$ 22.11, 4,650$ ו-4,100$ ב-13 עד 14.11) ממתינים לאלברט. החלון מגיע רק עד 13.11",
       "severity": "medium"
     },
     {
-      "what": "GA, Google Ads, Meta, גמייל פרטי, מדדי לקוחות וקבוצת CRM Tasks לא הורצו. שאילתת הזמנות בשופיפיי נכשלה",
+      "what": "GREEN API lastOutgoingMessages מחזיר 0, ההקשר היוצא חסר",
+      "severity": "medium"
+    },
+    {
+      "what": "GA, גוגל, מטא, שופיפיי וגמייל פרטי לא נסרקו. CRM Tasks לא הורצו, תאריכי פעולה לא נקבעו לרשומות קיימות",
       "severity": "medium"
     }
   ],
-  "whatsappNote": "נסרקו 17 צ'אטים פעילים ב-5 ימים דרך GREEN API, הודעות נכנסות בלבד",
+  "whatsappNote": "נסרקו 20 צ'אטים פעילים ב-5 ימים דרך GREEN API, הודעות נכנסות בלבד",
   "meetings": [
     {
       "when": "25-27.11",
