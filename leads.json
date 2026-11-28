@@ -1,50 +1,50 @@
 {
-  "updatedAt": "2026-11-27T07:10:00+02:00",
-  "scanDate": "2026-11-27",
+  "updatedAt": "2026-11-28T08:00:00+02:00",
+  "scanDate": "2026-11-28",
   "sources": {
     "monday": {
       "status": "ok",
-      "note": "48 שעות: 8 רשומות. נוצרו Annie ו-Aryeh Ackerman, עודכנו Adam, Irene Reiss, Henry. CRM Tasks לא הורצו"
+      "note": "48 שעות: 12 רשומות. נוצרו Brad Orelowitz, Rachel, Dan Cooper מוואטסאפ. CRM Tasks לא הורצו"
     },
     "quoMessages": {
       "status": "error",
-      "note": "Quo דורש התחברות מחדש (OAuth), נדחה גם הפעם. 14 יום לא נבדקו"
+      "note": "Quo דורש התחברות מחדש (OAuth), סירב גם הפעם. 14 יום לא נבדקו"
     },
     "gmailBusiness": {
       "status": "ok",
-      "note": "רצו שלושת החיפושים. buy.stripe.com והסווף 30 יום category:primary החזירו ריק. שרשורים מ-2d: JCC Dallas, CRJ Orlando, JNF California"
+      "note": "שלושת החיפושים רצו. buy.stripe.com וסווף 30 יום category:primary החזירו ריק. 2d: בעיקר ניוזלטרים ומענים אוטומטיים לקמפיין, אין שרשור לקוח פתוח"
     },
     "gmailPrivate": {
       "status": "ok",
-      "note": "Composio, 2d, 60 הודעות, נסרק על כותרות בלבד. נמצא חיוב מטא 2,000$ ב-26.11. שרשור Irvine painting (Mimi Tibbs) כבר נענה על ידי אלברט"
+      "note": "Composio, 2d, 60 הודעות, כותרות בלבד. פנייה מטופס Tom Seymour (כבר במנדיי)"
     },
     "shopify": {
       "status": "ok",
-      "note": "30 הזמנות מ-26.11, כולן PAID. מדדי לקוחות לא עודכנו"
+      "note": "14 הזמנות מ-27.11, כולן PAID. מדדי לקוחות לא עודכנו"
     },
     "stripe": {
       "status": "error",
-      "note": "Stripe דורש התחברות מחדש (OAuth). חיובים לא נסרקו, הריצה הבאה תשלים"
+      "note": "Stripe דורש התחברות מחדש (OAuth). חיובים לא נסרקו"
     },
     "autocalls": {
-      "status": "ok",
-      "note": "8 שיחות מ-26.11. אמיתיות: Sandy 76 שניות (ייעוץ נקבע), Marilyn 75 שניות. השאר תא קולי, ניתוק או כשל"
+      "status": "error",
+      "note": "לא נסרק בריצה זו"
     },
     "googleAnalytics": {
       "status": "error",
-      "note": "לא נסרק בריצה הזו"
+      "note": "לא נסרק בריצה זו"
     },
     "googleAds": {
       "status": "error",
-      "note": "לא נסרק בריצה הזו"
+      "note": "לא נסרק בריצה זו"
     },
     "metaAds": {
       "status": "error",
-      "note": "לא נסרק בריצה הזו"
+      "note": "לא נסרק בריצה זו"
     },
     "whatsapp": {
       "status": "ok",
-      "note": "26 צ'אטים עם הודעות נכנסות ב-5 ימים (133 הודעות). lastOutgoingMessages החזיר ריק. history נבדק ל-8 צ'אטים. נוצרו Annie ו-Aryeh, עודכנו Adam, Irene, Henry"
+      "note": "GREEN API: lastIncomingMessages החזיר 149 הודעות ב-29 צ׳אטים. lastOutgoingMessages החזיר 0 וההיסטוריה מציגה נכנסות בלבד, לכן אי אפשר לדעת אם אלברט כבר ענה"
     },
     "calendar": {
       "status": "ok",
@@ -57,113 +57,85 @@
   },
   "needsAnswer": [
     {
-      "name": "Henry",
-      "why": "הגיע ארגז בלי לוחית מתכת, רק קנבס קטן ותעודה. ביקש גם הדפס כותרת",
+      "name": "Rachel (We Will Dance)",
+      "why": "שלחה תמונות של הקיר, רוצה We Will Dance Again embellished, שואלת איזו מידה, התאמה לצבעי השטיח וממוסגר, ורוצה להזמין בזמן המבצע",
       "channel": "WhatsApp",
-      "waitingDays": 2,
+      "waitingDays": 1,
       "urgency": "high"
     },
     {
-      "name": "JCC Dallas (Rachelle Weiss Crane)",
-      "why": "הציעו 26 או 27 במאי 2027, מחכים לאישור תאריך",
-      "channel": "Email עסקי",
-      "waitingDays": 2,
+      "name": "Brad Orelowitz",
+      "why": "רוצה Tree of Life כחול 60x40 embellished ושואל אם אפשר עם מסגרת",
+      "channel": "WhatsApp",
+      "waitingDays": 1,
       "urgency": "high"
     },
     {
-      "name": "Michael Kancher (CRJ Orlando)",
-      "why": "יעביר 646.82$ בהעברה ביום שני, מחכה לפרטי חשבון",
-      "channel": "Email עסקי",
-      "waitingDays": 2,
+      "name": "Dan Cooper",
+      "why": "היה באתר ורוצה עצה לפני הזמנה",
+      "channel": "WhatsApp",
+      "waitingDays": 0,
+      "urgency": "medium"
+    },
+    {
+      "name": "Karen (15149831142)",
+      "why": "שלחה כמה הודעות בלילה, אולי ניסתה להתקשר: Did you get it",
+      "channel": "WhatsApp",
+      "waitingDays": 0,
+      "urgency": "medium"
+    },
+    {
+      "name": "Karen Silber",
+      "why": "שואלת מתי מגיעה היצירה שהזמינה, מקווה לקבל לפני 16.12",
+      "channel": "WhatsApp",
+      "waitingDays": 1,
       "urgency": "high"
+    },
+    {
+      "name": "Tom Seymour",
+      "why": "שואל על embellished ready to hang, גר בניו ג׳רזי. טיוטת מייל הוכנה",
+      "channel": "Email",
+      "waitingDays": 0,
+      "urgency": "medium"
     },
     {
       "name": "Annie",
-      "why": "שאלה למה היצירות המשובחות לא ממוסגרות והאם קל למסגר, לפני הזמנה",
+      "why": "שאלה על מסגור embellished, כתבה I understand",
       "channel": "WhatsApp",
       "waitingDays": 1,
-      "urgency": "high"
-    },
-    {
-      "name": "Aryeh Ackerman",
-      "why": "הופנה מסבתו Renee Green, שואל אם אלברט עושה פורטרטים",
-      "channel": "WhatsApp",
-      "waitingDays": 1,
-      "urgency": "high"
-    },
-    {
-      "name": "Irene Reiss",
-      "why": "מבקשת עותק של Roaring Lion, ועדיין פתוחים יתרה ולינק תשלום מ-02.11",
-      "channel": "WhatsApp",
-      "waitingDays": 1,
-      "urgency": "medium"
-    },
-    {
-      "name": "Adam",
-      "why": "ישלח תמונת החלל ומידות ביום ראשון, אין מה לענות עד אז",
-      "channel": "WhatsApp",
-      "waitingDays": 0,
       "urgency": "low"
     },
     {
-      "name": "נדב תובל",
-      "why": "רוצה ציור אישי, כתב ב-24.11 ולא נענה",
+      "name": "Adam",
+      "why": "ישלח תמונה ומידות ביום ראשון",
       "channel": "WhatsApp",
-      "waitingDays": 3,
-      "urgency": "medium"
-    },
-    {
-      "name": "Rachel Sandler",
-      "why": "טיוטה ממתינה בתיבה העסקית מ-25.11",
-      "channel": "Email עסקי",
-      "waitingDays": 4,
-      "urgency": "medium"
+      "waitingDays": 2,
+      "urgency": "low"
     }
   ],
   "newYesterday": [
     {
-      "name": "Annie",
+      "name": "Brad Orelowitz",
       "source": "WhatsApp",
-      "detail": "שאלת מסגור לפני הזמנה"
+      "detail": "Tree of Life כחול 60x40 embellished"
     },
     {
-      "name": "Aryeh Ackerman",
+      "name": "Rachel",
       "source": "WhatsApp",
-      "detail": "פורטרט, הופנה מסבתו"
+      "detail": "We Will Dance Again embellished"
     },
     {
-      "name": "Adam",
-      "source": "Autocalls",
-      "detail": "שיחה 11 שניות, אחר כך ענה בוואטסאפ"
+      "name": "Dan Cooper",
+      "source": "WhatsApp",
+      "detail": "עצה לפני הזמנה"
     },
     {
-      "name": "Marilyn",
-      "source": "Autocalls",
-      "detail": "שיחה 75 שניות ב-27.11"
+      "name": "Tom Seymour",
+      "source": "טופס אתר",
+      "detail": "embellished ready to hang"
     }
   ],
-  "replied": [
-    {
-      "name": "Adam",
-      "channel": "WhatsApp",
-      "said": "ישלח תמונה ומידות ביום ראשון"
-    },
-    {
-      "name": "Irene Reiss",
-      "channel": "WhatsApp",
-      "said": "מבקשת עותק של Roaring Lion"
-    },
-    {
-      "name": "Rachelle (JCC Dallas)",
-      "channel": "Email",
-      "said": "26 או 27 במאי"
-    },
-    {
-      "name": "Michael Kancher",
-      "channel": "Email",
-      "said": "wire ביום שני"
-    }
-  ],
+  "replied": [],
   "revenue": {
     "monthToDate": null,
     "cashNotTurnover": null,
@@ -173,49 +145,37 @@
   },
   "draftsPrepared": [
     {
-      "name": "JCC Dallas (Rachelle)",
+      "name": "Tom Seymour",
       "inbox": "business",
-      "gist": "תודה, שני התאריכים טובים, איזה ערב עדיף",
-      "needsInput": false
-    },
-    {
-      "name": "Michael Kancher",
-      "inbox": "business",
-      "gist": "wire ביום שני מתאים, פרטי העברה יישלחו בנפרד, סך 646.82$",
+      "gist": "תשובה קצרה, שואל איזו יצירה ומידה, מבטיח לחזור עם אפשרות ready to hang",
       "needsInput": false
     }
   ],
   "quoTasks": [],
   "mondayUpdated": {
-    "updated": 4,
-    "created": 2,
+    "updated": 0,
+    "created": 3,
     "details": [
-      "נוצר Annie",
-      "נוצר Aryeh Ackerman",
-      "Adam: Conversation Active, ערוץ WhatsApp, הערה",
-      "Irene Reiss: הערה",
-      "Henry: הערה"
+      "Brad Orelowitz",
+      "Rachel (We Will Dance)",
+      "Dan Cooper"
     ]
   },
   "faults": [
     {
-      "what": "Quo ו-Stripe דורשים התחברות מחדש. גם Quo וגם Stripe לא נסרקו",
+      "what": "Quo ו-Stripe דורשים התחברות מחדש. לא נסרקו Quo, Stripe, Autocalls, GA, Google Ads ו-Meta Ads",
       "severity": "high"
     },
     {
-      "what": "GA, גוגל אדס ומטא לא נסרקו. חיוב מטא 2,000$ ב-26.11 לפי מייל פרטי",
+      "what": "GREEN API: אין נתוני הודעות יוצאות, לא ברור מי כבר נענה. לאלברט לבדוק את הצ׳אטים ברשימה",
       "severity": "medium"
     },
     {
-      "what": "lastOutgoingMessages ריק, אי אפשר לדעת אם אלברט כבר ענה בוואטסאפ",
+      "what": "GREEN API: מייל אקספירציה (Expiration notice) הגיע מ-no_reply@green-api.com. לבדוק את תוקף המנוי",
       "severity": "medium"
-    },
-    {
-      "what": "פער בין שעון לוח מנדיי לתוכן: Georgina ו-Kay עדיין Unreachable, ללא שינוי",
-      "severity": "low"
     }
   ],
-  "whatsappNote": "נסרק 27.11 דרך GREEN API: 133 הודעות נכנסות ב-5 ימים, 26 צ'אטים. lastOutgoingMessages ריק",
+  "whatsappNote": "נסרק דרך GREEN API ב-28.11: 29 צ׳אטים פעילים ב-5 ימים, נוצרו 3 רשומות",
   "meetings": [
     {
       "when": "28.11 10:30 ET",
